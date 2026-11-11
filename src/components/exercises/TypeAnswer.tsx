@@ -21,7 +21,7 @@ export function TypeAnswer({ ex, locked, onSubmit }: ExProps<E>) {
   return (
     <View style={{ gap: 18 }}>
       <ExTitle color={colors.orange}>{toFinnish ? 'Kirjoita suomeksi · Type it in Finnish' : 'Kirjoita englanniksi · Type it in English'}</ExTitle>
-      <Prompt text={ex.prompt} speaker={toFinnish ? 'norppa' : ex.speaker} audio={toFinnish ? undefined : { text: ex.fi, id: ex.itemId }} />
+      <Prompt text={ex.prompt} speaker={toFinnish ? undefined : ex.speaker} audio={toFinnish ? undefined : { text: ex.fi, id: ex.itemId }} />
       <TextInput
         value={text}
         onChangeText={setText}

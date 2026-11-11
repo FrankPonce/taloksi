@@ -11,6 +11,7 @@
       "id": "u2l1",
       "title": "Mistä olet kotoisin?",
       "titleEn": "Where are you from?",
+      "host": "samir",
       "grammar": "g_locative",
       "words": [
         { "id": "w_suomi", "fi": "Suomi", "en": "Finland", "pos": "noun", "icon": "flag" },
@@ -21,9 +22,9 @@
         { "id": "w_mista", "fi": "mistä", "en": "from where", "altEn": ["where from"], "pos": "question" }
       ],
       "sentences": [
-        { "id": "s_u2l1_1", "fi": "Mistä sinä olet kotoisin?", "en": "Where are you from?", "altFi": ["Mistä olet kotoisin?"], "altEn": ["Where are you originally from?"], "puhe": "Mistä sä oot kotoisin?", "speaker": "mikko" },
+        { "id": "s_u2l1_1", "fi": "Mistä sinä olet kotoisin?", "en": "Where are you from?", "altFi": ["Mistä olet kotoisin?"], "altEn": ["Where are you originally from?"], "puhe": "Mistä sä oot kotoisin?", "speaker": "samir" },
         { "id": "s_u2l1_2", "fi": "Olen kotoisin Espanjasta.", "en": "I am from Spain.", "altEn": ["I am originally from Spain."], "puhe": "Mä oon Espanjasta.", "speaker": "sofia" },
-        { "id": "s_u2l1_3", "fi": "Hän on suomalainen.", "en": "He is Finnish.", "altEn": ["She is Finnish.", "He is a Finn.", "She is a Finn."], "puhe": "Se on suomalainen.", "speaker": "mikko" },
+        { "id": "s_u2l1_3", "fi": "Hän on suomalainen.", "en": "He is Finnish.", "altEn": ["She is Finnish.", "He is a Finn.", "She is a Finn."], "puhe": "Se on suomalainen.", "speaker": "samir" },
         { "id": "s_u2l1_4", "fi": "Asun nyt Suomessa.", "en": "I live in Finland now.", "altEn": ["Now I live in Finland.", "I now live in Finland."], "puhe": "Mä asun nyt Suomessa.", "speaker": "samir" },
         { "id": "s_u2l1_5", "fi": "Oletko sinä suomalainen?", "en": "Are you Finnish?", "altFi": ["Oletko suomalainen?"], "altEn": ["Are you a Finn?"], "puhe": "Ootsä suomalainen?", "speaker": "samir" }
       ],
@@ -35,6 +36,7 @@
       "id": "u2l2",
       "title": "Kielet",
       "titleEn": "Languages",
+      "host": "sofia",
       "grammar": "g_partitive_intro",
       "words": [
         { "id": "w_suomi_kieli", "fi": "suomi", "en": "Finnish (language)", "altEn": ["Finnish"], "note": "Languages are written lowercase; the country 'Suomi' is capitalised.", "pos": "noun" },
@@ -49,8 +51,8 @@
         { "id": "s_u2l2_1", "fi": "Puhun englantia ja espanjaa.", "en": "I speak English and Spanish.", "puhe": "Mä puhun englantii ja espanjaa.", "speaker": "sofia" },
         { "id": "s_u2l2_2", "fi": "Puhun vähän suomea.", "en": "I speak a little Finnish.", "altEn": ["I speak a bit of Finnish.", "I speak some Finnish."], "puhe": "Mä puhun vähän suomee.", "speaker": "sofia" },
         { "id": "s_u2l2_3", "fi": "Hän puhuu ruotsia hyvin.", "en": "He speaks Swedish well.", "altEn": ["She speaks Swedish well."], "puhe": "Se puhuu ruotsii hyvin.", "speaker": "sofia" },
-        { "id": "s_u2l2_4", "fi": "Puhutko sinä suomea?", "en": "Do you speak Finnish?", "altFi": ["Puhutko suomea?"], "puhe": "Puhuks sä suomee?", "speaker": "helvi" },
-        { "id": "s_u2l2_5", "fi": "Suomi on vaikea kieli.", "en": "Finnish is a difficult language.", "altEn": ["Finnish is a hard language."], "puhe": "Suomi on vaikee kieli.", "speaker": "helvi" }
+        { "id": "s_u2l2_4", "fi": "Puhutko sinä suomea?", "en": "Do you speak Finnish?", "altFi": ["Puhutko suomea?"], "puhe": "Puhuks sä suomee?", "speaker": "sofia" },
+        { "id": "s_u2l2_5", "fi": "Suomi on vaikea kieli.", "en": "Finnish is a difficult language.", "altEn": ["Finnish is a hard language."], "puhe": "Suomi on vaikee kieli.", "speaker": "sofia" }
       ],
       "fill": [
         { "id": "f_u2l2_1", "before": "Puhun vähän", "after": ".", "answer": "suomea", "options": ["suomi", "suomea", "suomessa"], "en": "I speak a little Finnish.", "hint": "After 'puhua', the language is in the partitive (-a / -ä)." }
@@ -60,6 +62,7 @@
       "id": "u2l3",
       "title": "Missä asut?",
       "titleEn": "Where do you live?",
+      "host": "pekka",
       "grammar": "g_verbs_present",
       "words": [
         { "id": "w_asua", "fi": "asua", "en": "to live", "altEn": ["live"], "pos": "verb", "icon": "home" },
@@ -75,7 +78,7 @@
         { "id": "s_u2l3_2", "fi": "Asun Turussa.", "en": "I live in Turku.", "puhe": "Mä asun Turussa.", "speaker": "pekka" },
         { "id": "s_u2l3_3", "fi": "Turku on kaunis kaupunki.", "en": "Turku is a beautiful city.", "altEn": ["Turku is a beautiful town.", "Turku is a pretty city."], "speaker": "pekka" },
         { "id": "s_u2l3_4", "fi": "Opiskelen yliopistossa.", "en": "I study at the university.", "altEn": ["I study at a university.", "I study at university."], "puhe": "Mä opiskelen yliopistossa.", "speaker": "sofia" },
-        { "id": "s_u2l3_5", "fi": "Hän asuu Helsingissä.", "en": "He lives in Helsinki.", "altEn": ["She lives in Helsinki."], "puhe": "Se asuu Helsingissä.", "speaker": "sofia" },
+        { "id": "s_u2l3_5", "fi": "Hän asuu Helsingissä.", "en": "He lives in Helsinki.", "altEn": ["She lives in Helsinki."], "puhe": "Se asuu Helsingissä.", "speaker": "pekka" },
         { "id": "s_u2l3_6", "fi": "Turku on Suomen vanhin kaupunki.", "en": "Turku is the oldest city in Finland.", "altEn": ["Turku is Finland's oldest city."], "speaker": "pekka", "fact": "True. Turku grew up around its cathedral in the 1200s and was the capital until 1812." }
       ],
       "fill": [
@@ -86,6 +89,7 @@
       "id": "u2l4",
       "title": "Numerot 0–10",
       "titleEn": "Numbers 0–10",
+      "host": "mikko",
       "words": [
         { "id": "w_nolla", "fi": "nolla", "en": "zero", "altEn": ["0"], "pos": "num", "icon": "numeric-0" },
         { "id": "w_yksi", "fi": "yksi", "en": "one", "altEn": ["1"], "puhe": "yks", "pos": "num", "icon": "numeric-1" },
@@ -100,12 +104,12 @@
         { "id": "w_kymmenen", "fi": "kymmenen", "en": "ten", "altEn": ["10"], "pos": "num", "icon": "numeric-10" }
       ],
       "sentences": [
-        { "id": "s_u2l4_1", "fi": "Minulla on kaksi siskoa.", "en": "I have two sisters.", "puhe": "Mulla on kaks siskoo.", "speaker": "helvi" },
-        { "id": "s_u2l4_2", "fi": "Yksi kahvi, kiitos.", "en": "One coffee, please.", "altEn": ["A coffee, please.", "One coffee, thanks."], "puhe": "Yks kahvi, kiitos.", "speaker": "aino" },
-        { "id": "s_u2l4_3", "fi": "Kolme plus neljä on seitsemän.", "en": "Three plus four is seven.", "altEn": ["Three plus four equals seven."], "puhe": "Kolme plus neljä on seittemän.", "speaker": "samir" },
-        { "id": "s_u2l4_4", "fi": "Hän on kymmenen vuotta vanha.", "en": "He is ten years old.", "altEn": ["She is ten years old."], "puhe": "Se on kymmenen vuotta vanha.", "speaker": "helvi" },
+        { "id": "s_u2l4_1", "fi": "Minulla on kaksi siskoa.", "en": "I have two sisters.", "puhe": "Mulla on kaks siskoo.", "speaker": "mikko" },
+        { "id": "s_u2l4_2", "fi": "Yksi kahvi, kiitos.", "en": "One coffee, please.", "altEn": ["A coffee, please.", "One coffee, thanks."], "puhe": "Yks kahvi, kiitos.", "speaker": "mikko" },
+        { "id": "s_u2l4_3", "fi": "Kolme plus neljä on seitsemän.", "en": "Three plus four is seven.", "altEn": ["Three plus four equals seven."], "puhe": "Kolme plus neljä on seittemän.", "speaker": "mikko" },
+        { "id": "s_u2l4_4", "fi": "Hän on kymmenen vuotta vanha.", "en": "He is ten years old.", "altEn": ["She is ten years old."], "puhe": "Se on kymmenen vuotta vanha.", "speaker": "mikko" },
         { "id": "s_u2l4_5", "fi": "Bussi numero kuusi tulee.", "en": "Bus number six is coming.", "altEn": ["Bus number six comes."], "puhe": "Kuutonen tulee.", "speaker": "mikko" },
-        { "id": "s_u2l4_6", "fi": "Suomessa on kolme miljoonaa saunaa.", "en": "There are three million saunas in Finland.", "altEn": ["Finland has three million saunas.", "In Finland there are three million saunas."], "speaker": "norppa", "fact": "About right: roughly three million saunas for five and a half million people." }
+        { "id": "s_u2l4_6", "fi": "Suomessa on kolme miljoonaa saunaa.", "en": "There are three million saunas in Finland.", "altEn": ["Finland has three million saunas.", "In Finland there are three million saunas."], "speaker": "mikko", "fact": "About right: roughly three million saunas for five and a half million people." }
       ],
       "fill": [
         { "id": "f_u2l4_1", "before": "Minulla on kaksi", "after": ".", "answer": "siskoa", "options": ["sisko", "siskoa", "siskot"], "en": "I have two sisters.", "hint": "After numbers 2 and up, the noun is singular partitive." }

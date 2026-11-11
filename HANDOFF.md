@@ -35,13 +35,13 @@ npm install
 npm run web
 ```
 
-**Content:** 4 A1 units plus 2 units on the 18+ track, 21 lessons, 152 words (130 with a picture), 116 sentences, 17 grammar notes, 2 stories, 5 conversations, 3 writing tasks, 232 lexicon word forms, 12 culture notes, 7 life-in-Finland notes, 11 study tips, 11 journey stages, 10 characters, 444 audio clips.
+**Content:** 4 A1 units plus 2 units on the 18+ track, 21 lessons, 152 words (130 with a picture), 116 sentences, 17 grammar notes, 2 stories, 5 conversations, 3 writing tasks, 232 lexicon word forms, 12 culture notes, 7 life-in-Finland notes, 11 study tips, 11 journey stages, 17 characters, 451 audio clips.
 
 **All content is AI-drafted and unreviewed** (`"reviewed": false` on every unit). That includes the lexicon explanations, culture notes and the 18+ pack. Treat the Finnish as good but unverified. A native-speaker review is Sprint 3.
 
 **First tasks for whoever picks this up:**
 
-1. `git init` and make the first commit. There is still no git history.
+1. Read `docs/ROADMAP.md`: it describes the finished app and lists the open decisions. The repository is at github.com/FrankPonce/suomeksi.
 2. Run it in Expo Go on Android and iOS. The style uses `boxShadow` and `skewX`, which need the new architecture on Android.
 3. Decide the voice licence question (see "Known gaps").
 4. Start Sprint 3: native review.
@@ -57,6 +57,10 @@ npm run web
 - **Writing tasks** (`writing.json`, `/write/[id]`) are scored 0–5 by an offline checker in `engine/writing.ts`. It only looks for the requested points by keyword and a few mechanical slips. **It does not understand Finnish and is not AI.** A real AI grader is not built: it needs a decision on provider and on where the API key lives.
 - **Speaking** is self-graded shadowing. The app does not listen.
 - **Motion and sound.** `components/motion.tsx` (pop, rise, shake, bob, flip; respects reduced motion) and synthesised effects in `assets/sfx/` behind a setting.
+- **Cast redrawn, second pass.** The portraits now use realistic proportions (long head, eyes halfway down, angular jaw, narrow eyes with a heavy lid, hard black shadows). The first redraw used big round anime eyes and was rejected: the brief is Persona / shounen, not cute. `Person` in `art.tsx` draws the face for a narrow head and fits the older, wider hair shapes onto it with the `HAIR_FIT` transform. Avatar fields added: `eyes`, `eyeStyle`, `jaw`, `prop` (axe, guitar, needles, pencil, headphones), `hat`. Two more moods: `wink` and `angry`.
+- **Bodies and poses.** There is a male and a female build (`TORSO_M`, `TORSO_F`, picked from `voice.gender`), with level shoulders and a short neck; an earlier single body with sloping shoulders read as "huge traps". The head is drawn 12% larger than the body's scale. `avatar.turn` (-1, 0, 1) fakes a three-quarter view by shifting the features, narrowing the far eye and hiding the far ear; `avatar.tilt` tilts the head. Bearded characters use tilt only, because the beard does not shift with the mouth.
+- **Seventeen characters.** Added Joonas (hockey fan), Joulupukki (Santa), Aada (pop-punk singer), Linh (quantum physicist), Tuuli (nurse), and on the 18+ track Ronja (tattoo artist) and Veera (DJ). These seven host no lessons yet; the roadmap says which units they are for. The cast screen lists 18+ characters as locked cards when the setting is off.
+- **One host per lesson.** Every lesson has a `host`. The host presents every exercise (`HostContext` in `art.tsx`, provided by the lesson screen) and reacts to answers: excited when right, sad when wrong. Most sentences in a lesson are spoken by its host; a line keeps another speaker only when it names someone or is a joke that belongs to that character. The validator requires a host and warns above two guest speakers. 68 clips were regenerated in the new speakers' voices.
 - **Not re-verified in the browser:** the last batch (conversations, writing, four-skills hub, backdrops, second 18+ unit) typechecks and the lesson engine was exercised in Node over every lesson, but the screens were not clicked through because the preview window was not painting.
 
 ## 3. Architecture
@@ -118,7 +122,7 @@ metro.config.js           makes Metro pick CommonJS builds (zustand's ESM build 
 
   Adding a lesson means adding JSON only.
 - **Breakdowns come from one lexicon.** `breakdown(sentence)` looks each word up in `lexicon.json`. The validator fails if a sentence uses a word that is not there, so new sentences need new lexicon entries. The `tag` (ine, ela, ill, ade, all, par, p1–p6, q) drives the ending-detective exercise.
-- **Every sentence has a speaker.** `"speaker"` on sentences and `"speakerId"` on story lines point at `characters.json`. The app shows that character's portrait and the audio script uses that character's voice.
+- **Every lesson has a host and every sentence a speaker.** `"host"` on a lesson is the character who teaches it. `"speaker"` on sentences and `"speakerId"` on story lines point at `characters.json`. The app shows that character's portrait and the audio script uses that character's voice.
 - **Mistakes are re-queued** once (key suffix `-r`).
 - **SRS:** finishing a lesson seeds FSRS cards for all its words and sentences. The Review tab grades Again / Hard / Good / Easy. A review session of 5+ cards refills a heart.
 - **Audio IDs = content IDs.** Puhekieli clips use `<id>__puhe` (always Aino's voice), sound-alike words `mp_<word>`, character intros `cast_<id>`. Don't rename IDs once audio exists. After changing content run `npm run audio` (needs Python 3.8+ and `pip install edge-tts`).

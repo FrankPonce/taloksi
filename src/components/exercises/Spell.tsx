@@ -15,7 +15,7 @@ export function Spell({ ex, locked, onSubmit }: ExProps<E>) {
   return (
     <View style={{ gap: 18 }}>
       <ExTitle color={colors.aurora}>Tavaa · Spell the word</ExTitle>
-      <Speech speaker="norppa" size={68}>
+      <Speech size={68}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
           {ex.icon ? <WordPic icon={ex.icon} size={64} /> : null}
           <View style={{ flexShrink: 1, gap: 6 }}>

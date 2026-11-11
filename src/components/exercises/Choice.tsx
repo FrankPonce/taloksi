@@ -47,14 +47,14 @@ export function Choice({ ex, locked, onSubmit }: ExProps<E>) {
           {ex.sub ? <Text style={{ fontSize: 16, color: colors.mutedOnPaper }}>{ex.sub}</Text> : null}
         </Prompt>
       ) : ex.audio ? (
-        <Speech speaker="norppa" size={68}>
+        <Speech size={68}>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
             <SpeakerButton text={ex.audio.text} id={ex.audio.id} size="md" />
             <Text style={{ fontSize: 17, flexShrink: 1 }}>{ex.sub}</Text>
           </View>
         </Speech>
       ) : (
-        <Speech speaker="norppa" size={68}>
+        <Speech size={68}>
           <Text style={{ fontSize: 18, lineHeight: 24, fontWeight: '700' }}>{ex.sub ?? 'Three of these belong together. One is an intruder. Tap it.'}</Text>
         </Speech>
       )}

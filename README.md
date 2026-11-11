@@ -7,6 +7,10 @@ A free, open-source Duolingo / LingoDeer-style app built *only* for Finnish — 
 
 Expo (React Native) · TypeScript · FSRS spaced repetition · neural character voices · Web + iOS + Android from one codebase
 
+**Status:** v0.2, playable on web. Sprint 3 of 12. Course content is AI-drafted and not yet checked by a native speaker.
+
+[Roadmap](docs/ROADMAP.md) · [Handoff notes](HANDOFF.md) · [Content guide](docs/CONTENT.md)
+
 </div>
 
 ---
@@ -39,14 +43,15 @@ Suomeksi teaches the course *and* drills those pain points directly.
 | ⌨️ | Forgiving answer checker: contractions, typos, missing ä/ö (with a nudge) | — |
 | 🏆 | Achievements, stats, settings, unlimited-hearts and unlock-all modes | Duolingo |
 | 🔊 | Neural voice clips for every item, with device-voice fallback | — |
-| 🎭 | **A cast of ten characters** (a seal pup, a lumberjack, a metalhead, a grandma…) with expressions, personal name tags and their own voices | *Suomeksi original* |
+| 🎭 | **A cast of seventeen characters** (a seal pup, a lumberjack, a metalhead, a grandma, a quantum physicist, Santa Claus…) drawn in code, each with their own build, pose, six expressions, a signature prop, a personal name tag and their own voice | *Suomeksi original* |
+| 🎤 | **One host per lesson.** Each character owns the topics that suit them, presents the whole lesson and reacts to your answers; units mix hosts | *Suomeksi original* |
 | 🎧 | **Four-skills hub**: listening with the text hidden, reading, writing tasks with a score, and shadowing for speaking | *Suomeksi original* |
 | 👆 | Tap or hover any word in a sentence for its meaning | LingQ-style |
 | ✂️ | **Sentence breakdowns**: tap any sentence apart into stems and endings, with an explanation for every word | *Suomeksi original* |
 | 🗺️ | **Journey map** from A1.1 to C2, mapped to YKI levels, with can-do goals and grammar per stage | *Suomeksi original* |
 | 🎓 | **Study guide**: eleven research-backed tips, each with sources | *Suomeksi original* |
 | 🇫🇮 | **Culture notes** attached to units: sauna, sisu, coffee, Turku, everyman's rights | *Suomeksi original* |
-| 🔞 | **18+ pack** behind a toggle: bar talk, swearing, dating | *Suomeksi original* |
+| 🔞 | **18+ track** behind a toggle, with its own units and characters: bar talk, swearing, dating, parties | *Suomeksi original* |
 | 🎨 | **Kaamos Ink** visual style: comic-ink panels, hard shadows, halftone, slanted type | *Suomeksi original* |
 
 **Course content:** 4 A1 units + 2 units on the 18+ track · 21 lessons · 152 words · 116 sentences · 17 grammar notes · 2 stories · 5 conversations · 3 writing tasks · 232 lexicon word forms · 12 culture notes · 7 life-in-Finland notes · 11 study tips · 14 gym nouns · 12 gym verbs.
@@ -55,6 +60,8 @@ All content is AI-drafted and marked `"reviewed": false` until a native speaker 
 ## Quick start
 
 ```bash
+git clone https://github.com/FrankPonce/suomeksi.git
+cd suomeksi
 npm install
 npx expo install --fix     # aligns native package versions with your Expo SDK
 npm run web                # or: npm run android / npm run ios (Expo Go)
@@ -94,7 +101,7 @@ src/
   theme.ts               "Kaamos Ink" design tokens
   engine/                exercise generator, answer checker, FSRS, achievements
   state/store.ts         zustand store persisted to AsyncStorage / localStorage
-  audio/                 Piper clip manifest + TTS fallback
+  audio/                 clip manifest + device text-to-speech fallback
   components/            UI kit, character art, sentence breakdown, one component per exercise type
 scripts/                 audio generation, content validation, open-data importers
 docs/                    roadmap, sprint reviews, content guide
@@ -121,7 +128,15 @@ Run as a solo Scrum project, rotating through four roles each sprint: **Scrum Le
 | 11 | **Mobile release** | EAS builds, Play Store internal testing, PWA install, reminders | 🗓️ |
 | 12 | **Launch & insights** | Retention dashboard (D1/D7/D30), A/B tests, public beta | 🗓️ |
 
-Full feature comparison and backlog: [docs/ROADMAP.md](docs/ROADMAP.md).
+What the finished app looks like, how it compares with Duolingo, Speakly, WordDive and LingQ, and the decisions still open: [docs/ROADMAP.md](docs/ROADMAP.md).
+
+## Contributing
+
+The most useful thing right now is a native Finnish speaker reading the course. Content is plain JSON in `src/content/`, so a correction is a one-line pull request; the checklist is in [docs/CONTENT.md](docs/CONTENT.md). Run `npm run validate` and `npm run typecheck` before opening one.
+
+## Licence
+
+No licence has been chosen yet, so for now all rights are reserved. This is an open decision in the roadmap.
 
 ## Data sources & credits
 

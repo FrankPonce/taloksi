@@ -16,7 +16,7 @@ export function Fill({ ex, locked, onSubmit }: ExProps<E>) {
   return (
     <View style={{ gap: 18 }}>
       <ExTitle color={colors.aurora}>Täydennä · Fill in the blank</ExTitle>
-      <Speech speaker="norppa" size={68}>
+      <Speech size={68}>
         <Text style={{ fontSize: 24, lineHeight: 34, fontWeight: '700' }}>
           {f.before}{' '}
           <Text style={{ fontSize: 24, fontWeight: '700', color: colors.blue, textDecorationLine: 'underline' }}>{sel ?? '______'}</Text>{' '}

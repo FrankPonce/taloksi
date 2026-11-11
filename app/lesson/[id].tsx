@@ -3,7 +3,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { sfx } from '../../src/audio/sfx';
-import { Norppa } from '../../src/components/art';
+import { HostContext, Norppa } from '../../src/components/art';
 import { Breakdown } from '../../src/components/Breakdown';
 import { ExerciseView, isSilent, type ExerciseResult } from '../../src/components/exercises';
 import { Bob, Pop, Rise } from '../../src/components/motion';
@@ -157,9 +157,11 @@ export default function LessonScreen() {
       </View>
 
       {ex && (
-        <Pop key={ex.key}>
-          <ExerciseView ex={ex} locked={!!result} onSubmit={onSubmit} />
-        </Pop>
+        <HostContext.Provider value={{ id: lesson.host ?? 'norppa', mood: !result ? 'happy' : result.correct ? 'excited' : 'sad' }}>
+          <Pop key={ex.key}>
+            <ExerciseView ex={ex} locked={!!result} onSubmit={onSubmit} />
+          </Pop>
+        </HostContext.Provider>
       )}
 
       {result && (

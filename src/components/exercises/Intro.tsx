@@ -4,7 +4,7 @@ import { speak } from '../../audio/speak';
 import type { Exercise } from '../../engine/exercises';
 import { useApp } from '../../state/store';
 import { colors, font } from '../../theme';
-import { Norppa } from '../art';
+import { Avatar, useHost } from '../art';
 import { Text } from '../Text';
 import { Button, Muted, Panel, PosTag, PuheLine, SpeakerButton, WordPic } from '../ui';
 import { ExTitle } from './parts';
@@ -15,6 +15,7 @@ type E = Extract<Exercise, { kind: 'intro' }>;
 export function Intro({ ex, onSubmit }: ExProps<E>) {
   const rate = useApp((s) => s.settings.audioRate);
   const w = ex.word;
+  const host = useHost();
   useEffect(() => {
     speak(w.fi, { id: w.id, rate });
   }, [w.id]);
@@ -33,7 +34,7 @@ export function Intro({ ex, onSubmit }: ExProps<E>) {
       </Panel>
       {w.note ? (
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-          <Norppa size={54} />
+          <Avatar id={host.id} size={54} />
           <Muted style={{ flex: 1 }}>{w.note}</Muted>
         </View>
       ) : null}

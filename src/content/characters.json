@@ -21,7 +21,7 @@
     "hello": "Hei! Minä olen Sofia. Puhun vähän suomea.",
     "color": "#FF3B5C",
     "tag": { "style": "note", "bg": "#FFE066", "fg": "#0B0F1A", "accent": "#FF3B5C", "icon": "pencil" },
-    "avatar": { "skin": "#E9B58F", "hair": "#3A2418", "hairStyle": "bob", "shirt": "#FFC629", "outfit": "hoodie", "extras": ["earring"] },
+    "avatar": { "skin": "#E9B58F", "hair": "#3A2418", "hairStyle": "bob", "shirt": "#FFC629", "outfit": "hoodie", "extras": ["earring", "freckles", "lashes"], "eyes": "#8A5A2B", "prop": "pencil", "jaw": "soft", "tilt": -4 },
     "voice": { "base": "noora", "pitch": "+0Hz", "rate": "-6%", "gender": "f", "webPitch": 1.1, "webRate": 0.95 }
   },
   {
@@ -34,7 +34,7 @@
     "hello": "Terve. Pekka. Asun Turussa.",
     "color": "#2FE6A8",
     "tag": { "style": "plank", "bg": "#B5793A", "fg": "#FFF8EA", "accent": "#5C3A17", "icon": "leaf" },
-    "avatar": { "skin": "#F0C5A5", "hair": "#B8742F", "hairStyle": "beanie", "shirt": "#C8372D", "outfit": "flannel", "extras": ["bigbeard"] },
+    "avatar": { "skin": "#F0C5A5", "hair": "#B8742F", "hairStyle": "beanie", "shirt": "#C8372D", "outfit": "flannel", "extras": ["bigbeard", "thickbrows"], "eyes": "#4F8FD9", "eyeStyle": "sharp", "prop": "axe", "hat": "#2E5E4E", "tilt": 3 },
     "voice": { "base": "harri", "pitch": "-8Hz", "rate": "-6%", "gender": "m", "webPitch": 0.8, "webRate": 0.94 }
   },
   {
@@ -47,7 +47,7 @@
     "hello": "Moi! Mä oon Aino. Mitä sulle sais olla?",
     "color": "#FFC629",
     "tag": { "style": "sleeve", "bg": "#FFF8EA", "fg": "#5C3A17", "accent": "#5C3A17", "icon": "cafe" },
-    "avatar": { "skin": "#F6D2B8", "hair": "#F2E3A0", "hairStyle": "pony", "shirt": "#2A3964", "outfit": "apron", "extras": [] },
+    "avatar": { "skin": "#F6D2B8", "hair": "#F2E3A0", "hairStyle": "pony", "shirt": "#2A3964", "outfit": "apron", "extras": ["lashes"], "eyes": "#2F9E77", "jaw": "soft", "turn": -1, "tilt": 3 },
     "voice": { "base": "noora", "pitch": "+22Hz", "rate": "+10%", "gender": "f", "webPitch": 1.3, "webRate": 1.1 }
   },
   {
@@ -60,7 +60,7 @@
     "hello": "Hyvää päivää. Minä olen Helvi. Otatko pullaa?",
     "color": "#C9A6FF",
     "tag": { "style": "lace", "bg": "#FFE3EC", "fg": "#7A2843", "accent": "#B4455C", "icon": "flower" },
-    "avatar": { "skin": "#F1C9AE", "hair": "#E3E7EF", "hairStyle": "bun", "shirt": "#B4455C", "outfit": "cardigan", "extras": ["glasses", "pearls"] },
+    "avatar": { "skin": "#F1C9AE", "hair": "#E3E7EF", "hairStyle": "bun", "shirt": "#B4455C", "outfit": "cardigan", "extras": ["glasses", "pearls", "wrinkles", "thinbrows"], "eyes": "#6A7FA8", "eyeStyle": "sharp", "prop": "needles", "jaw": "soft", "tilt": 4 },
     "voice": { "base": "noora", "pitch": "-28Hz", "rate": "-16%", "gender": "f", "webPitch": 0.8, "webRate": 0.85 }
   },
   {
@@ -73,7 +73,7 @@
     "hello": "Huomenta. Bussi lähtee nyt.",
     "color": "#FF8A3D",
     "tag": { "style": "ticket", "bg": "#FF8A3D", "fg": "#0B0F1A", "accent": "#0B0F1A", "icon": "bus" },
-    "avatar": { "skin": "#EBC0A0", "hair": "#5A4632", "hairStyle": "cap", "shirt": "#2A3964", "outfit": "uniform", "extras": ["moustache"] },
+    "avatar": { "skin": "#EBC0A0", "hair": "#5A4632", "hairStyle": "cap", "shirt": "#2A3964", "outfit": "uniform", "extras": ["moustache", "thickbrows"], "eyes": "#6B5236", "eyeStyle": "sharp" },
     "voice": { "base": "harri", "pitch": "-22Hz", "rate": "-8%", "gender": "m", "webPitch": 0.65, "webRate": 0.92 }
   },
   {
@@ -86,7 +86,7 @@
     "hello": "Moi, mä oon Samir. Suomi on vaikea kieli, mutta se on mahdollista!",
     "color": "#2F6BFF",
     "tag": { "style": "badge", "bg": "#FFFFFF", "fg": "#0B0F1A", "accent": "#2F6BFF", "icon": "id-card" },
-    "avatar": { "skin": "#B9825B", "hair": "#16110F", "hairStyle": "curly", "shirt": "#2FE6A8", "outfit": "shirt", "extras": ["beard"] },
+    "avatar": { "skin": "#B9825B", "hair": "#16110F", "hairStyle": "curly", "shirt": "#2FE6A8", "outfit": "shirt", "extras": ["beard"], "eyes": "#5C3A1E", "tilt": -3 },
     "voice": { "base": "harri", "pitch": "+16Hz", "rate": "-3%", "gender": "m", "webPitch": 1, "webRate": 0.97 }
   },
   {
@@ -99,8 +99,73 @@
     "hello": "Moro! Mä oon Jere. Mä soitan kitaraa.",
     "color": "#0B0F1A",
     "tag": { "style": "punk", "bg": "#E0102F", "fg": "#FFFFFF", "accent": "#0B0F1A", "icon": "star" },
-    "avatar": { "skin": "#F3D3BC", "hair": "#E9CB6B", "hairStyle": "wolfcut", "shirt": "#17141C", "outfit": "vest", "extras": ["stubble", "earring"] },
+    "avatar": { "skin": "#F3D3BC", "hair": "#E9CB6B", "hairStyle": "wolfcut", "shirt": "#17141C", "outfit": "vest", "extras": ["stubble", "earring"], "eyes": "#4FB3E8", "eyeStyle": "sharp", "prop": "guitar", "turn": -1, "tilt": -5 },
     "voice": { "base": "harri", "pitch": "-10Hz", "rate": "+4%", "gender": "m", "webPitch": 0.75, "webRate": 1.04 }
+  },
+  {
+    "id": "joonas",
+    "name": "Joonas",
+    "role": "Lätkäfani",
+    "roleEn": "Hockey fan and gamer",
+    "bio": "Twenty-four, studies IT, plays floorball on Tuesdays and shouts at TPS games on Saturdays. Says \"no niin\" in eleven different tones and means something different each time. Your guide to free time, sports and what Finns actually do after work.",
+    "likes": "Hobbies, sports, free time, weekends, games",
+    "hello": "No moi! Mä oon Joonas. Katotaanko lätkää?",
+    "color": "#35C4D9",
+    "tag": { "style": "jersey", "bg": "#FFFFFF", "fg": "#0B0F1A", "accent": "#E0102F", "icon": "trophy" },
+    "avatar": { "skin": "#F2CDB0", "hair": "#7A5230", "hairStyle": "short", "shirt": "#F4F6FA", "outfit": "jersey", "extras": ["stubble"], "eyes": "#5E8C4A", "eyeStyle": "sharp", "turn": 1, "tilt": 2 },
+    "voice": { "base": "harri", "pitch": "+6Hz", "rate": "+5%", "gender": "m", "webPitch": 1.05, "webRate": 1.05 }
+  },
+  {
+    "id": "pukki",
+    "name": "Joulupukki",
+    "role": "Joulupukki",
+    "roleEn": "Santa Claus, from Korvatunturi",
+    "bio": "The real one. Finns will tell you, politely but firmly, that he lives on Korvatunturi fell in Lapland and keeps an office in Rovaniemi. Speaks slowly, knows every child's name, and asks the same question at every door: are there any good children here?",
+    "likes": "Winter, Christmas, Lapland, months and seasons, wishes",
+    "hello": "Hyvää joulua! Onkos täällä kilttejä lapsia?",
+    "color": "#1F8A5B",
+    "tag": { "style": "gift", "bg": "#E0102F", "fg": "#FFFFFF", "accent": "#FFC629", "icon": "gift" },
+    "avatar": { "skin": "#F3C9AE", "hair": "#F4F6FA", "hairStyle": "santa", "shirt": "#C8102E", "outfit": "santa", "extras": ["bigbeard", "glasses", "wrinkles", "thickbrows"], "eyes": "#4F8FD9", "eyeStyle": "sharp" },
+    "voice": { "base": "harri", "pitch": "-30Hz", "rate": "-14%", "gender": "m", "webPitch": 0.55, "webRate": 0.86 }
+  },
+  {
+    "id": "aada",
+    "name": "Aada",
+    "role": "Rokkari",
+    "roleEn": "Singer in a pop-punk band",
+    "bio": "Twenty-three, fronts a pop-punk band that rehearses in a garage in Kupittaa and skates to every gig. Has an opinion about everything and is not shy about any of them. Rolls her eyes in Finnish better than anyone you will meet.",
+    "likes": "Opinions, likes and dislikes, clothes, shopping, skating",
+    "hello": "Moi! Mä oon Aada. Ihan sama, mitä muut ajattelee.",
+    "color": "#FF4FA3",
+    "tag": { "style": "tape", "bg": "#0B0F1A", "fg": "#FFFFFF", "accent": "#FF4FA3", "icon": "musical-notes" },
+    "avatar": { "skin": "#F6D8C4", "hair": "#F3DE8A", "hairStyle": "long", "shirt": "#17141C", "outfit": "tie", "extras": ["lashes", "eyeliner", "streak"], "eyes": "#4FB3E8", "jaw": "soft", "turn": 1, "tilt": -4 },
+    "voice": { "base": "noora", "pitch": "+28Hz", "rate": "+6%", "gender": "f", "webPitch": 1.4, "webRate": 1.06 }
+  },
+  {
+    "id": "linh",
+    "name": "Linh",
+    "role": "Kvanttifyysikko",
+    "roleEn": "Quantum physicist",
+    "bio": "Grew up in Vantaa, did her doctorate in Otaniemi, and now builds quantum computers that have to be kept colder than outer space. Explains hard things simply, drinks her coffee black, and wins every pub quiz she enters.",
+    "likes": "Studying, science, technology, big numbers, the future",
+    "hello": "Hei, mä oon Linh. Mä rakennan kvanttitietokoneita.",
+    "color": "#1FBF8F",
+    "tag": { "style": "badge", "bg": "#FFFFFF", "fg": "#0B0F1A", "accent": "#1FBF8F", "icon": "flask" },
+    "avatar": { "skin": "#EBC29C", "hair": "#16110F", "hairStyle": "pony", "shirt": "#FFFFFF", "outfit": "labcoat", "extras": ["lashes", "glasses"], "eyes": "#4A2E1A", "jaw": "soft", "turn": -1, "tilt": 3 },
+    "voice": { "base": "noora", "pitch": "+6Hz", "rate": "-2%", "gender": "f", "webPitch": 1.15, "webRate": 0.98 }
+  },
+  {
+    "id": "tuuli",
+    "name": "Tuuli",
+    "role": "Sairaanhoitaja",
+    "roleEn": "Nurse at the university hospital",
+    "bio": "Works nights in the emergency department at Tyks and has seen everything twice. Calm, exact, and very hard to shock. Asks where it hurts, on a scale of one to ten, and actually listens to the answer.",
+    "likes": "Health, the body, the doctor, feeling unwell, emergencies",
+    "hello": "Hei, minä olen Tuuli. Mikä sinulla on hätänä?",
+    "color": "#7FD4FF",
+    "tag": { "style": "badge", "bg": "#FFFFFF", "fg": "#0B0F1A", "accent": "#E0102F", "icon": "medkit" },
+    "avatar": { "skin": "#FBEDE6", "hair": "#14121A", "hairStyle": "bun", "shirt": "#2E8FA3", "outfit": "scrubs", "extras": ["lashes"], "eyes": "#5E7FB0", "jaw": "soft", "tilt": 3 },
+    "voice": { "base": "noora", "pitch": "-8Hz", "rate": "-8%", "gender": "f", "webPitch": 0.95, "webRate": 0.92 }
   },
   {
     "id": "niko",
@@ -113,7 +178,7 @@
     "hello": "No moi. Mä oon Niko. Ihan sama.",
     "color": "#9B6BFF",
     "tag": { "style": "tape", "bg": "#0B0F1A", "fg": "#FFFFFF", "accent": "#9B6BFF", "icon": "skull" },
-    "avatar": { "skin": "#F7DCCB", "hair": "#14121A", "hairStyle": "emo", "shirt": "#14121A", "outfit": "jacket", "extras": ["lipring", "eyeliner"] },
+    "avatar": { "skin": "#F7DCCB", "hair": "#14121A", "hairStyle": "emo", "shirt": "#14121A", "outfit": "jacket", "extras": ["lipring", "eyeliner"], "eyes": "#B18CFF", "eyeStyle": "sharp", "prop": "headphones", "tilt": 5 },
     "voice": { "base": "harri", "pitch": "+30Hz", "rate": "-2%", "gender": "m", "webPitch": 1.2, "webRate": 0.98 }
   },
   {
@@ -127,7 +192,35 @@
     "hello": "Moi! Mä oon Leo. Mitä saisi olla?",
     "color": "#FF4FA3",
     "tag": { "style": "neon", "bg": "#141D38", "fg": "#FF8FC7", "accent": "#FF4FA3", "icon": "flash" },
-    "avatar": { "skin": "#F6DCC8", "hair": "#B8924A", "hairStyle": "swept", "shirt": "#141D38", "outfit": "tee", "extras": ["liprings", "browring", "chain"] },
+    "avatar": { "skin": "#F6DCC8", "hair": "#D9B45A", "hairStyle": "sidelocks", "shirt": "#141D38", "outfit": "tee", "extras": ["liprings", "browring", "chain", "mole"], "eyes": "#D9962B", "eyeStyle": "sharp", "turn": 1, "tilt": -4 },
     "voice": { "base": "harri", "pitch": "+8Hz", "rate": "+6%", "gender": "m", "webPitch": 0.95, "webRate": 1.06 }
+  },
+  {
+    "id": "ronja",
+    "adult": true,
+    "name": "Ronja",
+    "role": "Tatuoija",
+    "roleEn": "Tattoo artist",
+    "bio": "Twenty-nine, runs a two-chair studio in Kallio and has heard every bad idea a person can have at one in the morning. Dry, blunt, and fluent in the kind of Finnish you only learn by being insulted with affection.",
+    "likes": "Bodies, slang, insults, honesty, bad ideas",
+    "hello": "Moi. Ronja. Ootko ihan varma tosta?",
+    "color": "#1FBF8F",
+    "tag": { "style": "tape", "bg": "#0B0F1A", "fg": "#FFFFFF", "accent": "#1FBF8F", "icon": "brush" },
+    "avatar": { "skin": "#EFCBB2", "hair": "#C8102E", "hairStyle": "long", "shirt": "#17141C", "outfit": "tee", "extras": ["lashes", "eyeliner", "lipring", "necktattoo"], "eyes": "#3FBF9A", "jaw": "soft", "turn": -1, "tilt": 2 },
+    "voice": { "base": "noora", "pitch": "-14Hz", "rate": "+2%", "gender": "f", "webPitch": 0.9, "webRate": 1.02 }
+  },
+  {
+    "id": "veera",
+    "adult": true,
+    "name": "Veera",
+    "role": "DJ",
+    "roleEn": "DJ and club promoter",
+    "bio": "Plays techno until five and is somehow at brunch by eleven. Knows every door person in Helsinki by first name. Teaches the Finnish of queues, guest lists, afterparties and the morning after.",
+    "likes": "Clubs, music, nights out, the morning after",
+    "hello": "Moi moi! Mä oon Veera. Tuutko keikalle?",
+    "color": "#FFC629",
+    "tag": { "style": "neon", "bg": "#141D38", "fg": "#FFE066", "accent": "#FFC629", "icon": "disc" },
+    "avatar": { "skin": "#8E5A3C", "hair": "#FF4FA3", "hairStyle": "undercut", "shirt": "#141D38", "outfit": "jacket", "extras": ["lashes", "earring", "browring"], "eyes": "#F2B33D", "jaw": "soft", "prop": "headphones", "turn": 1, "tilt": 4 },
+    "voice": { "base": "noora", "pitch": "+12Hz", "rate": "+8%", "gender": "f", "webPitch": 1.2, "webRate": 1.08 }
   }
 ]

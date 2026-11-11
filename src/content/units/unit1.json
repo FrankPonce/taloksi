@@ -11,6 +11,7 @@
       "id": "u1l1",
       "title": "Hei!",
       "titleEn": "Hi!",
+      "host": "sofia",
       "grammar": "g_pronunciation",
       "words": [
         { "id": "w_hei", "fi": "hei", "en": "hi", "altEn": ["hello", "hey"], "pos": "phrase", "icon": "hand-wave" },
@@ -35,6 +36,7 @@
       "id": "u1l2",
       "title": "Mitä kuuluu?",
       "titleEn": "How are you?",
+      "host": "helvi",
       "words": [
         { "id": "w_mita_kuuluu", "fi": "mitä kuuluu", "en": "how are you", "altEn": ["how are you doing", "what's up"], "pos": "phrase", "icon": "chat-question" },
         { "id": "w_hyvaa", "fi": "hyvää", "en": "good", "altEn": ["fine", "well"], "pos": "adj", "icon": "emoticon-happy" },
@@ -44,11 +46,11 @@
         { "id": "w_huonoa", "fi": "huonoa", "en": "bad", "altEn": ["not good"], "pos": "adj", "icon": "thumb-down" }
       ],
       "sentences": [
-        { "id": "s_u1l2_1", "fi": "Hei, mitä kuuluu?", "en": "Hi, how are you?", "altEn": ["Hello, how are you?"], "puhe": "Moi, mitä kuuluu?", "speaker": "sofia" },
-        { "id": "s_u1l2_2", "fi": "Kiitos, hyvää.", "en": "Fine, thanks.", "altEn": ["Good, thanks.", "Thanks, good.", "Fine, thank you.", "Good, thank you.", "Thank you, fine.", "Thank you, good."], "speaker": "samir" },
-        { "id": "s_u1l2_3", "fi": "Entä sinulle?", "en": "And you?", "altEn": ["What about you?", "How about you?"], "puhe": "Entä sulle?", "speaker": "sofia" },
+        { "id": "s_u1l2_1", "fi": "Hei, mitä kuuluu?", "en": "Hi, how are you?", "altEn": ["Hello, how are you?"], "puhe": "Moi, mitä kuuluu?", "speaker": "helvi" },
+        { "id": "s_u1l2_2", "fi": "Kiitos, hyvää.", "en": "Fine, thanks.", "altEn": ["Good, thanks.", "Thanks, good.", "Fine, thank you.", "Good, thank you.", "Thank you, fine.", "Thank you, good."], "speaker": "helvi" },
+        { "id": "s_u1l2_3", "fi": "Entä sinulle?", "en": "And you?", "altEn": ["What about you?", "How about you?"], "puhe": "Entä sulle?", "speaker": "helvi" },
         { "id": "s_u1l2_4", "fi": "Ihan hyvää, kiitos.", "en": "Pretty good, thanks.", "altEn": ["Pretty good, thank you.", "Quite good, thanks.", "Fine, thanks."], "speaker": "helvi" },
-        { "id": "s_u1l2_5", "fi": "Minulle kuuluu hyvää.", "en": "I am doing well.", "altEn": ["I am doing fine.", "I am fine.", "I am well."], "puhe": "Mulle kuuluu hyvää.", "speaker": "mikko" }
+        { "id": "s_u1l2_5", "fi": "Minulle kuuluu hyvää.", "en": "I am doing well.", "altEn": ["I am doing fine.", "I am fine.", "I am well."], "puhe": "Mulle kuuluu hyvää.", "speaker": "helvi" }
       ],
       "fill": [
         { "id": "f_u1l2_1", "before": "Mitä", "after": "?", "answer": "kuuluu", "options": ["kuuluu", "kiitos", "hyvää"], "en": "How are you?" }
@@ -58,6 +60,7 @@
       "id": "u1l3",
       "title": "Kuka sinä olet?",
       "titleEn": "Who are you?",
+      "host": "norppa",
       "grammar": "g_olla",
       "words": [
         { "id": "w_mina", "fi": "minä", "en": "I", "puhe": "mä", "pos": "pron", "icon": "account" },
@@ -70,12 +73,12 @@
         { "id": "w_nimi", "fi": "nimi", "en": "name", "pos": "noun", "icon": "card-account-details" }
       ],
       "sentences": [
-        { "id": "s_u1l3_1", "fi": "Kuka sinä olet?", "en": "Who are you?", "altFi": ["Kuka olet?"], "puhe": "Kuka sä oot?", "speaker": "helvi" },
+        { "id": "s_u1l3_1", "fi": "Kuka sinä olet?", "en": "Who are you?", "altFi": ["Kuka olet?"], "puhe": "Kuka sä oot?", "speaker": "norppa" },
         { "id": "s_u1l3_2", "fi": "Minun nimeni on Sofia.", "en": "My name is Sofia.", "altFi": ["Nimeni on Sofia."], "puhe": "Mun nimi on Sofia.", "speaker": "sofia" },
-        { "id": "s_u1l3_3", "fi": "Mikä sinun nimesi on?", "en": "What is your name?", "altFi": ["Mikä nimesi on?"], "puhe": "Mikä sun nimi on?", "speaker": "mikko" },
-        { "id": "s_u1l3_4", "fi": "Hän on Pekka.", "en": "He is Pekka.", "puhe": "Se on Pekka.", "speaker": "samir" },
-        { "id": "s_u1l3_5", "fi": "Me olemme ystäviä.", "en": "We are friends.", "altFi": ["Olemme ystäviä."], "puhe": "Me ollaan kavereita.", "speaker": "sofia" },
-        { "id": "s_u1l3_6", "fi": "He ovat opiskelijoita.", "en": "They are students.", "puhe": "Ne on opiskelijoita.", "speaker": "sofia" }
+        { "id": "s_u1l3_3", "fi": "Mikä sinun nimesi on?", "en": "What is your name?", "altFi": ["Mikä nimesi on?"], "puhe": "Mikä sun nimi on?", "speaker": "norppa" },
+        { "id": "s_u1l3_4", "fi": "Hän on Pekka.", "en": "He is Pekka.", "puhe": "Se on Pekka.", "speaker": "norppa" },
+        { "id": "s_u1l3_5", "fi": "Me olemme ystäviä.", "en": "We are friends.", "altFi": ["Olemme ystäviä."], "puhe": "Me ollaan kavereita.", "speaker": "norppa" },
+        { "id": "s_u1l3_6", "fi": "He ovat opiskelijoita.", "en": "They are students.", "puhe": "Ne on opiskelijoita.", "speaker": "norppa" }
       ],
       "fill": [
         { "id": "f_u1l3_1", "before": "Sinä", "after": "Sofia.", "answer": "olet", "options": ["olen", "olet", "ovat"], "en": "You are Sofia." },
@@ -86,6 +89,7 @@
       "id": "u1l4",
       "title": "Kiitos ja anteeksi",
       "titleEn": "Thanks and sorry",
+      "host": "samir",
       "grammar": "g_negation",
       "words": [
         { "id": "w_anteeksi", "fi": "anteeksi", "en": "sorry", "altEn": ["excuse me", "pardon"], "pos": "phrase", "icon": "emoticon-sad-outline" },
@@ -96,12 +100,12 @@
         { "id": "w_joo", "fi": "joo", "en": "yeah", "altEn": ["yes"], "pos": "particle", "icon": "check" }
       ],
       "sentences": [
-        { "id": "s_u1l4_1", "fi": "Anteeksi, en ymmärrä.", "en": "Sorry, I don't understand.", "altEn": ["Excuse me, I don't understand."], "puhe": "Sori, mä en ymmärrä.", "speaker": "sofia" },
-        { "id": "s_u1l4_2", "fi": "Kiitos paljon, Sofia!", "en": "Thank you very much, Sofia!", "altEn": ["Thanks a lot, Sofia!", "Thank you so much, Sofia!"], "speaker": "pekka" },
-        { "id": "s_u1l4_3", "fi": "Puhutko englantia?", "en": "Do you speak English?", "puhe": "Puhuks sä englantia?", "speaker": "sofia" },
-        { "id": "s_u1l4_4", "fi": "Kyllä, puhun.", "en": "Yes, I do.", "altEn": ["Yes, I speak.", "Yes, I speak it."], "puhe": "Joo, puhun.", "speaker": "pekka" },
-        { "id": "s_u1l4_5", "fi": "Ei, en puhu.", "en": "No, I don't.", "altEn": ["No, I don't speak.", "No, I don't speak it."], "speaker": "pekka" },
-        { "id": "s_u1l4_6", "fi": "Voitko puhua hitaammin?", "en": "Can you speak more slowly?", "altEn": ["Could you speak more slowly?", "Can you speak slower?"], "puhe": "Voitsä puhuu hitaammin?", "speaker": "helvi" }
+        { "id": "s_u1l4_1", "fi": "Anteeksi, en ymmärrä.", "en": "Sorry, I don't understand.", "altEn": ["Excuse me, I don't understand."], "puhe": "Sori, mä en ymmärrä.", "speaker": "samir" },
+        { "id": "s_u1l4_2", "fi": "Kiitos paljon, Sofia!", "en": "Thank you very much, Sofia!", "altEn": ["Thanks a lot, Sofia!", "Thank you so much, Sofia!"], "speaker": "samir" },
+        { "id": "s_u1l4_3", "fi": "Puhutko englantia?", "en": "Do you speak English?", "puhe": "Puhuks sä englantia?", "speaker": "samir" },
+        { "id": "s_u1l4_4", "fi": "Kyllä, puhun.", "en": "Yes, I do.", "altEn": ["Yes, I speak.", "Yes, I speak it."], "puhe": "Joo, puhun.", "speaker": "samir" },
+        { "id": "s_u1l4_5", "fi": "Ei, en puhu.", "en": "No, I don't.", "altEn": ["No, I don't speak.", "No, I don't speak it."], "speaker": "samir" },
+        { "id": "s_u1l4_6", "fi": "Voitko puhua hitaammin?", "en": "Can you speak more slowly?", "altEn": ["Could you speak more slowly?", "Can you speak slower?"], "puhe": "Voitsä puhuu hitaammin?", "speaker": "samir" }
       ],
       "fill": [
         { "id": "f_u1l4_1", "before": "Anteeksi, en", "after": ".", "answer": "ymmärrä", "options": ["ymmärrä", "ymmärrän", "ymmärtää"], "en": "Sorry, I don't understand.", "hint": "After the negative verb (en, et, ei…) the main verb loses its personal ending." }

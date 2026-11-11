@@ -45,6 +45,8 @@ export type Lesson = {
   words: Word[];
   sentences: Sentence[];
   fill?: FillBlank[];
+  /** character who teaches this lesson: they present every exercise and say most of the lines */
+  host?: string;
   /** id of a grammar note to suggest before the lesson */
   grammar?: string;
 };
@@ -150,14 +152,28 @@ export type Character = {
   /** topics this character tends to teach */
   likes: string;
   /** how their name tag looks */
-  tag: { style: 'punk' | 'plank' | 'note' | 'sleeve' | 'lace' | 'ticket' | 'badge' | 'ice' | 'tape' | 'neon'; bg: string; fg: string; accent: string; icon: string };
+  tag: { style: 'punk' | 'plank' | 'note' | 'sleeve' | 'lace' | 'ticket' | 'badge' | 'ice' | 'tape' | 'neon' | 'jersey' | 'gift'; bg: string; fg: string; accent: string; icon: string };
   avatar?: {
     skin: string;
     hair: string;
-    hairStyle: 'bob' | 'short' | 'pony' | 'bun' | 'cap' | 'curly' | 'long' | 'emo' | 'undercut' | 'beanie' | 'wolfcut' | 'swept';
+    hairStyle: 'bob' | 'short' | 'pony' | 'bun' | 'cap' | 'curly' | 'long' | 'emo' | 'undercut' | 'beanie' | 'wolfcut' | 'swept' | 'santa' | 'sidelocks';
     shirt: string;
-    outfit?: 'hoodie' | 'flannel' | 'apron' | 'cardigan' | 'uniform' | 'shirt' | 'vest' | 'jacket' | 'tee';
+    outfit?: 'hoodie' | 'flannel' | 'apron' | 'cardigan' | 'uniform' | 'shirt' | 'vest' | 'jacket' | 'tee' | 'jersey' | 'santa' | 'tie' | 'labcoat' | 'scrubs';
     extras?: string[];
+    /** iris colour */
+    eyes?: string;
+    /** 'sharp' eyes are narrower; default is round */
+    eyeStyle?: 'round' | 'sharp';
+    /** 'soft' rounds the jaw; default is angular */
+    jaw?: 'soft';
+    /** something they carry: it makes the silhouette theirs */
+    prop?: 'axe' | 'guitar' | 'needles' | 'pencil' | 'headphones';
+    /** which way the head is turned: -1 to the viewer's left, 1 to the right. Default faces the viewer. */
+    turn?: -1 | 0 | 1;
+    /** head tilt in degrees */
+    tilt?: number;
+    /** hat colour, for the beanie */
+    hat?: string;
   };
   voice: { base: 'noora' | 'harri'; pitch: string; rate: string; gender: 'f' | 'm'; webPitch: number; webRate: number };
 };

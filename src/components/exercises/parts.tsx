@@ -28,7 +28,7 @@ export function Prompt({
   children?: ReactNode;
 }) {
   return (
-    <Speech speaker={speaker ?? 'norppa'} size={68}>
+    <Speech speaker={speaker} size={68}>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
         {audio && <SpeakerButton text={audio.text} id={audio.id} speaker={speaker} size="sm" />}
         {fi ? <Glossed text={text} /> : <Text style={{ fontSize: big ? 30 : 22, lineHeight: big ? 34 : 28, fontWeight: '700', flexShrink: 1 }}>{text}</Text>}

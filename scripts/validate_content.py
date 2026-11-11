@@ -71,6 +71,14 @@ for u in units:
         lesson_ids.add(l["id"])
         if l.get("grammar") and l["grammar"] not in grammar_ids:
             errors.append(f"{l['id']}: grammar note '{l['grammar']}' does not exist")
+        if not l.get("host"):
+            errors.append(f"{l['id']}: no host character")
+        check_speaker(l["id"], l.get("host"))
+        if u.get("track", "main") != "adult" and next((c for c in load_characters() if c["id"] == l.get("host")), {}).get("adult"):
+            errors.append(f"{l['id']}: an 18+ character hosts a main-course lesson")
+        guests = {s_["speaker"] for s_ in l["sentences"] if s_.get("speaker") != l.get("host")}
+        if len(guests) > 2:
+            warnings.append(f"{l['id']}: {len(guests)} guest speakers besides the host; keep it to one voice where you can")
         if len(l["words"]) < 3:
             warnings.append(f"{l['id']}: fewer than 3 words (match exercise is skipped)")
         for w in l["words"]:

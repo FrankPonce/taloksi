@@ -12,6 +12,7 @@
       "id": "x2l1",
       "title": "Bileissä",
       "titleEn": "At the party",
+      "host": "jere",
       "grammar": "g_plural_places",
       "words": [
         { "id": "w_bileet", "fi": "bileet", "en": "party", "note": "Always plural, like 'treffit'. The formal word is 'juhlat'.", "pos": "noun", "icon": "balloon" },
@@ -22,12 +23,12 @@
         { "id": "w_vasynyt", "fi": "väsynyt", "en": "tired", "puhe": "väsyny", "pos": "adj", "icon": "sleep" }
       ],
       "sentences": [
-        { "id": "s_x2l1_1", "fi": "Tuletko bileisiin?", "en": "Are you coming to the party?", "altEn": ["Will you come to the party?"], "puhe": "Tuuks sä bileisiin?", "speaker": "niko" },
-        { "id": "s_x2l1_2", "fi": "Musiikki on liian kovalla.", "en": "The music is too loud.", "speaker": "helvi" },
-        { "id": "s_x2l1_3", "fi": "Haluatko tanssia?", "en": "Do you want to dance?", "puhe": "Haluuks sä tanssii?", "speaker": "leo" },
-        { "id": "s_x2l1_4", "fi": "Olen ihan kännissä.", "en": "I am totally wasted.", "altEn": ["I am totally drunk.", "I am completely wasted."], "puhe": "Mä oon ihan kännissä.", "speaker": "niko" },
+        { "id": "s_x2l1_1", "fi": "Tuletko bileisiin?", "en": "Are you coming to the party?", "altEn": ["Will you come to the party?"], "puhe": "Tuuks sä bileisiin?", "speaker": "jere" },
+        { "id": "s_x2l1_2", "fi": "Musiikki on liian kovalla.", "en": "The music is too loud.", "speaker": "jere" },
+        { "id": "s_x2l1_3", "fi": "Haluatko tanssia?", "en": "Do you want to dance?", "puhe": "Haluuks sä tanssii?", "speaker": "jere" },
+        { "id": "s_x2l1_4", "fi": "Olen ihan kännissä.", "en": "I am totally wasted.", "altEn": ["I am totally drunk.", "I am completely wasted."], "puhe": "Mä oon ihan kännissä.", "speaker": "jere" },
         { "id": "s_x2l1_5", "fi": "Mennäänkö jatkoille?", "en": "Shall we go to the afterparty?", "altEn": ["Shall we go to an afterparty?"], "puhe": "Mennääks jatkoille?", "speaker": "jere" },
-        { "id": "s_x2l1_6", "fi": "Olen väsynyt, menen kotiin.", "en": "I am tired, I am going home.", "altEn": ["I am tired, I go home.", "I am tired, I will go home."], "puhe": "Mä oon väsyny, mä meen kotiin.", "speaker": "sofia" }
+        { "id": "s_x2l1_6", "fi": "Olen väsynyt, menen kotiin.", "en": "I am tired, I am going home.", "altEn": ["I am tired, I go home.", "I am tired, I will go home."], "puhe": "Mä oon väsyny, mä meen kotiin.", "speaker": "jere" }
       ],
       "fill": [
         { "id": "f_x2l1_1", "before": "Tuletko", "after": "?", "answer": "bileisiin", "options": ["bileet", "bileissä", "bileisiin"], "en": "Are you coming to the party?", "hint": "Mihin? Into the party. Plural illative: bile + i + siin." },
@@ -38,6 +39,7 @@
       "id": "x2l2",
       "title": "Tunteet ja riidat",
       "titleEn": "Feelings and fights",
+      "host": "niko",
       "grammar": "g_feelings",
       "words": [
         { "id": "w_tunne", "fi": "tunne", "en": "feeling", "pos": "noun", "icon": "heart-pulse" },
@@ -49,11 +51,11 @@
         { "id": "w_sori", "fi": "sori", "en": "sorry (casual)", "altEn": ["sorry"], "pos": "phrase", "icon": "hand-peace" }
       ],
       "sentences": [
-        { "id": "s_x2l2_1", "fi": "Olen vihainen sinulle.", "en": "I am angry at you.", "altEn": ["I am angry with you.", "I am mad at you."], "puhe": "Mä oon vihanen sulle.", "speaker": "leo" },
+        { "id": "s_x2l2_1", "fi": "Olen vihainen sinulle.", "en": "I am angry at you.", "altEn": ["I am angry with you.", "I am mad at you."], "puhe": "Mä oon vihanen sulle.", "speaker": "niko" },
         { "id": "s_x2l2_2", "fi": "Minulla on ikävä sinua.", "en": "I miss you.", "puhe": "Mulla on ikävä sua.", "speaker": "niko" },
-        { "id": "s_x2l2_3", "fi": "Oletko mustasukkainen?", "en": "Are you jealous?", "puhe": "Ootsä mustasukkanen?", "speaker": "leo" },
-        { "id": "s_x2l2_4", "fi": "Hän on minun exäni.", "en": "He is my ex.", "altEn": ["She is my ex."], "puhe": "Se on mun exä.", "speaker": "aino" },
-        { "id": "s_x2l2_5", "fi": "Sinä olet idiootti.", "en": "You are an idiot.", "puhe": "Sä oot idiootti.", "speaker": "aino" },
+        { "id": "s_x2l2_3", "fi": "Oletko mustasukkainen?", "en": "Are you jealous?", "puhe": "Ootsä mustasukkanen?", "speaker": "niko" },
+        { "id": "s_x2l2_4", "fi": "Hän on minun exäni.", "en": "He is my ex.", "altEn": ["She is my ex."], "puhe": "Se on mun exä.", "speaker": "niko" },
+        { "id": "s_x2l2_5", "fi": "Sinä olet idiootti.", "en": "You are an idiot.", "puhe": "Sä oot idiootti.", "speaker": "niko" },
         { "id": "s_x2l2_6", "fi": "Sori, olen idiootti.", "en": "Sorry, I am an idiot.", "puhe": "Sori, mä oon idiootti.", "speaker": "niko" }
       ],
       "fill": [

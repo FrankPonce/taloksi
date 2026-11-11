@@ -76,13 +76,14 @@ def run_edge(force):
 
     voices = {c["id"]: c["voice"] for c in load_characters()}
     jobs = list(todo(force))
-    sem = asyncio.Semaphore(6)
     failed = []
+    sem = None  # made inside the event loop: older Pythons bind a semaphore to the loop it was created in
 
     async def one(audio_id, text, speaker):
         v = voices.get(speaker, NARRATOR)
         out = AUDIO_DIR / f"{audio_id}.mp3"
         async with sem:
+            err = None
             for attempt in range(3):
                 try:
                     await edge_tts.Communicate(text, EDGE_VOICES[v["base"]], rate=v["rate"], pitch=v["pitch"]).save(str(out))
@@ -91,10 +92,13 @@ def run_edge(force):
                 except Exception as e:  # network hiccups: retry, then report
                     err = e
                     await asyncio.sleep(1 + attempt)
-            out.unlink(missing_ok=True)
+            if out.exists():
+                out.unlink()
             failed.append((audio_id, str(err)))
 
     async def main():
+        nonlocal sem
+        sem = asyncio.Semaphore(6)
         await asyncio.gather(*(one(*j) for j in jobs))
 
     asyncio.run(main())

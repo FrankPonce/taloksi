@@ -12,6 +12,7 @@
       "id": "x1l1",
       "title": "Baarissa",
       "titleEn": "At the bar",
+      "host": "leo",
       "words": [
         { "id": "w_baari", "fi": "baari", "en": "bar", "pos": "noun", "icon": "glass-cocktail" },
         { "id": "w_kalja", "fi": "kalja", "en": "beer (casual)", "altEn": ["beer"], "note": "The textbook word is 'olut'. At the bar almost everyone says 'kalja' or 'bisse'.", "pos": "noun", "icon": "glass-mug" },
@@ -23,11 +24,11 @@
         { "id": "w_krapula", "fi": "krapula", "en": "hangover", "puhe": "darra", "pos": "noun", "icon": "emoticon-sick" }
       ],
       "sentences": [
-        { "id": "s_x1l1_1", "fi": "Yksi olut, kiitos.", "en": "One beer, please.", "puhe": "Yks kalja, kiitos.", "speaker": "niko" },
-        { "id": "s_x1l1_2", "fi": "Kippis, Pekka!", "en": "Cheers, Pekka!", "speaker": "sofia" },
+        { "id": "s_x1l1_1", "fi": "Yksi olut, kiitos.", "en": "One beer, please.", "puhe": "Yks kalja, kiitos.", "speaker": "leo" },
+        { "id": "s_x1l1_2", "fi": "Kippis, Pekka!", "en": "Cheers, Pekka!", "speaker": "leo" },
         { "id": "s_x1l1_3", "fi": "Otan lonkeron.", "en": "I'll take a long drink.", "altEn": ["I will take a long drink.", "I take a long drink."], "puhe": "Mä otan lonkeron.", "speaker": "leo" },
-        { "id": "s_x1l1_4", "fi": "Olen vähän humalassa.", "en": "I am a little drunk.", "altEn": ["I am a bit drunk."], "puhe": "Mä oon vähän kännissä.", "speaker": "niko" },
-        { "id": "s_x1l1_5", "fi": "Minulla on krapula.", "en": "I have a hangover.", "puhe": "Mulla on darra.", "speaker": "pekka" },
+        { "id": "s_x1l1_4", "fi": "Olen vähän humalassa.", "en": "I am a little drunk.", "altEn": ["I am a bit drunk."], "puhe": "Mä oon vähän kännissä.", "speaker": "leo" },
+        { "id": "s_x1l1_5", "fi": "Minulla on krapula.", "en": "I have a hangover.", "puhe": "Mulla on darra.", "speaker": "leo" },
         { "id": "s_x1l1_6", "fi": "Mennäänkö baariin?", "en": "Shall we go to a bar?", "altEn": ["Shall we go to the bar?", "Should we go to a bar?"], "puhe": "Mennääks baariin?", "speaker": "leo" }
       ],
       "fill": [
@@ -39,6 +40,7 @@
       "id": "x1l2",
       "title": "Kirosanat",
       "titleEn": "Swearing",
+      "host": "niko",
       "grammar": "g_swearing",
       "words": [
         { "id": "w_hitto", "fi": "hitto", "en": "damn (mild)", "altEn": ["damn", "darn"], "note": "Strength 1/5. Safe almost anywhere.", "pos": "phrase" },
@@ -53,9 +55,9 @@
       "sentences": [
         { "id": "s_x1l2_1", "fi": "Voi hitto!", "en": "Oh damn!", "altEn": ["Damn!", "Oh darn!"], "speaker": "helvi" },
         { "id": "s_x1l2_2", "fi": "Voi vittu!", "en": "Oh fuck!", "altEn": ["Fuck!"], "speaker": "niko" },
-        { "id": "s_x1l2_3", "fi": "Mitä helvettiä?", "en": "What the hell?", "speaker": "pekka" },
+        { "id": "s_x1l2_3", "fi": "Mitä helvettiä?", "en": "What the hell?", "speaker": "niko" },
         { "id": "s_x1l2_4", "fi": "Tämä on ihan paska.", "en": "This is total shit.", "altEn": ["This is totally shit.", "This is complete shit.", "This is just shit."], "puhe": "Tää on ihan paska.", "speaker": "niko" },
-        { "id": "s_x1l2_5", "fi": "Vitun hyvä!", "en": "Fucking good!", "altEn": ["Fucking great!"], "speaker": "jere" },
+        { "id": "s_x1l2_5", "fi": "Vitun hyvä!", "en": "Fucking good!", "altEn": ["Fucking great!"], "speaker": "niko" },
         { "id": "s_x1l2_6", "fi": "Perkele, bussi on myöhässä.", "en": "Damn it, the bus is late.", "altEn": ["Perkele, the bus is late.", "Damn, the bus is late."], "speaker": "mikko" }
       ],
       "fill": [
@@ -67,6 +69,7 @@
       "id": "x1l3",
       "title": "Treffeillä",
       "titleEn": "On a date",
+      "host": "leo",
       "grammar": "g_rection",
       "words": [
         { "id": "w_treffit", "fi": "treffit", "en": "date (romantic)", "altEn": ["date", "a date"], "note": "Always plural in Finnish, like 'scissors' in English.", "pos": "noun", "icon": "heart-multiple" },
@@ -80,11 +83,11 @@
       ],
       "sentences": [
         { "id": "s_x1l3_1", "fi": "Lähdetkö treffeille?", "en": "Will you go on a date?", "altEn": ["Do you want to go on a date?", "Will you go on a date with me?"], "puhe": "Lähetsä treffeille?", "speaker": "leo" },
-        { "id": "s_x1l3_2", "fi": "Olen sinkku.", "en": "I am single.", "puhe": "Mä oon sinkku.", "speaker": "niko" },
-        { "id": "s_x1l3_3", "fi": "Tykkään sinusta.", "en": "I like you.", "puhe": "Mä tykkään susta.", "speaker": "sofia" },
+        { "id": "s_x1l3_2", "fi": "Olen sinkku.", "en": "I am single.", "puhe": "Mä oon sinkku.", "speaker": "leo" },
+        { "id": "s_x1l3_3", "fi": "Tykkään sinusta.", "en": "I like you.", "puhe": "Mä tykkään susta.", "speaker": "leo" },
         { "id": "s_x1l3_4", "fi": "Sinä olet ihana.", "en": "You are lovely.", "altEn": ["You are wonderful."], "puhe": "Sä oot ihana.", "speaker": "leo" },
-        { "id": "s_x1l3_5", "fi": "Minä rakastan sinua.", "en": "I love you.", "altFi": ["Rakastan sinua."], "puhe": "Mä rakastan sua.", "speaker": "sofia" },
-        { "id": "s_x1l3_6", "fi": "Saanko suudella sinua?", "en": "May I kiss you?", "altEn": ["Can I kiss you?"], "puhe": "Saanks mä pussata sua?", "speaker": "niko" },
+        { "id": "s_x1l3_5", "fi": "Minä rakastan sinua.", "en": "I love you.", "altFi": ["Rakastan sinua."], "puhe": "Mä rakastan sua.", "speaker": "leo" },
+        { "id": "s_x1l3_6", "fi": "Saanko suudella sinua?", "en": "May I kiss you?", "altEn": ["Can I kiss you?"], "puhe": "Saanks mä pussata sua?", "speaker": "leo" },
         { "id": "s_x1l3_7", "fi": "Mennäänkö meille vai teille?", "en": "Shall we go to my place or yours?", "altEn": ["My place or yours?", "Your place or mine?"], "puhe": "Mennääks meille vai teille?", "speaker": "leo" }
       ],
       "fill": [

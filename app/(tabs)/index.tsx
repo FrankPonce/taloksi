@@ -97,7 +97,7 @@ export default function LearnScreen() {
               const unlocked = isLessonUnlocked(l.id, s.lessons, s.settings.unlockAll);
               const rec = s.lessons[l.id];
               const offset = [0, 46, 80, 46][li % 4];
-              const who = u.host ?? 'norppa';
+              const who = l.host ?? u.host ?? 'norppa';
               const fill = !unlocked ? colors.nightSoft : rec ? colors.gold : colors.paper;
               return (
                 <Pressable key={l.id} disabled={!unlocked} onPress={() => router.push(`/lesson/${l.id}`)} style={[styles.node, { marginLeft: offset }]}>
