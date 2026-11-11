@@ -5,7 +5,7 @@
   "color": "#8E44AD",
   "host": "mikko",
   "scene": "city",
-  "reviewed": false,
+  "reviewed": true,
   "lessons": [
     {
       "id": "u4l1",
@@ -24,14 +24,15 @@
         { "id": "w_ruokakauppa", "fi": "ruokakauppa", "en": "grocery store", "altEn": ["supermarket", "food shop"], "pos": "noun", "icon": "cart" }
       ],
       "sentences": [
-        { "id": "s_u4l1_1", "fi": "Kirjasto on lähellä.", "en": "The library is nearby.", "altEn": ["The library is close.", "The library is near."], "puhe": "Kirjasto on lähel.", "speaker": "samir" },
-        { "id": "s_u4l1_2", "fi": "Missä on apteekki?", "en": "Where is the pharmacy?", "altEn": ["Where is a pharmacy?"], "speaker": "samir" },
-        { "id": "s_u4l1_3", "fi": "Tori on keskustassa.", "en": "The market square is in the city center.", "altEn": ["The market square is downtown.", "The market square is in the city centre.", "The market is in the city center.", "The market is downtown."], "speaker": "samir" },
-        { "id": "s_u4l1_4", "fi": "Asema on tuolla.", "en": "The station is over there.", "altEn": ["The station is there."], "puhe": "Asema on tuol.", "speaker": "samir" },
-        { "id": "s_u4l1_5", "fi": "Ravintola on kiinni.", "en": "The restaurant is closed.", "speaker": "samir" }
+        { "id": "s_u4l1_1", "fi": "Kirjasto on lähellä.", "en": "The library is nearby.", "altEn": ["The library is near.", "The library is close."], "puhe": "Kirjasto on lähel.", "speaker": "samir" },
+        { "id": "s_u4l1_2", "fi": "Missä on apteekki?", "en": "Where is the pharmacy?", "altFi": ["Missä apteekki on?"], "speaker": "samir" },
+        { "id": "s_u4l1_3", "fi": "Asema on tuolla.", "en": "The station is over there.", "speaker": "samir" },
+        { "id": "s_u4l1_4", "fi": "Ravintola on kiinni.", "en": "The restaurant is closed.", "speaker": "samir" },
+        { "id": "s_u4l1_5", "fi": "Haluan omenan.", "en": "I want an apple.", "puhe": "Mä haluun omenan.", "speaker": "samir" },
+        { "id": "s_u4l1_6", "fi": "Tarvitsetko kassin?", "en": "Do you need a bag?", "note": "You'll hear this at every K-Market and S-Market checkout.", "puhe": "Tarviiks kassin?", "speaker": "aino" }
       ],
       "fill": [
-        { "id": "f_u4l1_1", "before": "Tori on", "after": ".", "answer": "keskustassa", "options": ["keskusta", "keskustassa", "keskustaan"], "en": "The market square is in the city center." }
+        { "id": "f_u4l1_1", "before": "Tarvitsetko", "after": "?", "answer": "kassin", "options": ["kassi", "kassin", "kassissa"], "en": "Do you need a bag?", "hint": "One whole thing you need: -n." }
       ]
     },
     {
@@ -46,14 +47,16 @@
         { "id": "w_suoraan", "fi": "suoraan", "en": "straight", "altEn": ["straight ahead"], "pos": "adv", "icon": "arrow-up-bold" },
         { "id": "w_lahella", "fi": "lähellä", "en": "near", "altEn": ["nearby", "close"], "puhe": "lähel", "pos": "adv", "icon": "map-marker-radius" },
         { "id": "w_kaukana", "fi": "kaukana", "en": "far", "altEn": ["far away"], "pos": "adv", "icon": "map-marker-distance" },
-        { "id": "w_vieressa", "fi": "vieressä", "en": "next to", "altEn": ["beside"], "puhe": "vieres", "pos": "adv" }
+        { "id": "w_vieressa", "fi": "vieressä", "en": "next to", "altEn": ["beside"], "puhe": "vieres", "pos": "adv" },
+        { "id": "w_vanhin", "fi": "vanhin", "en": "oldest", "altEn": ["the oldest"], "pos": "adj", "icon": "castle" }
       ],
       "sentences": [
         { "id": "s_u4l2_1", "fi": "Apteekki on vasemmalla.", "en": "The pharmacy is on the left.", "speaker": "mikko" },
-        { "id": "s_u4l2_2", "fi": "Pankki on kirjaston vieressä.", "en": "The bank is next to the library.", "altEn": ["The bank is beside the library."], "puhe": "Pankki on kirjaston vieres.", "speaker": "mikko" },
-        { "id": "s_u4l2_3", "fi": "Mene suoraan eteenpäin.", "en": "Go straight ahead.", "altEn": ["Go straight on.", "Go straight."], "puhe": "Mee suoraan eteenpäin.", "speaker": "mikko" },
+        { "id": "s_u4l2_2", "fi": "Pankki on kirjaston vieressä.", "en": "The bank is next to the library.", "puhe": "Pankki on kirjaston vieres.", "speaker": "mikko" },
+        { "id": "s_u4l2_3", "fi": "Ravintola on oikealla.", "en": "The restaurant is on the right.", "speaker": "mikko" },
         { "id": "s_u4l2_4", "fi": "Onko asema kaukana?", "en": "Is the station far?", "altEn": ["Is the station far away?"], "puhe": "Onks asema kaukana?", "speaker": "mikko" },
-        { "id": "s_u4l2_5", "fi": "Ei, se on lähellä.", "en": "No, it is near.", "altEn": ["No, it is close.", "No, it is nearby."], "puhe": "Ei, se on lähel.", "speaker": "mikko" }
+        { "id": "s_u4l2_5", "fi": "Ei, se on lähellä.", "en": "No, it is near.", "altEn": ["No, it's nearby.", "No, it is close.", "No, it's near."], "puhe": "Ei, se on lähel.", "speaker": "mikko" },
+        { "id": "s_u4l2_6", "fi": "Turku on Suomen vanhin kaupunki.", "en": "Turku is the oldest city in Finland.", "altEn": ["Turku is Finland's oldest city."], "fact": "True. Turku grew up around its cathedral in the 1200s and was the capital until 1812.", "speaker": "mikko" }
       ],
       "fill": [
         { "id": "f_u4l2_1", "before": "Apteekki on", "after": ".", "answer": "vasemmalla", "options": ["vasemmalla", "vasemmalle", "vasen"], "en": "The pharmacy is on the left." }
@@ -68,18 +71,18 @@
       "words": [
         { "id": "w_menna", "fi": "mennä", "en": "to go", "altEn": ["go"], "pos": "verb", "icon": "walk" },
         { "id": "w_tulla", "fi": "tulla", "en": "to come", "altEn": ["come"], "pos": "verb", "icon": "login" },
+        { "id": "w_mennaan", "fi": "mennään", "en": "let's go", "altEn": ["let us go"], "note": "In speech it also just means “we go”: me mennään.", "pos": "phrase", "icon": "run" },
         { "id": "w_kotiin", "fi": "kotiin", "en": "home", "altEn": ["to home", "(to) home"], "pos": "adv", "icon": "home-import-outline" },
         { "id": "w_toihin", "fi": "töihin", "en": "to work", "pos": "adv", "icon": "briefcase" },
         { "id": "w_tanaan", "fi": "tänään", "en": "today", "pos": "adv", "icon": "calendar-today" },
-        { "id": "w_huomenna", "fi": "huomenna", "en": "tomorrow", "pos": "adv", "icon": "calendar-arrow-right" },
-        { "id": "w_nyt", "fi": "nyt", "en": "now", "pos": "adv", "icon": "clock" }
+        { "id": "w_huomenna", "fi": "huomenna", "en": "tomorrow", "pos": "adv", "icon": "calendar-arrow-right" }
       ],
       "sentences": [
-        { "id": "s_u4l3_1", "fi": "Menen kauppaan.", "en": "I am going to the store.", "altEn": ["I am going to the shop.", "I go to the store.", "I go to the shop."], "puhe": "Mä meen kauppaan.", "speaker": "pekka" },
+        { "id": "s_u4l3_1", "fi": "Menen kauppaan.", "en": "I am going to the store.", "altEn": ["I go to the shop.", "I'm going to the shop.", "I am going to the shop.", "I'm going to the store.", "I go to the store."], "puhe": "Mä meen kauppaan.", "speaker": "pekka" },
         { "id": "s_u4l3_2", "fi": "Mennään kotiin!", "en": "Let's go home!", "altEn": ["Let us go home!"], "speaker": "pekka" },
-        { "id": "s_u4l3_3", "fi": "Tuletko huomenna kirjastoon?", "en": "Are you coming to the library tomorrow?", "altEn": ["Will you come to the library tomorrow?"], "puhe": "Tuuks sä huomenna kirjastoon?", "speaker": "pekka" },
+        { "id": "s_u4l3_3", "fi": "Tuletko huomenna kirjastoon?", "en": "Are you coming to the library tomorrow?", "altEn": ["Will you come to the library tomorrow?"], "puhe": "Tuleksä huomenna kirjastoon?", "speaker": "pekka" },
         { "id": "s_u4l3_4", "fi": "Hän menee töihin.", "en": "He goes to work.", "altEn": ["She goes to work.", "He is going to work.", "She is going to work."], "puhe": "Se menee töihin.", "speaker": "pekka" },
-        { "id": "s_u4l3_5", "fi": "Me menemme Helsinkiin tänään.", "en": "We are going to Helsinki today.", "altFi": ["Menemme Helsinkiin tänään."], "altEn": ["We go to Helsinki today.", "Today we are going to Helsinki."], "puhe": "Me mennään Helsinkiin tänään.", "speaker": "pekka" }
+        { "id": "s_u4l3_5", "fi": "Me menemme Helsinkiin tänään.", "en": "We are going to Helsinki today.", "altEn": ["We go to Helsinki today.", "Today we are going to Helsinki."], "altFi": ["Menemme Helsinkiin tänään."], "puhe": "Me mennään Helsinkiin tänään.", "speaker": "pekka" }
       ],
       "fill": [
         { "id": "f_u4l3_1", "before": "Menen", "after": ".", "answer": "kauppaan", "options": ["kauppa", "kaupassa", "kauppaan"], "en": "I am going to the store." }
@@ -101,14 +104,15 @@
         { "id": "w_seuraava", "fi": "seuraava", "en": "next", "pos": "adj", "icon": "skip-next" }
       ],
       "sentences": [
-        { "id": "s_u4l4_1", "fi": "Milloin seuraava bussi tulee?", "en": "When does the next bus come?", "altEn": ["When is the next bus coming?", "When will the next bus come?"], "puhe": "Millon seuraava bussi tulee?", "speaker": "mikko" },
+        { "id": "s_u4l4_1", "fi": "Milloin seuraava bussi tulee?", "en": "When does the next bus come?", "altEn": ["When is the next bus coming?", "When does the next bus arrive?"], "puhe": "Millon seuraava bussi tulee?", "speaker": "mikko" },
         { "id": "s_u4l4_2", "fi": "Bussi on myöhässä.", "en": "The bus is late.", "altEn": ["The bus is delayed."], "speaker": "mikko" },
-        { "id": "s_u4l4_3", "fi": "Ostan lipun sovelluksesta.", "en": "I buy a ticket from the app.", "altEn": ["I buy the ticket from the app.", "I buy a ticket in the app."], "puhe": "Mä ostan lipun äpistä.", "speaker": "mikko" },
-        { "id": "s_u4l4_4", "fi": "Menen bussilla yliopistolle.", "en": "I go to the university by bus.", "altEn": ["I am going to the university by bus.", "I take the bus to the university."], "puhe": "Mä meen bussilla yliopistolle.", "speaker": "mikko" },
-        { "id": "s_u4l4_5", "fi": "Minulla on lippu.", "en": "I have a ticket.", "puhe": "Mulla on lippu.", "speaker": "mikko" }
+        { "id": "s_u4l4_3", "fi": "Missä pysäkki on?", "en": "Where is the stop?", "altEn": ["Where is the bus stop?"], "altFi": ["Missä on pysäkki?"], "speaker": "mikko" },
+        { "id": "s_u4l4_4", "fi": "Menen bussilla keskustaan.", "en": "I go to the city centre by bus.", "altEn": ["I'm going downtown by bus.", "I go downtown by bus.", "I am going to the city center by bus.", "I go to the city center by bus.", "I am going to the city centre by bus."], "puhe": "Mä meen bussilla keskustaan.", "speaker": "mikko" },
+        { "id": "s_u4l4_5", "fi": "Minulla on lippu.", "en": "I have a ticket.", "puhe": "Mulla on lippu.", "speaker": "mikko" },
+        { "id": "s_u4l4_6", "fi": "Onko sinulla lippu?", "en": "Do you have a ticket?", "puhe": "Onks sulla lippu?", "speaker": "mikko" }
       ],
       "fill": [
-        { "id": "f_u4l4_1", "before": "Menen", "after": "yliopistolle.", "answer": "bussilla", "options": ["bussi", "bussilla", "bussiin"], "en": "I go to the university by bus.", "hint": "'By means of' = -lla / -llä." },
+        { "id": "f_u4l4_1", "before": "Menen", "after": "keskustaan.", "answer": "bussilla", "options": ["bussi", "bussilla", "bussiin"], "en": "I go to the city centre by bus.", "hint": "'By means of' = -lla / -llä." },
         { "id": "f_u4l4_2", "before": "", "after": "on lippu.", "answer": "Minulla", "options": ["Minä", "Minulla", "Minun"], "en": "I have a ticket.", "hint": "Finnish says 'at me is a ticket'." }
       ]
     }

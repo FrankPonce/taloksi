@@ -21,6 +21,8 @@ export default function LearnScreen() {
   const { stage, progress } = currentStage(s.lessons);
   const units = visibleUnits(s.settings.adult);
   const mainCount = units.filter((u) => u.track !== 'adult').length;
+  // The starter unit is unit 0, so the course proper still starts at unit 1
+  const first = units[0]?.starter ? 0 : 1;
 
   return (
     <Screen>
@@ -78,7 +80,7 @@ export default function LearnScreen() {
               <Halftone color={colors.ink} opacity={0.14} />
               <Scene kind={u.scene} />
               <View style={{ flex: 1, gap: 2 }}>
-                <Tag label={adult ? `18+ // Yöpuoli ${ui + 1 - mainCount}` : `Osa ${ui + 1} // Unit ${ui + 1}`} tilt={-2} />
+                <Tag label={adult ? `18+ // Yöpuoli ${ui + 1 - mainCount}` : `Osa ${ui + first} // Unit ${ui + first}`} tilt={-2} />
                 <Text style={[styles.unitTitle, { color: onColor(u.color) }]}>{u.title}</Text>
                 <Text style={{ fontSize: 15, fontWeight: '700', color: onColor(u.color) }}>
                   {u.titleEn} · {done}/{u.lessons.length}
@@ -92,6 +94,12 @@ export default function LearnScreen() {
                 <Text style={{ fontFamily: font.label, fontSize: 11, color: colors.ink }}>KIELIOPPI</Text>
               </Pressable>
             </View>
+
+            {u.starter && (
+              <Muted>
+                Valinnainen · Optional. How Finnish sounds and how a sentence is put together. Already know it? Unit 1 is open.
+              </Muted>
+            )}
 
             {u.lessons.map((l, li) => {
               const unlocked = isLessonUnlocked(l.id, s.lessons, s.settings.unlockAll);

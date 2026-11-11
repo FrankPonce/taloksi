@@ -1,0 +1,185 @@
+[
+  {
+    "id": "k_persons",
+    "lesson": "u1l1",
+    "tags": ["p1", "p2", "p3"],
+    "title": "Olen, olet, on",
+    "titleEn": "I am, you are, he or she is",
+    "body": ["The end of the verb says who: olen is “I am”, olet is “you are”.", "So minä and sinä can be left out: Olen Sofia means “I am Sofia”."],
+    "examples": [
+      { "from": "minä", "fi": "olen", "en": "I am" },
+      { "from": "sinä", "fi": "olet", "en": "you are" },
+      { "from": "hän", "fi": "on", "en": "he or she is" }
+    ]
+  },
+  {
+    "id": "k_persons_pl",
+    "lesson": "u1l3",
+    "tags": ["p4", "p5", "p6"],
+    "title": "Olemme, olette, ovat",
+    "titleEn": "We, you all, they",
+    "body": ["Three more endings for three more people.", "te is also the polite “you” for one person."],
+    "examples": [
+      { "from": "me", "fi": "olemme", "en": "we are" },
+      { "from": "te", "fi": "olette", "en": "you are (plural)" },
+      { "from": "he", "fi": "ovat", "en": "they are" }
+    ]
+  },
+  {
+    "id": "k_negation",
+    "lesson": "u1l4",
+    "tags": ["neg"],
+    "title": "En ymmärrä",
+    "titleEn": "Not: a verb of its own",
+    "body": ["Finnish says “not” with a verb that takes the person ending: en, et, ei.", "The main verb then loses its ending: puhun → en puhu."],
+    "examples": [
+      { "from": "puhun", "fi": "en puhu", "en": "I don’t speak", "wrong": ["en puhun", "ei puhun"] },
+      { "from": "puhut", "fi": "et puhu", "en": "you don’t speak", "wrong": ["et puhut", "en puhut"] },
+      { "from": "puhuu", "fi": "ei puhu", "en": "he or she doesn’t speak", "wrong": ["ei puhuu", "en puhuu"] }
+    ]
+  },
+  {
+    "id": "k_question",
+    "lesson": "u2l1",
+    "tags": ["q"],
+    "title": "Oletko?",
+    "titleEn": "Yes/no questions: -ko / -kö",
+    "body": ["Add -ko or -kö to the verb and put it first. That turns a sentence into a yes/no question.", "Back-team words take -ko, front-team words take -kö, as in unit 0."],
+    "examples": [
+      { "from": "olet", "fi": "oletko", "en": "are you?", "wrong": ["oletkö", "koolet"] },
+      { "from": "on", "fi": "onko", "en": "is it?", "wrong": ["onkö", "koon"] },
+      { "from": "puhut", "fi": "puhutko", "en": "do you speak?", "wrong": ["puhutkö", "kopuhut"] },
+      { "from": "syöt", "fi": "syötkö", "en": "do you eat?", "wrong": ["syötko", "kösyöt"] }
+    ]
+  },
+  {
+    "id": "k_from",
+    "lesson": "u2l2",
+    "tags": ["ela"],
+    "title": "Espanjasta",
+    "titleEn": "From: -sta / -stä",
+    "body": ["“From” is an ending: -sta or -stä, matching the word’s vowel team.", "Some words change a little before it: Suomi → Suomesta."],
+    "examples": [
+      { "from": "Espanja", "fi": "Espanjasta", "en": "from Spain", "wrong": ["Espanjastä", "Espanja"] },
+      { "from": "Suomi", "fi": "Suomesta", "en": "from Finland", "wrong": ["Suomista", "Suomestä"] },
+      { "from": "Yhdysvallat", "fi": "Yhdysvalloista", "en": "from the United States", "wrong": ["Yhdysvallatsta", "Yhdysvallasta"] }
+    ]
+  },
+  {
+    "id": "k_in",
+    "lesson": "u2l3",
+    "tags": ["ine"],
+    "title": "Turussa, Helsingissä",
+    "titleEn": "In: -ssa / -ssä",
+    "body": ["“In” is the ending -ssa or -ssä.", "Some words change their middle consonant before it: Turku → Turussa, Helsinki → Helsingissä. This is called consonant gradation. For now, learn these as they come."],
+    "examples": [
+      { "from": "Turku", "fi": "Turussa", "en": "in Turku", "wrong": ["Turkussa", "Turussä"] },
+      { "from": "Helsinki", "fi": "Helsingissä", "en": "in Helsinki", "wrong": ["Helsinkissä", "Helsingissa"] },
+      { "from": "Suomi", "fi": "Suomessa", "en": "in Finland", "wrong": ["Suomissa", "Suomessä"] }
+    ]
+  },
+  {
+    "id": "k_partitive",
+    "lesson": "u2l4",
+    "tags": ["par"],
+    "title": "Puhun suomea",
+    "titleEn": "After puhua: -a / -ä",
+    "body": ["After puhua (to speak), the language takes -a or -ä: suomi → suomea.", "This form is called the partitive. It has more uses, and they arrive one at a time: next with numbers, then with food."],
+    "examples": [
+      { "from": "suomi", "fi": "suomea", "en": "(speak) Finnish", "wrong": ["suomi", "suomia"] },
+      { "from": "englanti", "fi": "englantia", "en": "(speak) English", "wrong": ["englanti", "englantiä"] },
+      { "from": "ruotsi", "fi": "ruotsia", "en": "(speak) Swedish", "wrong": ["ruotsi", "ruotsea"] }
+    ]
+  },
+  {
+    "id": "k_numbers",
+    "lesson": "u3l0",
+    "tags": [],
+    "title": "Kaksi kahvia",
+    "titleEn": "After a number: the partitive",
+    "body": ["After yksi (one), the noun stays as it is: yksi kahvi.", "From kaksi (two) up, the noun takes the partitive, and stays singular: kaksi kahvia, viisi euroa."],
+    "examples": [
+      { "from": "yksi kahvi", "fi": "kaksi kahvia", "en": "two coffees", "wrong": ["kaksi kahvi", "kaksi kahvit"] },
+      { "from": "yksi euro", "fi": "viisi euroa", "en": "five euros", "wrong": ["viisi euro", "viisi eurot"] },
+      { "from": "yksi kieli", "fi": "kaksi kieltä", "en": "two languages", "wrong": ["kaksi kieli", "kaksi kielet"] }
+    ]
+  },
+  {
+    "id": "k_some",
+    "lesson": "u3l2",
+    "tags": [],
+    "title": "Leipää ja juustoa",
+    "titleEn": "Some bread, some cheese",
+    "body": ["Food and drink you can’t count take the partitive: Syön leipää. Juon kahvia.", "After a “not”, the thing is always partitive: En syö lihaa."],
+    "examples": [
+      { "from": "leipä", "fi": "leipää", "en": "(some) bread", "wrong": ["leipä", "leipäa"] },
+      { "from": "juusto", "fi": "juustoa", "en": "(some) cheese", "wrong": ["juusto", "juustää"] },
+      { "from": "liha", "fi": "lihaa", "en": "(any) meat", "wrong": ["liha", "lihää"] }
+    ]
+  },
+  {
+    "id": "k_with",
+    "lesson": "u3l4",
+    "tags": ["ade"],
+    "title": "Kortilla",
+    "titleEn": "By, with, on: -lla / -llä",
+    "body": ["-lla or -llä means “on” or “at”, and also “by means of”: kortilla is “by card”.", "Notice kortti → kortilla: the tt becomes one t, like rk in Turku → Turussa."],
+    "examples": [
+      { "from": "kortti", "fi": "kortilla", "en": "by card", "wrong": ["korttilla", "kortillä"] },
+      { "from": "bussi", "fi": "bussilla", "en": "by bus", "wrong": ["bussillä", "bussissa"] },
+      { "from": "minä", "fi": "minulla", "en": "at me, as in minulla on: I have", "wrong": ["minällä", "minulle"] }
+    ]
+  },
+  {
+    "id": "k_object",
+    "lesson": "u4l1",
+    "tags": ["acc"],
+    "title": "Kassin, omenan",
+    "titleEn": "One whole thing: -n",
+    "body": ["When you want, take or need one whole thing, it often ends in -n: Haluan omenan. Tarvitsetko kassin?", "With “some”, or after “not”, it is the partitive instead: Haluan kahvia. En tarvitse kassia."],
+    "examples": [
+      { "from": "kassi", "fi": "kassin", "en": "a bag (the whole bag)", "wrong": ["kassi", "kassissa"] },
+      { "from": "omena", "fi": "omenan", "en": "an apple (the whole apple)", "wrong": ["omena", "omenassa"] },
+      { "from": "kortti", "fi": "kortin", "en": "a card", "wrong": ["korttin", "kortti"] }
+    ]
+  },
+  {
+    "id": "k_of",
+    "lesson": "u4l2",
+    "tags": ["gen"],
+    "title": "Kirjaston vieressä",
+    "titleEn": "Of, ’s: -n",
+    "body": ["-n also means “of” or “’s”: Suomen is “of Finland, Finland’s”.", "Words like vieressä (next to) need it: kirjaston vieressä, next to the library.", "Same word, different jobs: Turku, Turussa, Turun."],
+    "examples": [
+      { "from": "kirjasto", "fi": "kirjaston", "en": "of the library, the library’s", "wrong": ["kirjastoon", "kirjasto"] },
+      { "from": "Suomi", "fi": "Suomen", "en": "of Finland, Finland’s", "wrong": ["Suomin", "Suomi"] },
+      { "from": "Turku", "fi": "Turun", "en": "of Turku, Turku’s", "wrong": ["Turkun", "Turku"] }
+    ]
+  },
+  {
+    "id": "k_into",
+    "lesson": "u4l3",
+    "tags": ["ill"],
+    "title": "Kauppaan, kotiin",
+    "titleEn": "Into, to: repeat the vowel, add -n",
+    "body": ["Going into or to a place: repeat the last vowel and add -n. kauppa → kauppaan.", "This ending keeps the strong consonant: kaupassa (in the shop) but kauppaan (into the shop).", "A few words take -hin instead: töihin, to work."],
+    "examples": [
+      { "from": "kauppa", "fi": "kauppaan", "en": "to the shop", "wrong": ["kaupaan", "kauppan"] },
+      { "from": "Helsinki", "fi": "Helsinkiin", "en": "to Helsinki", "wrong": ["Helsingiin", "Helsinkin"] },
+      { "from": "kirjasto", "fi": "kirjastoon", "en": "to the library", "wrong": ["kirjastossa", "kirjaston"] }
+    ]
+  },
+  {
+    "id": "k_having",
+    "lesson": "u4l4",
+    "tags": [],
+    "title": "Minulla on",
+    "titleEn": "Having: “at me is”",
+    "body": ["Finnish has no verb “have”. It says “at me is”: minulla on.", "The question: Onko sinulla lippu? Do you have a ticket?"],
+    "examples": [
+      { "from": "minä", "fi": "minulla on", "en": "I have", "wrong": ["minä on", "minun on"] },
+      { "from": "sinä", "fi": "sinulla on", "en": "you have", "wrong": ["sinä on", "sinun on"] },
+      { "from": "hän", "fi": "hänellä on", "en": "he or she has", "wrong": ["hän on", "hänen on"] }
+    ]
+  }
+]

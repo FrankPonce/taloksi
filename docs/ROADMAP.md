@@ -202,10 +202,10 @@ One row per feature. **Needs** lists the IDs that must exist first; "ext" means 
 | C1 | Learn path, locked progression, hearts, XP, streaks | ✅ | | |
 | C2 | Exercise engine, 18 exercise types | ✅ | | |
 | C3 | Lesson hosts that react to answers | ✅ | | |
-| C4 | Unit 0: letters, sounds, sentence structure | 🗓️ | C2 | 3 |
-| C5 | Concept cards and the strict first-contact rule (content, card screen, validator) | 🗓️ | lexicon tags ✅ | 3 |
-| C6 | Units 1–4 rewritten to obey C5, plus review pass | 🗓️ | C5 | 3 |
-| C7 | Frequency-ordered vocabulary from open data | 🟡 scripts exist | | 3 |
+| C4 | Unit 0: letters, sounds, sentence structure (optional, never blocks unit 1) | ✅ | C2 | 3 |
+| C5 | Concept cards and the strict first-contact rule (content, card screen, validator) | ✅ | lexicon tags ✅ | 3 |
+| C6 | Units 1–4 rewritten to obey C5, plus review pass | ✅ | C5 | 3 |
+| C7 | Frequency-ordered vocabulary from open data, used to choose the words for units 5–10 | 🟡 scripts exist | | 7 |
 | C8 | Shorter lessons: 15 to 20 steps, from about 32 | 🗓️ | | 7 |
 | C9 | Units 5–10, A1 complete, with the seven hosts who have no lessons | 🗓️ | C5 | 7 |
 | C10 | Unit checkpoints | 🗓️ | C9 | 7 |
@@ -305,8 +305,8 @@ The pack is ready to launch when all five exist: **X1** study guide, **X2** ques
 
 | Stage | CEFR | Units | Status |
 |---|---|---|---|
-| Starter | pre-A1 | 0: letters and sounds, how a Finnish sentence works | 🗓️ 3 |
-| Survival basics | A1.1 | 1–4: greetings, origins, shop and café, the city | ✅ 16 lessons, no review pass yet; to be re-ordered to follow the first-contact rule |
+| Starter | pre-A1 | 0: letters and sounds, how a Finnish sentence works | ✅ 4 lessons, optional |
+| Survival basics | A1.1 | 1–4: greetings, origins, shop and café, the city | ✅ 17 lessons, rewritten for the first-contact rule, review pass done |
 | Everyday life | A1.2–A1.3 | 5–10: time, family, home, weather, health, work | 🗓️ 7 |
 | Getting by | A2 | 11–20 | 🗓️ after launch |
 | Independent | B1 (YKI 3) | 21–32 | 🗓️ after launch |
@@ -376,11 +376,11 @@ Four short lessons before unit 1, hosted by Norppa. There is no vocabulary to me
 | 0.3 Ä vai A | Vowel harmony: a word uses a, o, u or ä, ö, y, not both, and endings follow (*talossa*, *metsässä*). | Sort words into two groups; pick the ending that matches. |
 | 0.4 Miten lause toimii | How a sentence is built: no articles, no grammatical gender (*hän* is he and she), no future tense, the verb ending says who is doing it (*olen*, *olet*, *on*), and small words like "in" and "from" are endings glued to the noun. | Build three-word sentences from tiles; a preview of endings with no testing. |
 
-A learner who already knows this can skip it with a five-question check.
+The unit is optional instead of gated: it has its own unlock chain and unit 1 is open from the start. That replaced the planned five-question skip test, since with nothing gated there is nothing to skip.
 
 ### The first-contact rule
 
-Decided: the rule is strict. A form may not appear in the lesson that introduces its word, and the unit 1 and 2 sentences that break it get rewritten in sprint 3. The only exception is fixed phrases, as described in point 3.
+Decided: the rule is strict. A form may not appear in the lesson that introduces its word. The only exception is fixed phrases, as described in point 3. Done in sprint 3: `scripts/validate_content.py` enforces it on the main course, and units 1–4 were rewritten to pass.
 
 1. **Plain form first.** A noun appears in its dictionary form (*Turku*, *kahvi*, *bussi*) for at least one lesson before any other form of it is used.
 2. **A concept card on first contact.** The first lesson that uses a new ending opens with a short card: what it means, two or three words shown side by side in both forms (*Turku → Turussa*, *Helsinki → Helsingissä*, *Suomi → Suomessa*), and when to use it. Then two easy exercises on only that, before it shows up in sentences.
@@ -389,15 +389,9 @@ Decided: the rule is strict. A form may not appear in the lesson that introduces
 
 The validator enforces rule 3 (see "New content shapes" in section 4).
 
-### Where the current course breaks the rule
+### How the rule changed the course
 
-The four existing units were written before this rule. Known cases to fix when unit 0 is added:
-
-- Unit 1 lesson 3 uses *ystäviä* and *opiskelijoita* (partitive plural) in "Me olemme ystäviä" and "He ovat opiskelijoita" with no explanation.
-- Unit 1 lesson 4 uses *englantia* (partitive) in "Puhutko englantia?". This one can stay as a fixed phrase.
-- Unit 2 lesson 1 uses *Espanjasta* and *Suomessa* in the same lesson that first teaches the words *Espanja* and *Suomi*.
-
-This list comes from reading the lessons, not from a full audit; the validator check will find the rest.
+Run against the course as it was before sprint 3, the check found 130 problems, among them *ystäviä* in unit 1 and *Espanjasta* in the lesson that first taught *Espanja*. Unit 2 was re-ordered (countries and languages → from → in → speaking a language), numbers moved to the start of unit 3, and a lesson's new nouns now appear only in their plain form until the next lesson. The 18+ track is not checked, because it unlocks on its own.
 
 ### The order concepts arrive in (A1)
 
@@ -468,11 +462,11 @@ There is no native-speaker review sprint: nobody is available to do one. Every c
 |---|---|---|---|---|
 | 1 | Foundations ✅ | App, exercise engine, FSRS, 4 units, gyms, stories | Runs on web, validator passes | |
 | 2 | Voice and identity ✅ | Audio for every item, cast, visual style, breakdowns, journey map, 18+ pack | Every item has a clip | |
-| 3 | Starter and structure ⏳ | C4–C7: unit 0, concept cards and the validator rule, units 1–4 rewritten and reviewed, word-frequency data | Validator passes with the rule on | 25 Nov |
-| 4 | Exam-prep engine | X2, X3, X4, X6: question-bank format and validator, practice, mock test, source tracker, notices; a small draft bank as test data | A mock test runs end to end on web; the validator rejects an item without a source | 9 Dec |
+| 3 | Starter and structure ✅ | C4–C6: unit 0, concept cards and the validator rule, units 1–4 rewritten and reviewed. C7 moved to sprint 7, where it chooses the new words | Validator passes with the rule on | [Review](sprints/sprint-03-starter-and-structure.md) |
+| 4 | Exam-prep engine ⏳ | X2, X3, X4, X6: question-bank format and validator, practice, mock test, source tracker, notices; a small draft bank as test data | A mock test runs end to end on web; the validator rejects an item without a source | 9 Dec |
 | 5 | Citizenship content | X1, X5, M5 from the official material: study guide, question bank v1, term pack feeding Review. Fallback if the material is late: the four published topics, labelled draft | Every chapter of the official material has a study page and about 8 to 10 questions, all with sources; review pass done | 6 Jan |
 | 6 | Citizenship launch | X7, P2, P3, V4: info page, phone testing, hosting, installable web app, icon | Someone can open a link on a phone, install it and run a mock test offline | 3 Feb |
-| 7 | A1 complete | C8–C13: units 5–10, shorter lessons, checkpoints, placement, phrasebook (L5), a story per unit | About 600 words, each unit through a review pass | |
+| 7 | A1 complete | C7–C13: word-frequency data, units 5–10, shorter lessons, checkpoints, placement, phrasebook (L5), a story per unit | About 600 words, each unit through a review pass | |
 | 8 | Accounts and sync | P4 | Progress survives a reinstall | |
 | 9 | Learning science | M2–M4, S6–S8 | Retention measured against defaults | |
 | 10 | Skill rooms | S1–S4, P5 if decided | Each room has 10 graded tasks | |

@@ -14,7 +14,7 @@
   },
   {
     "id": "d_origins",
-    "lesson": "u2l3",
+    "lesson": "u2l4",
     "title": "Mummon kysymykset",
     "titleEn": "Grandma's questions",
     "with": "helvi",
@@ -32,10 +32,10 @@
     "titleEn": "Placing an order",
     "with": "aino",
     "turns": [
-      { "them": { "fi": "Hei! Mitä saisi olla?", "en": "Hi! What would you like?" }, "you": { "fi": "Haluaisin kupin kahvia.", "en": "I would like a cup of coffee." } },
-      { "them": { "fi": "Tuleeko muuta?", "en": "Anything else?" }, "you": { "fi": "Otan korvapuustin.", "en": "I'll take a cinnamon roll." } },
+      { "them": { "fi": "Hei! Mitä saisi olla?", "en": "Hi! What can I get you?" }, "you": { "fi": "Haluaisin kahvia, kiitos.", "en": "I would like some coffee, please." } },
       { "them": { "fi": "Täällä vai mukaan?", "en": "For here or to go?" }, "you": { "fi": "Täällä, kiitos.", "en": "For here, please." } },
-      { "them": { "fi": "Se maksaa seitsemän euroa.", "en": "That costs seven euros." }, "you": { "fi": "Voinko maksaa kortilla?", "en": "Can I pay by card?" } }
+      { "them": { "fi": "Se maksaa viisi euroa.", "en": "That is five euros." }, "you": { "fi": "Voinko maksaa kortilla?", "en": "Can I pay by card?" } },
+      { "them": { "fi": "Kyllä. Ole hyvä!", "en": "Yes. Here you go!" }, "you": { "fi": "Kiitos, hei hei!", "en": "Thanks, bye!" } }
     ]
   },
   {
@@ -47,7 +47,7 @@
     "turns": [
       { "them": { "fi": "Huomenta.", "en": "Good morning." }, "you": { "fi": "Milloin seuraava bussi tulee?", "en": "When does the next bus come?" } },
       { "them": { "fi": "Bussi on myöhässä.", "en": "The bus is late." }, "you": { "fi": "Onko asema kaukana?", "en": "Is the station far?" } },
-      { "them": { "fi": "Ei, se on lähellä.", "en": "No, it is near." }, "you": { "fi": "Menen bussilla yliopistolle.", "en": "I go to the university by bus." } },
+      { "them": { "fi": "Ei, se on lähellä.", "en": "No, it is near." }, "you": { "fi": "Menen bussilla keskustaan.", "en": "I am going to the city centre by bus." } },
       { "them": { "fi": "Onko sinulla lippu?", "en": "Do you have a ticket?" }, "you": { "fi": "Minulla on lippu.", "en": "I have a ticket." } }
     ]
   },

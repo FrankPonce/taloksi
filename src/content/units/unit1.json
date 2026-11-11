@@ -5,14 +5,14 @@
   "color": "#1F5FBF",
   "host": "norppa",
   "scene": "lake",
-  "reviewed": false,
+  "reviewed": true,
   "lessons": [
     {
       "id": "u1l1",
       "title": "Hei!",
       "titleEn": "Hi!",
       "host": "sofia",
-      "grammar": "g_pronunciation",
+      "grammar": "g_olla",
       "words": [
         { "id": "w_hei", "fi": "hei", "en": "hi", "altEn": ["hello", "hey"], "pos": "phrase", "icon": "hand-wave" },
         { "id": "w_moi", "fi": "moi", "en": "hi (casual)", "altEn": ["hi", "hello", "hey"], "note": "Very common in speech and texts. 'Moi moi' means bye.", "pos": "phrase", "icon": "hand-wave-outline" },
@@ -50,7 +50,7 @@
         { "id": "s_u1l2_2", "fi": "Kiitos, hyvää.", "en": "Fine, thanks.", "altEn": ["Good, thanks.", "Thanks, good.", "Fine, thank you.", "Good, thank you.", "Thank you, fine.", "Thank you, good."], "speaker": "helvi" },
         { "id": "s_u1l2_3", "fi": "Entä sinulle?", "en": "And you?", "altEn": ["What about you?", "How about you?"], "puhe": "Entä sulle?", "speaker": "helvi" },
         { "id": "s_u1l2_4", "fi": "Ihan hyvää, kiitos.", "en": "Pretty good, thanks.", "altEn": ["Pretty good, thank you.", "Quite good, thanks.", "Fine, thanks."], "speaker": "helvi" },
-        { "id": "s_u1l2_5", "fi": "Minulle kuuluu hyvää.", "en": "I am doing well.", "altEn": ["I am doing fine.", "I am fine.", "I am well."], "puhe": "Mulle kuuluu hyvää.", "speaker": "helvi" }
+        { "id": "s_u1l2_5", "fi": "Mitä kuuluu, Pekka?", "en": "How are you, Pekka?", "altEn": ["How are you doing, Pekka?"], "speaker": "helvi" }
       ],
       "fill": [
         { "id": "f_u1l2_1", "before": "Mitä", "after": "?", "answer": "kuuluu", "options": ["kuuluu", "kiitos", "hyvää"], "en": "How are you?" }
@@ -70,19 +70,20 @@
         { "id": "w_te", "fi": "te", "en": "you (plural)", "altEn": ["you", "you all"], "note": "Also the polite 'you' for one person.", "pos": "pron", "icon": "account-multiple" },
         { "id": "w_he", "fi": "he", "en": "they", "puhe": "ne", "pos": "pron", "icon": "account-group-outline" },
         { "id": "w_kuka", "fi": "kuka", "en": "who", "pos": "question", "icon": "account-question" },
-        { "id": "w_nimi", "fi": "nimi", "en": "name", "pos": "noun", "icon": "card-account-details" }
+        { "id": "w_minun_nimeni_on", "fi": "minun nimeni on", "en": "my name is", "puhe": "mun nimi on", "note": "Learn it whole for now. The parts (minun = my, -ni = my) come later.", "pos": "phrase", "icon": "card-account-details-outline" },
+        { "id": "w_mika_sinun_nimesi_on", "fi": "mikä sinun nimesi on", "en": "what is your name", "altEn": ["what's your name"], "puhe": "mikä sun nimi on", "pos": "phrase", "icon": "badge-account-horizontal" }
       ],
       "sentences": [
         { "id": "s_u1l3_1", "fi": "Kuka sinä olet?", "en": "Who are you?", "altFi": ["Kuka olet?"], "puhe": "Kuka sä oot?", "speaker": "norppa" },
         { "id": "s_u1l3_2", "fi": "Minun nimeni on Sofia.", "en": "My name is Sofia.", "altFi": ["Nimeni on Sofia."], "puhe": "Mun nimi on Sofia.", "speaker": "sofia" },
         { "id": "s_u1l3_3", "fi": "Mikä sinun nimesi on?", "en": "What is your name?", "altFi": ["Mikä nimesi on?"], "puhe": "Mikä sun nimi on?", "speaker": "norppa" },
         { "id": "s_u1l3_4", "fi": "Hän on Pekka.", "en": "He is Pekka.", "puhe": "Se on Pekka.", "speaker": "norppa" },
-        { "id": "s_u1l3_5", "fi": "Me olemme ystäviä.", "en": "We are friends.", "altFi": ["Olemme ystäviä."], "puhe": "Me ollaan kavereita.", "speaker": "norppa" },
-        { "id": "s_u1l3_6", "fi": "He ovat opiskelijoita.", "en": "They are students.", "puhe": "Ne on opiskelijoita.", "speaker": "norppa" }
+        { "id": "s_u1l3_5", "fi": "Me olemme Sofia ja Pekka.", "en": "We are Sofia and Pekka.", "altFi": ["Olemme Sofia ja Pekka."], "puhe": "Me ollaan Sofia ja Pekka.", "speaker": "sofia" },
+        { "id": "s_u1l3_6", "fi": "He ovat Aino ja Mikko.", "en": "They are Aino and Mikko.", "puhe": "Ne on Aino ja Mikko.", "speaker": "norppa" }
       ],
       "fill": [
         { "id": "f_u1l3_1", "before": "Sinä", "after": "Sofia.", "answer": "olet", "options": ["olen", "olet", "ovat"], "en": "You are Sofia." },
-        { "id": "f_u1l3_2", "before": "He", "after": "opiskelijoita.", "answer": "ovat", "options": ["on", "ovat", "olemme"], "en": "They are students." }
+        { "id": "f_u1l3_2", "before": "He", "after": "Aino ja Mikko.", "answer": "ovat", "options": ["on", "ovat", "olemme"], "en": "They are Aino and Mikko." }
       ]
     },
     {
@@ -97,7 +98,9 @@
         { "id": "w_kiitos_paljon", "fi": "kiitos paljon", "en": "thank you very much", "altEn": ["thanks a lot", "thank you so much", "many thanks"], "pos": "phrase", "icon": "hand-clap" },
         { "id": "w_kylla", "fi": "kyllä", "en": "yes", "puhe": "joo", "pos": "particle", "icon": "check-bold" },
         { "id": "w_ei", "fi": "ei", "en": "no", "pos": "particle", "icon": "close-thick" },
-        { "id": "w_joo", "fi": "joo", "en": "yeah", "altEn": ["yes"], "pos": "particle", "icon": "check" }
+        { "id": "w_joo", "fi": "joo", "en": "yeah", "altEn": ["yes"], "pos": "particle", "icon": "check" },
+        { "id": "w_puhutko_englantia", "fi": "puhutko englantia", "en": "do you speak English", "puhe": "puhuks sä englantia", "note": "Learn it whole. Why it ends in -a comes in unit 2.", "pos": "phrase", "icon": "translate" },
+        { "id": "w_voitko_puhua_hitaammin", "fi": "voitko puhua hitaammin", "en": "can you speak more slowly", "altEn": ["could you speak more slowly", "can you speak slower"], "pos": "phrase", "icon": "turtle" }
       ],
       "sentences": [
         { "id": "s_u1l4_1", "fi": "Anteeksi, en ymmärrä.", "en": "Sorry, I don't understand.", "altEn": ["Excuse me, I don't understand."], "puhe": "Sori, mä en ymmärrä.", "speaker": "samir" },
@@ -113,20 +116,6 @@
     }
   ],
   "grammar": [
-    {
-      "id": "g_pronunciation",
-      "title": "Ääntäminen",
-      "titleEn": "Pronunciation basics",
-      "blocks": [
-        { "type": "p", "text": "Finnish is written almost exactly as it sounds: every letter is pronounced, always the same way." },
-        { "type": "p", "text": "Stress is always on the first syllable of a word: HUO-men-ta, NÄ-ke-miin." },
-        { "type": "table", "head": ["Letter", "Sounds like"], "rows": [["a", "a in 'father' (short)"], ["ä", "a in 'cat'"], ["ö", "i in 'bird' (German ö)"], ["y", "German ü — say 'ee' with rounded lips"], ["r", "rolled / trilled r"], ["j", "y in 'yes'"]] },
-        { "type": "p", "text": "Double letters are long, and length changes the meaning:" },
-        { "type": "example", "fi": "tuli – tuuli – tulli", "en": "fire – wind – customs" },
-        { "type": "example", "fi": "kansa – kanssa", "en": "people – with" },
-        { "type": "tip", "text": "Exaggerate long sounds at first. Finns notice length much more than accent." }
-      ]
-    },
     {
       "id": "g_olla",
       "title": "Olla – olla-verbi",

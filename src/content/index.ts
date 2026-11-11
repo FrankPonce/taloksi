@@ -1,3 +1,4 @@
+import unit0 from './units/unit0.json';
 import unit1 from './units/unit1.json';
 import unit2 from './units/unit2.json';
 import unit3 from './units/unit3.json';
@@ -15,11 +16,12 @@ import setsJson from './sets.json';
 import dialoguesJson from './dialogues.json';
 import lifeJson from './life.json';
 import writingJson from './writing.json';
-import type { Character, CultureNote, Dialogue, GrammarNote, GuideTip, Item, Lesson, Link, Noun, Stage, Story, Token, Unit, Verb, WritingPrompt } from './types';
+import conceptsJson from './concepts.json';
+import type { Character, ConceptCard, CultureNote, Dialogue, GrammarNote, GuideTip, Item, Lesson, Link, Noun, Stage, Story, Token, Unit, Verb, WritingPrompt } from './types';
 
 export * from './types';
 
-export const UNITS = [unit1, unit2, unit3, unit4, unitx1, unitx2] as unknown as Unit[];
+export const UNITS = [unit0, unit1, unit2, unit3, unit4, unitx1, unitx2] as unknown as Unit[];
 export const MAIN_UNITS = UNITS.filter((u) => (u.track ?? 'main') === 'main');
 export const visibleUnits = (adult: boolean) => UNITS.filter((u) => adult || u.track !== 'adult');
 
@@ -39,11 +41,14 @@ export const dialogueFor = (lessonId: string) => DIALOGUES.find((d) => d.lesson 
 export const getWriting = (id: string) => WRITING.find((w) => w.id === id);
 export const CATEGORIES = setsJson.categories as { id: string; label: string; words: string[] }[];
 export const MINIMAL_PAIRS = setsJson.minimalPairs as { id: string; words: { fi: string; en: string }[]; note: string }[];
+export const CONCEPTS = conceptsJson as unknown as ConceptCard[];
+/** Concept cards that open this lesson */
+export const conceptsFor = (lessonId: string) => CONCEPTS.filter((c) => c.lesson === lessonId);
 
-export type LessonRef = Lesson & { unitId: string; unitIndex: number; order: number; track: 'main' | 'adult' };
+export type LessonRef = Lesson & { unitId: string; unitIndex: number; order: number; track: 'main' | 'adult'; starter: boolean };
 
 export const ALL_LESSONS: LessonRef[] = UNITS.flatMap((u, unitIndex) =>
-  u.lessons.map((l) => ({ ...l, unitId: u.id, unitIndex, order: 0, track: u.track ?? ('main' as const) }))
+  u.lessons.map((l) => ({ ...l, unitId: u.id, unitIndex, order: 0, track: u.track ?? ('main' as const), starter: !!u.starter }))
 ).map((l, order) => ({ ...l, order }));
 export const MAIN_LESSONS = ALL_LESSONS.filter((l) => l.track === 'main');
 
@@ -72,12 +77,16 @@ export const getTip = (id: string) => GUIDE.find((t) => t.id === id);
 export const getCulture = (id: string) => [...CULTURE, ...LIFE].find((c) => c.id === id);
 export const cultureFor = (unitId: string) => CULTURE.filter((c) => c.unit === unitId);
 
-/** Lessons unlock one after another within their own track; each track's first lesson is open. */
+/**
+ * Lessons unlock one after another within their own track; each track's first lesson is open.
+ * The starter unit is a track of its own, so skipping it never blocks unit 1.
+ */
 export function isLessonUnlocked(lessonId: string, done: Record<string, unknown>, unlockAll: boolean): boolean {
   if (unlockAll) return true;
   const l = getLesson(lessonId);
   if (!l) return false;
-  const track = ALL_LESSONS.filter((x) => x.track === l.track);
+  if (done[l.id]) return true;
+  const track = ALL_LESSONS.filter((x) => x.track === l.track && x.starter === l.starter);
   const i = track.findIndex((x) => x.id === l.id);
   return i <= 0 || !!done[track[i - 1].id];
 }

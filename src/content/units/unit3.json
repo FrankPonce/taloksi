@@ -5,8 +5,38 @@
   "color": "#D9822B",
   "host": "aino",
   "scene": "cafe",
-  "reviewed": false,
+  "reviewed": true,
   "lessons": [
+    {
+      "id": "u3l0",
+      "title": "Numerot 0–10",
+      "titleEn": "Numbers 0–10",
+      "host": "mikko",
+      "words": [
+        { "id": "w_nolla", "fi": "nolla", "en": "zero", "altEn": ["0"], "pos": "num", "icon": "numeric-0" },
+        { "id": "w_yksi", "fi": "yksi", "en": "one", "altEn": ["1"], "puhe": "yks", "pos": "num", "icon": "numeric-1" },
+        { "id": "w_kaksi", "fi": "kaksi", "en": "two", "altEn": ["2"], "puhe": "kaks", "pos": "num", "icon": "numeric-2" },
+        { "id": "w_kolme", "fi": "kolme", "en": "three", "altEn": ["3"], "pos": "num", "icon": "numeric-3" },
+        { "id": "w_nelja", "fi": "neljä", "en": "four", "altEn": ["4"], "pos": "num", "icon": "numeric-4" },
+        { "id": "w_viisi", "fi": "viisi", "en": "five", "altEn": ["5"], "puhe": "viis", "pos": "num", "icon": "numeric-5" },
+        { "id": "w_kuusi", "fi": "kuusi", "en": "six", "altEn": ["6"], "puhe": "kuus", "pos": "num", "icon": "numeric-6" },
+        { "id": "w_seitseman", "fi": "seitsemän", "en": "seven", "altEn": ["7"], "puhe": "seittemän", "pos": "num", "icon": "numeric-7" },
+        { "id": "w_kahdeksan", "fi": "kahdeksan", "en": "eight", "altEn": ["8"], "puhe": "kaheksan", "pos": "num", "icon": "numeric-8" },
+        { "id": "w_yhdeksan", "fi": "yhdeksän", "en": "nine", "altEn": ["9"], "puhe": "yheksän", "pos": "num", "icon": "numeric-9" },
+        { "id": "w_kymmenen", "fi": "kymmenen", "en": "ten", "altEn": ["10"], "pos": "num", "icon": "numeric-10" },
+        { "id": "w_euro", "fi": "euro", "en": "euro", "pos": "noun", "icon": "currency-eur" }
+      ],
+      "sentences": [
+        { "id": "s_u3l0_1", "fi": "Yksi kahvi, kiitos.", "en": "One coffee, please.", "altEn": ["A coffee, please.", "One coffee, thanks."], "puhe": "Yks kahvi, kiitos.", "speaker": "aino" },
+        { "id": "s_u3l0_2", "fi": "Kolme plus neljä on seitsemän.", "en": "Three plus four is seven.", "altEn": ["Three plus four equals seven."], "puhe": "Kolme plus neljä on seittemän.", "speaker": "mikko" },
+        { "id": "s_u3l0_3", "fi": "Bussi numero kuusi tulee.", "en": "Bus number six is coming.", "altEn": ["The number six bus is coming.", "Bus six is coming."], "puhe": "Kutonen tulee.", "note": "In speech, buses go by their number names: kutonen is “the six”.", "speaker": "mikko" },
+        { "id": "s_u3l0_4", "fi": "Suomessa on kaksi kieltä: suomi ja ruotsi.", "en": "Finland has two languages: Finnish and Swedish.", "altEn": ["There are two languages in Finland: Finnish and Swedish."], "puhe": "Suomessa on kaks kieltä: suomi ja ruotsi.", "fact": "Finnish and Swedish are Finland’s two national languages. The Sámi languages also have official status in the Sámi homeland in the north.", "speaker": "mikko" },
+        { "id": "s_u3l0_5", "fi": "Turussa on kaksi yliopistoa.", "en": "There are two universities in Turku.", "altEn": ["Turku has two universities."], "puhe": "Turussa on kaks yliopistoa.", "fact": "The University of Turku teaches mainly in Finnish, Åbo Akademi University in Swedish.", "speaker": "mikko" }
+      ],
+      "fill": [
+        { "id": "f_u3l0_1", "before": "Turussa on kaksi", "after": ".", "answer": "yliopistoa", "options": ["yliopisto", "yliopistoa", "yliopistossa"], "en": "There are two universities in Turku.", "hint": "After numbers from two up, the noun is singular partitive." }
+      ]
+    },
     {
       "id": "u3l1",
       "title": "Ruoka",
@@ -24,15 +54,15 @@
         { "id": "w_syoda", "fi": "syödä", "en": "to eat", "altEn": ["eat"], "pos": "verb", "icon": "silverware-fork-knife" }
       ],
       "sentences": [
-        { "id": "s_u3l1_1", "fi": "Syön leipää ja juustoa.", "en": "I eat bread and cheese.", "altEn": ["I am eating bread and cheese."], "puhe": "Mä syön leipää ja juustoo.", "speaker": "helvi" },
-        { "id": "s_u3l1_2", "fi": "Ruisleipä on hyvää.", "en": "Rye bread is good.", "altEn": ["The rye bread is good.", "Rye bread is tasty."], "speaker": "helvi" },
-        { "id": "s_u3l1_3", "fi": "Haluan omenan.", "en": "I want an apple.", "altEn": ["I would like an apple."], "puhe": "Mä haluun omenan.", "speaker": "helvi" },
-        { "id": "s_u3l1_4", "fi": "Syötkö kalaa?", "en": "Do you eat fish?", "puhe": "Syöks sä kalaa?", "speaker": "helvi" },
-        { "id": "s_u3l1_5", "fi": "En syö lihaa.", "en": "I don't eat meat.", "puhe": "Mä en syö lihaa.", "speaker": "helvi" }
+        { "id": "s_u3l1_1", "fi": "Ruisleipä on hyvää.", "en": "Rye bread is good.", "speaker": "helvi" },
+        { "id": "s_u3l1_2", "fi": "Kala vai liha?", "en": "Fish or meat?", "speaker": "helvi" },
+        { "id": "s_u3l1_3", "fi": "Juusto on hyvää.", "en": "The cheese is good.", "altEn": ["Cheese is good."], "speaker": "helvi" },
+        { "id": "s_u3l1_4", "fi": "Omena on hyvä.", "en": "The apple is good.", "altEn": ["An apple is good."], "note": "One whole apple is hyvä. Things you can’t count, like bread or cheese, are hyvää.", "speaker": "helvi" },
+        { "id": "s_u3l1_5", "fi": "Mitä sinä syöt?", "en": "What are you eating?", "altEn": ["What do you eat?"], "altFi": ["Mitä syöt?"], "puhe": "Mitä sä syöt?", "speaker": "helvi" },
+        { "id": "s_u3l1_6", "fi": "Leipä ja juusto, kiitos.", "en": "Bread and cheese, please.", "altEn": ["Bread and cheese, thanks."], "speaker": "helvi" }
       ],
       "fill": [
-        { "id": "f_u3l1_1", "before": "Syön", "after": ".", "answer": "leipää", "options": ["leipä", "leipää", "leivän"], "en": "I eat (some) bread.", "hint": "Uncountable food → partitive." },
-        { "id": "f_u3l1_2", "before": "En syö", "after": ".", "answer": "lihaa", "options": ["liha", "lihaa", "lihan"], "en": "I don't eat meat.", "hint": "After a negative verb the object is always partitive." }
+        { "id": "f_u3l1_1", "before": "Mitä sinä", "after": "?", "answer": "syöt", "options": ["syön", "syöt", "syö"], "en": "What are you eating?" }
       ]
     },
     {
@@ -40,7 +70,6 @@
       "title": "Juomat",
       "titleEn": "Drinks",
       "host": "jere",
-      "grammar": "g_question_ko",
       "words": [
         { "id": "w_vesi", "fi": "vesi", "en": "water", "pos": "noun", "icon": "water" },
         { "id": "w_maito", "fi": "maito", "en": "milk", "pos": "noun" },
@@ -48,14 +77,16 @@
         { "id": "w_tee", "fi": "tee", "en": "tea", "pos": "noun", "icon": "tea" },
         { "id": "w_mehu", "fi": "mehu", "en": "juice", "pos": "noun", "icon": "fruit-citrus" },
         { "id": "w_olut", "fi": "olut", "en": "beer", "puhe": "kalja", "pos": "noun", "icon": "beer" },
-        { "id": "w_juoda", "fi": "juoda", "en": "to drink", "altEn": ["drink"], "pos": "verb", "icon": "cup-water" }
+        { "id": "w_juoda", "fi": "juoda", "en": "to drink", "altEn": ["drink"], "pos": "verb", "icon": "cup-water" },
+        { "id": "w_suomalaiset", "fi": "suomalaiset", "en": "Finns", "altEn": ["the Finns", "Finnish people"], "note": "The plural of suomalainen. Learn it whole for now.", "pos": "noun", "icon": "account-group" }
       ],
       "sentences": [
         { "id": "s_u3l2_1", "fi": "Juon kahvia joka aamu.", "en": "I drink coffee every morning.", "puhe": "Mä juon kahvii joka aamu.", "speaker": "jere" },
-        { "id": "s_u3l2_2", "fi": "Haluatko teetä vai kahvia?", "en": "Do you want tea or coffee?", "altEn": ["Would you like tea or coffee?"], "puhe": "Haluuks sä teetä vai kahvii?", "speaker": "jere" },
-        { "id": "s_u3l2_3", "fi": "Lasi vettä, kiitos.", "en": "A glass of water, please.", "altEn": ["A glass of water, thanks.", "Glass of water, please."], "speaker": "jere" },
-        { "id": "s_u3l2_4", "fi": "Suomalaiset juovat paljon kahvia.", "en": "Finns drink a lot of coffee.", "altEn": ["Finnish people drink a lot of coffee.", "Finns drink lots of coffee."], "puhe": "Suomalaiset juo tosi paljon kahvii.", "fact": "Finland is regularly at or near the top of the world for coffee drunk per person.", "speaker": "jere" },
-        { "id": "s_u3l2_5", "fi": "Maito on kylmää.", "en": "The milk is cold.", "altEn": ["Milk is cold."], "speaker": "jere" }
+        { "id": "s_u3l2_2", "fi": "Haluatko kahvia?", "en": "Do you want coffee?", "altEn": ["Would you like coffee?", "Do you want some coffee?"], "puhe": "Haluuksä kahvii?", "speaker": "jere" },
+        { "id": "s_u3l2_3", "fi": "Syön leipää ja juustoa.", "en": "I eat bread and cheese.", "altEn": ["I am eating bread and cheese."], "puhe": "Mä syön leipää ja juustoo.", "speaker": "jere" },
+        { "id": "s_u3l2_4", "fi": "En syö lihaa.", "en": "I don't eat meat.", "puhe": "Mä en syö lihaa.", "speaker": "jere" },
+        { "id": "s_u3l2_5", "fi": "Syötkö kalaa?", "en": "Do you eat fish?", "puhe": "Syöksä kalaa?", "speaker": "jere" },
+        { "id": "s_u3l2_6", "fi": "Suomalaiset juovat paljon kahvia.", "en": "Finns drink a lot of coffee.", "altEn": ["Finnish people drink a lot of coffee.", "Finns drink lots of coffee."], "fact": "Finland is regularly at or near the top of the world for coffee drunk per person.", "puhe": "Suomalaiset juo paljon kahvii.", "speaker": "jere" }
       ],
       "fill": [
         { "id": "f_u3l2_1", "before": "Juon", "after": "joka aamu.", "answer": "kahvia", "options": ["kahvi", "kahvia", "kahvin"], "en": "I drink coffee every morning." }
@@ -69,7 +100,6 @@
       "words": [
         { "id": "w_paljonko", "fi": "paljonko", "en": "how much", "puhe": "paljonks", "pos": "question" },
         { "id": "w_maksaa", "fi": "maksaa", "en": "to cost", "altEn": ["cost", "to pay", "pay"], "pos": "verb", "icon": "cash-register" },
-        { "id": "w_euro", "fi": "euro", "en": "euro", "pos": "noun", "icon": "currency-eur" },
         { "id": "w_kallis", "fi": "kallis", "en": "expensive", "pos": "adj", "icon": "cash-multiple" },
         { "id": "w_halpa", "fi": "halpa", "en": "cheap", "pos": "adj", "icon": "sale" },
         { "id": "w_kauppa", "fi": "kauppa", "en": "shop", "altEn": ["store"], "pos": "noun", "icon": "store" },
@@ -78,11 +108,11 @@
       ],
       "sentences": [
         { "id": "s_u3l3_1", "fi": "Paljonko tämä maksaa?", "en": "How much does this cost?", "altEn": ["How much is this?"], "puhe": "Paljonks tää maksaa?", "speaker": "aino" },
-        { "id": "s_u3l3_2", "fi": "Se maksaa viisi euroa.", "en": "It costs five euros.", "altEn": ["That costs five euros.", "It is five euros."], "puhe": "Se maksaa viis euroo.", "speaker": "aino" },
+        { "id": "s_u3l3_2", "fi": "Se maksaa viisi euroa.", "en": "It costs five euros.", "puhe": "Se maksaa viis euroo.", "speaker": "aino" },
         { "id": "s_u3l3_3", "fi": "Tämä on liian kallis.", "en": "This is too expensive.", "puhe": "Tää on liian kallis.", "speaker": "aino" },
-        { "id": "s_u3l3_4", "fi": "Voinko maksaa kortilla?", "en": "Can I pay by card?", "altEn": ["Can I pay with a card?", "Can I pay with card?"], "puhe": "Voinks mä maksaa kortilla?", "speaker": "aino" },
+        { "id": "s_u3l3_4", "fi": "Onko tämä halpa?", "en": "Is this cheap?", "puhe": "Onks tää halpa?", "speaker": "aino" },
         { "id": "s_u3l3_5", "fi": "Kauppa on auki.", "en": "The shop is open.", "altEn": ["The store is open."], "speaker": "aino" },
-        { "id": "s_u3l3_6", "fi": "Tarvitsetko kassin?", "en": "Do you need a bag?", "puhe": "Tarviiks kassin?", "note": "You'll hear this at every K-Market and S-Market checkout.", "speaker": "aino" }
+        { "id": "s_u3l3_6", "fi": "Kortti vai käteinen?", "en": "Card or cash?", "note": "What a cashier may ask. Almost everywhere takes cards.", "speaker": "aino" }
       ],
       "fill": [
         { "id": "f_u3l3_1", "before": "Se maksaa viisi", "after": ".", "answer": "euroa", "options": ["euro", "euroa", "euroja"], "en": "It costs five euros.", "hint": "After numbers 2+, the noun is singular partitive." }
@@ -98,20 +128,21 @@
         { "id": "w_kahvila", "fi": "kahvila", "en": "café", "altEn": ["cafe", "coffee shop"], "pos": "noun", "icon": "coffee-maker" },
         { "id": "w_pulla", "fi": "pulla", "en": "sweet bun", "altEn": ["bun", "pulla"], "pos": "noun", "icon": "muffin" },
         { "id": "w_korvapuusti", "fi": "korvapuusti", "en": "cinnamon roll", "altEn": ["cinnamon bun"], "note": "Literally 'a slap on the ear'.", "pos": "noun", "icon": "cookie" },
-        { "id": "w_kuppi", "fi": "kuppi", "en": "cup", "pos": "noun", "icon": "cup" },
-        { "id": "w_sokeri", "fi": "sokeri", "en": "sugar", "pos": "noun", "icon": "spoon-sugar" },
         { "id": "w_ottaa", "fi": "ottaa", "en": "to take", "altEn": ["take", "to have"], "pos": "verb", "icon": "hand-back-right" },
-        { "id": "w_haluaisin", "fi": "haluaisin", "en": "I would like", "altEn": ["I'd like"], "pos": "phrase" }
+        { "id": "w_haluaisin", "fi": "haluaisin", "en": "I would like", "altEn": ["I'd like"], "pos": "phrase" },
+        { "id": "w_mita_saisi_olla", "fi": "mitä saisi olla", "en": "what can I get you", "altEn": ["what would you like"], "puhe": "mitä sais olla", "note": "What staff say. Learn it whole.", "pos": "phrase", "icon": "room-service" },
+        { "id": "w_taalla_vai_mukaan", "fi": "täällä vai mukaan", "en": "for here or to go", "pos": "phrase", "icon": "coffee-to-go" }
       ],
       "sentences": [
-        { "id": "s_u3l4_1", "fi": "Haluaisin kupin kahvia.", "en": "I would like a cup of coffee.", "puhe": "Mä ottaisin kupin kahvii.", "speaker": "aino" },
-        { "id": "s_u3l4_2", "fi": "Otan korvapuustin.", "en": "I'll take a cinnamon roll.", "altEn": ["I will take a cinnamon roll.", "I'll have a cinnamon roll.", "I take a cinnamon roll.", "I'll take a cinnamon bun."], "puhe": "Mä otan korvapuustin.", "speaker": "aino" },
-        { "id": "s_u3l4_3", "fi": "Täällä vai mukaan?", "en": "For here or to go?", "altEn": ["Here or to go?", "For here or takeaway?", "Eat in or take away?"], "speaker": "aino" },
-        { "id": "s_u3l4_4", "fi": "Täällä, kiitos.", "en": "For here, please.", "altEn": ["Here, please.", "For here, thanks."], "speaker": "aino" },
-        { "id": "s_u3l4_5", "fi": "Onko teillä kauramaitoa?", "en": "Do you have oat milk?", "puhe": "Onks teil kauramaitoo?", "speaker": "aino" }
+        { "id": "s_u3l4_1", "fi": "Mitä saisi olla?", "en": "What can I get you?", "altEn": ["What would you like?"], "puhe": "Mitä sais olla?", "speaker": "aino" },
+        { "id": "s_u3l4_2", "fi": "Haluaisin kahvia, kiitos.", "en": "I would like some coffee, please.", "altEn": ["I'd like coffee, please.", "I would like coffee, please.", "I'd like some coffee, please."], "puhe": "Mä haluisin kahvii, kiitos.", "speaker": "sofia" },
+        { "id": "s_u3l4_3", "fi": "Kahvi ja korvapuusti, kiitos.", "en": "A coffee and a cinnamon roll, please.", "altEn": ["Coffee and a cinnamon roll, please.", "A coffee and a cinnamon bun, please."], "speaker": "sofia" },
+        { "id": "s_u3l4_4", "fi": "Täällä vai mukaan?", "en": "For here or to go?", "speaker": "aino" },
+        { "id": "s_u3l4_5", "fi": "Täällä, kiitos.", "en": "For here, please.", "altEn": ["Here, please.", "For here, thanks."], "speaker": "sofia" },
+        { "id": "s_u3l4_6", "fi": "Voinko maksaa kortilla?", "en": "Can I pay by card?", "altEn": ["Can I pay with a card?", "Could I pay by card?"], "puhe": "Voinks mä maksaa kortilla?", "speaker": "sofia" }
       ],
       "fill": [
-        { "id": "f_u3l4_1", "before": "Haluaisin kupin", "after": ".", "answer": "kahvia", "options": ["kahvi", "kahvia", "kahvissa"], "en": "I would like a cup of coffee." }
+        { "id": "f_u3l4_1", "before": "Voinko maksaa", "after": "?", "answer": "kortilla", "options": ["kortti", "kortilla", "kortissa"], "en": "Can I pay by card?", "hint": "-lla / -llä: by means of." }
       ]
     }
   ],
@@ -125,16 +156,6 @@
         { "type": "table", "head": ["Basic form", "Partitive", "Example"], "rows": [["kahvi", "kahvia", "Juon kahvia."], ["leipä", "leipää", "Syön leipää."], ["vesi", "vettä", "Lasi vettä."], ["tee", "teetä", "Haluatko teetä?"], ["maito", "maitoa", "Ostan maitoa."]] },
         { "type": "p", "text": "A whole, countable thing takes the -n ending instead: 'Syön omenan' (I eat an/the apple — all of it)." },
         { "type": "tip", "text": "Negative sentences always use the partitive object: 'Syön lihan' → 'En syö lihaa'." }
-      ]
-    },
-    {
-      "id": "g_question_ko",
-      "title": "Kysymykset: -ko / -kö",
-      "titleEn": "Yes/no questions",
-      "blocks": [
-        { "type": "p", "text": "To ask a yes/no question, move the verb first and add -ko or -kö (vowel harmony)." },
-        { "type": "table", "head": ["Statement", "Question", "Puhekieli"], "rows": [["Puhut suomea.", "Puhutko suomea?", "Puhuks sä suomee?"], ["Syöt kalaa.", "Syötkö kalaa?", "Syöks sä kalaa?"], ["Se on auki.", "Onko se auki?", "Onks se auki?"]] },
-        { "type": "tip", "text": "In speech -ko/-kö usually shrinks to -ks: onks, puhuks, haluuks." }
       ]
     },
     {

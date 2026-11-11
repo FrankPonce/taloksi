@@ -2,6 +2,7 @@ import {
   ALL_ITEMS,
   breakdown,
   CATEGORIES,
+  conceptsFor,
   dialogueFor,
   formsOf,
   getItem,
@@ -9,6 +10,7 @@ import {
   sentencePool,
   wordPool,
   words as splitWords,
+  type ConceptCard,
   type FillBlank,
   type Item,
   type Lesson,
@@ -22,6 +24,8 @@ export type ChoiceVariant = 'odd' | 'ending' | 'register' | 'judge' | 'hear' | '
 
 export type Exercise =
   | { kind: 'intro'; key: string; word: Word }
+  /** A concept card: explains a new ending or rule before it is used */
+  | { kind: 'concept'; key: string; card: ConceptCard }
   | {
       kind: 'pick';
       key: string;
@@ -308,8 +312,8 @@ export function judgeExercise(item: Item, lesson: Lesson, key: string): Exercise
 }
 
 /** Sound-alike words that differ only in length: which one did you hear? */
-export function hearExercise(index: number, key: string): Exercise {
-  const set = MINIMAL_PAIRS[index % MINIMAL_PAIRS.length];
+export function hearExercise(index: number, key: string, pairId?: string): Exercise {
+  const set = MINIMAL_PAIRS.find((p) => p.id === pairId) ?? MINIMAL_PAIRS[index % MINIMAL_PAIRS.length];
   const target = pick(set.words);
   const label = (w: { fi: string; en: string }) => `${w.fi}  (${w.en})`;
   return {
@@ -402,6 +406,71 @@ export function spellExercise(lesson: Lesson, key: string): Exercise | null {
   return { kind: 'spell', key, itemId: word.id, fi: word.fi, en: word.en, icon: word.icon, tiles: shuffle([...letters, ...[...decoys].slice(0, 3)]) };
 }
 
+// ── Concept cards ───────────────────────────────────────────────────────────
+
+/** Audio id for one example on a card */
+export const exampleAudio = (card: ConceptCard, i: number) => card.examples[i].audio ?? `${card.id}_${i}`;
+
+/**
+ * Two quick questions on a card, before its ending shows up in sentences:
+ * build the new form, then say what a form means.
+ */
+export function conceptPractice(card: ConceptCard): Exercise[] {
+  const n = card.examples.length;
+  if (n < 3) return [];
+  const order = shuffle(card.examples.map((_, i) => i));
+  const a = card.examples[order[0]];
+  const b = card.examples[order[1]];
+  const others = card.examples.filter((e) => e !== a).map((e) => e.fi);
+  const wrong = (a.wrong?.length ? a.wrong : others).filter((w) => w !== a.fi).slice(0, 3);
+  return [
+    {
+      kind: 'choice',
+      key: `${card.id}-make`,
+      variant: 'form',
+      title: 'Uusi muoto · Make the new form',
+      sub: a.from ? `${a.from} → ?   (${a.en})` : `Which one means “${a.en}”?`,
+      choices: shuffle([a.fi, ...wrong]),
+      answer: a.fi,
+      note: card.body[0],
+    },
+    {
+      kind: 'choice',
+      key: `${card.id}-mean`,
+      variant: 'form',
+      title: 'Mitä se tarkoittaa? · What does it mean?',
+      itemId: exampleAudio(card, order[1]),
+      fi: b.fi,
+      sub: 'Pick the meaning.',
+      choices: shuffle(card.examples.map((e) => e.en)),
+      answer: b.en,
+    },
+  ];
+}
+
+/** The starter unit's authored steps, turned into exercises */
+function starterExercises(lesson: Lesson): Exercise[] {
+  return (lesson.steps ?? []).map((st, i): Exercise => {
+    const key = `${lesson.id}-${i}`;
+    if (st.type === 'card') return { kind: 'concept', key, card: st.card };
+    if (st.type === 'hear') return hearExercise(0, key, st.pair);
+    const audioId = `${lesson.id}_${i}`;
+    return {
+      kind: 'choice',
+      key,
+      variant: st.listen ? 'hear' : 'form',
+      title: st.title,
+      itemId: st.fi ? audioId : undefined,
+      fi: st.fi,
+      audio: st.listen ? { text: st.listen, id: audioId } : undefined,
+      sub: st.sub,
+      choices: st.keepOrder ? st.choices : shuffle(st.choices),
+      answer: st.answer,
+      note: st.note,
+    };
+  });
+}
+
 // ── Lesson builder ──────────────────────────────────────────────────────────
 
 /**
@@ -414,6 +483,7 @@ export function buildLessonExercises(
   lesson: Lesson,
   opts: { replay?: boolean; adult?: boolean; warmupIds?: string[]; lessonIndex?: number } = {}
 ): Exercise[] {
+  if (lesson.steps?.length) return starterExercises(lesson);
   const adult = !!opts.adult;
   const words: Item[] = lesson.words.map((w) => ({ ...w, kind: 'word' }));
   const sentences: Item[] = lesson.sentences.map((s) => ({ ...s, kind: 'sentence' }));
@@ -425,6 +495,12 @@ export function buildLessonExercises(
     const it = getItem(id);
     if (it && it.kind === 'word') out.push(pickExercise(it, 'en-fi', `warm-${id}`, adult || it.adult, true));
   });
+
+  // 0b. A new ending or rule: its card first, then two quick questions on it alone
+  for (const card of conceptsFor(lesson.id)) {
+    if (!opts.replay) out.push({ kind: 'concept', key: `concept-${card.id}`, card });
+    conceptPractice(card).forEach((e) => out.push(e));
+  }
 
   // 1. New words: intro cards in pairs, each followed by a quick check
   for (let i = 0; i < lesson.words.length; i += 2) {

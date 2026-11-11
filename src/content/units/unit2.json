@@ -5,57 +5,58 @@
   "color": "#2E9E5B",
   "host": "sofia",
   "scene": "river",
-  "reviewed": false,
+  "reviewed": true,
   "lessons": [
     {
       "id": "u2l1",
+      "title": "Maat ja kielet",
+      "titleEn": "Countries and languages",
+      "host": "sofia",
+      "grammar": "g_question_ko",
+      "words": [
+        { "id": "w_suomi", "fi": "Suomi", "en": "Finland", "pos": "noun", "icon": "flag" },
+        { "id": "w_espanja", "fi": "Espanja", "en": "Spain", "pos": "noun" },
+        { "id": "w_yhdysvallat", "fi": "Yhdysvallat", "en": "the United States", "altEn": ["United States", "USA", "the USA", "America"], "pos": "noun" },
+        { "id": "w_suomalainen", "fi": "suomalainen", "en": "Finnish", "altEn": ["a Finn", "Finn", "Finnish person"], "pos": "adj" },
+        { "id": "w_maa", "fi": "maa", "en": "country", "altEn": ["land"], "note": "Also means land, ground and earth.", "pos": "noun", "icon": "earth" },
+        { "id": "w_englanti", "fi": "englanti", "en": "English", "pos": "noun" },
+        { "id": "w_ruotsi", "fi": "ruotsi", "en": "Swedish", "note": "Finland's second official language. In Turku you'll hear it a lot.", "pos": "noun" }
+      ],
+      "sentences": [
+        { "id": "s_u2l1_1", "fi": "Oletko sinä suomalainen?", "en": "Are you Finnish?", "altEn": ["Are you a Finn?"], "altFi": ["Oletko suomalainen?"], "puhe": "Ootsä suomalainen?", "speaker": "sofia" },
+        { "id": "s_u2l1_2", "fi": "Hän on suomalainen.", "en": "He is Finnish.", "altEn": ["She is Finnish.", "He is a Finn.", "She is a Finn."], "puhe": "Se on suomalainen.", "speaker": "sofia" },
+        { "id": "s_u2l1_3", "fi": "Espanja on kaunis maa.", "en": "Spain is a beautiful country.", "speaker": "sofia" },
+        { "id": "s_u2l1_4", "fi": "Suomi on vaikea kieli.", "en": "Finnish is a difficult language.", "altEn": ["Finnish is a hard language."], "puhe": "Suomi on vaikee kieli.", "speaker": "sofia", "note": "At the start of a sentence every word gets a capital letter, so here Suomi is the language, Finnish, not the country." },
+        { "id": "s_u2l1_5", "fi": "Onko englanti vaikea kieli?", "en": "Is English a difficult language?", "altEn": ["Is English a hard language?"], "puhe": "Onks englanti vaikee kieli?", "speaker": "sofia" },
+        { "id": "s_u2l1_6", "fi": "Yhdysvallat on iso maa.", "en": "The United States is a big country.", "altEn": ["The United States is a large country.", "The USA is a big country.", "America is a big country."], "speaker": "sofia" }
+      ],
+      "fill": [
+        { "id": "f_u2l1_1", "before": "", "after": "sinä suomalainen?", "answer": "Oletko", "options": ["Oletko", "Olet", "Olen"], "en": "Are you Finnish?", "hint": "Add -ko to the verb and put it first to ask a yes/no question." }
+      ]
+    },
+    {
+      "id": "u2l2",
       "title": "Mistä olet kotoisin?",
       "titleEn": "Where are you from?",
       "host": "samir",
       "grammar": "g_locative",
       "words": [
-        { "id": "w_suomi", "fi": "Suomi", "en": "Finland", "pos": "noun", "icon": "flag" },
-        { "id": "w_suomalainen", "fi": "suomalainen", "en": "Finnish", "altEn": ["a Finn", "Finn", "Finnish person"], "pos": "adj" },
-        { "id": "w_espanja", "fi": "Espanja", "en": "Spain", "pos": "noun" },
-        { "id": "w_yhdysvallat", "fi": "Yhdysvallat", "en": "the United States", "altEn": ["United States", "USA", "the USA", "America"], "pos": "noun" },
+        { "id": "w_mista", "fi": "mistä", "en": "from where", "altEn": ["where from"], "pos": "question" },
         { "id": "w_kotoisin", "fi": "kotoisin", "en": "from (originally)", "altEn": ["from", "originally from"], "pos": "adv", "icon": "home-map-marker" },
-        { "id": "w_mista", "fi": "mistä", "en": "from where", "altEn": ["where from"], "pos": "question" }
+        { "id": "w_turku", "fi": "Turku", "en": "Turku", "pos": "noun" },
+        { "id": "w_helsinki", "fi": "Helsinki", "en": "Helsinki", "pos": "noun" },
+        { "id": "w_kaupunki", "fi": "kaupunki", "en": "city", "altEn": ["town"], "pos": "noun", "icon": "city" }
       ],
       "sentences": [
-        { "id": "s_u2l1_1", "fi": "Mistä sinä olet kotoisin?", "en": "Where are you from?", "altFi": ["Mistä olet kotoisin?"], "altEn": ["Where are you originally from?"], "puhe": "Mistä sä oot kotoisin?", "speaker": "samir" },
-        { "id": "s_u2l1_2", "fi": "Olen kotoisin Espanjasta.", "en": "I am from Spain.", "altEn": ["I am originally from Spain."], "puhe": "Mä oon Espanjasta.", "speaker": "sofia" },
-        { "id": "s_u2l1_3", "fi": "Hän on suomalainen.", "en": "He is Finnish.", "altEn": ["She is Finnish.", "He is a Finn.", "She is a Finn."], "puhe": "Se on suomalainen.", "speaker": "samir" },
-        { "id": "s_u2l1_4", "fi": "Asun nyt Suomessa.", "en": "I live in Finland now.", "altEn": ["Now I live in Finland.", "I now live in Finland."], "puhe": "Mä asun nyt Suomessa.", "speaker": "samir" },
-        { "id": "s_u2l1_5", "fi": "Oletko sinä suomalainen?", "en": "Are you Finnish?", "altFi": ["Oletko suomalainen?"], "altEn": ["Are you a Finn?"], "puhe": "Ootsä suomalainen?", "speaker": "samir" }
+        { "id": "s_u2l2_1", "fi": "Mistä sinä olet kotoisin?", "en": "Where are you from?", "altEn": ["Where do you come from?"], "altFi": ["Mistä olet kotoisin?"], "puhe": "Mistä sä oot kotoisin?", "speaker": "samir" },
+        { "id": "s_u2l2_2", "fi": "Olen kotoisin Espanjasta.", "en": "I am from Spain.", "altEn": ["I'm from Spain.", "I come from Spain."], "altFi": ["Minä olen kotoisin Espanjasta."], "puhe": "Mä oon kotoisin Espanjasta.", "speaker": "sofia" },
+        { "id": "s_u2l2_3", "fi": "Hän on kotoisin Yhdysvalloista.", "en": "He is from the United States.", "altEn": ["She is from the United States.", "He is from the USA.", "She is from the USA."], "puhe": "Se on kotoisin Yhdysvalloista.", "speaker": "samir" },
+        { "id": "s_u2l2_4", "fi": "Oletko sinä kotoisin Suomesta?", "en": "Are you from Finland?", "altFi": ["Oletko kotoisin Suomesta?"], "puhe": "Ootsä kotoisin Suomesta?", "speaker": "samir" },
+        { "id": "s_u2l2_5", "fi": "Turku on kaunis kaupunki.", "en": "Turku is a beautiful city.", "altEn": ["Turku is a beautiful town."], "speaker": "samir" },
+        { "id": "s_u2l2_6", "fi": "Onko Helsinki iso kaupunki?", "en": "Is Helsinki a big city?", "altEn": ["Is Helsinki a large city?"], "puhe": "Onks Helsinki iso kaupunki?", "speaker": "samir" }
       ],
       "fill": [
-        { "id": "f_u2l1_1", "before": "Olen kotoisin", "after": ".", "answer": "Espanjasta", "options": ["Espanja", "Espanjasta", "Espanjassa"], "en": "I am from Spain.", "hint": "'From (inside) somewhere' = -sta / -stä." }
-      ]
-    },
-    {
-      "id": "u2l2",
-      "title": "Kielet",
-      "titleEn": "Languages",
-      "host": "sofia",
-      "grammar": "g_partitive_intro",
-      "words": [
-        { "id": "w_suomi_kieli", "fi": "suomi", "en": "Finnish (language)", "altEn": ["Finnish"], "note": "Languages are written lowercase; the country 'Suomi' is capitalised.", "pos": "noun" },
-        { "id": "w_englanti", "fi": "englanti", "en": "English", "pos": "noun" },
-        { "id": "w_ruotsi", "fi": "ruotsi", "en": "Swedish", "note": "Finland's second official language. In Turku you'll hear it a lot.", "pos": "noun" },
-        { "id": "w_espanja_kieli", "fi": "espanja", "en": "Spanish", "pos": "noun" },
-        { "id": "w_puhua", "fi": "puhua", "en": "to speak", "altEn": ["speak"], "pos": "verb", "icon": "account-voice" },
-        { "id": "w_vahan", "fi": "vähän", "en": "a little", "altEn": ["a bit", "little"], "pos": "adv" },
-        { "id": "w_hyvin", "fi": "hyvin", "en": "well", "pos": "adv" }
-      ],
-      "sentences": [
-        { "id": "s_u2l2_1", "fi": "Puhun englantia ja espanjaa.", "en": "I speak English and Spanish.", "puhe": "Mä puhun englantii ja espanjaa.", "speaker": "sofia" },
-        { "id": "s_u2l2_2", "fi": "Puhun vähän suomea.", "en": "I speak a little Finnish.", "altEn": ["I speak a bit of Finnish.", "I speak some Finnish."], "puhe": "Mä puhun vähän suomee.", "speaker": "sofia" },
-        { "id": "s_u2l2_3", "fi": "Hän puhuu ruotsia hyvin.", "en": "He speaks Swedish well.", "altEn": ["She speaks Swedish well."], "puhe": "Se puhuu ruotsii hyvin.", "speaker": "sofia" },
-        { "id": "s_u2l2_4", "fi": "Puhutko sinä suomea?", "en": "Do you speak Finnish?", "altFi": ["Puhutko suomea?"], "puhe": "Puhuks sä suomee?", "speaker": "sofia" },
-        { "id": "s_u2l2_5", "fi": "Suomi on vaikea kieli.", "en": "Finnish is a difficult language.", "altEn": ["Finnish is a hard language."], "puhe": "Suomi on vaikee kieli.", "speaker": "sofia" }
-      ],
-      "fill": [
-        { "id": "f_u2l2_1", "before": "Puhun vähän", "after": ".", "answer": "suomea", "options": ["suomi", "suomea", "suomessa"], "en": "I speak a little Finnish.", "hint": "After 'puhua', the language is in the partitive (-a / -ä)." }
+        { "id": "f_u2l2_1", "before": "Olen kotoisin", "after": ".", "answer": "Espanjasta", "options": ["Espanja", "Espanjasta", "Suomesta"], "en": "I am from Spain.", "hint": "'From' = -sta / -stä." }
       ]
     },
     {
@@ -67,56 +68,58 @@
       "words": [
         { "id": "w_asua", "fi": "asua", "en": "to live", "altEn": ["live"], "pos": "verb", "icon": "home" },
         { "id": "w_missa", "fi": "missä", "en": "where", "pos": "question", "icon": "map-marker-question" },
-        { "id": "w_turku", "fi": "Turku", "en": "Turku", "pos": "noun" },
-        { "id": "w_helsinki", "fi": "Helsinki", "en": "Helsinki", "pos": "noun" },
-        { "id": "w_kaupunki", "fi": "kaupunki", "en": "city", "altEn": ["town"], "pos": "noun", "icon": "city" },
         { "id": "w_opiskella", "fi": "opiskella", "en": "to study", "altEn": ["study"], "pos": "verb", "icon": "book-open-page-variant" },
-        { "id": "w_yliopisto", "fi": "yliopisto", "en": "university", "pos": "noun", "icon": "school" }
+        { "id": "w_yliopisto", "fi": "yliopisto", "en": "university", "pos": "noun", "icon": "school" },
+        { "id": "w_nyt", "fi": "nyt", "en": "now", "pos": "adv", "icon": "clock" }
       ],
       "sentences": [
         { "id": "s_u2l3_1", "fi": "Missä sinä asut?", "en": "Where do you live?", "altFi": ["Missä asut?"], "puhe": "Missä sä asut?", "speaker": "pekka" },
-        { "id": "s_u2l3_2", "fi": "Asun Turussa.", "en": "I live in Turku.", "puhe": "Mä asun Turussa.", "speaker": "pekka" },
-        { "id": "s_u2l3_3", "fi": "Turku on kaunis kaupunki.", "en": "Turku is a beautiful city.", "altEn": ["Turku is a beautiful town.", "Turku is a pretty city."], "speaker": "pekka" },
-        { "id": "s_u2l3_4", "fi": "Opiskelen yliopistossa.", "en": "I study at the university.", "altEn": ["I study at a university.", "I study at university."], "puhe": "Mä opiskelen yliopistossa.", "speaker": "sofia" },
-        { "id": "s_u2l3_5", "fi": "Hän asuu Helsingissä.", "en": "He lives in Helsinki.", "altEn": ["She lives in Helsinki."], "puhe": "Se asuu Helsingissä.", "speaker": "pekka" },
-        { "id": "s_u2l3_6", "fi": "Turku on Suomen vanhin kaupunki.", "en": "Turku is the oldest city in Finland.", "altEn": ["Turku is Finland's oldest city."], "speaker": "pekka", "fact": "True. Turku grew up around its cathedral in the 1200s and was the capital until 1812." }
+        { "id": "s_u2l3_2", "fi": "Asun Turussa.", "en": "I live in Turku.", "altFi": ["Minä asun Turussa."], "puhe": "Mä asun Turussa.", "speaker": "pekka" },
+        { "id": "s_u2l3_3", "fi": "Hän asuu Helsingissä.", "en": "He lives in Helsinki.", "altEn": ["She lives in Helsinki."], "puhe": "Se asuu Helsingissä.", "speaker": "pekka" },
+        { "id": "s_u2l3_4", "fi": "Opiskelen Turussa.", "en": "I study in Turku.", "altFi": ["Minä opiskelen Turussa."], "puhe": "Mä opiskelen Turussa.", "speaker": "sofia" },
+        { "id": "s_u2l3_5", "fi": "Asun nyt Suomessa.", "en": "I live in Finland now.", "altEn": ["Now I live in Finland.", "I now live in Finland."], "altFi": ["Nyt asun Suomessa."], "puhe": "Mä asun nyt Suomessa.", "speaker": "sofia" },
+        { "id": "s_u2l3_6", "fi": "Missä yliopisto on?", "en": "Where is the university?", "altFi": ["Missä on yliopisto?"], "speaker": "pekka" }
       ],
       "fill": [
-        { "id": "f_u2l3_1", "before": "Asun", "after": ".", "answer": "Turussa", "options": ["Turku", "Turussa", "Turkuun"], "en": "I live in Turku.", "hint": "Turku → Turussa: rk weakens to r (consonant gradation)." }
+        { "id": "f_u2l3_1", "before": "Asun", "after": ".", "answer": "Turussa", "options": ["Turku", "Turussa", "Turusta"], "en": "I live in Turku.", "hint": "Turku → Turussa: rk weakens to r (consonant gradation)." }
       ]
     },
     {
       "id": "u2l4",
-      "title": "Numerot 0–10",
-      "titleEn": "Numbers 0–10",
-      "host": "mikko",
+      "title": "Puhutko suomea?",
+      "titleEn": "Do you speak Finnish?",
+      "host": "helvi",
+      "grammar": "g_partitive_intro",
       "words": [
-        { "id": "w_nolla", "fi": "nolla", "en": "zero", "altEn": ["0"], "pos": "num", "icon": "numeric-0" },
-        { "id": "w_yksi", "fi": "yksi", "en": "one", "altEn": ["1"], "puhe": "yks", "pos": "num", "icon": "numeric-1" },
-        { "id": "w_kaksi", "fi": "kaksi", "en": "two", "altEn": ["2"], "puhe": "kaks", "pos": "num", "icon": "numeric-2" },
-        { "id": "w_kolme", "fi": "kolme", "en": "three", "altEn": ["3"], "pos": "num", "icon": "numeric-3" },
-        { "id": "w_nelja", "fi": "neljä", "en": "four", "altEn": ["4"], "pos": "num", "icon": "numeric-4" },
-        { "id": "w_viisi", "fi": "viisi", "en": "five", "altEn": ["5"], "puhe": "viis", "pos": "num", "icon": "numeric-5" },
-        { "id": "w_kuusi", "fi": "kuusi", "en": "six", "altEn": ["6"], "puhe": "kuus", "pos": "num", "icon": "numeric-6" },
-        { "id": "w_seitseman", "fi": "seitsemän", "en": "seven", "altEn": ["7"], "puhe": "seittemän", "pos": "num", "icon": "numeric-7" },
-        { "id": "w_kahdeksan", "fi": "kahdeksan", "en": "eight", "altEn": ["8"], "puhe": "kaheksan", "pos": "num", "icon": "numeric-8" },
-        { "id": "w_yhdeksan", "fi": "yhdeksän", "en": "nine", "altEn": ["9"], "puhe": "yheksän", "pos": "num", "icon": "numeric-9" },
-        { "id": "w_kymmenen", "fi": "kymmenen", "en": "ten", "altEn": ["10"], "pos": "num", "icon": "numeric-10" }
+        { "id": "w_suomi_kieli", "fi": "suomi", "en": "Finnish (language)", "altEn": ["Finnish"], "note": "Languages are written lowercase; the country 'Suomi' is capitalised.", "pos": "noun" },
+        { "id": "w_espanja_kieli", "fi": "espanja", "en": "Spanish", "pos": "noun" },
+        { "id": "w_puhua", "fi": "puhua", "en": "to speak", "altEn": ["speak"], "pos": "verb", "icon": "account-voice" },
+        { "id": "w_vahan", "fi": "vähän", "en": "a little", "altEn": ["a bit", "little"], "pos": "adv" },
+        { "id": "w_hyvin", "fi": "hyvin", "en": "well", "pos": "adv" }
       ],
       "sentences": [
-        { "id": "s_u2l4_1", "fi": "Minulla on kaksi siskoa.", "en": "I have two sisters.", "puhe": "Mulla on kaks siskoo.", "speaker": "mikko" },
-        { "id": "s_u2l4_2", "fi": "Yksi kahvi, kiitos.", "en": "One coffee, please.", "altEn": ["A coffee, please.", "One coffee, thanks."], "puhe": "Yks kahvi, kiitos.", "speaker": "mikko" },
-        { "id": "s_u2l4_3", "fi": "Kolme plus neljä on seitsemän.", "en": "Three plus four is seven.", "altEn": ["Three plus four equals seven."], "puhe": "Kolme plus neljä on seittemän.", "speaker": "mikko" },
-        { "id": "s_u2l4_4", "fi": "Hän on kymmenen vuotta vanha.", "en": "He is ten years old.", "altEn": ["She is ten years old."], "puhe": "Se on kymmenen vuotta vanha.", "speaker": "mikko" },
-        { "id": "s_u2l4_5", "fi": "Bussi numero kuusi tulee.", "en": "Bus number six is coming.", "altEn": ["Bus number six comes."], "puhe": "Kuutonen tulee.", "speaker": "mikko" },
-        { "id": "s_u2l4_6", "fi": "Suomessa on kolme miljoonaa saunaa.", "en": "There are three million saunas in Finland.", "altEn": ["Finland has three million saunas.", "In Finland there are three million saunas."], "speaker": "mikko", "fact": "About right: roughly three million saunas for five and a half million people." }
+        { "id": "s_u2l4_1", "fi": "Puhutko sinä suomea?", "en": "Do you speak Finnish?", "altFi": ["Puhutko suomea?"], "puhe": "Puhuks sä suomee?", "speaker": "helvi" },
+        { "id": "s_u2l4_2", "fi": "Puhun vähän suomea.", "en": "I speak a little Finnish.", "altEn": ["I speak a bit of Finnish."], "puhe": "Mä puhun vähän suomee.", "speaker": "sofia" },
+        { "id": "s_u2l4_3", "fi": "Puhun englantia ja espanjaa.", "en": "I speak English and Spanish.", "puhe": "Mä puhun englantii ja espanjaa.", "speaker": "sofia" },
+        { "id": "s_u2l4_4", "fi": "Hän puhuu ruotsia hyvin.", "en": "He speaks Swedish well.", "altEn": ["She speaks Swedish well.", "He speaks good Swedish.", "She speaks good Swedish."], "puhe": "Se puhuu ruotsii hyvin.", "speaker": "helvi" },
+        { "id": "s_u2l4_5", "fi": "Puhut hyvin suomea!", "en": "You speak Finnish well!", "altEn": ["You speak good Finnish!"], "puhe": "Sä puhut hyvin suomee!", "speaker": "helvi" }
       ],
       "fill": [
-        { "id": "f_u2l4_1", "before": "Minulla on kaksi", "after": ".", "answer": "siskoa", "options": ["sisko", "siskoa", "siskot"], "en": "I have two sisters.", "hint": "After numbers 2 and up, the noun is singular partitive." }
+        { "id": "f_u2l4_1", "before": "Puhun vähän", "after": ".", "answer": "suomea", "options": ["suomi", "suomea", "Suomessa"], "en": "I speak a little Finnish.", "hint": "After puhua, the language takes the partitive: -a / -ä." }
       ]
     }
   ],
   "grammar": [
+    {
+      "id": "g_question_ko",
+      "title": "Kysymykset: -ko / -kö",
+      "titleEn": "Yes/no questions",
+      "blocks": [
+        { "type": "p", "text": "To ask a yes/no question, move the verb first and add -ko or -kö (vowel harmony)." },
+        { "type": "table", "head": ["Statement", "Question", "Puhekieli"], "rows": [["Puhut suomea.", "Puhutko suomea?", "Puhuks sä suomee?"], ["Syöt kalaa.", "Syötkö kalaa?", "Syöks sä kalaa?"], ["Se on auki.", "Onko se auki?", "Onks se auki?"]] },
+        { "type": "tip", "text": "In speech -ko/-kö usually shrinks to -ks: onks, puhuks, haluuks." }
+      ]
+    },
     {
       "id": "g_locative",
       "title": "Missä? Mistä? Mihin?",

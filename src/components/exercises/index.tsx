@@ -1,6 +1,7 @@
 import type { Exercise } from '../../engine/exercises';
 import { Build } from './Build';
 import { Choice } from './Choice';
+import { Concept } from './Concept';
 import { Convo } from './Convo';
 import { Fill } from './Fill';
 import { Intro } from './Intro';
@@ -20,6 +21,8 @@ export function ExerciseView({ ex, locked, onSubmit }: { ex: Exercise; locked: b
   switch (ex.kind) {
     case 'intro':
       return <Intro key={ex.key} ex={ex} {...p} />;
+    case 'concept':
+      return <Concept key={ex.key} ex={ex} {...p} />;
     case 'pick':
       return <Pick key={ex.key} ex={ex} {...p} />;
     case 'match':
@@ -46,4 +49,4 @@ export function ExerciseView({ ex, locked, onSubmit }: { ex: Exercise; locked: b
 }
 
 /** Exercises that advance without the correct/incorrect feedback sheet */
-export const isSilent = (ex: Exercise) => ex.kind === 'intro' || ex.kind === 'match';
+export const isSilent = (ex: Exercise) => ex.kind === 'intro' || ex.kind === 'concept' || ex.kind === 'match';

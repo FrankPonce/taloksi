@@ -1,0 +1,187 @@
+{
+  "id": "u0",
+  "title": "Alkeet",
+  "titleEn": "Start here",
+  "color": "#0E7C86",
+  "host": "norppa",
+  "scene": "forest",
+  "starter": true,
+  "reviewed": true,
+  "lessons": [
+    {
+      "id": "u0l1",
+      "title": "Aakkoset",
+      "titleEn": "Letters and sounds",
+      "host": "norppa",
+      "grammar": "g_pronunciation",
+      "words": [],
+      "sentences": [],
+      "steps": [
+        {
+          "type": "card",
+          "card": {
+            "id": "k0_letters",
+            "title": "Yksi kirjain, yksi ääni",
+            "titleEn": "One letter, one sound",
+            "body": ["Finnish is spelled the way it is said. Every letter is pronounced, and always the same way.", "Most letters sound the way you would guess. Four need attention: ä, ö, y and j."],
+            "examples": [
+              { "fi": "äiti", "en": "mother · ä as in “cat”" },
+              { "fi": "yö", "en": "night · ö like the i in “bird”" },
+              { "fi": "yksi", "en": "one · y like German ü: “ee” with rounded lips" },
+              { "fi": "joo", "en": "yeah · j like the y in “yes”" }
+            ]
+          }
+        },
+        { "type": "choice", "title": "Kuuntele · Listen and pick the spelling", "listen": "äiti", "sub": "Which word did you hear?", "choices": ["äiti", "aiti", "eiti"], "answer": "äiti", "note": "ä is the a in “cat”. a is the a in “father”." },
+        { "type": "choice", "title": "Kuuntele · Listen and pick the spelling", "listen": "yö", "sub": "Which word did you hear?", "choices": ["yö", "jo", "uo"], "answer": "yö", "note": "yö means night. jo (already) is a different word." },
+        { "type": "choice", "title": "Kuuntele · Listen and pick the spelling", "listen": "juna", "sub": "Which word did you hear?", "choices": ["juna", "yuna", "guna"], "answer": "juna", "note": "j always sounds like the y in “yes”. juna is a train." },
+        { "type": "choice", "title": "Kuuntele · Listen and pick the spelling", "listen": "kyllä", "sub": "Which word did you hear?", "choices": ["kyllä", "kullä", "killä"], "answer": "kyllä", "note": "y is not i and not u: say “ee” and round your lips. kyllä means yes." },
+        { "type": "choice", "title": "Paino · Stress", "fi": "huomenta", "sub": "Where does the stress go?", "choices": ["HUO-men-ta", "huo-MEN-ta", "huo-men-TA"], "answer": "HUO-men-ta", "note": "Always on the first syllable, in every Finnish word.", "keepOrder": true }
+      ]
+    },
+    {
+      "id": "u0l2",
+      "title": "Pitkä ja lyhyt",
+      "titleEn": "Long and short",
+      "host": "sofia",
+      "words": [],
+      "sentences": [],
+      "steps": [
+        {
+          "type": "card",
+          "card": {
+            "id": "k0_length",
+            "title": "Pitkä vai lyhyt?",
+            "titleEn": "Long or short?",
+            "body": ["A double letter is a long sound, and length changes the meaning.", "Hold a double vowel for twice as long. Before a double consonant, make a tiny pause."],
+            "examples": [
+              { "from": "tuli", "fi": "tuuli", "en": "fire → wind", "audio": "mp_tuuli" },
+              { "from": "tuli", "fi": "tulli", "en": "fire → customs", "audio": "mp_tulli" },
+              { "from": "kuka", "fi": "kukka", "en": "who → flower", "audio": "mp_kukka" },
+              { "from": "sika", "fi": "siika", "en": "pig → whitefish", "audio": "mp_siika" }
+            ]
+          }
+        },
+        { "type": "hear", "pair": "mp_tuli" },
+        { "type": "hear", "pair": "mp_kuka" },
+        { "type": "hear", "pair": "mp_muta" },
+        { "type": "hear", "pair": "mp_mato" },
+        { "type": "hear", "pair": "mp_tapaan" },
+        { "type": "hear", "pair": "mp_sata" }
+      ]
+    },
+    {
+      "id": "u0l3",
+      "title": "Ä vai A",
+      "titleEn": "Vowel harmony",
+      "host": "helvi",
+      "words": [],
+      "sentences": [],
+      "steps": [
+        {
+          "type": "card",
+          "card": {
+            "id": "k0_harmony",
+            "title": "Kaksi joukkuetta",
+            "titleEn": "Two teams of vowels",
+            "body": ["Finnish vowels come in two teams. Back: a, o, u. Front: ä, ö, y.", "One word uses one team, never both. e and i are neutral and can go with either; a word with only e and i takes the front team.", "Endings follow the word: talo → talossa, but metsä → metsässä. What these endings mean comes later. For now, hear how they match."],
+            "examples": [
+              { "from": "talo", "fi": "talossa", "en": "house · back team" },
+              { "from": "metsä", "fi": "metsässä", "en": "forest · front team" },
+              { "from": "Kemi", "fi": "Kemissä", "en": "a town in Lapland · only e and i, so front" }
+            ]
+          }
+        },
+        { "type": "choice", "title": "Kumpi joukkue? · Which team?", "fi": "talo", "sub": "Which team of vowels does this word use?", "choices": ["a o u · back", "ä ö y · front"], "answer": "a o u · back", "note": "talo has a and o: back team.", "keepOrder": true },
+        { "type": "choice", "title": "Kumpi joukkue? · Which team?", "fi": "kylä", "sub": "Which team of vowels does this word use?", "choices": ["a o u · back", "ä ö y · front"], "answer": "ä ö y · front", "note": "kylä (village) has y and ä: front team.", "keepOrder": true },
+        { "type": "choice", "title": "Kumpi joukkue? · Which team?", "fi": "kahvi", "sub": "Which team of vowels does this word use?", "choices": ["a o u · back", "ä ö y · front"], "answer": "a o u · back", "note": "kahvi has a, so it is back team. The i is neutral.", "keepOrder": true },
+        { "type": "choice", "title": "Kumpi joukkue? · Which team?", "fi": "Helsinki", "sub": "Which team of vowels does this word use?", "choices": ["a o u · back", "ä ö y · front"], "answer": "ä ö y · front", "note": "Only e and i, so front: Helsingissä.", "keepOrder": true },
+        { "type": "choice", "title": "Kumpi pääte? · Which ending fits?", "fi": "metsä", "sub": "metsä + ?", "choices": ["-ssa", "-ssä"], "answer": "-ssä", "note": "metsä has ä, so the ending has ä: metsässä.", "keepOrder": true },
+        { "type": "choice", "title": "Kumpi pääte? · Which ending fits?", "fi": "talo", "sub": "talo + ?", "choices": ["-ssa", "-ssä"], "answer": "-ssa", "note": "talo is back team: talossa.", "keepOrder": true }
+      ]
+    },
+    {
+      "id": "u0l4",
+      "title": "Miten lause toimii",
+      "titleEn": "How a sentence works",
+      "host": "norppa",
+      "words": [],
+      "sentences": [],
+      "steps": [
+        {
+          "type": "card",
+          "card": {
+            "id": "k0_articles",
+            "title": "Ei a:ta eikä the:tä",
+            "titleEn": "No “a”, no “the”",
+            "body": ["Finnish has no words for “a” or “the”. The context tells you which one is meant."],
+            "examples": [
+              { "fi": "kahvi", "en": "coffee, a coffee or the coffee" },
+              { "fi": "bussi", "en": "bus, a bus or the bus" }
+            ]
+          }
+        },
+        { "type": "choice", "title": "Mitä se tarkoittaa? · What can it mean?", "fi": "kahvi", "sub": "What can this mean?", "choices": ["coffee, a coffee or the coffee", "only “the coffee”", "only “a coffee”"], "answer": "coffee, a coffee or the coffee" },
+        {
+          "type": "card",
+          "card": {
+            "id": "k0_gender",
+            "title": "Hän = he tai she",
+            "titleEn": "One word for he and she",
+            "body": ["There is no grammatical gender. hän means he and she.", "In everyday speech people say se for both, and for “it”."],
+            "examples": [
+              { "fi": "hän", "en": "he or she" },
+              { "fi": "se", "en": "it, and he or she in speech" }
+            ]
+          }
+        },
+        { "type": "choice", "title": "Valitse · Pick one", "sub": "How do you say “she” in Finnish?", "choices": ["hän", "hen", "sie"], "answer": "hän", "note": "hän is both he and she." },
+        {
+          "type": "card",
+          "card": {
+            "id": "k0_verbs",
+            "title": "Pääte kertoo, kuka",
+            "titleEn": "The ending tells you who",
+            "body": ["The end of a verb shows who is doing it, so the pronoun is often left out: Olen Sofia means “I am Sofia”.", "There is no future tense either. The present covers it."],
+            "examples": [
+              { "fi": "olen", "en": "I am" },
+              { "fi": "olet", "en": "you are" },
+              { "fi": "on", "en": "he or she is" }
+            ]
+          }
+        },
+        { "type": "choice", "title": "Kuka puhuu? · Who is it about?", "fi": "Olen Sofia.", "sub": "The -n at the end of olen means…", "choices": ["the speaker: “I am Sofia”", "you: “you are Sofia”", "someone else"], "answer": "the speaker: “I am Sofia”", "keepOrder": true },
+        {
+          "type": "card",
+          "card": {
+            "id": "k0_endings",
+            "title": "Pienet sanat ovat päätteitä",
+            "titleEn": "Little words are endings",
+            "body": ["English uses small words: in, from, to. Finnish glues an ending onto the word instead.", "You will meet them one at a time, each with a card like this one, before any sentence uses them."],
+            "examples": [
+              { "from": "Turku", "fi": "Turussa", "en": "in Turku" },
+              { "from": "Turku", "fi": "Turusta", "en": "from Turku" },
+              { "from": "Turku", "fi": "Turkuun", "en": "to Turku" }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_pronunciation",
+      "title": "Ääntäminen",
+      "titleEn": "Pronunciation basics",
+      "blocks": [
+        { "type": "p", "text": "Finnish is written almost exactly as it sounds: every letter is pronounced, always the same way." },
+        { "type": "p", "text": "Stress is always on the first syllable of a word: HUO-men-ta, NÄ-ke-miin." },
+        { "type": "table", "head": ["Letter", "Sounds like"], "rows": [["a", "a in 'father' (short)"], ["ä", "a in 'cat'"], ["ö", "i in 'bird' (German ö)"], ["y", "German ü — say 'ee' with rounded lips"], ["r", "rolled / trilled r"], ["j", "y in 'yes'"]] },
+        { "type": "p", "text": "Double letters are long, and length changes the meaning:" },
+        { "type": "example", "fi": "tuli – tuuli – tulli", "en": "fire – wind – customs" },
+        { "type": "example", "fi": "kansa – kanssa", "en": "people – with" },
+        { "type": "tip", "text": "Exaggerate long sounds at first. Finns notice length much more than accent." }
+      ]
+    }
+  ]
+}

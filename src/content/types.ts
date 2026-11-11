@@ -38,6 +38,53 @@ export type FillBlank = {
   hint?: string;
 };
 
+/** One example on a concept card: an optional starting form, the form being taught, its meaning */
+export type ConceptExample = {
+  from?: string;
+  fi: string;
+  en: string;
+  /** wrong forms used as distractors in the practice question */
+  wrong?: string[];
+  /** id of an existing audio clip to reuse; otherwise `${card.id}_${index}` */
+  audio?: string;
+};
+
+/**
+ * A short explanation that opens the first lesson to use a new ending or rule.
+ * Cards in concepts.json gate the ending `tags` they list: no sentence may use
+ * those endings before the card's lesson (the first-contact rule). Cards with
+ * no tags are reminders that deepen something already introduced.
+ */
+export type ConceptCard = {
+  id: string;
+  /** lesson the card opens; starter-lesson cards live inline in `steps` instead */
+  lesson?: string;
+  tags?: string[];
+  title: string;
+  titleEn: string;
+  body: string[];
+  examples: ConceptExample[];
+};
+
+/** Authored steps for the starter unit, which teaches sounds and structure instead of vocabulary */
+export type Step =
+  | { type: 'card'; card: ConceptCard }
+  | {
+      type: 'choice';
+      title: string;
+      /** Finnish shown as the prompt (with audio) */
+      fi?: string;
+      /** Finnish only played, not shown, until answered */
+      listen?: string;
+      sub?: string;
+      choices: string[];
+      answer: string;
+      note?: string;
+      /** keep the choices in the written order instead of shuffling */
+      keepOrder?: boolean;
+    }
+  | { type: 'hear'; pair: string };
+
 export type Lesson = {
   id: string;
   title: string;
@@ -49,6 +96,8 @@ export type Lesson = {
   host?: string;
   /** id of a grammar note to suggest before the lesson */
   grammar?: string;
+  /** starter lessons are authored step by step instead of generated */
+  steps?: Step[];
 };
 
 export type GrammarBlock =
@@ -75,6 +124,8 @@ export type Unit = {
   scene?: 'lake' | 'river' | 'cafe' | 'city' | 'bar' | 'forest';
   /** 'adult' units are hidden unless the 18+ setting is on. Default: main path */
   track?: 'main' | 'adult';
+  /** the optional starter unit: its lessons chain among themselves and never block unit 1 */
+  starter?: boolean;
   /** Has a native speaker reviewed this unit? */
   reviewed: boolean;
   lessons: Lesson[];

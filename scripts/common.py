@@ -28,6 +28,17 @@ def load_characters():
     return _load("characters.json")
 
 
+def load_concepts():
+    return _load("concepts.json")
+
+
+def card_audio(card):
+    """(audio_id, text) for each example on a concept card; examples that reuse a clip are skipped."""
+    for i, ex in enumerate(card["examples"]):
+        if not ex.get("audio"):
+            yield f'{card["id"]}_{i}', ex["fi"]
+
+
 def load_lexicon():
     return {k: v for k, v in _load("lexicon.json").items() if not k.startswith("_")}
 
@@ -65,6 +76,12 @@ def speakable_items():
     """
     for unit in load_units():
         for lesson in unit["lessons"]:
+            for i, step in enumerate(lesson.get("steps", [])):
+                if step["type"] == "card":
+                    for audio_id, text in card_audio(step["card"]):
+                        yield audio_id, text, None
+                elif step["type"] == "choice" and (step.get("fi") or step.get("listen")):
+                    yield f'{lesson["id"]}_{i}', step.get("listen") or step["fi"], None
             for word in lesson["words"]:
                 yield word["id"], word["fi"], None
                 if word.get("puhe"):
@@ -81,6 +98,9 @@ def speakable_items():
             yield f'mp_{w["fi"]}', w["fi"], None
     for c in load_characters():
         yield f'cast_{c["id"]}', c["hello"], c["id"]
+    for card in load_concepts():
+        for audio_id, text in card_audio(card):
+            yield audio_id, text, None
     for d in load_dialogues():
         for i, turn in enumerate(d["turns"]):
             yield f'{d["id"]}_{i}', turn["them"]["fi"], d["with"]

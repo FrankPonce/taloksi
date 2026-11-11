@@ -12,7 +12,7 @@ and practice for the exams that come with staying.
 <br>
 
 ![Status](https://img.shields.io/badge/status-v0.2_%C2%B7_playable_on_web-2FE6A8?style=flat-square&labelColor=0B0F1A)
-![Sprint](https://img.shields.io/badge/sprint-3_of_12-FFC629?style=flat-square&labelColor=0B0F1A)
+![Sprint](https://img.shields.io/badge/sprint-4_of_12-FFC629?style=flat-square&labelColor=0B0F1A)
 ![Expo](https://img.shields.io/badge/Expo-React_Native-2F6BFF?style=flat-square&labelColor=0B0F1A)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-9B6BFF?style=flat-square&labelColor=0B0F1A)
 ![Platforms](https://img.shields.io/badge/web_%C2%B7_iOS_%C2%B7_Android-one_codebase-FF3B5C?style=flat-square&labelColor=0B0F1A)
@@ -45,7 +45,7 @@ It is also a small Finnish lesson. *Talo* is a house; the ending *-ksi* means *b
 
 A structured course from zero toward B1. Textbook Finnish and the Finnish people actually say, side by side on every sentence.
 
-**Today:** 4 units, 21 lessons, 18 exercise types, spaced-repetition review.
+**Today:** a starter unit and 4 units, 26 lessons, 18 exercise types, spaced-repetition review.
 
 </td>
 <td width="33%" valign="top">
@@ -129,13 +129,13 @@ Generic language apps teach Finnish the way they teach Spanish. The hard parts o
 
 ## Progress
 
-**v0.2, playable on web.** Sprint 3 of 12.
+**v0.2, playable on web.** Sprint 4 of 12.
 
 ```
-Sprints done            ███░░░░░░░░░░░░░░░░░   2 / 12
-Course to B1 (units)    ██░░░░░░░░░░░░░░░░░░   4 / 33
-A1 units                ███████░░░░░░░░░░░░░   4 / 11
-Units with review pass  ░░░░░░░░░░░░░░░░░░░░   0 / 6
+Sprints done            █████░░░░░░░░░░░░░░░   3 / 12
+Course to B1 (units)    ███░░░░░░░░░░░░░░░░░   5 / 33
+A1 units                █████████░░░░░░░░░░░   5 / 11
+Units with review pass  ██████████████░░░░░░   5 / 7
 Characters with lessons ████████████░░░░░░░░  10 / 17
 Skill rooms with grading░░░░░░░░░░░░░░░░░░░░   0 / 4
 Citizenship pack parts  ░░░░░░░░░░░░░░░░░░░░   0 / 5
@@ -147,7 +147,7 @@ Citizenship pack parts  ░░░░░░░░░░░░░░░░░░�
 | Android | ⬜ Not tested yet |
 | iOS | ⬜ Not tested yet |
 
-> **About the content.** All course content is written by AI and checked by AI. No native speaker has read it yet. The app says so too. If you speak Finnish natively, [your corrections](#contributing) are the most valuable contribution there is.
+> **About the content.** All course content is written by AI and checked by AI: units 0–4 have had a review pass, the two 18+ units not yet. No native speaker has read it. The app says so too. If you speak Finnish natively, [your corrections](#contributing) are the most valuable contribution there is.
 
 ### Goalposts
 
@@ -155,8 +155,8 @@ Citizenship pack parts  ░░░░░░░░░░░░░░░░░░�
 |---|---|---|---|
 | 1 | **Playable prototype** | A full lesson can be played start to finish on web | ✅ |
 | 2 | **Its own identity** | Own visual style, a cast, a voice for every line | ✅ |
-| 3 | **A proper beginning** | A starter unit for letters, sounds and sentence structure; no lesson uses grammar before explaining it | ⏳ |
-| 4 | **Citizenship test practice** | Study guide, practice by topic and a mock test, every item with a source, usable on a phone. Target: before 1 March 2027 | ⬜ |
+| 3 | **A proper beginning** | A starter unit for letters, sounds and sentence structure; no lesson uses grammar before explaining it | ✅ |
+| 4 | **Citizenship test practice** | Study guide, practice by topic and a mock test, every item with a source, usable on a phone. Target: before 1 March 2027 | ⏳ |
 | 5 | **A1 complete** | Units 0–10, each with a checkpoint test and a story | ⬜ |
 | 6 | **Progress that follows you** | An account keeps progress across devices | ⬜ |
 | 7 | **Four real skills** | Listening, reading, writing and speaking each have graded tasks | ⬜ |
@@ -174,11 +174,11 @@ Run as a solo Scrum project, rotating through four roles each sprint: Scrum Lead
 |---|---|---|---|
 | 1 | **Foundations** | App, learning engine, FSRS, 4 A1 units | ✅ [Review](docs/sprints/sprint-01-foundations.md) |
 | 2 | **Voice and identity** | Audio for every item, the cast, own visual style, breakdowns, journey map, 18+ pack | ✅ [Review](docs/sprints/sprint-02-voice-and-identity.md) |
-| 3 | **Starter and structure** | Unit 0, concept cards, no grammar before its explanation, review pass on units 1–4 | ⏳ |
-| 4 | **Exam-prep engine** | Question-bank format, practice by topic, mock test, source tracking | ⬜ |
+| 3 | **Starter and structure** | Unit 0, concept cards, no grammar before its explanation, review pass on units 1–4 | ✅ [Review](docs/sprints/sprint-03-starter-and-structure.md) |
+| 4 | **Exam-prep engine** | Question-bank format, practice by topic, mock test, source tracking | ⏳ |
 | 5 | **Citizenship content** | Study guide, question bank and term pack built from the official learning material | ⬜ |
 | 6 | **Citizenship launch** | Info page, phone testing, hosting, installable web app, icon | ⬜ |
-| 7 | **A1 complete** | Units 5–10, checkpoints, placement check, a story per unit | ⬜ |
+| 7 | **A1 complete** | Word-frequency data, units 5–10, checkpoints, placement check, a story per unit | ⬜ |
 | 8 | **Accounts and sync** | Sign-in and progress sync | ⬜ |
 | 9 | **Learning science** | Mistake bank, typed review, gradation and partitive drills | ⬜ |
 | 10 | **Skill rooms** | Graded listening, reading, writing and speaking | ⬜ |

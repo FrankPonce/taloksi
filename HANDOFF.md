@@ -26,7 +26,7 @@ The plan is to copy the proven mechanics from Duolingo and LingoDeer, then add F
 
 **Author:** Frank Ponce (frankponce.dev), CS grad, data science master's student (EDISS, Åbo Akademi). The README and roadmap are meant to look good as a portfolio piece. The format mirrors the CadetX project: numbered sprints (12 in the current plan), rotating Scrum roles, and a review file per sprint.
 
-## 2. Current state (end of Sprint 2)
+## 2. Current state (end of Sprint 3)
 
 **It builds and runs on web.** `npm run typecheck` is clean, `npm run validate` reports 0 errors, and every screen and a full lesson have been clicked through in the browser. It has **not** been run on a phone yet.
 
@@ -37,18 +37,22 @@ npm install
 npm run web
 ```
 
-**Content:** 4 A1 units plus 2 units on the 18+ track, 21 lessons, 152 words (130 with a picture), 116 sentences, 17 grammar notes, 2 stories, 5 conversations, 3 writing tasks, 232 lexicon word forms, 12 culture notes, 7 life-in-Finland notes, 11 study tips, 11 journey stages, 17 characters, 451 audio clips.
+**Content:** an optional starter unit, 4 A1 units and 2 units on the 18+ track, 26 lessons, 159 words (137 with a picture), 128 sentences, 14 concept cards, 17 grammar notes, 2 stories, 5 conversations, 3 writing tasks, 259 lexicon word forms, 12 culture notes, 7 life-in-Finland notes, 11 study tips, 11 journey stages, 17 characters, 550 audio clips.
 
-**All content is AI-drafted and unreviewed** (`"reviewed": false` on every unit). That includes the lexicon explanations, culture notes and the 18+ pack. Treat the Finnish as good but unverified. No native speaker is available, so there is no native review sprint; instead each content sprint ends with a review pass by Claude against `docs/CONTENT.md`, and `reviewed: true` means that pass was done.
+**All content is AI-drafted.** Units 0–4 have had a review pass by Claude (`"reviewed": true`); the 18+ units have not. That includes the lexicon explanations, culture notes and the 18+ pack. Treat the Finnish as good but unverified. No native speaker is available, so there is no native review sprint; instead each content sprint ends with a review pass by Claude against `docs/CONTENT.md`, and `reviewed: true` means that pass was done.
 
 **First tasks for whoever picks this up:**
 
 1. Read `docs/ROADMAP.md`: it describes the finished app and lists the open decisions. The repository is at github.com/FrankPonce/taloksi.
 2. Run it in Expo Go on Android and iOS. The style uses `boxShadow` and `skewX`, which need the new architecture on Android.
 3. Decide the voice licence question (see "Known gaps").
-4. Start Sprint 3: starter and structure (unit 0, concept cards, the strict first-contact rule, review pass on units 1–4).
+4. Start Sprint 4: the exam-prep engine (question-bank format, practice by topic, mock test, source tracking). See `docs/ROADMAP.md` section 8 before writing any exam content.
 
-### Added after the Sprint 2 review (Sprint 3 work in progress)
+### Sprint 3: starter unit, concept cards, the first-contact rule
+
+See `docs/sprints/sprint-03-starter-and-structure.md`. In short: an optional unit 0 written as `steps`; 14 concept cards in `concepts.json` that open the lesson introducing each ending; the validator enforces the strict first-contact rule on the main course; units 1–4 rewritten to pass it and reviewed; numbers moved to lesson `u3l0`. Rules for writing content under the rule are in `docs/CONTENT.md`.
+
+### Added after the Sprint 2 review
 
 - **Cast rebuilt.** Ten characters with personalities, outfits, four expressions (happy, excited, puzzled, sad) and a personal name-tag style each: Norppa (white seal pup, the mascot), Sofia (exchange student; was "Sofia"), Pekka (lumberjack), Aino (barista), Helvi (grandma), Mikko (bus driver), Samir (engineer), Jere (metalhead), and on the 18+ track Niko and Leo. Units have a `host` character and a `scene` backdrop.
 - **Words** carry a type (`pos`) and most a picture (`icon`, a MaterialCommunityIcons name).
