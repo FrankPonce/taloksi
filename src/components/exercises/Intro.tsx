@@ -6,7 +6,7 @@ import { useApp } from '../../state/store';
 import { colors, font } from '../../theme';
 import { Norppa } from '../art';
 import { Text } from '../Text';
-import { Button, Muted, Panel, PuheLine, SpeakerButton } from '../ui';
+import { Button, Muted, Panel, PosTag, PuheLine, SpeakerButton, WordPic } from '../ui';
 import { ExTitle } from './parts';
 import type { ExProps } from './types';
 
@@ -22,7 +22,9 @@ export function Intro({ ex, onSubmit }: ExProps<E>) {
     <View style={{ gap: 18 }}>
       <ExTitle color={colors.aurora}>Uusi sana · New word</ExTitle>
       <Panel halftone tilt={-0.6} style={{ alignItems: 'center', paddingVertical: 28, gap: 14 }}>
+        <WordPic icon={w.icon} size={112} />
         <Text style={{ fontFamily: font.display, fontSize: 48, lineHeight: 52, textAlign: 'center' }}>{w.fi}</Text>
+        <PosTag pos={w.pos} />
         <SpeakerButton text={w.fi} id={w.id} />
         <View style={{ backgroundColor: colors.ink, paddingHorizontal: 14, paddingVertical: 4, transform: [{ rotate: '1.5deg' }] }}>
           <Text style={{ fontSize: 22, fontWeight: '700', color: colors.paper, textAlign: 'center' }}>{w.en}</Text>

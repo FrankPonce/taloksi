@@ -54,6 +54,8 @@ def check_speaker(id_, speaker):
 units = load_units()
 unit_ids = {u["id"] for u in units}
 lesson_ids, grammar_ids, all_words = set(), set(), set()
+POS = {"noun", "verb", "adj", "adv", "pron", "num", "question", "particle", "phrase"}
+n_pictures = 0
 for u in units:
     if not u.get("reviewed"):
         warnings.append(f"{u['id']} '{u['titleEn']}' has not been reviewed by a native speaker yet")
@@ -75,6 +77,10 @@ for u in units:
             all_words.add(w["fi"])
             if not w["fi"].strip() or not w["en"].strip():
                 errors.append(f"{w['id']}: empty fi/en")
+            if w.get("pos") not in POS:
+                errors.append(f"{w['id']}: missing or unknown word type (pos) '{w.get('pos')}'")
+            if w.get("icon"):
+                n_pictures += 1
         for s in l["sentences"]:
             claim(s["id"], l["id"])
             if not re.search(r"[.!?]$", s["fi"]):
@@ -159,6 +165,7 @@ n_words = sum(len(l["words"]) for u in units for l in u["lessons"])
 n_sent = sum(len(l["sentences"]) for u in units for l in u["lessons"])
 print(f"Units {len(units)} · lessons {len(lesson_ids)} · words {n_words} · sentences {n_sent} · "
       f"grammar notes {len(grammar_ids)} · stories {len(load_stories())} · gym nouns {len(gym['nouns'])} · gym verbs {len(gym['verbs'])}")
+print(f"Words with a picture {n_pictures}/{n_words}")
 print(f"Lexicon {len(lexicon)} word forms · culture notes {len(load_culture())} · study tips {len(load_guide())} · "
       f"journey stages {len(curriculum['stages'])} · characters {len(characters)}")
 print(f"Audio: {len(speak) - len(missing)}/{len(speak)} clips generated"

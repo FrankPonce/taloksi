@@ -1,6 +1,6 @@
 import { Barlow_500Medium, Barlow_700Bold } from '@expo-google-fonts/barlow';
 import { BarlowCondensed_700Bold, BarlowCondensed_800ExtraBold_Italic } from '@expo-google-fonts/barlow-condensed';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -15,6 +15,7 @@ export default function RootLayout() {
     BarlowCondensed_700Bold,
     BarlowCondensed_800ExtraBold_Italic,
     ...Ionicons.font,
+    ...MaterialCommunityIcons.font,
   });
   // Hold the first paint until the fonts are in, so text never flashes in a fallback face
   if (!loaded && !error) return <View style={{ flex: 1, backgroundColor: colors.night }} />;

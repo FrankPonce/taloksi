@@ -2,9 +2,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
+import { sfx } from '../../src/audio/sfx';
 import { Norppa } from '../../src/components/art';
 import { Breakdown } from '../../src/components/Breakdown';
 import { ExerciseView, isSilent, type ExerciseResult } from '../../src/components/exercises';
+import { Bob, Pop, Rise } from '../../src/components/motion';
 import { Surface } from '../../src/components/Text';
 import { BackButton, goBack, Button, H1, Muted, Panel, ProgressBar, PuheLine, Screen, Tag, Text, Verdict } from '../../src/components/ui';
 import { getItem, getLesson } from '../../src/content';
@@ -56,6 +58,7 @@ export default function LessonScreen() {
     const accuracy = sc.answered ? sc.correct / sc.answered : 1;
     const xp = (replay ? 5 : 10) + (accuracy === 1 ? 5 : 0);
     s.completeLesson(lesson.id, lessonItemIds(lesson), accuracy, xp);
+    sfx('complete');
     setSummary({ xp, accuracy });
   };
 
@@ -71,6 +74,7 @@ export default function LessonScreen() {
     const sc = { correct: score.correct + (r.correct ? 1 : 0), answered: score.answered + 1 };
     setScore(sc);
     s.recordAnswer(r.correct);
+    sfx(r.correct ? 'correct' : 'wrong');
     if (!r.correct) {
       s.loseHeart();
       // Missed exercises come back once at the end of the lesson
@@ -84,14 +88,18 @@ export default function LessonScreen() {
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 18, paddingTop: 24 }}>
-          <Norppa size={210} mood="cheer" burst={perfect ? colors.gold : colors.aurora} />
+          <Pop from={0.4}>
+            <Bob>
+              <Norppa size={210} mood="cheer" burst={perfect ? colors.gold : colors.aurora} />
+            </Bob>
+          </Pop>
           <View style={{ transform: [{ rotate: '-3deg' }], alignItems: 'center' }}>
             <Text style={{ fontFamily: font.display, fontSize: 52, lineHeight: 54, textTransform: 'uppercase', textAlign: 'center' }}>
               {perfect ? 'Täydellinen!' : 'Valmis!'}
             </Text>
             <Tag label={perfect ? 'Perfect lesson' : 'Lesson complete'} color={colors.gold} size={18} tilt={2} style={{ alignSelf: 'center' }} />
           </View>
-          <View style={{ flexDirection: 'row', gap: 14, alignSelf: 'stretch' }}>
+          <Pop delay={250} style={{ flexDirection: 'row', gap: 14, alignSelf: 'stretch' }}>
             <Panel color={colors.gold} tilt={-2} style={{ flex: 1, alignItems: 'center' }}>
               <Text style={styles.big}>+{summary.xp}</Text>
               <Text style={styles.bigLabel}>XP</Text>
@@ -100,7 +108,7 @@ export default function LessonScreen() {
               <Text style={styles.big}>{Math.round(summary.accuracy * 100)}%</Text>
               <Text style={styles.bigLabel}>Tarkkuus · Accuracy</Text>
             </Panel>
-          </View>
+          </Pop>
           {s.newAchievements.length > 0 && (
             <Panel color={colors.berry} style={{ alignSelf: 'stretch', flexDirection: 'row', alignItems: 'center', gap: 10 }}>
               <Ionicons name="trophy" size={26} color={colors.paper} />
@@ -148,9 +156,14 @@ export default function LessonScreen() {
         </View>
       </View>
 
-      {ex && <ExerciseView ex={ex} locked={!!result} onSubmit={onSubmit} />}
+      {ex && (
+        <Pop key={ex.key}>
+          <ExerciseView ex={ex} locked={!!result} onSubmit={onSubmit} />
+        </Pop>
+      )}
 
       {result && (
+        <Rise shake={!result.correct}>
         <Verdict ok={result.correct} title={result.correct ? PRAISE[index % PRAISE.length] : 'Ei aivan · Not quite'}>
           {!result.correct && result.expected ? (
             <Text style={styles.fbText}>
@@ -184,6 +197,7 @@ export default function LessonScreen() {
           )}
           <Button title="Jatka · Continue" variant="secondary" onPress={() => advance()} />
         </Verdict>
+        </Rise>
       )}
     </Screen>
   );

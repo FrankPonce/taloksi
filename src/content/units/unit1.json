@@ -11,12 +11,12 @@
       "titleEn": "Hi!",
       "grammar": "g_pronunciation",
       "words": [
-        { "id": "w_hei", "fi": "hei", "en": "hi", "altEn": ["hello", "hey"] },
-        { "id": "w_moi", "fi": "moi", "en": "hi (casual)", "altEn": ["hi", "hello", "hey"], "note": "Very common in speech and texts. 'Moi moi' means bye." },
-        { "id": "w_huomenta", "fi": "huomenta", "en": "good morning" },
-        { "id": "w_hyvaa_paivaa", "fi": "hyvää päivää", "en": "good day", "altEn": ["good afternoon"], "note": "Formal. In everyday life people just say 'hei' or 'moi'." },
-        { "id": "w_hei_hei", "fi": "hei hei", "en": "bye", "altEn": ["bye bye", "goodbye"] },
-        { "id": "w_nakemiin", "fi": "näkemiin", "en": "goodbye", "altEn": ["bye"] }
+        { "id": "w_hei", "fi": "hei", "en": "hi", "altEn": ["hello", "hey"], "pos": "phrase", "icon": "hand-wave" },
+        { "id": "w_moi", "fi": "moi", "en": "hi (casual)", "altEn": ["hi", "hello", "hey"], "note": "Very common in speech and texts. 'Moi moi' means bye.", "pos": "phrase", "icon": "hand-wave-outline" },
+        { "id": "w_huomenta", "fi": "huomenta", "en": "good morning", "pos": "phrase", "icon": "weather-sunset-up" },
+        { "id": "w_hyvaa_paivaa", "fi": "hyvää päivää", "en": "good day", "altEn": ["good afternoon"], "note": "Formal. In everyday life people just say 'hei' or 'moi'.", "pos": "phrase", "icon": "white-balance-sunny" },
+        { "id": "w_hei_hei", "fi": "hei hei", "en": "bye", "altEn": ["bye bye", "goodbye"], "pos": "phrase", "icon": "exit-run" },
+        { "id": "w_nakemiin", "fi": "näkemiin", "en": "goodbye", "altEn": ["bye"], "pos": "phrase", "icon": "door-open" }
       ],
       "sentences": [
         { "id": "s_u1l1_1", "fi": "Hei, minä olen Anna.", "en": "Hi, I am Anna.", "altEn": ["Hello, I am Anna."], "altFi": ["Hei, olen Anna."], "puhe": "Moi, mä oon Anna.", "speaker": "anna" },
@@ -34,12 +34,12 @@
       "title": "Mitä kuuluu?",
       "titleEn": "How are you?",
       "words": [
-        { "id": "w_mita_kuuluu", "fi": "mitä kuuluu", "en": "how are you", "altEn": ["how are you doing", "what's up"] },
-        { "id": "w_hyvaa", "fi": "hyvää", "en": "good", "altEn": ["fine", "well"] },
-        { "id": "w_kiitos", "fi": "kiitos", "en": "thank you", "altEn": ["thanks", "please"], "note": "Also used like 'please' when ordering: 'Kahvi, kiitos.'" },
-        { "id": "w_enta_sinulle", "fi": "entä sinulle", "en": "and you", "altEn": ["what about you", "how about you"], "puhe": "entä sulle" },
-        { "id": "w_ihan_hyvaa", "fi": "ihan hyvää", "en": "pretty good", "altEn": ["quite good", "just fine", "fine"] },
-        { "id": "w_huonoa", "fi": "huonoa", "en": "bad", "altEn": ["not good"] }
+        { "id": "w_mita_kuuluu", "fi": "mitä kuuluu", "en": "how are you", "altEn": ["how are you doing", "what's up"], "pos": "phrase", "icon": "chat-question" },
+        { "id": "w_hyvaa", "fi": "hyvää", "en": "good", "altEn": ["fine", "well"], "pos": "adj", "icon": "emoticon-happy" },
+        { "id": "w_kiitos", "fi": "kiitos", "en": "thank you", "altEn": ["thanks", "please"], "note": "Also used like 'please' when ordering: 'Kahvi, kiitos.'", "pos": "phrase", "icon": "hand-heart" },
+        { "id": "w_enta_sinulle", "fi": "entä sinulle", "en": "and you", "altEn": ["what about you", "how about you"], "puhe": "entä sulle", "pos": "phrase" },
+        { "id": "w_ihan_hyvaa", "fi": "ihan hyvää", "en": "pretty good", "altEn": ["quite good", "just fine", "fine"], "pos": "phrase", "icon": "emoticon-neutral" },
+        { "id": "w_huonoa", "fi": "huonoa", "en": "bad", "altEn": ["not good"], "pos": "adj", "icon": "thumb-down" }
       ],
       "sentences": [
         { "id": "s_u1l2_1", "fi": "Hei, mitä kuuluu?", "en": "Hi, how are you?", "altEn": ["Hello, how are you?"], "puhe": "Moi, mitä kuuluu?", "speaker": "anna" },
@@ -58,14 +58,14 @@
       "titleEn": "Who are you?",
       "grammar": "g_olla",
       "words": [
-        { "id": "w_mina", "fi": "minä", "en": "I", "puhe": "mä" },
-        { "id": "w_sina", "fi": "sinä", "en": "you", "altEn": ["you (singular)"], "puhe": "sä" },
-        { "id": "w_han", "fi": "hän", "en": "he/she", "altEn": ["he", "she", "he or she"], "puhe": "se", "note": "Finnish has no grammatical gender: hän = he and she." },
-        { "id": "w_me", "fi": "me", "en": "we" },
-        { "id": "w_te", "fi": "te", "en": "you (plural)", "altEn": ["you", "you all"], "note": "Also the polite 'you' for one person." },
-        { "id": "w_he", "fi": "he", "en": "they", "puhe": "ne" },
-        { "id": "w_kuka", "fi": "kuka", "en": "who" },
-        { "id": "w_nimi", "fi": "nimi", "en": "name" }
+        { "id": "w_mina", "fi": "minä", "en": "I", "puhe": "mä", "pos": "pron", "icon": "account" },
+        { "id": "w_sina", "fi": "sinä", "en": "you", "altEn": ["you (singular)"], "puhe": "sä", "pos": "pron", "icon": "account-arrow-left" },
+        { "id": "w_han", "fi": "hän", "en": "he/she", "altEn": ["he", "she", "he or she"], "puhe": "se", "note": "Finnish has no grammatical gender: hän = he and she.", "pos": "pron", "icon": "account-outline" },
+        { "id": "w_me", "fi": "me", "en": "we", "pos": "pron", "icon": "account-group" },
+        { "id": "w_te", "fi": "te", "en": "you (plural)", "altEn": ["you", "you all"], "note": "Also the polite 'you' for one person.", "pos": "pron", "icon": "account-multiple" },
+        { "id": "w_he", "fi": "he", "en": "they", "puhe": "ne", "pos": "pron", "icon": "account-group-outline" },
+        { "id": "w_kuka", "fi": "kuka", "en": "who", "pos": "question", "icon": "account-question" },
+        { "id": "w_nimi", "fi": "nimi", "en": "name", "pos": "noun", "icon": "card-account-details" }
       ],
       "sentences": [
         { "id": "s_u1l3_1", "fi": "Kuka sinä olet?", "en": "Who are you?", "altFi": ["Kuka olet?"], "puhe": "Kuka sä oot?", "speaker": "helvi" },
@@ -86,12 +86,12 @@
       "titleEn": "Thanks and sorry",
       "grammar": "g_negation",
       "words": [
-        { "id": "w_anteeksi", "fi": "anteeksi", "en": "sorry", "altEn": ["excuse me", "pardon"] },
-        { "id": "w_ole_hyva", "fi": "ole hyvä", "en": "you're welcome", "altEn": ["here you go", "here you are", "you are welcome"], "note": "Said when handing something over or replying to thanks." },
-        { "id": "w_kiitos_paljon", "fi": "kiitos paljon", "en": "thank you very much", "altEn": ["thanks a lot", "thank you so much", "many thanks"] },
-        { "id": "w_kylla", "fi": "kyllä", "en": "yes", "puhe": "joo" },
-        { "id": "w_ei", "fi": "ei", "en": "no" },
-        { "id": "w_joo", "fi": "joo", "en": "yeah", "altEn": ["yes"] }
+        { "id": "w_anteeksi", "fi": "anteeksi", "en": "sorry", "altEn": ["excuse me", "pardon"], "pos": "phrase", "icon": "emoticon-sad-outline" },
+        { "id": "w_ole_hyva", "fi": "ole hyvä", "en": "you're welcome", "altEn": ["here you go", "here you are", "you are welcome"], "note": "Said when handing something over or replying to thanks.", "pos": "phrase", "icon": "gift" },
+        { "id": "w_kiitos_paljon", "fi": "kiitos paljon", "en": "thank you very much", "altEn": ["thanks a lot", "thank you so much", "many thanks"], "pos": "phrase", "icon": "hand-clap" },
+        { "id": "w_kylla", "fi": "kyllä", "en": "yes", "puhe": "joo", "pos": "particle", "icon": "check-bold" },
+        { "id": "w_ei", "fi": "ei", "en": "no", "pos": "particle", "icon": "close-thick" },
+        { "id": "w_joo", "fi": "joo", "en": "yeah", "altEn": ["yes"], "pos": "particle", "icon": "check" }
       ],
       "sentences": [
         { "id": "s_u1l4_1", "fi": "Anteeksi, en ymmärrä.", "en": "Sorry, I don't understand.", "altEn": ["Excuse me, I don't understand."], "puhe": "Sori, mä en ymmärrä.", "speaker": "anna" },

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { colors } from '../../theme';
 import { Speech } from '../art';
 import { Text } from '../Text';
-import { SpeakerButton, Tag } from '../ui';
+import { Glossed, SpeakerButton, Tag } from '../ui';
 
 /** Slanted instruction label at the top of every exercise */
 export function ExTitle({ children, color = colors.gold }: { children: string; color?: string }) {
@@ -16,19 +16,22 @@ export function Prompt({
   speaker,
   audio,
   big,
+  fi,
   children,
 }: {
   text: string;
   speaker?: string;
   audio?: { text: string; id?: string };
   big?: boolean;
+  /** the text is a Finnish sentence: make its words tappable for a translation */
+  fi?: boolean;
   children?: ReactNode;
 }) {
   return (
     <Speech speaker={speaker ?? 'norppa'} size={68}>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
         {audio && <SpeakerButton text={audio.text} id={audio.id} speaker={speaker} size="sm" />}
-        <Text style={{ fontSize: big ? 30 : 22, lineHeight: big ? 34 : 28, fontWeight: '700', flexShrink: 1 }}>{text}</Text>
+        {fi ? <Glossed text={text} /> : <Text style={{ fontSize: big ? 30 : 22, lineHeight: big ? 34 : 28, fontWeight: '700', flexShrink: 1 }}>{text}</Text>}
       </View>
       {children}
     </Speech>

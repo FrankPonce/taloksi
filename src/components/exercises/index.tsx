@@ -6,6 +6,9 @@ import { Intro } from './Intro';
 import { Listen } from './Listen';
 import { Match } from './Match';
 import { Pick } from './Pick';
+import { Picture } from './Picture';
+import { Spell } from './Spell';
+import { Strike } from './Strike';
 import { TypeAnswer } from './TypeAnswer';
 import type { ExerciseResult } from './types';
 
@@ -28,6 +31,12 @@ export function ExerciseView({ ex, locked, onSubmit }: { ex: Exercise; locked: b
       return <TypeAnswer key={ex.key} ex={ex} {...p} />;
     case 'choice':
       return <Choice key={ex.key} ex={ex} {...p} />;
+    case 'picture':
+      return <Picture key={ex.key} ex={ex} {...p} />;
+    case 'strike':
+      return <Strike key={ex.key} ex={ex} {...p} />;
+    case 'spell':
+      return <Spell key={ex.key} ex={ex} {...p} />;
     case 'fill':
       return <Fill key={ex.key} ex={ex} {...p} />;
   }

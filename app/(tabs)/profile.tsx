@@ -97,6 +97,7 @@ export default function ProfileScreen() {
           ))}
         </View>
         <Toggle k="showPuhekieli" label="Näytä puhekieli" sub="Show spoken-Finnish variants next to textbook Finnish" />
+        <Toggle k="sfx" label="Äänitehosteet" sub="Sound effects for right, wrong and finished lessons" />
         <Toggle k="strictUmlauts" label="Tarkat ä ja ö" sub="Count a/o typed instead of ä/ö as a mistake" />
         <Toggle k="unlimitedHearts" label="Rajattomat sydämet" sub="Unlimited hearts: no penalty for mistakes" />
         <Toggle k="unlockAll" label="Avaa kaikki" sub="Unlock every lesson and story" />

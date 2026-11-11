@@ -11,14 +11,14 @@
       "titleEn": "Food",
       "grammar": "g_partitive",
       "words": [
-        { "id": "w_leipa", "fi": "leipä", "en": "bread" },
-        { "id": "w_ruisleipa", "fi": "ruisleipä", "en": "rye bread", "note": "The Finnish staple. Try it with butter and cheese." },
-        { "id": "w_juusto", "fi": "juusto", "en": "cheese" },
-        { "id": "w_omena", "fi": "omena", "en": "apple", "altEn": ["an apple"] },
-        { "id": "w_kala", "fi": "kala", "en": "fish" },
-        { "id": "w_liha", "fi": "liha", "en": "meat" },
-        { "id": "w_peruna", "fi": "peruna", "en": "potato" },
-        { "id": "w_syoda", "fi": "syödä", "en": "to eat", "altEn": ["eat"] }
+        { "id": "w_leipa", "fi": "leipä", "en": "bread", "pos": "noun", "icon": "bread-slice" },
+        { "id": "w_ruisleipa", "fi": "ruisleipä", "en": "rye bread", "note": "The Finnish staple. Try it with butter and cheese.", "pos": "noun", "icon": "baguette" },
+        { "id": "w_juusto", "fi": "juusto", "en": "cheese", "pos": "noun", "icon": "cheese" },
+        { "id": "w_omena", "fi": "omena", "en": "apple", "altEn": ["an apple"], "pos": "noun", "icon": "food-apple" },
+        { "id": "w_kala", "fi": "kala", "en": "fish", "pos": "noun", "icon": "fish" },
+        { "id": "w_liha", "fi": "liha", "en": "meat", "pos": "noun", "icon": "food-steak" },
+        { "id": "w_peruna", "fi": "peruna", "en": "potato", "pos": "noun" },
+        { "id": "w_syoda", "fi": "syödä", "en": "to eat", "altEn": ["eat"], "pos": "verb", "icon": "silverware-fork-knife" }
       ],
       "sentences": [
         { "id": "s_u3l1_1", "fi": "Syön leipää ja juustoa.", "en": "I eat bread and cheese.", "altEn": ["I am eating bread and cheese."], "puhe": "Mä syön leipää ja juustoo.", "speaker": "mikko" },
@@ -38,13 +38,13 @@
       "titleEn": "Drinks",
       "grammar": "g_question_ko",
       "words": [
-        { "id": "w_vesi", "fi": "vesi", "en": "water" },
-        { "id": "w_maito", "fi": "maito", "en": "milk" },
-        { "id": "w_kahvi", "fi": "kahvi", "en": "coffee" },
-        { "id": "w_tee", "fi": "tee", "en": "tea" },
-        { "id": "w_mehu", "fi": "mehu", "en": "juice" },
-        { "id": "w_olut", "fi": "olut", "en": "beer", "puhe": "kalja" },
-        { "id": "w_juoda", "fi": "juoda", "en": "to drink", "altEn": ["drink"] }
+        { "id": "w_vesi", "fi": "vesi", "en": "water", "pos": "noun", "icon": "water" },
+        { "id": "w_maito", "fi": "maito", "en": "milk", "pos": "noun" },
+        { "id": "w_kahvi", "fi": "kahvi", "en": "coffee", "pos": "noun", "icon": "coffee" },
+        { "id": "w_tee", "fi": "tee", "en": "tea", "pos": "noun", "icon": "tea" },
+        { "id": "w_mehu", "fi": "mehu", "en": "juice", "pos": "noun", "icon": "fruit-citrus" },
+        { "id": "w_olut", "fi": "olut", "en": "beer", "puhe": "kalja", "pos": "noun", "icon": "beer" },
+        { "id": "w_juoda", "fi": "juoda", "en": "to drink", "altEn": ["drink"], "pos": "verb", "icon": "cup-water" }
       ],
       "sentences": [
         { "id": "s_u3l2_1", "fi": "Juon kahvia joka aamu.", "en": "I drink coffee every morning.", "puhe": "Mä juon kahvii joka aamu.", "speaker": "aino" },
@@ -62,14 +62,14 @@
       "title": "Paljonko se maksaa?",
       "titleEn": "How much is it?",
       "words": [
-        { "id": "w_paljonko", "fi": "paljonko", "en": "how much", "puhe": "paljonks" },
-        { "id": "w_maksaa", "fi": "maksaa", "en": "to cost", "altEn": ["cost", "to pay", "pay"] },
-        { "id": "w_euro", "fi": "euro", "en": "euro" },
-        { "id": "w_kallis", "fi": "kallis", "en": "expensive" },
-        { "id": "w_halpa", "fi": "halpa", "en": "cheap" },
-        { "id": "w_kauppa", "fi": "kauppa", "en": "shop", "altEn": ["store"] },
-        { "id": "w_kortti", "fi": "kortti", "en": "card" },
-        { "id": "w_kassi", "fi": "kassi", "en": "bag", "altEn": ["shopping bag"] }
+        { "id": "w_paljonko", "fi": "paljonko", "en": "how much", "puhe": "paljonks", "pos": "question" },
+        { "id": "w_maksaa", "fi": "maksaa", "en": "to cost", "altEn": ["cost", "to pay", "pay"], "pos": "verb", "icon": "cash-register" },
+        { "id": "w_euro", "fi": "euro", "en": "euro", "pos": "noun", "icon": "currency-eur" },
+        { "id": "w_kallis", "fi": "kallis", "en": "expensive", "pos": "adj", "icon": "cash-multiple" },
+        { "id": "w_halpa", "fi": "halpa", "en": "cheap", "pos": "adj", "icon": "sale" },
+        { "id": "w_kauppa", "fi": "kauppa", "en": "shop", "altEn": ["store"], "pos": "noun", "icon": "store" },
+        { "id": "w_kortti", "fi": "kortti", "en": "card", "pos": "noun", "icon": "credit-card" },
+        { "id": "w_kassi", "fi": "kassi", "en": "bag", "altEn": ["shopping bag"], "pos": "noun", "icon": "shopping" }
       ],
       "sentences": [
         { "id": "s_u3l3_1", "fi": "Paljonko tämä maksaa?", "en": "How much does this cost?", "altEn": ["How much is this?"], "puhe": "Paljonks tää maksaa?", "speaker": "helvi" },
@@ -89,13 +89,13 @@
       "titleEn": "At the café",
       "grammar": "g_conditional_polite",
       "words": [
-        { "id": "w_kahvila", "fi": "kahvila", "en": "café", "altEn": ["cafe", "coffee shop"] },
-        { "id": "w_pulla", "fi": "pulla", "en": "sweet bun", "altEn": ["bun", "pulla"] },
-        { "id": "w_korvapuusti", "fi": "korvapuusti", "en": "cinnamon roll", "altEn": ["cinnamon bun"], "note": "Literally 'a slap on the ear'." },
-        { "id": "w_kuppi", "fi": "kuppi", "en": "cup" },
-        { "id": "w_sokeri", "fi": "sokeri", "en": "sugar" },
-        { "id": "w_ottaa", "fi": "ottaa", "en": "to take", "altEn": ["take", "to have"] },
-        { "id": "w_haluaisin", "fi": "haluaisin", "en": "I would like", "altEn": ["I'd like"] }
+        { "id": "w_kahvila", "fi": "kahvila", "en": "café", "altEn": ["cafe", "coffee shop"], "pos": "noun", "icon": "coffee-maker" },
+        { "id": "w_pulla", "fi": "pulla", "en": "sweet bun", "altEn": ["bun", "pulla"], "pos": "noun", "icon": "muffin" },
+        { "id": "w_korvapuusti", "fi": "korvapuusti", "en": "cinnamon roll", "altEn": ["cinnamon bun"], "note": "Literally 'a slap on the ear'.", "pos": "noun", "icon": "cookie" },
+        { "id": "w_kuppi", "fi": "kuppi", "en": "cup", "pos": "noun", "icon": "cup" },
+        { "id": "w_sokeri", "fi": "sokeri", "en": "sugar", "pos": "noun", "icon": "spoon-sugar" },
+        { "id": "w_ottaa", "fi": "ottaa", "en": "to take", "altEn": ["take", "to have"], "pos": "verb", "icon": "hand-back-right" },
+        { "id": "w_haluaisin", "fi": "haluaisin", "en": "I would like", "altEn": ["I'd like"], "pos": "phrase" }
       ],
       "sentences": [
         { "id": "s_u3l4_1", "fi": "Haluaisin kupin kahvia.", "en": "I would like a cup of coffee.", "puhe": "Mä ottaisin kupin kahvii.", "speaker": "aino" },

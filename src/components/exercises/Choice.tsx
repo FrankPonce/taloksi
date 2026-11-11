@@ -18,6 +18,7 @@ const TITLE_COLOR: Record<ChoiceVariant, string> = {
   register: colors.berry,
   judge: colors.gold,
   hear: colors.red,
+  form: colors.blue,
 };
 
 /** One component for every "pick one answer" exercise: odd one out, ending detective, street Finnish, true/false, long-or-short */
@@ -32,7 +33,7 @@ export function Choice({ ex, locked, onSubmit }: ExProps<E>) {
     <View style={{ gap: 18 }}>
       <ExTitle color={TITLE_COLOR[ex.variant]}>{ex.title}</ExTitle>
       {ex.fi ? (
-        <Prompt text={ex.fi} speaker={ex.speaker} audio={{ text: ex.fi, id: ex.itemId }}>
+        <Prompt text={ex.fi} fi speaker={ex.speaker} audio={{ text: ex.fi, id: ex.itemId }}>
           {ex.sub ? <Text style={{ fontSize: 16, color: colors.mutedOnPaper }}>{ex.sub}</Text> : null}
         </Prompt>
       ) : ex.audio ? (
@@ -44,7 +45,7 @@ export function Choice({ ex, locked, onSubmit }: ExProps<E>) {
         </Speech>
       ) : (
         <Speech speaker="norppa" size={68}>
-          <Text style={{ fontSize: 17 }}>Three of these belong together. One is an intruder. Tap it.</Text>
+          <Text style={{ fontSize: 18, lineHeight: 24, fontWeight: '700' }}>{ex.sub ?? 'Three of these belong together. One is an intruder. Tap it.'}</Text>
         </Speech>
       )}
       <View style={twoUp ? { flexDirection: 'row', gap: 12 } : { gap: 12 }}>

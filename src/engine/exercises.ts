@@ -2,6 +2,7 @@ import {
   ALL_ITEMS,
   breakdown,
   CATEGORIES,
+  formsOf,
   getItem,
   MINIMAL_PAIRS,
   sentencePool,
@@ -16,7 +17,7 @@ import { distractors, pick, sample, shuffle } from './random';
 
 export type Dir = 'fi-en' | 'en-fi';
 
-export type ChoiceVariant = 'odd' | 'ending' | 'register' | 'judge' | 'hear';
+export type ChoiceVariant = 'odd' | 'ending' | 'register' | 'judge' | 'hear' | 'form';
 
 export type Exercise =
   | { kind: 'intro'; key: string; word: Word }
@@ -46,6 +47,40 @@ export type Exercise =
   | { kind: 'listen'; key: string; itemId: string; fi: string; en: string; tiles: string[]; accepted: string[]; speaker?: string }
   | { kind: 'type'; key: string; itemId: string; dir: Dir; prompt: string; fi: string; accepted: string[]; speaker?: string }
   | { kind: 'fill'; key: string; fill: FillBlank }
+  | {
+      /** Picture cards: match a word to its picture, or a picture to its word */
+      kind: 'picture';
+      key: string;
+      itemId: string;
+      mode: 'word-to-pic' | 'pic-to-word';
+      fi: string;
+      en: string;
+      /** the picture shown in pic-to-word */
+      icon: string;
+      options: { id: string; fi: string; icon: string }[];
+      answerId: string;
+    }
+  | {
+      /** A sentence with one word too many: tap the intruder to cross it out */
+      kind: 'strike';
+      key: string;
+      itemId: string;
+      words: string[];
+      extra: number;
+      fi: string;
+      en: string;
+      speaker?: string;
+    }
+  | {
+      /** Spell a word from letter tiles (trains double letters and ä/ö) */
+      kind: 'spell';
+      key: string;
+      itemId: string;
+      fi: string;
+      en: string;
+      icon?: string;
+      tiles: string[];
+    }
   | {
       /** Every "pick one answer" exercise beyond plain vocabulary */
       kind: 'choice';
@@ -274,6 +309,83 @@ export function hearExercise(index: number, key: string): Exercise {
   };
 }
 
+/** Same dictionary word, different endings: pick the form that carries the meaning */
+export function formExercise(item: Item, key: string): Exercise | null {
+  const candidates = shuffle(breakdown(item.fi).filter((t) => t.known && t.parts.length > 1));
+  for (const t of candidates) {
+    // One option per distinct meaning, so there is exactly one right answer
+    const byMeaning = new Map<string, string>();
+    for (const f of formsOf(t.lemma)) if (!byMeaning.has(f.en)) byMeaning.set(f.en, f.form);
+    if (byMeaning.size < 3 || !byMeaning.has(t.en)) continue;
+    const answer = byMeaning.get(t.en) as string;
+    const others = sample([...byMeaning.values()].filter((f) => f !== answer), 3);
+    return {
+      kind: 'choice',
+      key,
+      variant: 'form',
+      title: 'Oikea muoto · Pick the right form',
+      sub: `Which form of “${t.lemma}” means “${t.en}”?`,
+      choices: shuffle([answer, ...others]),
+      answer,
+      note: `${t.parts[0]} + ${t.parts.slice(1).map((p) => `-${p}`).join(' + ')}. ${t.why}`,
+    };
+  }
+  return null;
+}
+
+/** Picture cards. Wrong options are other pictured words, this lesson's first. */
+export function pictureExercise(word: Word, lesson: Lesson, mode: 'word-to-pic' | 'pic-to-word', key: string, adult: boolean): Exercise | null {
+  if (!word.icon) return null;
+  const pictured = (w: { icon?: string; id: string }) => !!w.icon && w.id !== word.id && w.icon !== word.icon;
+  const near = shuffle(lesson.words.filter(pictured));
+  const far = shuffle(wordPool(adult).filter(pictured)).filter((w) => !near.some((n) => n.id === w.id));
+  const wrong = [...near, ...far].slice(0, 3);
+  if (wrong.length < 3) return null;
+  return {
+    kind: 'picture',
+    key,
+    itemId: word.id,
+    mode,
+    fi: word.fi,
+    en: word.en,
+    icon: word.icon,
+    options: shuffle([word, ...wrong]).map((w) => ({ id: w.id, fi: w.fi, icon: w.icon as string })),
+    answerId: word.id,
+  };
+}
+
+/** Slip one extra word into a sentence; the learner crosses it out */
+export function strikeExercise(item: Item, key: string, adult: boolean): Exercise | null {
+  const tokens = splitWords(item.fi);
+  if (tokens.length < 2) return null;
+  const have = new Set(tokens.map((t) => t.toLowerCase()));
+  const pool = sentencePool(adult)
+    .flatMap((s) => splitWords(s.fi))
+    .filter((w) => !have.has(w.toLowerCase()) && !PROPER.has(w))
+    .map((w) => w.toLowerCase());
+  if (!pool.length) return null;
+  // Never first, so the sentence still starts with its own capital letter
+  const at = 1 + Math.floor(Math.random() * tokens.length);
+  const words = [...tokens.slice(0, at), pick(pool), ...tokens.slice(at)];
+  return { kind: 'strike', key, itemId: item.id, words, extra: at, fi: item.fi, en: item.en, speaker: item.speaker };
+}
+
+/** Spell one of the lesson's words from its letters plus a few decoys */
+export function spellExercise(lesson: Lesson, key: string): Exercise | null {
+  const word = shuffle(lesson.words.filter((w) => /^[a-zäöå]{4,10}$/i.test(w.fi)))[0];
+  if (!word) return null;
+  const letters = word.fi.toLowerCase().split('');
+  // Decoys target the classic mistakes: a/ä, o/ö, and one more of a doubled letter
+  const decoys = new Set<string>();
+  if (letters.includes('a')) decoys.add('ä');
+  if (letters.includes('ä')) decoys.add('a');
+  if (letters.includes('o')) decoys.add('ö');
+  if (letters.includes('ö')) decoys.add('o');
+  decoys.add(pick(letters));
+  for (const l of shuffle('eiklmnstu'.split(''))) if (decoys.size < 3) decoys.add(l);
+  return { kind: 'spell', key, itemId: word.id, fi: word.fi, en: word.en, icon: word.icon, tiles: shuffle([...letters, ...[...decoys].slice(0, 3)]) };
+}
+
 // ── Lesson builder ──────────────────────────────────────────────────────────
 
 /**
@@ -302,9 +414,12 @@ export function buildLessonExercises(
   for (let i = 0; i < lesson.words.length; i += 2) {
     const chunk = lesson.words.slice(i, i + 2);
     if (!opts.replay) chunk.forEach((w) => out.push({ kind: 'intro', key: `intro-${w.id}`, word: w }));
-    chunk.forEach((w, j) =>
-      out.push(pickExercise({ ...w, kind: 'word' }, (i + j) % 2 === 0 ? 'fi-en' : 'en-fi', `pick-${w.id}`, adult))
-    );
+    chunk.forEach((w, j) => {
+      // Words with a picture alternate between text and picture cards
+      const n = i + j;
+      const pic = n % 2 === 1 ? pictureExercise(w, lesson, n % 4 === 1 ? 'word-to-pic' : 'pic-to-word', `pic-${w.id}`, adult) : null;
+      out.push(pic ?? pickExercise({ ...w, kind: 'word' }, n % 2 === 0 ? 'fi-en' : 'en-fi', `pick-${w.id}`, adult));
+    });
   }
 
   // 2. Words together: match pairs, then spot the intruder
@@ -316,16 +431,23 @@ export function buildLessonExercises(
     });
   }
   push(oddOneOut(lesson, `odd-${lesson.id}`));
+  push(spellExercise(lesson, `spell-${lesson.id}`));
 
-  // 3. Sentences: rotate through translation and listening, with one of each
-  //    special exercise slotted in between
-  const extras: (Exercise | null)[] = [];
+  // 3. Sentences: rotate through translation and listening, with special
+  //    exercises slotted in between. Four of the six kinds are drawn each
+  //    time, so replaying a lesson is not the same session twice.
+  const candidates: (Exercise | null)[] = [];
   const withEnding = shuffle(sentences).find((s) => endingDetective(s, 'x'));
-  if (withEnding) extras.push(endingDetective(withEnding, `ending-${withEnding.id}`));
+  if (withEnding) candidates.push(endingDetective(withEnding, `ending-${withEnding.id}`));
   const withPuhe = shuffle(sentences).find((s) => s.puhe);
-  if (withPuhe) extras.push(registerExercise(withPuhe, lesson, `register-${withPuhe.id}`, adult));
-  if (sentences.length > 1) extras.push(judgeExercise(pick(sentences), lesson, `judge-${lesson.id}`));
-  extras.push(hearExercise(opts.lessonIndex ?? 0, `hear-${lesson.id}`));
+  if (withPuhe) candidates.push(registerExercise(withPuhe, lesson, `register-${withPuhe.id}`, adult));
+  if (sentences.length > 1) candidates.push(judgeExercise(pick(sentences), lesson, `judge-${lesson.id}`));
+  candidates.push(hearExercise(opts.lessonIndex ?? 0, `hear-${lesson.id}`));
+  const toStrike = shuffle(sentences).find((s) => splitWords(s.fi).length >= 3);
+  if (toStrike) candidates.push(strikeExercise(toStrike, `strike-${toStrike.id}`, adult));
+  const withForms = shuffle(sentences).find((s) => formExercise(s, 'x'));
+  if (withForms) candidates.push(formExercise(withForms, `form-${withForms.id}`));
+  const extras = sample(candidates.filter((e): e is Exercise => !!e), 4);
 
   const rotation = ['build-fi-en', 'build-en-fi', 'listen', 'build-fi-en', 'build-en-fi'] as const;
   sentences.forEach((s, i) => {

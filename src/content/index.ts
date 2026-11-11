@@ -91,6 +91,19 @@ export function currentStage(done: Record<string, unknown>): { stage: Stage; pro
 
 const lexicon = lexiconJson as unknown as Record<string, string[]>;
 
+/** Every form of one dictionary word that the lexicon knows, e.g. Turku → Turku, Turussa, Turkuun */
+export function formsOf(lemma: string): { form: string; en: string }[] {
+  return Object.entries(lexicon)
+    .filter(([k, e]) => !k.startsWith('_') && e[0] === lemma)
+    .map(([, e]) => ({ form: e[2].replace(/\|/g, ''), en: e[1] }));
+}
+
+/** Quick gloss for one word of a sentence (hover / tap translation) */
+export function gloss(word: string): { lemma: string; en: string } | undefined {
+  const e = lexicon[word.replace(/[.,!?;:"“”]/g, '').toLowerCase()];
+  return e ? { lemma: e[0], en: e[1] } : undefined;
+}
+
 /** Words of a sentence without punctuation, original capitalisation kept */
 export const words = (s: string) => s.replace(/[.,!?;:"“”]/g, '').split(/\s+/).filter(Boolean);
 

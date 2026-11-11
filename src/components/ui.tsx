@@ -1,12 +1,15 @@
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import { type ComponentProps, type ReactNode } from 'react';
-import { Pressable, ScrollView, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
+import { useState, type ComponentProps, type ReactNode } from 'react';
+import { Animated, Pressable, ScrollView, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Circle, Defs, Pattern, Rect } from 'react-native-svg';
+import { sfx } from '../audio/sfx';
 import { speak } from '../audio/speak';
+import { gloss, type Pos } from '../content';
 import { useApp } from '../state/store';
 import { colors, font, hardShadow, onColor, OUTLINE, radius } from '../theme';
+import { useGlide } from './motion';
 import { Surface, Text, useSurface } from './Text';
 
 export { Text } from './Text';
@@ -173,7 +176,10 @@ export function Chip({
   return (
     <Pressable
       disabled={disabled}
-      onPress={onPress}
+      onPress={() => {
+        sfx('tap');
+        onPress?.();
+      }}
       style={[
         styles.chip,
         { backgroundColor: bg, opacity: disabled && !tone && !selected ? 0.55 : 1, boxShadow: hardShadow(colors.ink, selected ? 1 : 3) },
@@ -186,9 +192,10 @@ export function Chip({
 }
 
 export function ProgressBar({ value, color = colors.aurora }: { value: number; color?: string }) {
+  const w = useGlide(Math.max(0, Math.min(1, value)));
   return (
     <View style={styles.track}>
-      <View style={[styles.fill, { width: `${Math.max(0, Math.min(1, value)) * 100}%` as `${number}%`, backgroundColor: color }]} />
+      <Animated.View style={[styles.fill, { width: w.interpolate({ inputRange: [0, 1], outputRange: ['0%', '100%'] }), backgroundColor: color }]} />
     </View>
   );
 }
@@ -298,6 +305,102 @@ export function StatPill({ icon, value, color }: { icon: IconName; value: string
     <View style={[styles.stat, { backgroundColor: color }]}>
       <Ionicons name={icon} size={18} color={onColor(color)} />
       <Text style={{ fontFamily: font.display, fontSize: 20, color: onColor(color) }}>{value}</Text>
+    </View>
+  );
+}
+
+const POS_LABEL: Record<Pos, { fi: string; en: string; color: string }> = {
+  noun: { fi: 'substantiivi', en: 'noun', color: colors.blue },
+  verb: { fi: 'verbi', en: 'verb', color: colors.red },
+  adj: { fi: 'adjektiivi', en: 'adjective', color: colors.aurora },
+  adv: { fi: 'adverbi', en: 'adverb', color: colors.orange },
+  pron: { fi: 'pronomini', en: 'pronoun', color: colors.berry },
+  num: { fi: 'numero', en: 'number', color: colors.gold },
+  question: { fi: 'kysymyssana', en: 'question word', color: colors.gold },
+  particle: { fi: 'partikkeli', en: 'little word', color: colors.paperDim },
+  phrase: { fi: 'fraasi', en: 'phrase', color: colors.paperDim },
+};
+
+/** Word-type label: "substantiivi · noun". One colour per type, the same everywhere. */
+export function PosTag({ pos, tilt = 2 }: { pos?: Pos; tilt?: number }) {
+  if (!pos) return null;
+  const p = POS_LABEL[pos];
+  return <Tag label={`${p.fi} · ${p.en}`} color={p.color} tilt={tilt} size={13} />;
+}
+
+/** A word's picture as a tilted sticker: flat colour, ink outline, hard shadow */
+export function WordPic({ icon, size = 96, color = colors.gold, tilt = -4 }: { icon?: string; size?: number; color?: string; tilt?: number }) {
+  if (!icon) return null;
+  return (
+    <View
+      style={{
+        width: size,
+        height: size,
+        backgroundColor: color,
+        borderWidth: OUTLINE,
+        borderColor: colors.ink,
+        borderRadius: radius.lg,
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+        boxShadow: hardShadow(colors.ink, Math.max(3, Math.round(size / 22))),
+        transform: [{ rotate: `${tilt}deg` }],
+      }}
+    >
+      <Halftone color={colors.ink} opacity={0.14} size={8} />
+      <MaterialCommunityIcons name={icon as never} size={size * 0.62} color={onColor(color)} />
+    </View>
+  );
+}
+
+/**
+ * A Finnish sentence whose words you can hover (web) or tap to see what each
+ * one means. The gloss appears in a strip under the sentence.
+ */
+export function Glossed({ text, size = 22 }: { text: string; size?: number }) {
+  const [open, setOpen] = useState<number | null>(null);
+  const parts = text.split(/\s+/).filter(Boolean);
+  const g = open === null ? undefined : gloss(parts[open]);
+  return (
+    <View style={{ flexShrink: 1, gap: 4 }}>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', columnGap: size * 0.28 }}>
+        {parts.map((w, i) => {
+          const known = !!gloss(w);
+          return (
+            <Pressable
+              key={i}
+              disabled={!known}
+              onPress={() => setOpen(open === i ? null : i)}
+              onHoverIn={() => setOpen(i)}
+              onHoverOut={() => setOpen((o) => (o === i ? null : o))}
+            >
+              <Text
+                style={{
+                  fontSize: size,
+                  lineHeight: size * 1.3,
+                  fontWeight: '700',
+                  backgroundColor: open === i ? colors.gold : 'transparent',
+                  borderBottomWidth: known ? 2 : 0,
+                  borderStyle: 'dotted',
+                  borderColor: colors.mutedOnPaper,
+                }}
+              >
+                {w}
+              </Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      <View style={{ minHeight: 22 }}>
+        {g ? (
+          <Text style={{ fontSize: 15 }}>
+            <Text style={{ fontSize: 15, fontWeight: '700' }}>{g.en}</Text>
+            {g.lemma.toLowerCase() !== parts[open as number].replace(/[.,!?;:]/g, '').toLowerCase() ? `  ·  from ${g.lemma}` : ''}
+          </Text>
+        ) : (
+          <Text style={{ fontSize: 13, color: colors.mutedOnPaper }}>Tap a word to see what it means</Text>
+        )}
+      </View>
     </View>
   );
 }

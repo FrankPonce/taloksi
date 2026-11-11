@@ -11,12 +11,12 @@
       "titleEn": "Where are you from?",
       "grammar": "g_locative",
       "words": [
-        { "id": "w_suomi", "fi": "Suomi", "en": "Finland" },
-        { "id": "w_suomalainen", "fi": "suomalainen", "en": "Finnish", "altEn": ["a Finn", "Finn", "Finnish person"] },
-        { "id": "w_espanja", "fi": "Espanja", "en": "Spain" },
-        { "id": "w_yhdysvallat", "fi": "Yhdysvallat", "en": "the United States", "altEn": ["United States", "USA", "the USA", "America"] },
-        { "id": "w_kotoisin", "fi": "kotoisin", "en": "from (originally)", "altEn": ["from", "originally from"] },
-        { "id": "w_mista", "fi": "mistä", "en": "from where", "altEn": ["where from"] }
+        { "id": "w_suomi", "fi": "Suomi", "en": "Finland", "pos": "noun", "icon": "flag" },
+        { "id": "w_suomalainen", "fi": "suomalainen", "en": "Finnish", "altEn": ["a Finn", "Finn", "Finnish person"], "pos": "adj" },
+        { "id": "w_espanja", "fi": "Espanja", "en": "Spain", "pos": "noun" },
+        { "id": "w_yhdysvallat", "fi": "Yhdysvallat", "en": "the United States", "altEn": ["United States", "USA", "the USA", "America"], "pos": "noun" },
+        { "id": "w_kotoisin", "fi": "kotoisin", "en": "from (originally)", "altEn": ["from", "originally from"], "pos": "adv", "icon": "home-map-marker" },
+        { "id": "w_mista", "fi": "mistä", "en": "from where", "altEn": ["where from"], "pos": "question" }
       ],
       "sentences": [
         { "id": "s_u2l1_1", "fi": "Mistä sinä olet kotoisin?", "en": "Where are you from?", "altFi": ["Mistä olet kotoisin?"], "altEn": ["Where are you originally from?"], "puhe": "Mistä sä oot kotoisin?", "speaker": "mikko" },
@@ -35,13 +35,13 @@
       "titleEn": "Languages",
       "grammar": "g_partitive_intro",
       "words": [
-        { "id": "w_suomi_kieli", "fi": "suomi", "en": "Finnish (language)", "altEn": ["Finnish"], "note": "Languages are written lowercase; the country 'Suomi' is capitalised." },
-        { "id": "w_englanti", "fi": "englanti", "en": "English" },
-        { "id": "w_ruotsi", "fi": "ruotsi", "en": "Swedish", "note": "Finland's second official language. In Turku you'll hear it a lot." },
-        { "id": "w_espanja_kieli", "fi": "espanja", "en": "Spanish" },
-        { "id": "w_puhua", "fi": "puhua", "en": "to speak", "altEn": ["speak"] },
-        { "id": "w_vahan", "fi": "vähän", "en": "a little", "altEn": ["a bit", "little"] },
-        { "id": "w_hyvin", "fi": "hyvin", "en": "well" }
+        { "id": "w_suomi_kieli", "fi": "suomi", "en": "Finnish (language)", "altEn": ["Finnish"], "note": "Languages are written lowercase; the country 'Suomi' is capitalised.", "pos": "noun" },
+        { "id": "w_englanti", "fi": "englanti", "en": "English", "pos": "noun" },
+        { "id": "w_ruotsi", "fi": "ruotsi", "en": "Swedish", "note": "Finland's second official language. In Turku you'll hear it a lot.", "pos": "noun" },
+        { "id": "w_espanja_kieli", "fi": "espanja", "en": "Spanish", "pos": "noun" },
+        { "id": "w_puhua", "fi": "puhua", "en": "to speak", "altEn": ["speak"], "pos": "verb", "icon": "account-voice" },
+        { "id": "w_vahan", "fi": "vähän", "en": "a little", "altEn": ["a bit", "little"], "pos": "adv" },
+        { "id": "w_hyvin", "fi": "hyvin", "en": "well", "pos": "adv" }
       ],
       "sentences": [
         { "id": "s_u2l2_1", "fi": "Puhun englantia ja espanjaa.", "en": "I speak English and Spanish.", "puhe": "Mä puhun englantii ja espanjaa.", "speaker": "anna" },
@@ -60,13 +60,13 @@
       "titleEn": "Where do you live?",
       "grammar": "g_verbs_present",
       "words": [
-        { "id": "w_asua", "fi": "asua", "en": "to live", "altEn": ["live"] },
-        { "id": "w_missa", "fi": "missä", "en": "where" },
-        { "id": "w_turku", "fi": "Turku", "en": "Turku" },
-        { "id": "w_helsinki", "fi": "Helsinki", "en": "Helsinki" },
-        { "id": "w_kaupunki", "fi": "kaupunki", "en": "city", "altEn": ["town"] },
-        { "id": "w_opiskella", "fi": "opiskella", "en": "to study", "altEn": ["study"] },
-        { "id": "w_yliopisto", "fi": "yliopisto", "en": "university" }
+        { "id": "w_asua", "fi": "asua", "en": "to live", "altEn": ["live"], "pos": "verb", "icon": "home" },
+        { "id": "w_missa", "fi": "missä", "en": "where", "pos": "question", "icon": "map-marker-question" },
+        { "id": "w_turku", "fi": "Turku", "en": "Turku", "pos": "noun" },
+        { "id": "w_helsinki", "fi": "Helsinki", "en": "Helsinki", "pos": "noun" },
+        { "id": "w_kaupunki", "fi": "kaupunki", "en": "city", "altEn": ["town"], "pos": "noun", "icon": "city" },
+        { "id": "w_opiskella", "fi": "opiskella", "en": "to study", "altEn": ["study"], "pos": "verb", "icon": "book-open-page-variant" },
+        { "id": "w_yliopisto", "fi": "yliopisto", "en": "university", "pos": "noun", "icon": "school" }
       ],
       "sentences": [
         { "id": "s_u2l3_1", "fi": "Missä sinä asut?", "en": "Where do you live?", "altFi": ["Missä asut?"], "puhe": "Missä sä asut?", "speaker": "pekka" },
@@ -84,17 +84,17 @@
       "title": "Numerot 0–10",
       "titleEn": "Numbers 0–10",
       "words": [
-        { "id": "w_nolla", "fi": "nolla", "en": "zero", "altEn": ["0"] },
-        { "id": "w_yksi", "fi": "yksi", "en": "one", "altEn": ["1"], "puhe": "yks" },
-        { "id": "w_kaksi", "fi": "kaksi", "en": "two", "altEn": ["2"], "puhe": "kaks" },
-        { "id": "w_kolme", "fi": "kolme", "en": "three", "altEn": ["3"] },
-        { "id": "w_nelja", "fi": "neljä", "en": "four", "altEn": ["4"] },
-        { "id": "w_viisi", "fi": "viisi", "en": "five", "altEn": ["5"], "puhe": "viis" },
-        { "id": "w_kuusi", "fi": "kuusi", "en": "six", "altEn": ["6"], "puhe": "kuus" },
-        { "id": "w_seitseman", "fi": "seitsemän", "en": "seven", "altEn": ["7"], "puhe": "seittemän" },
-        { "id": "w_kahdeksan", "fi": "kahdeksan", "en": "eight", "altEn": ["8"], "puhe": "kaheksan" },
-        { "id": "w_yhdeksan", "fi": "yhdeksän", "en": "nine", "altEn": ["9"], "puhe": "yheksän" },
-        { "id": "w_kymmenen", "fi": "kymmenen", "en": "ten", "altEn": ["10"] }
+        { "id": "w_nolla", "fi": "nolla", "en": "zero", "altEn": ["0"], "pos": "num", "icon": "numeric-0" },
+        { "id": "w_yksi", "fi": "yksi", "en": "one", "altEn": ["1"], "puhe": "yks", "pos": "num", "icon": "numeric-1" },
+        { "id": "w_kaksi", "fi": "kaksi", "en": "two", "altEn": ["2"], "puhe": "kaks", "pos": "num", "icon": "numeric-2" },
+        { "id": "w_kolme", "fi": "kolme", "en": "three", "altEn": ["3"], "pos": "num", "icon": "numeric-3" },
+        { "id": "w_nelja", "fi": "neljä", "en": "four", "altEn": ["4"], "pos": "num", "icon": "numeric-4" },
+        { "id": "w_viisi", "fi": "viisi", "en": "five", "altEn": ["5"], "puhe": "viis", "pos": "num", "icon": "numeric-5" },
+        { "id": "w_kuusi", "fi": "kuusi", "en": "six", "altEn": ["6"], "puhe": "kuus", "pos": "num", "icon": "numeric-6" },
+        { "id": "w_seitseman", "fi": "seitsemän", "en": "seven", "altEn": ["7"], "puhe": "seittemän", "pos": "num", "icon": "numeric-7" },
+        { "id": "w_kahdeksan", "fi": "kahdeksan", "en": "eight", "altEn": ["8"], "puhe": "kaheksan", "pos": "num", "icon": "numeric-8" },
+        { "id": "w_yhdeksan", "fi": "yhdeksän", "en": "nine", "altEn": ["9"], "puhe": "yheksän", "pos": "num", "icon": "numeric-9" },
+        { "id": "w_kymmenen", "fi": "kymmenen", "en": "ten", "altEn": ["10"], "pos": "num", "icon": "numeric-10" }
       ],
       "sentences": [
         { "id": "s_u2l4_1", "fi": "Minulla on kaksi siskoa.", "en": "I have two sisters.", "puhe": "Mulla on kaks siskoo.", "speaker": "helvi" },

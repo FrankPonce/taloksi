@@ -18,6 +18,8 @@ export type Settings = {
   unlockAll: boolean;
   /** 18+ content: bar talk, swearing, dating */
   adult: boolean;
+  /** short sound effects for right, wrong, tap and lesson complete */
+  sfx: boolean;
 };
 
 export type LessonRecord = { completions: number; bestAccuracy: number; lastAt: string };
@@ -73,6 +75,7 @@ const initial = (): Data => ({
     unlimitedHearts: false,
     unlockAll: false,
     adult: false,
+    sfx: true,
   },
 });
 

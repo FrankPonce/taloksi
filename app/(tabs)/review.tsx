@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
+import { sfx } from '../../src/audio/sfx';
 import { Avatar, Norppa } from '../../src/components/art';
 import { Breakdown } from '../../src/components/Breakdown';
-import { Button, H1, Muted, Panel, ProgressBar, PuheLine, Screen, SpeakerButton, Tag, Text } from '../../src/components/ui';
+import { Flip, Pop } from '../../src/components/motion';
+import { Button, H1, Muted, Panel, PosTag, ProgressBar, PuheLine, Screen, SpeakerButton, Tag, Text, WordPic } from '../../src/components/ui';
 import { getItem } from '../../src/content';
 import { sample } from '../../src/engine/random';
 import { dueIds, type Grade } from '../../src/engine/srs';
@@ -62,9 +64,17 @@ export default function ReviewScreen() {
           <Tag label={`${session.i + 1}/${session.ids.length} · ${item.kind === 'word' ? 'Sana' : 'Lause'}`} color={colors.gold} />
           <ProgressBar value={session.i / session.ids.length} color={colors.gold} />
         </View>
-        <Pressable onPress={() => setRevealed(true)}>
+        <Pressable
+          onPress={() => {
+            if (!revealed) sfx('flip');
+            setRevealed(true);
+          }}
+        >
+          <Flip face={`${id}-${revealed}`}>
           <Panel halftone tilt={-0.8} style={{ minHeight: 280, alignItems: 'center', justifyContent: 'center', gap: 14 }}>
             {item.speaker && <Avatar id={item.speaker} size={56} />}
+            {/* The picture would give the answer away when the Finnish word is the question */}
+            {(session.front === 'en' || revealed) && <WordPic icon={item.icon} size={84} />}
             <Text style={styles.front}>{front}</Text>
             {session.front === 'fi' && <SpeakerButton text={item.fi} id={item.id} speaker={item.speaker} />}
             {revealed ? (
@@ -72,6 +82,7 @@ export default function ReviewScreen() {
                 <View style={styles.divider} />
                 <Text style={styles.back}>{back}</Text>
                 {session.front === 'en' && <SpeakerButton text={item.fi} id={item.id} speaker={item.speaker} />}
+                <PosTag pos={item.pos} />
                 <PuheLine puhe={item.puhe} id={item.id} />
                 {item.kind === 'sentence' && (
                   <View style={{ alignSelf: 'stretch' }}>
@@ -80,16 +91,22 @@ export default function ReviewScreen() {
                 )}
               </>
             ) : (
-              <Tag label="Napauta · Tap to reveal" color={colors.ink} tilt={2} />
+              <Tag label="Napauta · Tap to flip" color={colors.ink} tilt={2} />
             )}
           </Panel>
+          </Flip>
         </Pressable>
         {revealed && (
           <>
             <Muted>How well did you remember it? Be honest. It sets when you see this card again.</Muted>
             <View style={{ flexDirection: 'row', gap: 10 }}>
               {GRADES.map(({ g, fi, en, color }) => (
-                <Pressable key={g} onPress={() => rate(g)} style={[styles.grade, { backgroundColor: color }]}>
+                <Pressable
+                  key={g}
+                  onPress={() => {
+                    sfx(g === 'again' ? 'wrong' : 'tap');
+                    rate(g);
+                  }} style={[styles.grade, { backgroundColor: color }]}>
                   <Text style={{ fontFamily: font.label, fontSize: 16, color: onColor(color), textTransform: 'uppercase' }}>{fi}</Text>
                   <Text style={{ fontSize: 12, color: onColor(color) }}>{en}</Text>
                 </Pressable>

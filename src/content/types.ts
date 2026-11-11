@@ -1,7 +1,13 @@
+export type Pos = 'noun' | 'verb' | 'adj' | 'adv' | 'pron' | 'num' | 'question' | 'particle' | 'phrase';
+
 export type Word = {
   id: string;
   fi: string;
   en: string;
+  /** word type, shown as a tag when the word is taught */
+  pos?: Pos;
+  /** MaterialCommunityIcons name used as the word's picture */
+  icon?: string;
   altEn?: string[];
   /** Spoken-Finnish (puhekieli) variant, if different */
   puhe?: string;
@@ -119,6 +125,8 @@ export type Item = {
   altEn?: string[];
   speaker?: string;
   note?: string;
+  pos?: Pos;
+  icon?: string;
 };
 
 export type Character = {

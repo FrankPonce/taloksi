@@ -11,14 +11,14 @@
       "title": "Baarissa",
       "titleEn": "At the bar",
       "words": [
-        { "id": "w_baari", "fi": "baari", "en": "bar" },
-        { "id": "w_kalja", "fi": "kalja", "en": "beer (casual)", "altEn": ["beer"], "note": "The textbook word is 'olut'. At the bar almost everyone says 'kalja' or 'bisse'." },
-        { "id": "w_siideri", "fi": "siideri", "en": "cider" },
-        { "id": "w_lonkero", "fi": "lonkero", "en": "long drink", "note": "Gin and grapefruit soda, invented for the 1952 Helsinki Olympics. Finland's unofficial national drink." },
-        { "id": "w_viini", "fi": "viini", "en": "wine" },
-        { "id": "w_kippis", "fi": "kippis", "en": "cheers" },
-        { "id": "w_humalassa", "fi": "humalassa", "en": "drunk", "note": "Literally 'in the hop'. Slang: 'kännissä'." },
-        { "id": "w_krapula", "fi": "krapula", "en": "hangover", "puhe": "darra" }
+        { "id": "w_baari", "fi": "baari", "en": "bar", "pos": "noun", "icon": "glass-cocktail" },
+        { "id": "w_kalja", "fi": "kalja", "en": "beer (casual)", "altEn": ["beer"], "note": "The textbook word is 'olut'. At the bar almost everyone says 'kalja' or 'bisse'.", "pos": "noun", "icon": "glass-mug" },
+        { "id": "w_siideri", "fi": "siideri", "en": "cider", "pos": "noun", "icon": "bottle-soda" },
+        { "id": "w_lonkero", "fi": "lonkero", "en": "long drink", "note": "Gin and grapefruit soda, invented for the 1952 Helsinki Olympics. Finland's unofficial national drink.", "pos": "noun", "icon": "bottle-tonic" },
+        { "id": "w_viini", "fi": "viini", "en": "wine", "pos": "noun", "icon": "glass-wine" },
+        { "id": "w_kippis", "fi": "kippis", "en": "cheers", "pos": "phrase", "icon": "party-popper" },
+        { "id": "w_humalassa", "fi": "humalassa", "en": "drunk", "note": "Literally 'in the hop'. Slang: 'kännissä'.", "pos": "adj", "icon": "emoticon-confused" },
+        { "id": "w_krapula", "fi": "krapula", "en": "hangover", "puhe": "darra", "pos": "noun", "icon": "emoticon-sick" }
       ],
       "sentences": [
         { "id": "s_x1l1_1", "fi": "Yksi olut, kiitos.", "en": "One beer, please.", "puhe": "Yks kalja, kiitos.", "speaker": "samir" },
@@ -39,14 +39,14 @@
       "titleEn": "Swearing",
       "grammar": "g_swearing",
       "words": [
-        { "id": "w_hitto", "fi": "hitto", "en": "damn (mild)", "altEn": ["damn", "darn"], "note": "Strength 1/5. Safe almost anywhere." },
-        { "id": "w_hemmetti", "fi": "hemmetti", "en": "heck (mild)", "altEn": ["heck", "damn"], "note": "Strength 1/5. Grandma-approved." },
-        { "id": "w_paska", "fi": "paska", "en": "shit", "altEn": ["crap"], "note": "Strength 2/5. Also an adjective: 'paska päivä', a shit day." },
-        { "id": "w_helvetti", "fi": "helvetti", "en": "hell", "note": "Strength 3/5." },
-        { "id": "w_saatana", "fi": "saatana", "en": "Satan (strong swear)", "altEn": ["Satan", "damn it"], "note": "Strength 4/5." },
-        { "id": "w_perkele", "fi": "perkele", "en": "perkele (the classic swear)", "altEn": ["perkele", "damn it", "devil"], "note": "Strength 4/5. Roll the R. Finland's most famous word abroad." },
-        { "id": "w_vittu", "fi": "vittu", "en": "fuck", "note": "Strength 5/5 and extremely common among friends. Never at work, never with strangers." },
-        { "id": "w_vitun", "fi": "vitun", "en": "fucking", "note": "The genitive of 'vittu', used as an intensifier before adjectives and nouns." }
+        { "id": "w_hitto", "fi": "hitto", "en": "damn (mild)", "altEn": ["damn", "darn"], "note": "Strength 1/5. Safe almost anywhere.", "pos": "phrase" },
+        { "id": "w_hemmetti", "fi": "hemmetti", "en": "heck (mild)", "altEn": ["heck", "damn"], "note": "Strength 1/5. Grandma-approved.", "pos": "phrase" },
+        { "id": "w_paska", "fi": "paska", "en": "shit", "altEn": ["crap"], "note": "Strength 2/5. Also an adjective: 'paska päivä', a shit day.", "pos": "noun", "icon": "emoticon-poop" },
+        { "id": "w_helvetti", "fi": "helvetti", "en": "hell", "note": "Strength 3/5.", "pos": "noun", "icon": "fire" },
+        { "id": "w_saatana", "fi": "saatana", "en": "Satan (strong swear)", "altEn": ["Satan", "damn it"], "note": "Strength 4/5.", "pos": "phrase", "icon": "emoticon-devil" },
+        { "id": "w_perkele", "fi": "perkele", "en": "perkele (the classic swear)", "altEn": ["perkele", "damn it", "devil"], "note": "Strength 4/5. Roll the R. Finland's most famous word abroad.", "pos": "phrase", "icon": "lightning-bolt" },
+        { "id": "w_vittu", "fi": "vittu", "en": "fuck", "note": "Strength 5/5 and extremely common among friends. Never at work, never with strangers.", "pos": "phrase" },
+        { "id": "w_vitun", "fi": "vitun", "en": "fucking", "note": "The genitive of 'vittu', used as an intensifier before adjectives and nouns.", "pos": "phrase" }
       ],
       "sentences": [
         { "id": "s_x1l2_1", "fi": "Voi hitto!", "en": "Oh damn!", "altEn": ["Damn!", "Oh darn!"], "speaker": "helvi" },
@@ -67,14 +67,14 @@
       "titleEn": "On a date",
       "grammar": "g_rection",
       "words": [
-        { "id": "w_treffit", "fi": "treffit", "en": "date (romantic)", "altEn": ["date", "a date"], "note": "Always plural in Finnish, like 'scissors' in English." },
-        { "id": "w_sinkku", "fi": "sinkku", "en": "single" },
-        { "id": "w_ihastus", "fi": "ihastus", "en": "crush" },
-        { "id": "w_ihana", "fi": "ihana", "en": "lovely", "altEn": ["wonderful", "adorable"] },
-        { "id": "w_tykata", "fi": "tykätä", "en": "to like" },
-        { "id": "w_rakastaa", "fi": "rakastaa", "en": "to love" },
-        { "id": "w_suudella", "fi": "suudella", "en": "to kiss", "puhe": "pussata" },
-        { "id": "w_seurustella", "fi": "seurustella", "en": "to be in a relationship", "altEn": ["to date", "to go out with"] }
+        { "id": "w_treffit", "fi": "treffit", "en": "date (romantic)", "altEn": ["date", "a date"], "note": "Always plural in Finnish, like 'scissors' in English.", "pos": "noun", "icon": "heart-multiple" },
+        { "id": "w_sinkku", "fi": "sinkku", "en": "single", "pos": "adj", "icon": "human-greeting" },
+        { "id": "w_ihastus", "fi": "ihastus", "en": "crush", "pos": "noun", "icon": "heart-flash" },
+        { "id": "w_ihana", "fi": "ihana", "en": "lovely", "altEn": ["wonderful", "adorable"], "pos": "adj", "icon": "star-shooting" },
+        { "id": "w_tykata", "fi": "tykätä", "en": "to like", "pos": "verb", "icon": "thumb-up" },
+        { "id": "w_rakastaa", "fi": "rakastaa", "en": "to love", "pos": "verb", "icon": "heart" },
+        { "id": "w_suudella", "fi": "suudella", "en": "to kiss", "puhe": "pussata", "pos": "verb", "icon": "emoticon-kiss" },
+        { "id": "w_seurustella", "fi": "seurustella", "en": "to be in a relationship", "altEn": ["to date", "to go out with"], "pos": "verb", "icon": "account-heart" }
       ],
       "sentences": [
         { "id": "s_x1l3_1", "fi": "Lähdetkö treffeille?", "en": "Will you go on a date?", "altEn": ["Do you want to go on a date?", "Will you go on a date with me?"], "puhe": "Lähetsä treffeille?", "speaker": "samir" },

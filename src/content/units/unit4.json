@@ -11,14 +11,14 @@
       "titleEn": "Places",
       "grammar": "g_gradation",
       "words": [
-        { "id": "w_kirjasto", "fi": "kirjasto", "en": "library" },
-        { "id": "w_asema", "fi": "asema", "en": "station" },
-        { "id": "w_apteekki", "fi": "apteekki", "en": "pharmacy" },
-        { "id": "w_ravintola", "fi": "ravintola", "en": "restaurant" },
-        { "id": "w_pankki", "fi": "pankki", "en": "bank" },
-        { "id": "w_tori", "fi": "tori", "en": "market square", "altEn": ["market", "square"] },
-        { "id": "w_keskusta", "fi": "keskusta", "en": "city center", "altEn": ["city centre", "downtown", "centre", "center"] },
-        { "id": "w_ruokakauppa", "fi": "ruokakauppa", "en": "grocery store", "altEn": ["supermarket", "food shop"] }
+        { "id": "w_kirjasto", "fi": "kirjasto", "en": "library", "pos": "noun", "icon": "library" },
+        { "id": "w_asema", "fi": "asema", "en": "station", "pos": "noun", "icon": "transit-connection-variant" },
+        { "id": "w_apteekki", "fi": "apteekki", "en": "pharmacy", "pos": "noun", "icon": "pill" },
+        { "id": "w_ravintola", "fi": "ravintola", "en": "restaurant", "pos": "noun", "icon": "food" },
+        { "id": "w_pankki", "fi": "pankki", "en": "bank", "pos": "noun", "icon": "bank" },
+        { "id": "w_tori", "fi": "tori", "en": "market square", "altEn": ["market", "square"], "pos": "noun", "icon": "tent" },
+        { "id": "w_keskusta", "fi": "keskusta", "en": "city center", "altEn": ["city centre", "downtown", "centre", "center"], "pos": "noun", "icon": "home-city" },
+        { "id": "w_ruokakauppa", "fi": "ruokakauppa", "en": "grocery store", "altEn": ["supermarket", "food shop"], "pos": "noun", "icon": "cart" }
       ],
       "sentences": [
         { "id": "s_u4l1_1", "fi": "Kirjasto on lähellä.", "en": "The library is nearby.", "altEn": ["The library is close.", "The library is near."], "puhe": "Kirjasto on lähel.", "speaker": "helvi" },
@@ -37,12 +37,12 @@
       "titleEn": "Where is…?",
       "grammar": "g_external",
       "words": [
-        { "id": "w_vasemmalla", "fi": "vasemmalla", "en": "on the left", "altEn": ["left", "to the left"] },
-        { "id": "w_oikealla", "fi": "oikealla", "en": "on the right", "altEn": ["right", "to the right"] },
-        { "id": "w_suoraan", "fi": "suoraan", "en": "straight", "altEn": ["straight ahead"] },
-        { "id": "w_lahella", "fi": "lähellä", "en": "near", "altEn": ["nearby", "close"], "puhe": "lähel" },
-        { "id": "w_kaukana", "fi": "kaukana", "en": "far", "altEn": ["far away"] },
-        { "id": "w_vieressa", "fi": "vieressä", "en": "next to", "altEn": ["beside"], "puhe": "vieres" }
+        { "id": "w_vasemmalla", "fi": "vasemmalla", "en": "on the left", "altEn": ["left", "to the left"], "pos": "adv", "icon": "arrow-left-bold" },
+        { "id": "w_oikealla", "fi": "oikealla", "en": "on the right", "altEn": ["right", "to the right"], "pos": "adv", "icon": "arrow-right-bold" },
+        { "id": "w_suoraan", "fi": "suoraan", "en": "straight", "altEn": ["straight ahead"], "pos": "adv", "icon": "arrow-up-bold" },
+        { "id": "w_lahella", "fi": "lähellä", "en": "near", "altEn": ["nearby", "close"], "puhe": "lähel", "pos": "adv", "icon": "map-marker-radius" },
+        { "id": "w_kaukana", "fi": "kaukana", "en": "far", "altEn": ["far away"], "pos": "adv", "icon": "map-marker-distance" },
+        { "id": "w_vieressa", "fi": "vieressä", "en": "next to", "altEn": ["beside"], "puhe": "vieres", "pos": "adv" }
       ],
       "sentences": [
         { "id": "s_u4l2_1", "fi": "Apteekki on vasemmalla.", "en": "The pharmacy is on the left.", "speaker": "aino" },
@@ -61,13 +61,13 @@
       "titleEn": "Let's go!",
       "grammar": "g_illative",
       "words": [
-        { "id": "w_menna", "fi": "mennä", "en": "to go", "altEn": ["go"] },
-        { "id": "w_tulla", "fi": "tulla", "en": "to come", "altEn": ["come"] },
-        { "id": "w_kotiin", "fi": "kotiin", "en": "home", "altEn": ["to home", "(to) home"] },
-        { "id": "w_toihin", "fi": "töihin", "en": "to work" },
-        { "id": "w_tanaan", "fi": "tänään", "en": "today" },
-        { "id": "w_huomenna", "fi": "huomenna", "en": "tomorrow" },
-        { "id": "w_nyt", "fi": "nyt", "en": "now" }
+        { "id": "w_menna", "fi": "mennä", "en": "to go", "altEn": ["go"], "pos": "verb", "icon": "walk" },
+        { "id": "w_tulla", "fi": "tulla", "en": "to come", "altEn": ["come"], "pos": "verb", "icon": "login" },
+        { "id": "w_kotiin", "fi": "kotiin", "en": "home", "altEn": ["to home", "(to) home"], "pos": "adv", "icon": "home-import-outline" },
+        { "id": "w_toihin", "fi": "töihin", "en": "to work", "pos": "adv", "icon": "briefcase" },
+        { "id": "w_tanaan", "fi": "tänään", "en": "today", "pos": "adv", "icon": "calendar-today" },
+        { "id": "w_huomenna", "fi": "huomenna", "en": "tomorrow", "pos": "adv", "icon": "calendar-arrow-right" },
+        { "id": "w_nyt", "fi": "nyt", "en": "now", "pos": "adv", "icon": "clock" }
       ],
       "sentences": [
         { "id": "s_u4l3_1", "fi": "Menen kauppaan.", "en": "I am going to the store.", "altEn": ["I am going to the shop.", "I go to the store.", "I go to the shop."], "puhe": "Mä meen kauppaan.", "speaker": "pekka" },
@@ -86,13 +86,13 @@
       "titleEn": "By bus",
       "grammar": "g_possession",
       "words": [
-        { "id": "w_bussi", "fi": "bussi", "en": "bus" },
-        { "id": "w_pysakki", "fi": "pysäkki", "en": "stop", "altEn": ["bus stop"] },
-        { "id": "w_lippu", "fi": "lippu", "en": "ticket" },
-        { "id": "w_juna", "fi": "juna", "en": "train" },
-        { "id": "w_aikataulu", "fi": "aikataulu", "en": "timetable", "altEn": ["schedule"] },
-        { "id": "w_myohassa", "fi": "myöhässä", "en": "late", "altEn": ["delayed"] },
-        { "id": "w_seuraava", "fi": "seuraava", "en": "next" }
+        { "id": "w_bussi", "fi": "bussi", "en": "bus", "pos": "noun", "icon": "bus" },
+        { "id": "w_pysakki", "fi": "pysäkki", "en": "stop", "altEn": ["bus stop"], "pos": "noun", "icon": "bus-stop" },
+        { "id": "w_lippu", "fi": "lippu", "en": "ticket", "pos": "noun", "icon": "ticket" },
+        { "id": "w_juna", "fi": "juna", "en": "train", "pos": "noun", "icon": "train" },
+        { "id": "w_aikataulu", "fi": "aikataulu", "en": "timetable", "altEn": ["schedule"], "pos": "noun", "icon": "timetable" },
+        { "id": "w_myohassa", "fi": "myöhässä", "en": "late", "altEn": ["delayed"], "pos": "adv", "icon": "clock-alert" },
+        { "id": "w_seuraava", "fi": "seuraava", "en": "next", "pos": "adj", "icon": "skip-next" }
       ],
       "sentences": [
         { "id": "s_u4l4_1", "fi": "Milloin seuraava bussi tulee?", "en": "When does the next bus come?", "altEn": ["When is the next bus coming?", "When will the next bus come?"], "puhe": "Millon seuraava bussi tulee?", "speaker": "mikko" },

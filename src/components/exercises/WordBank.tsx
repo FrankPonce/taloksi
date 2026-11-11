@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
+import { sfx } from '../../audio/sfx';
 import { checkAnswer, type Lang } from '../../engine/text';
 import { colors, font, hardShadow, OUTLINE, radius } from '../../theme';
 import { Text } from '../Text';
@@ -13,25 +14,28 @@ export function WordBank({
   lang,
   locked,
   onSubmit,
+  joiner = ' ',
 }: {
   tiles: string[];
   accepted: string[];
   lang: Lang;
+  /** '' for letter tiles (spelling), ' ' for word tiles */
+  joiner?: string;
   locked: boolean;
   onSubmit: (r: ExerciseResult) => void;
 }) {
   const [picked, setPicked] = useState<number[]>([]);
-  const answer = picked.map((i) => tiles[i]).join(' ');
+  const answer = picked.map((i) => tiles[i]).join(joiner);
   return (
     <View style={{ gap: 18 }}>
       <View style={styles.answerRow}>
         {picked.map((i) => (
-          <Tile key={i} label={tiles[i]} onPress={() => !locked && setPicked(picked.filter((p) => p !== i))} />
+          <Tile key={i} label={tiles[i]} onPress={() => !locked && (sfx('flip'), setPicked(picked.filter((p) => p !== i)))} />
         ))}
       </View>
       <View style={styles.bank}>
         {tiles.map((t, i) => (
-          <Tile key={i} label={t} used={picked.includes(i)} onPress={() => !locked && !picked.includes(i) && setPicked([...picked, i])} />
+          <Tile key={i} label={t} used={picked.includes(i)} onPress={() => !locked && !picked.includes(i) && (sfx('tap'), setPicked([...picked, i]))} />
         ))}
       </View>
       {!locked && (
