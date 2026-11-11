@@ -31,7 +31,7 @@ and practice for the exams that come with staying.
 
 It is also a small Finnish lesson. *Talo* is a house; the ending *-ksi* means *becoming* or *as*. Endings like that are how Finnish works, and the app teaches them one at a time.
 
-<sub>The project started under the working title <b>Suomeksi</b> ("in Finnish"), which is why the repository is still called that.</sub>
+<sub>The project started under the working title <b>Suomeksi</b> ("in Finnish").</sub>
 
 <br>
 
@@ -194,8 +194,8 @@ The [roadmap](docs/ROADMAP.md) has the detail: who the app is for, a diagram of 
 ## Quick start
 
 ```bash
-git clone https://github.com/FrankPonce/suomeksi.git
-cd suomeksi
+git clone https://github.com/FrankPonce/taloksi.git
+cd taloksi
 npm install
 npx expo install --fix     # aligns native package versions with your Expo SDK
 npm run web                # or: npm run android / npm run ios (Expo Go)

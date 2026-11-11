@@ -513,7 +513,7 @@ Recommendation: keep everything free through the citizenship launch (sprint 6), 
 3. **Character art.** Stay with code-drawn portraits, or commission or draw full illustrations and keep the code version as a fallback.
 4. **Licence.** The repository is public but has no licence file yet, so nobody can legally reuse it. Code and course content may want different licences, and the money decision (10) shapes the choice.
 5. **How far the course goes.** B1 is the stated end. Whether B2 and beyond are lessons or only a reading and listening library is undecided.
-6. **Name.** Taloksi is chosen and the app is renamed; the repository rename and the availability checks are still to do. See below.
+6. **Name.** Taloksi is chosen and the app and repository are renamed; the availability checks are still to do. See below.
 7. **Money.** Section 10. Default: free until sprint 12.
 8. **Explanation languages.** All explanations are English. Newcomers speak many other languages (VINCE offers Finnish, English, Swedish and Ukrainian), so this limits reach. Machine-translated explanations cannot be checked by anyone here. Default: English only until the course has a review route for other languages.
 9. **Who checks the exam content.** With no native reviewer, accuracy rests on citing a source for every item, a `draft` flag, a visible "not official" notice and a report-a-problem link. Whether to find a human checker before launch is open.
@@ -528,7 +528,7 @@ What is done and what is not:
 
 - ✅ README and its artwork use Taloksi.
 - ✅ The app's title, `app.json`, `package.json`, the app identifiers and the in-app text are renamed. The saved-progress key keeps the old name so nobody loses progress.
-- ⬜ The GitHub repository is still `suomeksi`. Renaming it changes its URL (GitHub redirects the old one) and is done in the repository's settings.
+- ✅ The GitHub repository is renamed to `taloksi`; the old URL redirects.
 - ⬜ App stores, domains and trademarks have not been checked for "Taloksi". Do that before the first store listing in sprint 12; a rename after that is expensive.
 
 ## 12. Backlog

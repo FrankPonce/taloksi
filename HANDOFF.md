@@ -1,6 +1,6 @@
 # Taloksi — Handoff
 
-> **Name.** The brand is now **Taloksi** (from *asettua taloksi*, to settle in). The app was called Suomeksi until 2026-11-11. `app.json`, `package.json`, the in-app text and the docs were renamed that day. Three things keep the old name on purpose: the GitHub repository and local folder (`suomeksi`), the storage key `suomeksi-progress` in `store.ts` (changing it would wipe saved progress), and the Finnish word *suomeksi* ("in Finnish") wherever it appears in exercise labels and content. `npm run readme-art` regenerates `docs/assets/banner.svg` and `cast.svg` from the character components: run it after changing the cast.
+> **Name.** The brand is now **Taloksi** (from *asettua taloksi*, to settle in). The app was called Suomeksi until 2026-11-11. `app.json`, `package.json`, the in-app text and the docs were renamed that day. The GitHub repository was renamed to `taloksi` the same day. Two things keep the old name on purpose: the storage key `suomeksi-progress` in `store.ts` (changing it would wipe saved progress), and the Finnish word *suomeksi* ("in Finnish") wherever it appears in exercise labels and content. `npm run readme-art` regenerates `docs/assets/banner.svg` and `cast.svg` from the character components: run it after changing the cast.
 
 Everything a new contributor (human or Claude Code) needs to pick this project up cold.
 
@@ -43,7 +43,7 @@ npm run web
 
 **First tasks for whoever picks this up:**
 
-1. Read `docs/ROADMAP.md`: it describes the finished app and lists the open decisions. The repository is at github.com/FrankPonce/suomeksi.
+1. Read `docs/ROADMAP.md`: it describes the finished app and lists the open decisions. The repository is at github.com/FrankPonce/taloksi.
 2. Run it in Expo Go on Android and iOS. The style uses `boxShadow` and `skewX`, which need the new architecture on Android.
 3. Decide the voice licence question (see "Known gaps").
 4. Start Sprint 3: starter and structure (unit 0, concept cards, the strict first-contact rule, review pass on units 1–4).
