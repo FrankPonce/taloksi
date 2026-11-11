@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Suomeksi",
-    "slug": "suomeksi",
-    "scheme": "suomeksi",
+    "name": "Taloksi",
+    "slug": "taloksi",
+    "scheme": "taloksi",
     "version": "0.2.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
@@ -10,10 +10,10 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "dev.frankponce.suomeksi"
+      "bundleIdentifier": "dev.frankponce.taloksi"
     },
     "android": {
-      "package": "dev.frankponce.suomeksi"
+      "package": "dev.frankponce.taloksi"
     },
     "web": {
       "bundler": "metro",

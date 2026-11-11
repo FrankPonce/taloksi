@@ -1,10 +1,12 @@
-# Suomeksi — Handoff
+# Taloksi — Handoff
+
+> **Name.** The brand is now **Taloksi** (from *asettua taloksi*, to settle in). The app was called Suomeksi until 2026-11-11. `app.json`, `package.json`, the in-app text and the docs were renamed that day. Three things keep the old name on purpose: the GitHub repository and local folder (`suomeksi`), the storage key `suomeksi-progress` in `store.ts` (changing it would wipe saved progress), and the Finnish word *suomeksi* ("in Finnish") wherever it appears in exercise labels and content. `npm run readme-art` regenerates `docs/assets/banner.svg` and `cast.svg` from the character components: run it after changing the cast.
 
 Everything a new contributor (human or Claude Code) needs to pick this project up cold.
 
 ## 1. The idea
 
-**Suomeksi** ("in Finnish") is a free, open-source Duolingo / LingoDeer-style app built **only for Finnish**.
+**Taloksi** (from *asettua taloksi*, "to settle in"; first called Suomeksi) is a free Duolingo / LingoDeer-style app built **only for Finnish**, growing into exam practice and a guide to life in Finland.
 
 Generic language apps handle Finnish poorly where learners struggle most:
 
@@ -14,7 +16,7 @@ Generic language apps handle Finnish poorly where learners struggle most:
 
 The plan is to copy the proven mechanics from Duolingo and LingoDeer, then add Finnish-specific tools on top:
 
-| From Duolingo | From LingoDeer | Suomeksi originals |
+| From Duolingo | From LingoDeer | Taloksi originals |
 |---|---|---|
 | Learning path, hearts, XP, streaks, daily goal, leagues (planned), stories, re-queued mistakes, characters | New-word intro cards, grammar "learning tips", flashcard review, strong audio | Sentence breakdowns, ending detective, street-Finnish exercise, long-or-short listening, case gym, verb gym, puhekieli on every sentence, journey map to C2, sourced study guide, culture notes, 18+ pack |
 
@@ -22,7 +24,7 @@ The plan is to copy the proven mechanics from Duolingo and LingoDeer, then add F
 
 **Constraints:** zero budget. Free tiers only (Expo, Vercel/Cloudflare, Supabase later), free TTS, open data (Wiktionary via kaikki.org, Tatoeba). The only unavoidable costs are app-store fees: Google Play $25 once, Apple $99/yr, and Apple can be deferred.
 
-**Author:** Frank Ponce (frankponce.dev), CS grad, data science master's student (EDISS, Åbo Akademi). The README and roadmap are meant to look good as a portfolio piece. The format mirrors the CadetX project: numbered sprints (11 after the native-review sprint was dropped), rotating Scrum roles, and a review file per sprint.
+**Author:** Frank Ponce (frankponce.dev), CS grad, data science master's student (EDISS, Åbo Akademi). The README and roadmap are meant to look good as a portfolio piece. The format mirrors the CadetX project: numbered sprints (12 in the current plan), rotating Scrum roles, and a review file per sprint.
 
 ## 2. Current state (end of Sprint 2)
 
@@ -159,16 +161,17 @@ Full table in `docs/ROADMAP.md`. Sprint reviews go in `docs/sprints/sprint-NN-na
 1. ✅ Foundations
 2. ✅ Voice and identity
 3. ⏳ **Starter and structure** (unit 0, concept cards, first-contact rule, review pass, open data)
-4. Units 5–10 (A1 complete)
-5. Supabase accounts and sync
-6. Leagues and friends
-7. Learning science (mistake bank, FSRS tuning)
-8. Skill rooms
-9. Life in Finland / YKI
-10. Mobile release (EAS, Play Store, PWA)
-11. Launch and retention analytics
+4. Exam-prep engine (question bank, practice, mock test, source tracking)
+5. Citizenship content (from Migri's learning material, due around the turn of 2026–27)
+6. Citizenship launch (phone testing, hosting, installable web app, icon)
+7. Units 5–10 (A1 complete)
+8. Supabase accounts and sync
+9. Learning science (mistake bank, FSRS tuning)
+10. Skill rooms
+11. Life in Finland and YKI
+12. Mobile release and public beta
 
-The native-review sprint was dropped on 2026-11-11 because no native speaker is available.
+Two changes made on 2026-11-11. The native-review sprint was dropped because no native speaker is available. And the plan was widened: besides the course, the app gets an exam-prep track, starting with Finland's citizenship test, which applies to applications from 1 March 2027. Those three sprints go before the rest of A1 because the test has a date. The test is taken in Finnish or Swedish, so that track is for learners past A2. Leagues and friends are parked. `docs/ROADMAP.md` section 4 has the architecture and section 5 a register of every feature with its dependencies; keep both current. No official sample test or learning material existed on 2026-11-11: do not use third-party "practice question" sites as sources.
 
 Roles rotate every sprint: **Scrum Lead · Content Quality · Documentation · Tech Lead**. Update the README's sprint table and write a sprint review when a sprint closes.
 

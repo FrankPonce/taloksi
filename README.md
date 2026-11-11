@@ -1,41 +1,144 @@
 <div align="center">
 
-# 🦭 Suomeksi
+<img src="docs/assets/banner.svg" alt="Taloksi. Asetu taloksi: settle in. Finnish, the way it is actually spoken." width="100%">
 
-**Learn Finnish the way it's actually spoken.**
-A free Duolingo / LingoDeer-style app built *only* for Finnish: cases, consonant gradation and puhekieli included.
+<br>
 
-Expo (React Native) · TypeScript · FSRS spaced repetition · character voices · Web + iOS + Android from one codebase
+**Learn Finnish. Pass the tests. Make yourself at home.**
 
-[Roadmap](docs/ROADMAP.md) · [Handoff notes](HANDOFF.md) · [Content guide](docs/CONTENT.md)
+A free app for people building a life in Finland: a full Finnish course with the spoken language built in,<br>
+and practice for the exams that come with staying.
+
+<br>
+
+![Status](https://img.shields.io/badge/status-v0.2_%C2%B7_playable_on_web-2FE6A8?style=flat-square&labelColor=0B0F1A)
+![Sprint](https://img.shields.io/badge/sprint-3_of_12-FFC629?style=flat-square&labelColor=0B0F1A)
+![Expo](https://img.shields.io/badge/Expo-React_Native-2F6BFF?style=flat-square&labelColor=0B0F1A)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-9B6BFF?style=flat-square&labelColor=0B0F1A)
+![Platforms](https://img.shields.io/badge/web_%C2%B7_iOS_%C2%B7_Android-one_codebase-FF3B5C?style=flat-square&labelColor=0B0F1A)
+
+[**Roadmap**](docs/ROADMAP.md) &nbsp;·&nbsp; [Quick start](#quick-start) &nbsp;·&nbsp; [The cast](#the-cast) &nbsp;·&nbsp; [Progress](#progress)
 
 </div>
 
----
+<br>
 
-## Contents
+## The name
 
-1. [Status and progress](#status-and-progress)
-2. [Goalposts](#goalposts)
-3. [Why another language app?](#why-another-language-app)
-4. [What is in it today](#what-is-in-it-today)
-5. [Quick start](#quick-start)
-6. [Project structure](#project-structure)
-7. [Sprint plan](#sprint-plan)
-8. [Contributing](#contributing)
-9. [Licence and credits](#licence-and-credits)
+*Asettua taloksi* is the Finnish for settling in: making yourself at home somewhere new. That is the whole job of the app, in one word.
 
-## Status and progress
+> **Asetu taloksi.** Settle in.
 
-**v0.2, playable on web.** Sprint 3 of 11. All course content is written by AI and checked by AI; no native speaker has read it.
+It is also a small Finnish lesson. *Talo* is a house; the ending *-ksi* means *becoming* or *as*. Endings like that are how Finnish works, and the app teaches them one at a time.
+
+<sub>The project started under the working title <b>Suomeksi</b> ("in Finnish"), which is why the repository is still called that.</sub>
+
+<br>
+
+## Three things in one app
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🗣️ The language
+
+A structured course from zero toward B1. Textbook Finnish and the Finnish people actually say, side by side on every sentence.
+
+**Today:** 4 units, 21 lessons, 18 exercise types, spaced-repetition review.
+
+</td>
+<td width="33%" valign="top">
+
+### 🎓 The tests
+
+Practice for Finland's citizenship test, which applies to applications from 1 March 2027, and later for the YKI language exam.
+
+**Today:** planned. It is the next thing being built after the starter unit.
+
+</td>
+<td width="33%" valign="top">
+
+### 🏠 Life here
+
+How things work: sauna etiquette, shoes off, Kela, the bus. Facts about Finland sit inside the lessons themselves.
+
+**Today:** 12 culture notes, 7 practical notes. Scenario lessons are planned.
+
+</td>
+</tr>
+</table>
+
+<br>
+
+## The cast
+
+Seventeen characters, each with their own voice, their own way of talking, and the topics they teach. One of them hosts every lesson and reacts to your answers.
+
+<div align="center">
+<img src="docs/assets/cast.svg" alt="The seventeen characters of Taloksi" width="100%">
+</div>
+
+<br>
+
+| | Who | Teaches |
+|---|---|---|
+| **Norppa** | A Saimaa seal pup who somehow knows all fifteen cases | The basics |
+| **Pekka** | Lumberjack. Built like a spruce, talks about as much as one | Home, forest, sauna |
+| **Aino** | Barista running on four coffees and no patience | Shops, prices, fast spoken Finnish |
+| **Helvi** | Eighty-one, bakes every Friday, firm opinions on shoes in the hallway | Food, family, manners |
+| **Mikko** | Has driven bus line 6 for nineteen years and been late twice | Numbers, directions, transport |
+| **Samir** | Came for a job, passed the language exam, now helps the next newcomers | Paperwork, work, exams |
+| **Jere** | Metalhead. Gentle, polite, extremely loud | Music, drinks, feelings |
+
+…plus Sofia, Joonas, Joulupukki, Aada, Linh and Tuuli, and four more behind the 18+ setting.
+
+Every portrait is drawn in code, not from image files: six expressions each, a signature prop, and a name tag in their own style. The pictures on this page are rendered from the same components the app uses (`npm run readme-art`).
+
+<br>
+
+## Built for Finnish, not adapted to it
+
+Generic language apps teach Finnish the way they teach Spanish. The hard parts of Finnish are different, so the tools are too.
+
+| | |
+|---|---|
+| **Puhekieli on every sentence** | *Minä olen* is what the textbook says. *Mä oon* is what you will hear. Both are shown, both have audio. |
+| **Sentence breakdowns** | Any sentence taken apart into stems and endings, with the reason for each. |
+| **One new idea at a time** | A word appears in its plain form first. A new ending is never used before the lesson that explains it. |
+| **Case gym and verb gym** | Any noun in any of ten cases; verbs in textbook or spoken Finnish. |
+| **Exercises for Finnish problems** | Ending detective, pick the right form, street Finnish, long-or-short listening. |
+| **Tap any word** | A quick translation for every word in a Finnish sentence. |
+| **Review that adapts** | Flashcards scheduled with FSRS, the algorithm behind modern Anki. |
+| **An 18+ track** | Behind a setting: the bar, swearing, dating. The Finnish adults use and textbooks leave out. |
+
+<br>
+
+## The look: Kaamos Ink
+
+*Kaamos* is the polar night. The app is comic-ink panels on a dark winter sky.
+
+- Paper-coloured panels with thick ink outlines and hard offset shadows, never blurred ones
+- Slanted condensed type, labels as tilted bars, halftone dots
+- Flat saturated colours named after Finnish things: lake blue, aurora green, lingonberry red, cloudberry gold, bilberry purple
+- Characters with realistic proportions and hard cel shadows
+
+![night](https://img.shields.io/badge/kaamos-1B2748?style=flat-square) ![paper](https://img.shields.io/badge/paperi-FFF8EA?style=flat-square) ![ink](https://img.shields.io/badge/muste-0B0F1A?style=flat-square) ![blue](https://img.shields.io/badge/j%C3%A4rvi-2F6BFF?style=flat-square) ![aurora](https://img.shields.io/badge/revontuli-2FE6A8?style=flat-square) ![red](https://img.shields.io/badge/puolukka-FF3B5C?style=flat-square) ![gold](https://img.shields.io/badge/lakka-FFC629?style=flat-square) ![berry](https://img.shields.io/badge/mustikka-9B6BFF?style=flat-square)
+
+<br>
+
+## Progress
+
+**v0.2, playable on web.** Sprint 3 of 12.
 
 ```
-Sprints done            ████░░░░░░░░░░░░░░░░   2 / 11
+Sprints done            ███░░░░░░░░░░░░░░░░░   2 / 12
 Course to B1 (units)    ██░░░░░░░░░░░░░░░░░░   4 / 33
 A1 units                ███████░░░░░░░░░░░░░   4 / 11
 Units with review pass  ░░░░░░░░░░░░░░░░░░░░   0 / 6
 Characters with lessons ████████████░░░░░░░░  10 / 17
 Skill rooms with grading░░░░░░░░░░░░░░░░░░░░   0 / 4
+Citizenship pack parts  ░░░░░░░░░░░░░░░░░░░░   0 / 5
 ```
 
 | Platform | State |
@@ -44,82 +147,49 @@ Skill rooms with grading░░░░░░░░░░░░░░░░░░�
 | Android | ⬜ Not tested yet |
 | iOS | ⬜ Not tested yet |
 
-The bars are updated by hand when a sprint closes. The unit totals count the planned starter unit (unit 0) and units 1 to 32.
+> **About the content.** All course content is written by AI and checked by AI. No native speaker has read it yet. The app says so too. If you speak Finnish natively, [your corrections](#contributing) are the most valuable contribution there is.
 
-## Goalposts
+### Goalposts
 
-The project is done in this order. Each goalpost has one test that says whether it has been reached.
-
-| | Goalpost | Reached when | State |
+| | Goalpost | Reached when | |
 |---|---|---|---|
 | 1 | **Playable prototype** | A full lesson can be played start to finish on web | ✅ |
 | 2 | **Its own identity** | Own visual style, a cast, a voice for every line | ✅ |
-| 3 | **A proper beginning** | Unit 0 (letters, sounds, sentence structure) exists, no lesson uses grammar before explaining it, and units 1–4 have had a review pass | ⏳ current |
-| 4 | **A1 complete** | Units 0–10, each with a checkpoint test and a story | ⬜ |
-| 5 | **On your phone** | Installable on Android and as a web app, with progress synced to an account | ⬜ |
-| 6 | **Four real skills** | Listening, reading, writing and speaking each have graded tasks | ⬜ |
-| 7 | **Public beta** | Open to anyone, with retention numbers being collected | ⬜ |
-| 8 | **A2, then B1** | The course reaches YKI level 3 | ⬜ after launch |
+| 3 | **A proper beginning** | A starter unit for letters, sounds and sentence structure; no lesson uses grammar before explaining it | ⏳ |
+| 4 | **Citizenship test practice** | Study guide, practice by topic and a mock test, every item with a source, usable on a phone. Target: before 1 March 2027 | ⬜ |
+| 5 | **A1 complete** | Units 0–10, each with a checkpoint test and a story | ⬜ |
+| 6 | **Progress that follows you** | An account keeps progress across devices | ⬜ |
+| 7 | **Four real skills** | Listening, reading, writing and speaking each have graded tasks | ⬜ |
+| 8 | **Public beta** | In a store, open to anyone | ⬜ |
+| 9 | **A2, then B1** | The course reaches YKI level 3 | ⬜ |
 
-What each of these involves, and the decisions still open, is in [docs/ROADMAP.md](docs/ROADMAP.md).
+<details>
+<summary><b>Sprint plan</b></summary>
 
-## Why another language app?
+<br>
 
-Generic apps treat Finnish like any other language. Learners struggle with the things that make Finnish *Finnish*:
+Run as a solo Scrum project, rotating through four roles each sprint: Scrum Lead, Content Quality, Documentation, Tech Lead. Every sprint ends with a review in [`docs/sprints/`](docs/sprints/).
 
-- **15 grammatical cases** and **consonant gradation** (*katu → kadulla*, *pankki → pankissa*)
-- The gap between **kirjakieli** (textbook) and **puhekieli** (what people actually say: *minä olen → mä oon*)
-- Real life in Finland: K-Market checkouts, Föli buses, Kela, the YKI exam
+| # | Sprint | Goal | |
+|---|---|---|---|
+| 1 | **Foundations** | App, learning engine, FSRS, 4 A1 units | ✅ [Review](docs/sprints/sprint-01-foundations.md) |
+| 2 | **Voice and identity** | Audio for every item, the cast, own visual style, breakdowns, journey map, 18+ pack | ✅ [Review](docs/sprints/sprint-02-voice-and-identity.md) |
+| 3 | **Starter and structure** | Unit 0, concept cards, no grammar before its explanation, review pass on units 1–4 | ⏳ |
+| 4 | **Exam-prep engine** | Question-bank format, practice by topic, mock test, source tracking | ⬜ |
+| 5 | **Citizenship content** | Study guide, question bank and term pack built from the official learning material | ⬜ |
+| 6 | **Citizenship launch** | Info page, phone testing, hosting, installable web app, icon | ⬜ |
+| 7 | **A1 complete** | Units 5–10, checkpoints, placement check, a story per unit | ⬜ |
+| 8 | **Accounts and sync** | Sign-in and progress sync | ⬜ |
+| 9 | **Learning science** | Mistake bank, typed review, gradation and partitive drills | ⬜ |
+| 10 | **Skill rooms** | Graded listening, reading, writing and speaking | ⬜ |
+| 11 | **Life in Finland and YKI** | Scenario lessons, YKI practice, more 18+ units | ⬜ |
+| 12 | **Mobile release and public beta** | Store release, reminders, usage numbers | ⬜ |
 
-Suomeksi teaches the course *and* drills those pain points directly.
+</details>
 
-## What is in it today
+The [roadmap](docs/ROADMAP.md) has the detail: who the app is for, a diagram of how its parts connect, a register of every feature with what it depends on, the citizenship test plan, and the decisions still open.
 
-### Learning
-
-| Feature | From |
-|---|---|
-| Learning path with units and locked progression | Duolingo |
-| New-word cards with a picture, word type and audio before any quiz | LingoDeer |
-| 18 exercise types, generated from each lesson's content: multiple choice, picture cards, match pairs, word-bank translation both ways, listen-and-build, typing, spelling tiles, fill-in, cross out the extra word, multi-turn conversation, odd one out, true or false, and the Finnish-specific ones below | Duolingo, LingoDeer, own |
-| Missed exercises come back at the end of the lesson | Duolingo |
-| Flashcard review scheduled with FSRS | Anki |
-| Forgiving answer checker: contractions, typos, missing ä/ö with a nudge | own |
-| Hearts, XP, daily goal, streaks, achievements | Duolingo |
-
-### Built for Finnish
-
-| Feature | What it does |
-|---|---|
-| **Puhekieli on every sentence** | The spoken form sits next to the textbook form, with its own audio |
-| **Sentence breakdowns** | Any sentence taken apart into stems and endings, with a reason for each |
-| **Ending detective, pick the right form, street Finnish, long-or-short** | Exercises for cases, registers and vowel length |
-| **Case gym and verb gym** | Any noun in any of 10 cases; verbs in textbook or spoken Finnish |
-| **Tap any word** | A quick translation for every word in a Finnish sentence |
-| **Journey map** | A1.1 to C2, mapped to YKI levels, with can-do goals per stage |
-
-### The cast
-
-Seventeen characters drawn in code, each with a build, a pose, six expressions, a signature prop, a name tag and a voice. One character hosts each lesson, presents every exercise and reacts to your answers.
-
-Norppa the seal pup · Sofia the exchange student · Pekka the lumberjack · Aino the barista · Helvi the grandma · Mikko the bus driver · Samir the engineer · Jere the metalhead · Joonas the hockey fan · Joulupukki · Aada the pop-punk singer · Linh the quantum physicist · Tuuli the nurse · and on the 18+ track Niko, Leo, Ronja and Veera.
-
-### Around the course
-
-| Feature | What it does |
-|---|---|
-| **Four-skills hub** | Listening with the text hidden, reading, writing tasks with a score, shadowing for speaking |
-| **Stories and conversations** | Dialogue stories with questions; four-turn conversations inside lessons |
-| **Finland in the course** | Facts inside sentences, 12 culture notes, 7 practical notes on living here |
-| **Study guide** | Eleven tips on how to learn, each with sources |
-| **18+ track** | Behind a setting: bar talk, swearing, dating, parties, with its own characters |
-| **Kaamos Ink** | The visual style: comic-ink panels, hard shadows, halftone, slanted type |
-
-### Content in numbers
-
-4 A1 units and 2 units on the 18+ track · 21 lessons · 152 words · 116 sentences · 17 grammar notes · 2 stories · 5 conversations · 3 writing tasks · 451 audio clips · 14 gym nouns · 12 gym verbs.
-
-A unit is marked `"reviewed": true` once it has had a review pass by Claude against the checklist in [docs/CONTENT.md](docs/CONTENT.md). That pass is not a native speaker's check, and the app says so.
+<br>
 
 ## Quick start
 
@@ -131,14 +201,19 @@ npx expo install --fix     # aligns native package versions with your Expo SDK
 npm run web                # or: npm run android / npm run ios (Expo Go)
 ```
 
-Check your work before committing:
+Before committing:
 
 ```bash
 npm run validate           # ids, hosts, speakers, fill-ins, stories, audio coverage
 npm run typecheck
 ```
 
-Regenerate audio after changing content. The clips for the current content are already in `assets/audio/`.
+<details>
+<summary><b>Regenerating audio and README art</b></summary>
+
+<br>
+
+Audio clips for the current content are already in `assets/audio/`. After changing content:
 
 ```bash
 pip install edge-tts
@@ -147,7 +222,18 @@ npm run audio              # writes assets/audio/* and src/audio/manifest.ts
 
 `edge-tts` is free but unofficial; see the note at the top of `scripts/generate_audio.py`. For an open, offline alternative with a single voice, run `python scripts/generate_audio.py --engine piper`.
 
-## Project structure
+The banner and cast sheet on this page are rendered from the app's character components:
+
+```bash
+npm run readme-art         # writes docs/assets/banner.svg and cast.svg
+```
+
+</details>
+
+<details>
+<summary><b>Project structure</b></summary>
+
+<br>
 
 ```
 app/                     expo-router screens
@@ -164,29 +250,17 @@ src/
   state/store.ts         progress, saved on the device
   audio/                 clip manifest + device text-to-speech fallback
   theme.ts               design tokens
-scripts/                 audio generation, content validation, open-data importers
-docs/                    roadmap, sprint reviews, content guide
+scripts/                 audio generation, content validation, README art, open-data importers
+docs/                    roadmap, sprint reviews, content guide, README artwork
 ```
 
 Content is plain JSON on purpose: a reviewer can fix a sentence in a pull request without touching code, and the Python scripts can read it directly.
 
-## Sprint plan
+</details>
 
-Run as a solo Scrum project, rotating through four roles each sprint: Scrum Lead, Content Quality, Documentation, Tech Lead. Every sprint ends with a review in [`docs/sprints/`](docs/sprints/).
+**Built with** Expo and React Native · TypeScript · expo-router · zustand · ts-fsrs · react-native-svg
 
-| # | Sprint | Goal | Status |
-|---|---|---|---|
-| 1 | **Foundations** | App, learning engine, FSRS, 4 A1 units | ✅ [Review](docs/sprints/sprint-01-foundations.md) |
-| 2 | **Voice and identity** | Audio for every item, the cast, own visual style, breakdowns, journey map, 18+ pack | ✅ [Review](docs/sprints/sprint-02-voice-and-identity.md) |
-| 3 | **Starter and structure** | Unit 0, concept cards, no grammar before its explanation, review pass on units 1–4, open-data word lists | ⏳ Current |
-| 4 | **A1 complete** | Units 5–10, checkpoints, placement check, a story per unit | ⬜ |
-| 5 | **Accounts and sync** | Sign-in and progress sync | ⬜ |
-| 6 | **Social** | Leagues, friends, streak freeze | ⬜ |
-| 7 | **Learning science** | Mistake bank, typed review, gradation and partitive drills | ⬜ |
-| 8 | **Skill rooms** | Graded listening, reading, writing and speaking | ⬜ |
-| 9 | **Life in Finland** | Scenario lessons, YKI practice, more 18+ units | ⬜ |
-| 10 | **Mobile release** | Android build, installable web app, reminders | ⬜ |
-| 11 | **Launch** | Public beta and retention numbers | ⬜ |
+<br>
 
 ## Contributing
 
@@ -198,6 +272,12 @@ No licence has been chosen yet, so for now all rights are reserved. This is an o
 
 Data sources are credited in [ATTRIBUTION.md](ATTRIBUTION.md). Open data (Wiktionary via kaikki.org, Tatoeba) only enters the course through the review pipeline in `scripts/`.
 
----
+<br>
 
-Built in Turku by [Frank Ponce](https://frankponce.dev) · Not affiliated with Duolingo or LingoDeer.
+<div align="center">
+
+Built in Turku by [Frank Ponce](https://frankponce.dev)
+
+<sub>Not affiliated with Duolingo, LingoDeer, Migri or any exam authority. Exam practice in this app is unofficial.</sub>
+
+</div>

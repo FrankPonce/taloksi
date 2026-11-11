@@ -194,6 +194,7 @@ export const useApp = create<AppState>()(
       };
     },
     {
+      // The key keeps the app's first name on purpose: changing it would wipe everyone's saved progress
       name: 'suomeksi-progress',
       version: 1,
       // Keep new settings' defaults when loading progress saved by an older build

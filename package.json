@@ -1,5 +1,5 @@
 {
-  "name": "suomeksi",
+  "name": "taloksi",
   "version": "0.2.0",
   "private": true,
   "main": "expo-router/entry",
@@ -10,7 +10,8 @@
     "ios": "expo start --ios",
     "typecheck": "tsc --noEmit",
     "validate": "python scripts/validate_content.py",
-    "audio": "python scripts/generate_audio.py"
+    "audio": "python scripts/generate_audio.py",
+    "readme-art": "node scripts/render_readme_art.js"
   },
   "dependencies": {
     "@expo-google-fonts/barlow": "^0.4.1",
