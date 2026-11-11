@@ -66,11 +66,11 @@ export default function GuideScreen() {
       <Pressable onPress={() => router.push('/cast')}>
         <Panel style={{ gap: 10 }}>
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
-            {CHARACTERS.map((c) => (
+            {CHARACTERS.filter((c) => s.settings.adult || !c.adult).map((c) => (
               <Avatar key={c.id} id={c.id} size={58} />
             ))}
           </View>
-          <Text style={{ fontSize: 15, fontWeight: '700' }}>Meet the seven voices you will hear in every lesson.</Text>
+          <Text style={{ fontSize: 15, fontWeight: '700' }}>Meet the people (and one seal) who teach you.</Text>
         </Panel>
       </Pressable>
     </Screen>

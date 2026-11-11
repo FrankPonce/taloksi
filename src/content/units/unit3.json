@@ -3,6 +3,8 @@
   "title": "Kaupassa ja kahvilassa",
   "titleEn": "Shop and café",
   "color": "#D9822B",
+  "host": "aino",
+  "scene": "cafe",
   "reviewed": false,
   "lessons": [
     {

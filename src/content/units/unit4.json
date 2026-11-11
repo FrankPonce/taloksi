@@ -3,6 +3,8 @@
   "title": "Kaupungissa",
   "titleEn": "In the city",
   "color": "#8E44AD",
+  "host": "mikko",
+  "scene": "city",
   "reviewed": false,
   "lessons": [
     {

@@ -3,6 +3,8 @@
   "title": "Tervehdykset",
   "titleEn": "Greetings",
   "color": "#1F5FBF",
+  "host": "norppa",
+  "scene": "lake",
   "reviewed": false,
   "lessons": [
     {

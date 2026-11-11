@@ -65,6 +65,10 @@ export type Unit = {
   title: string;
   titleEn: string;
   color: string;
+  /** character who fronts this unit */
+  host?: string;
+  /** background scene drawn behind the unit header */
+  scene?: 'lake' | 'river' | 'cafe' | 'city' | 'bar' | 'forest';
   /** 'adult' units are hidden unless the 18+ setting is on. Default: main path */
   track?: 'main' | 'adult';
   /** Has a native speaker reviewed this unit? */
@@ -138,7 +142,20 @@ export type Character = {
   /** a line in the character's own voice, for the cast screen */
   hello: string;
   color: string;
-  avatar?: { skin: string; hair: string; hairStyle: 'bob' | 'short' | 'pony' | 'bun' | 'cap' | 'curly'; shirt: string; extras?: string[] };
+  /** only shown when the 18+ setting is on */
+  adult?: boolean;
+  /** topics this character tends to teach */
+  likes: string;
+  /** how their name tag looks */
+  tag: { style: 'punk' | 'plank' | 'note' | 'sleeve' | 'lace' | 'ticket' | 'badge' | 'ice' | 'tape' | 'neon'; bg: string; fg: string; accent: string; icon: string };
+  avatar?: {
+    skin: string;
+    hair: string;
+    hairStyle: 'bob' | 'short' | 'pony' | 'bun' | 'cap' | 'curly' | 'long' | 'emo' | 'undercut' | 'beanie';
+    shirt: string;
+    outfit?: 'hoodie' | 'flannel' | 'apron' | 'cardigan' | 'uniform' | 'shirt' | 'vest' | 'jacket' | 'tee';
+    extras?: string[];
+  };
   voice: { base: 'noora' | 'harri'; pitch: string; rate: string; gender: 'f' | 'm'; webPitch: number; webRate: number };
 };
 

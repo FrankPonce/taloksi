@@ -6,7 +6,7 @@ import type { Exercise } from '../../engine/exercises';
 import { useApp } from '../../state/store';
 import { colors, font, hardShadow, OUTLINE } from '../../theme';
 import { Text } from '../Text';
-import { Button, Chip, WordPic } from '../ui';
+import { Button, Chip, Options, WordPic } from '../ui';
 import { ExTitle, Prompt } from './parts';
 import type { ExProps } from './types';
 
@@ -70,7 +70,7 @@ export function Picture({ ex, locked, onSubmit }: ExProps<E>) {
           })}
         </View>
       ) : (
-        <View style={{ gap: 12 }}>
+        <Options labels={ex.options.map((o) => o.fi)}>
           {ex.options.map((o) => (
             <Chip
               key={o.id}
@@ -81,7 +81,7 @@ export function Picture({ ex, locked, onSubmit }: ExProps<E>) {
               onPress={() => setSel(o.id)}
             />
           ))}
-        </View>
+        </Options>
       )}
       {!locked && <Button title="Tarkista · Check" disabled={!sel} onPress={check} />}
     </View>

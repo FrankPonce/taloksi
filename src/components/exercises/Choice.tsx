@@ -6,7 +6,7 @@ import { useApp } from '../../state/store';
 import { colors } from '../../theme';
 import { Speech } from '../art';
 import { Text } from '../Text';
-import { Button, Chip, SpeakerButton } from '../ui';
+import { Button, Chip, Options, SpeakerButton } from '../ui';
 import { ExTitle, Prompt } from './parts';
 import type { ExProps } from './types';
 
@@ -29,6 +29,16 @@ export function Choice({ ex, locked, onSubmit }: ExProps<E>) {
     if (ex.audio) speak(ex.audio.text, { id: ex.audio.id, rate });
   }, [ex.key]);
   const twoUp = ex.variant === 'judge';
+  const chip = (c: string) => (
+    <Chip
+      key={c}
+      label={c}
+      selected={sel === c}
+      disabled={locked}
+      tone={locked ? (c === ex.answer ? 'success' : sel === c ? 'danger' : undefined) : undefined}
+      onPress={() => setSel(c)}
+    />
+  );
   return (
     <View style={{ gap: 18 }}>
       <ExTitle color={TITLE_COLOR[ex.variant]}>{ex.title}</ExTitle>
@@ -48,19 +58,17 @@ export function Choice({ ex, locked, onSubmit }: ExProps<E>) {
           <Text style={{ fontSize: 18, lineHeight: 24, fontWeight: '700' }}>{ex.sub ?? 'Three of these belong together. One is an intruder. Tap it.'}</Text>
         </Speech>
       )}
-      <View style={twoUp ? { flexDirection: 'row', gap: 12 } : { gap: 12 }}>
-        {ex.choices.map((c) => (
-          <View key={c} style={twoUp ? { flex: 1 } : undefined}>
-            <Chip
-              label={c}
-              selected={sel === c}
-              disabled={locked}
-              tone={locked ? (c === ex.answer ? 'success' : sel === c ? 'danger' : undefined) : undefined}
-              onPress={() => setSel(c)}
-            />
-          </View>
-        ))}
-      </View>
+      {twoUp ? (
+        <View style={{ flexDirection: 'row', gap: 12 }}>
+          {ex.choices.map((c) => (
+            <View key={c} style={{ flex: 1 }}>
+              {chip(c)}
+            </View>
+          ))}
+        </View>
+      ) : (
+        <Options labels={ex.choices}>{ex.choices.map(chip)}</Options>
+      )}
       {!locked && (
         <Button title="Tarkista · Check" disabled={!sel} onPress={() => onSubmit({ correct: sel === ex.answer, expected: ex.answer, note: ex.note })} />
       )}

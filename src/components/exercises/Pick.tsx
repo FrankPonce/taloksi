@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { View } from 'react-native';
 import type { Exercise } from '../../engine/exercises';
 import { colors } from '../../theme';
-import { Button, Chip } from '../ui';
+import { Button, Chip, Options } from '../ui';
 import { ExTitle, Prompt } from './parts';
 import type { ExProps } from './types';
 
@@ -21,7 +21,7 @@ export function Pick({ ex, locked, onSubmit }: ExProps<E>) {
             : 'Mitä tämä tarkoittaa? · What does this mean?'}
       </ExTitle>
       <Prompt text={ex.prompt} big audio={toFinnish ? undefined : { text: ex.fi, id: ex.itemId }} />
-      <View style={{ gap: 12 }}>
+      <Options labels={ex.choices}>
         {ex.choices.map((c) => (
           <Chip
             key={c}
@@ -32,7 +32,7 @@ export function Pick({ ex, locked, onSubmit }: ExProps<E>) {
             onPress={() => setSel(c)}
           />
         ))}
-      </View>
+      </Options>
       {!locked && <Button title="Tarkista · Check" disabled={!sel} onPress={() => onSubmit({ correct: sel === ex.answer, expected: ex.answer })} />}
     </View>
   );

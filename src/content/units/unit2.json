@@ -3,6 +3,8 @@
   "title": "Mistä olet?",
   "titleEn": "Where are you from?",
   "color": "#2E9E5B",
+  "host": "anna",
+  "scene": "river",
   "reviewed": false,
   "lessons": [
     {

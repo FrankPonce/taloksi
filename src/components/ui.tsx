@@ -1,7 +1,7 @@
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import { useState, type ComponentProps, type ReactNode } from 'react';
-import { Animated, Pressable, ScrollView, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
+import { Children, useState, type ComponentProps, type ReactNode } from 'react';
+import { Animated, Pressable, ScrollView, StyleSheet, useWindowDimensions, View, type StyleProp, type ViewStyle } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Circle, Defs, Pattern, Rect } from 'react-native-svg';
 import { sfx } from '../audio/sfx';
@@ -405,6 +405,23 @@ export function Glossed({ text, size = 22 }: { text: string; size?: number }) {
   );
 }
 
+/**
+ * Lays answer options out as a two-column grid when they are short enough to
+ * fit, and as a list when they are long. Pass the option texts as `labels`.
+ */
+export function Options({ labels, children }: { labels: string[]; children: ReactNode }) {
+  const { width } = useWindowDimensions();
+  const longest = Math.max(...labels.map((l) => l.length));
+  const grid = labels.length >= 4 && longest <= (width >= 480 ? 24 : 13);
+  return (
+    <View style={grid ? { flexDirection: 'row', flexWrap: 'wrap', gap: 12 } : { gap: 12 }}>
+      {Children.map(children, (c) => (
+        <View style={grid ? { flexBasis: '46%', flexGrow: 1 } : undefined}>{c}</View>
+      ))}
+    </View>
+  );
+}
+
 /** Shared look for text inputs */
 export const inputStyle = {
   borderWidth: OUTLINE,
@@ -436,7 +453,7 @@ export function Verdict({ ok, title, children }: { ok: boolean; title: string; c
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.night },
   scroll: { padding: 16, paddingBottom: 56 },
-  inner: { width: '100%', maxWidth: 640, alignSelf: 'center', gap: 14 },
+  inner: { width: '100%', maxWidth: 560, alignSelf: 'center', gap: 14 },
   panel: {
     borderRadius: radius.md,
     padding: 16,
@@ -459,7 +476,7 @@ const styles = StyleSheet.create({
   },
   btnText: { fontFamily: font.display, fontSize: 21, letterSpacing: 0.6, textTransform: 'uppercase' },
   chip: { borderWidth: OUTLINE, borderColor: colors.ink, borderRadius: radius.md, paddingVertical: 11, paddingHorizontal: 14 },
-  chipText: { fontSize: 18, fontFamily: font.bold },
+  chipText: { fontSize: 18, fontFamily: font.bold, textAlign: 'center' },
   track: {
     height: 18,
     backgroundColor: colors.nightDeep,
