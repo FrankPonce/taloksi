@@ -159,12 +159,12 @@ Full table in `docs/ROADMAP.md`. Sprint reviews go in `docs/sprints/sprint-NN-na
 1. ✅ Foundations
 2. ✅ Voice and identity
 3. ⏳ **Native review** (next)
-4. Open data (kaikki.org, Tatoeba)
+4. Starter and structure (unit 0, concept cards, first-contact rule, open data)
 5. Units 5–10 (A1 complete)
 6. Supabase accounts and sync
 7. Leagues and friends
 8. Learning science (mistake bank, FSRS tuning)
-9. Speaking
+9. Skill rooms
 10. Life in Finland / YKI
 11. Mobile release (EAS, Play Store, PWA)
 12. Launch and retention analytics

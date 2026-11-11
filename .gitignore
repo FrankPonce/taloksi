@@ -9,3 +9,6 @@ expo-env.d.ts
 voices/
 data/raw/
 __pycache__/
+
+# Local Claude Code settings
+.claude/
