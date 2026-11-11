@@ -1,0 +1,122 @@
+{
+  "id": "x1",
+  "title": "Aikuisten suomi",
+  "titleEn": "Finnish after dark",
+  "color": "#9B6BFF",
+  "track": "adult",
+  "reviewed": false,
+  "lessons": [
+    {
+      "id": "x1l1",
+      "title": "Baarissa",
+      "titleEn": "At the bar",
+      "words": [
+        { "id": "w_baari", "fi": "baari", "en": "bar" },
+        { "id": "w_kalja", "fi": "kalja", "en": "beer (casual)", "altEn": ["beer"], "note": "The textbook word is 'olut'. At the bar almost everyone says 'kalja' or 'bisse'." },
+        { "id": "w_siideri", "fi": "siideri", "en": "cider" },
+        { "id": "w_lonkero", "fi": "lonkero", "en": "long drink", "note": "Gin and grapefruit soda, invented for the 1952 Helsinki Olympics. Finland's unofficial national drink." },
+        { "id": "w_viini", "fi": "viini", "en": "wine" },
+        { "id": "w_kippis", "fi": "kippis", "en": "cheers" },
+        { "id": "w_humalassa", "fi": "humalassa", "en": "drunk", "note": "Literally 'in the hop'. Slang: 'kännissä'." },
+        { "id": "w_krapula", "fi": "krapula", "en": "hangover", "puhe": "darra" }
+      ],
+      "sentences": [
+        { "id": "s_x1l1_1", "fi": "Yksi olut, kiitos.", "en": "One beer, please.", "puhe": "Yks kalja, kiitos.", "speaker": "samir" },
+        { "id": "s_x1l1_2", "fi": "Kippis, Pekka!", "en": "Cheers, Pekka!", "speaker": "anna" },
+        { "id": "s_x1l1_3", "fi": "Otan lonkeron.", "en": "I'll take a long drink.", "altEn": ["I will take a long drink.", "I take a long drink."], "puhe": "Mä otan lonkeron.", "speaker": "pekka" },
+        { "id": "s_x1l1_4", "fi": "Olen vähän humalassa.", "en": "I am a little drunk.", "altEn": ["I am a bit drunk."], "puhe": "Mä oon vähän kännissä.", "speaker": "samir" },
+        { "id": "s_x1l1_5", "fi": "Minulla on krapula.", "en": "I have a hangover.", "puhe": "Mulla on darra.", "speaker": "pekka" },
+        { "id": "s_x1l1_6", "fi": "Mennäänkö baariin?", "en": "Shall we go to a bar?", "altEn": ["Shall we go to the bar?", "Should we go to a bar?"], "puhe": "Mennääks baariin?", "speaker": "anna" }
+      ],
+      "fill": [
+        { "id": "f_x1l1_1", "before": "Otan", "after": ".", "answer": "lonkeron", "options": ["lonkero", "lonkeron", "lonkerossa"], "en": "I'll take a long drink.", "hint": "One whole drink is a complete object, so it takes -n." },
+        { "id": "f_x1l1_2", "before": "Mennäänkö", "after": "?", "answer": "baariin", "options": ["baarissa", "baarista", "baariin"], "en": "Shall we go to a bar?", "hint": "Mihin? Movement into a place: illative." }
+      ]
+    },
+    {
+      "id": "x1l2",
+      "title": "Kirosanat",
+      "titleEn": "Swearing",
+      "grammar": "g_swearing",
+      "words": [
+        { "id": "w_hitto", "fi": "hitto", "en": "damn (mild)", "altEn": ["damn", "darn"], "note": "Strength 1/5. Safe almost anywhere." },
+        { "id": "w_hemmetti", "fi": "hemmetti", "en": "heck (mild)", "altEn": ["heck", "damn"], "note": "Strength 1/5. Grandma-approved." },
+        { "id": "w_paska", "fi": "paska", "en": "shit", "altEn": ["crap"], "note": "Strength 2/5. Also an adjective: 'paska päivä', a shit day." },
+        { "id": "w_helvetti", "fi": "helvetti", "en": "hell", "note": "Strength 3/5." },
+        { "id": "w_saatana", "fi": "saatana", "en": "Satan (strong swear)", "altEn": ["Satan", "damn it"], "note": "Strength 4/5." },
+        { "id": "w_perkele", "fi": "perkele", "en": "perkele (the classic swear)", "altEn": ["perkele", "damn it", "devil"], "note": "Strength 4/5. Roll the R. Finland's most famous word abroad." },
+        { "id": "w_vittu", "fi": "vittu", "en": "fuck", "note": "Strength 5/5 and extremely common among friends. Never at work, never with strangers." },
+        { "id": "w_vitun", "fi": "vitun", "en": "fucking", "note": "The genitive of 'vittu', used as an intensifier before adjectives and nouns." }
+      ],
+      "sentences": [
+        { "id": "s_x1l2_1", "fi": "Voi hitto!", "en": "Oh damn!", "altEn": ["Damn!", "Oh darn!"], "speaker": "helvi" },
+        { "id": "s_x1l2_2", "fi": "Voi vittu!", "en": "Oh fuck!", "altEn": ["Fuck!"], "speaker": "aino" },
+        { "id": "s_x1l2_3", "fi": "Mitä helvettiä?", "en": "What the hell?", "speaker": "pekka" },
+        { "id": "s_x1l2_4", "fi": "Tämä on ihan paska.", "en": "This is total shit.", "altEn": ["This is totally shit.", "This is complete shit.", "This is just shit."], "puhe": "Tää on ihan paska.", "speaker": "samir" },
+        { "id": "s_x1l2_5", "fi": "Vitun hyvä!", "en": "Fucking good!", "altEn": ["Fucking great!"], "speaker": "aino" },
+        { "id": "s_x1l2_6", "fi": "Perkele, bussi on myöhässä.", "en": "Damn it, the bus is late.", "altEn": ["Perkele, the bus is late.", "Damn, the bus is late."], "speaker": "mikko" }
+      ],
+      "fill": [
+        { "id": "f_x1l2_1", "before": "Mitä", "after": "?", "answer": "helvettiä", "options": ["helvetti", "helvettiä", "helvetissä"], "en": "What the hell?", "hint": "After 'mitä' the swear word goes in the partitive, like 'mitä kuuluu'." },
+        { "id": "f_x1l2_2", "before": "", "after": "hyvä!", "answer": "Vitun", "options": ["Vittu", "Vitun", "Vittua"], "en": "Fucking good!", "hint": "The intensifier is the genitive: vittu → vitun (tt → t)." }
+      ]
+    },
+    {
+      "id": "x1l3",
+      "title": "Treffeillä",
+      "titleEn": "On a date",
+      "grammar": "g_rection",
+      "words": [
+        { "id": "w_treffit", "fi": "treffit", "en": "date (romantic)", "altEn": ["date", "a date"], "note": "Always plural in Finnish, like 'scissors' in English." },
+        { "id": "w_sinkku", "fi": "sinkku", "en": "single" },
+        { "id": "w_ihastus", "fi": "ihastus", "en": "crush" },
+        { "id": "w_ihana", "fi": "ihana", "en": "lovely", "altEn": ["wonderful", "adorable"] },
+        { "id": "w_tykata", "fi": "tykätä", "en": "to like" },
+        { "id": "w_rakastaa", "fi": "rakastaa", "en": "to love" },
+        { "id": "w_suudella", "fi": "suudella", "en": "to kiss", "puhe": "pussata" },
+        { "id": "w_seurustella", "fi": "seurustella", "en": "to be in a relationship", "altEn": ["to date", "to go out with"] }
+      ],
+      "sentences": [
+        { "id": "s_x1l3_1", "fi": "Lähdetkö treffeille?", "en": "Will you go on a date?", "altEn": ["Do you want to go on a date?", "Will you go on a date with me?"], "puhe": "Lähetsä treffeille?", "speaker": "samir" },
+        { "id": "s_x1l3_2", "fi": "Olen sinkku.", "en": "I am single.", "puhe": "Mä oon sinkku.", "speaker": "aino" },
+        { "id": "s_x1l3_3", "fi": "Tykkään sinusta.", "en": "I like you.", "puhe": "Mä tykkään susta.", "speaker": "anna" },
+        { "id": "s_x1l3_4", "fi": "Sinä olet ihana.", "en": "You are lovely.", "altEn": ["You are wonderful."], "puhe": "Sä oot ihana.", "speaker": "pekka" },
+        { "id": "s_x1l3_5", "fi": "Minä rakastan sinua.", "en": "I love you.", "altFi": ["Rakastan sinua."], "puhe": "Mä rakastan sua.", "speaker": "anna" },
+        { "id": "s_x1l3_6", "fi": "Saanko suudella sinua?", "en": "May I kiss you?", "altEn": ["Can I kiss you?"], "puhe": "Saanks mä pussata sua?", "speaker": "pekka" },
+        { "id": "s_x1l3_7", "fi": "Mennäänkö meille vai teille?", "en": "Shall we go to my place or yours?", "altEn": ["My place or yours?", "Your place or mine?"], "puhe": "Mennääks meille vai teille?", "speaker": "aino" }
+      ],
+      "fill": [
+        { "id": "f_x1l3_1", "before": "Tykkään", "after": ".", "answer": "sinusta", "options": ["sinua", "sinusta", "sinulle"], "en": "I like you.", "hint": "tykätä always takes -sta/-stä: tykkään sinusta, kahvista, Suomesta." },
+        { "id": "f_x1l3_2", "before": "Minä rakastan", "after": ".", "answer": "sinua", "options": ["sinä", "sinua", "sinusta"], "en": "I love you.", "hint": "rakastaa always takes the partitive: rakastan sinua." }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_swearing",
+      "title": "Kiroilun kielioppi",
+      "titleEn": "The grammar of swearing",
+      "blocks": [
+        { "type": "p", "text": "Finnish swearing is not about bodies or mothers. It is mostly devils, hell and one very versatile anatomical word. Even swear words obey the case system, which makes them surprisingly good grammar practice." },
+        { "type": "table", "head": ["Word", "Strength", "Where it is OK"], "rows": [["hitto, hemmetti", "1/5", "Anywhere"], ["paska", "2/5", "Friends, casual work"], ["helvetti", "3/5", "Friends"], ["saatana, perkele", "4/5", "Friends, stubbed toes"], ["vittu", "5/5", "Close friends only"]] },
+        { "type": "tip", "text": "Voi + swear word is the all-purpose reaction: 'Voi hitto!' (mild) up to 'Voi vittu!' (strong)." },
+        { "type": "example", "fi": "Mitä helvettiä?", "en": "What the hell?" },
+        { "type": "p", "text": "As an intensifier the swear goes into the genitive and sits in front of the word: vittu → vitun, helvetti → helvetin, perkele → perkeleen. Note the consonant gradation tt → t." },
+        { "type": "example", "fi": "Helvetin kylmä.", "en": "Hellishly cold." },
+        { "type": "tip", "text": "Read the room. Finns swear a lot with friends and almost never with strangers, customers or at the doctor's. When unsure, 'hitto' is always safe." }
+      ]
+    },
+    {
+      "id": "g_rection",
+      "title": "Tykätä + -sta, rakastaa + partitiivi",
+      "titleEn": "Verbs that demand a case",
+      "blocks": [
+        { "type": "p", "text": "Many Finnish verbs decide which case their object takes. This is called rektio (rection). You cannot guess it, so learn each verb together with its case." },
+        { "type": "table", "head": ["Verb", "Case", "Example"], "rows": [["tykätä", "-sta / -stä", "Tykkään sinusta."], ["pitää", "-sta / -stä", "Pidän kahvista."], ["rakastaa", "partitive", "Rakastan sinua."], ["ihastua", "-Vn (illative)", "Ihastuin sinuun."]] },
+        { "type": "example", "fi": "Tykkään sinusta.", "en": "I like you.", "puhe": "Mä tykkään susta." },
+        { "type": "example", "fi": "Minä rakastan sinua.", "en": "I love you.", "puhe": "Mä rakastan sua." },
+        { "type": "tip", "text": "'Minä rakastan sinua' is a big sentence in Finland. People say it rarely and mean it completely. 'Tykkään sinusta' is the normal thing to say when dating." }
+      ]
+    }
+  ]
+}

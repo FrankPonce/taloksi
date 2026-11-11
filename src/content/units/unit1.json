@@ -1,0 +1,147 @@
+{
+  "id": "u1",
+  "title": "Tervehdykset",
+  "titleEn": "Greetings",
+  "color": "#1F5FBF",
+  "reviewed": false,
+  "lessons": [
+    {
+      "id": "u1l1",
+      "title": "Hei!",
+      "titleEn": "Hi!",
+      "grammar": "g_pronunciation",
+      "words": [
+        { "id": "w_hei", "fi": "hei", "en": "hi", "altEn": ["hello", "hey"] },
+        { "id": "w_moi", "fi": "moi", "en": "hi (casual)", "altEn": ["hi", "hello", "hey"], "note": "Very common in speech and texts. 'Moi moi' means bye." },
+        { "id": "w_huomenta", "fi": "huomenta", "en": "good morning" },
+        { "id": "w_hyvaa_paivaa", "fi": "hyvää päivää", "en": "good day", "altEn": ["good afternoon"], "note": "Formal. In everyday life people just say 'hei' or 'moi'." },
+        { "id": "w_hei_hei", "fi": "hei hei", "en": "bye", "altEn": ["bye bye", "goodbye"] },
+        { "id": "w_nakemiin", "fi": "näkemiin", "en": "goodbye", "altEn": ["bye"] }
+      ],
+      "sentences": [
+        { "id": "s_u1l1_1", "fi": "Hei, minä olen Anna.", "en": "Hi, I am Anna.", "altEn": ["Hello, I am Anna."], "altFi": ["Hei, olen Anna."], "puhe": "Moi, mä oon Anna.", "speaker": "anna" },
+        { "id": "s_u1l1_2", "fi": "Huomenta, Pekka!", "en": "Good morning, Pekka!", "speaker": "anna" },
+        { "id": "s_u1l1_3", "fi": "Hei hei, Anna!", "en": "Bye, Anna!", "altEn": ["Bye bye, Anna!", "Goodbye, Anna!"], "puhe": "Moi moi, Anna!", "speaker": "pekka" },
+        { "id": "s_u1l1_4", "fi": "Minä olen Pekka.", "en": "I am Pekka.", "altFi": ["Olen Pekka."], "puhe": "Mä oon Pekka.", "speaker": "pekka" },
+        { "id": "s_u1l1_5", "fi": "Hei, sinä olet Anna.", "en": "Hi, you are Anna.", "altEn": ["Hello, you are Anna."], "puhe": "Moi, sä oot Anna.", "speaker": "pekka" }
+      ],
+      "fill": [
+        { "id": "f_u1l1_1", "before": "Minä", "after": "Anna.", "answer": "olen", "options": ["olen", "olet", "on"], "en": "I am Anna." }
+      ]
+    },
+    {
+      "id": "u1l2",
+      "title": "Mitä kuuluu?",
+      "titleEn": "How are you?",
+      "words": [
+        { "id": "w_mita_kuuluu", "fi": "mitä kuuluu", "en": "how are you", "altEn": ["how are you doing", "what's up"] },
+        { "id": "w_hyvaa", "fi": "hyvää", "en": "good", "altEn": ["fine", "well"] },
+        { "id": "w_kiitos", "fi": "kiitos", "en": "thank you", "altEn": ["thanks", "please"], "note": "Also used like 'please' when ordering: 'Kahvi, kiitos.'" },
+        { "id": "w_enta_sinulle", "fi": "entä sinulle", "en": "and you", "altEn": ["what about you", "how about you"], "puhe": "entä sulle" },
+        { "id": "w_ihan_hyvaa", "fi": "ihan hyvää", "en": "pretty good", "altEn": ["quite good", "just fine", "fine"] },
+        { "id": "w_huonoa", "fi": "huonoa", "en": "bad", "altEn": ["not good"] }
+      ],
+      "sentences": [
+        { "id": "s_u1l2_1", "fi": "Hei, mitä kuuluu?", "en": "Hi, how are you?", "altEn": ["Hello, how are you?"], "puhe": "Moi, mitä kuuluu?", "speaker": "anna" },
+        { "id": "s_u1l2_2", "fi": "Kiitos, hyvää.", "en": "Fine, thanks.", "altEn": ["Good, thanks.", "Thanks, good.", "Fine, thank you.", "Good, thank you.", "Thank you, fine.", "Thank you, good."], "speaker": "samir" },
+        { "id": "s_u1l2_3", "fi": "Entä sinulle?", "en": "And you?", "altEn": ["What about you?", "How about you?"], "puhe": "Entä sulle?", "speaker": "anna" },
+        { "id": "s_u1l2_4", "fi": "Ihan hyvää, kiitos.", "en": "Pretty good, thanks.", "altEn": ["Pretty good, thank you.", "Quite good, thanks.", "Fine, thanks."], "speaker": "helvi" },
+        { "id": "s_u1l2_5", "fi": "Minulle kuuluu hyvää.", "en": "I am doing well.", "altEn": ["I am doing fine.", "I am fine.", "I am well."], "puhe": "Mulle kuuluu hyvää.", "speaker": "mikko" }
+      ],
+      "fill": [
+        { "id": "f_u1l2_1", "before": "Mitä", "after": "?", "answer": "kuuluu", "options": ["kuuluu", "kiitos", "hyvää"], "en": "How are you?" }
+      ]
+    },
+    {
+      "id": "u1l3",
+      "title": "Kuka sinä olet?",
+      "titleEn": "Who are you?",
+      "grammar": "g_olla",
+      "words": [
+        { "id": "w_mina", "fi": "minä", "en": "I", "puhe": "mä" },
+        { "id": "w_sina", "fi": "sinä", "en": "you", "altEn": ["you (singular)"], "puhe": "sä" },
+        { "id": "w_han", "fi": "hän", "en": "he/she", "altEn": ["he", "she", "he or she"], "puhe": "se", "note": "Finnish has no grammatical gender: hän = he and she." },
+        { "id": "w_me", "fi": "me", "en": "we" },
+        { "id": "w_te", "fi": "te", "en": "you (plural)", "altEn": ["you", "you all"], "note": "Also the polite 'you' for one person." },
+        { "id": "w_he", "fi": "he", "en": "they", "puhe": "ne" },
+        { "id": "w_kuka", "fi": "kuka", "en": "who" },
+        { "id": "w_nimi", "fi": "nimi", "en": "name" }
+      ],
+      "sentences": [
+        { "id": "s_u1l3_1", "fi": "Kuka sinä olet?", "en": "Who are you?", "altFi": ["Kuka olet?"], "puhe": "Kuka sä oot?", "speaker": "helvi" },
+        { "id": "s_u1l3_2", "fi": "Minun nimeni on Anna.", "en": "My name is Anna.", "altFi": ["Nimeni on Anna."], "puhe": "Mun nimi on Anna.", "speaker": "anna" },
+        { "id": "s_u1l3_3", "fi": "Mikä sinun nimesi on?", "en": "What is your name?", "altFi": ["Mikä nimesi on?"], "puhe": "Mikä sun nimi on?", "speaker": "mikko" },
+        { "id": "s_u1l3_4", "fi": "Hän on Pekka.", "en": "He is Pekka.", "puhe": "Se on Pekka.", "speaker": "samir" },
+        { "id": "s_u1l3_5", "fi": "Me olemme ystäviä.", "en": "We are friends.", "altFi": ["Olemme ystäviä."], "puhe": "Me ollaan kavereita.", "speaker": "anna" },
+        { "id": "s_u1l3_6", "fi": "He ovat opiskelijoita.", "en": "They are students.", "puhe": "Ne on opiskelijoita.", "speaker": "anna" }
+      ],
+      "fill": [
+        { "id": "f_u1l3_1", "before": "Sinä", "after": "Anna.", "answer": "olet", "options": ["olen", "olet", "ovat"], "en": "You are Anna." },
+        { "id": "f_u1l3_2", "before": "He", "after": "opiskelijoita.", "answer": "ovat", "options": ["on", "ovat", "olemme"], "en": "They are students." }
+      ]
+    },
+    {
+      "id": "u1l4",
+      "title": "Kiitos ja anteeksi",
+      "titleEn": "Thanks and sorry",
+      "grammar": "g_negation",
+      "words": [
+        { "id": "w_anteeksi", "fi": "anteeksi", "en": "sorry", "altEn": ["excuse me", "pardon"] },
+        { "id": "w_ole_hyva", "fi": "ole hyvä", "en": "you're welcome", "altEn": ["here you go", "here you are", "you are welcome"], "note": "Said when handing something over or replying to thanks." },
+        { "id": "w_kiitos_paljon", "fi": "kiitos paljon", "en": "thank you very much", "altEn": ["thanks a lot", "thank you so much", "many thanks"] },
+        { "id": "w_kylla", "fi": "kyllä", "en": "yes", "puhe": "joo" },
+        { "id": "w_ei", "fi": "ei", "en": "no" },
+        { "id": "w_joo", "fi": "joo", "en": "yeah", "altEn": ["yes"] }
+      ],
+      "sentences": [
+        { "id": "s_u1l4_1", "fi": "Anteeksi, en ymmärrä.", "en": "Sorry, I don't understand.", "altEn": ["Excuse me, I don't understand."], "puhe": "Sori, mä en ymmärrä.", "speaker": "anna" },
+        { "id": "s_u1l4_2", "fi": "Kiitos paljon, Anna!", "en": "Thank you very much, Anna!", "altEn": ["Thanks a lot, Anna!", "Thank you so much, Anna!"], "speaker": "pekka" },
+        { "id": "s_u1l4_3", "fi": "Puhutko englantia?", "en": "Do you speak English?", "puhe": "Puhuks sä englantia?", "speaker": "anna" },
+        { "id": "s_u1l4_4", "fi": "Kyllä, puhun.", "en": "Yes, I do.", "altEn": ["Yes, I speak.", "Yes, I speak it."], "puhe": "Joo, puhun.", "speaker": "pekka" },
+        { "id": "s_u1l4_5", "fi": "Ei, en puhu.", "en": "No, I don't.", "altEn": ["No, I don't speak.", "No, I don't speak it."], "speaker": "pekka" },
+        { "id": "s_u1l4_6", "fi": "Voitko puhua hitaammin?", "en": "Can you speak more slowly?", "altEn": ["Could you speak more slowly?", "Can you speak slower?"], "puhe": "Voitsä puhuu hitaammin?", "speaker": "helvi" }
+      ],
+      "fill": [
+        { "id": "f_u1l4_1", "before": "Anteeksi, en", "after": ".", "answer": "ymmärrä", "options": ["ymmärrä", "ymmärrän", "ymmärtää"], "en": "Sorry, I don't understand.", "hint": "After the negative verb (en, et, ei…) the main verb loses its personal ending." }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_pronunciation",
+      "title": "Ääntäminen",
+      "titleEn": "Pronunciation basics",
+      "blocks": [
+        { "type": "p", "text": "Finnish is written almost exactly as it sounds: every letter is pronounced, always the same way." },
+        { "type": "p", "text": "Stress is always on the first syllable of a word: HUO-men-ta, NÄ-ke-miin." },
+        { "type": "table", "head": ["Letter", "Sounds like"], "rows": [["a", "a in 'father' (short)"], ["ä", "a in 'cat'"], ["ö", "i in 'bird' (German ö)"], ["y", "German ü — say 'ee' with rounded lips"], ["r", "rolled / trilled r"], ["j", "y in 'yes'"]] },
+        { "type": "p", "text": "Double letters are long, and length changes the meaning:" },
+        { "type": "example", "fi": "tuli – tuuli – tulli", "en": "fire – wind – customs" },
+        { "type": "example", "fi": "kansa – kanssa", "en": "people – with" },
+        { "type": "tip", "text": "Exaggerate long sounds at first. Finns notice length much more than accent." }
+      ]
+    },
+    {
+      "id": "g_olla",
+      "title": "Olla – olla-verbi",
+      "titleEn": "The verb 'to be'",
+      "blocks": [
+        { "type": "p", "text": "Olla (to be) is irregular in the 3rd person, but the endings -n, -t, -mme, -tte are the same for almost every verb." },
+        { "type": "table", "head": ["Kirjakieli", "Puhekieli", "English"], "rows": [["minä olen", "mä oon", "I am"], ["sinä olet", "sä oot", "you are"], ["hän on", "se on", "he/she is"], ["me olemme", "me ollaan", "we are"], ["te olette", "te ootte", "you (pl.) are"], ["he ovat", "ne on", "they are"]] },
+        { "type": "tip", "text": "In standard Finnish you can drop minä/sinä/me/te because the ending already shows the person: 'Olen Anna.' In spoken Finnish people usually keep the pronoun: 'Mä oon Anna.'" },
+        { "type": "example", "fi": "Olen opiskelija.", "en": "I am a student.", "puhe": "Mä oon opiskelija." }
+      ]
+    },
+    {
+      "id": "g_negation",
+      "title": "Kieltoverbi",
+      "titleEn": "Saying no: the negative verb",
+      "blocks": [
+        { "type": "p", "text": "Finnish negates with a verb of its own, 'ei', which takes the personal ending. The main verb drops its ending." },
+        { "type": "table", "head": ["Kirjakieli", "Puhekieli", "English"], "rows": [["en puhu", "mä en puhu", "I don't speak"], ["et puhu", "sä et puhu", "you don't speak"], ["ei puhu", "se ei puhu", "he/she doesn't speak"], ["emme puhu", "me ei puhuta", "we don't speak"], ["ette puhu", "te ette puhu", "you (pl.) don't speak"], ["eivät puhu", "ne ei puhu", "they don't speak"]] },
+        { "type": "example", "fi": "En ymmärrä.", "en": "I don't understand." },
+        { "type": "tip", "text": "To answer a yes/no question, Finns usually repeat the verb: 'Puhutko suomea?' – 'Puhun.' / 'En puhu.'" }
+      ]
+    }
+  ]
+}

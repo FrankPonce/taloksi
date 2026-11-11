@@ -1,0 +1,24 @@
+{
+  "categories": [
+    { "id": "greetings", "label": "greetings", "words": ["hei", "moi", "huomenta", "näkemiin", "hei hei"] },
+    { "id": "pronouns", "label": "pronouns", "words": ["minä", "sinä", "hän", "me", "te", "he"] },
+    { "id": "numbers", "label": "numbers", "words": ["yksi", "kaksi", "kolme", "neljä", "viisi", "kuusi", "seitsemän", "kymmenen"] },
+    { "id": "languages", "label": "languages", "words": ["suomi", "englanti", "ruotsi", "espanja"] },
+    { "id": "food", "label": "foods", "words": ["leipä", "juusto", "omena", "kala", "liha", "peruna", "pulla"] },
+    { "id": "drinks", "label": "drinks", "words": ["vesi", "maito", "kahvi", "tee", "mehu", "olut"] },
+    { "id": "places", "label": "places in town", "words": ["kirjasto", "asema", "apteekki", "ravintola", "pankki", "tori", "kahvila", "kauppa"] },
+    { "id": "transport", "label": "transport words", "words": ["bussi", "juna", "pysäkki", "lippu", "aikataulu"] },
+    { "id": "verbs", "label": "verbs", "words": ["puhua", "asua", "syödä", "juoda", "mennä", "tulla", "ottaa"] },
+    { "id": "directions", "label": "direction words", "words": ["vasemmalla", "oikealla", "suoraan", "lähellä", "kaukana"] }
+  ],
+  "minimalPairs": [
+    { "id": "mp_tuli", "words": [{ "fi": "tuli", "en": "fire" }, { "fi": "tuuli", "en": "wind" }, { "fi": "tulli", "en": "customs" }], "note": "Short u and l, long u, or long l. Three different words." },
+    { "id": "mp_muta", "words": [{ "fi": "muta", "en": "mud" }, { "fi": "mutta", "en": "but" }, { "fi": "muuta", "en": "anything else" }], "note": "Hold the tt for a beat. Stretch the uu." },
+    { "id": "mp_kuka", "words": [{ "fi": "kuka", "en": "who" }, { "fi": "kukka", "en": "flower" }], "note": "A double k is a tiny pause before the k." },
+    { "id": "mp_tapaan", "words": [{ "fi": "tapan", "en": "I kill" }, { "fi": "tapaan", "en": "I meet" }], "note": "The classic learner mistake. One long vowel is the difference between meeting a friend and killing one." },
+    { "id": "mp_sika", "words": [{ "fi": "sika", "en": "pig" }, { "fi": "siika", "en": "whitefish" }], "note": "Short i or long ii." },
+    { "id": "mp_mato", "words": [{ "fi": "mato", "en": "worm" }, { "fi": "matto", "en": "carpet" }], "note": "Single t or double tt." },
+    { "id": "mp_kisa", "words": [{ "fi": "kisa", "en": "competition" }, { "fi": "kissa", "en": "cat" }], "note": "Single s or double ss." },
+    { "id": "mp_sata", "words": [{ "fi": "sata", "en": "hundred" }, { "fi": "sataa", "en": "it rains" }], "note": "The long vowel at the end is easy to miss." }
+  ]
+}

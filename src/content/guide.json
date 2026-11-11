@@ -1,0 +1,182 @@
+[
+  {
+    "id": "t_spacing",
+    "icon": "calendar",
+    "title": "Vähän ja usein",
+    "titleEn": "Little and often beats long and rare",
+    "summary": "Spread your practice out. Ten minutes a day beats seventy minutes on Sunday.",
+    "body": [
+      "Spacing practice over time is one of the two study techniques that a major review of learning research rated as highly effective. Forgetting a little between sessions is not a failure. The effort of pulling a word back is what makes it stick.",
+      "Cramming feels productive because everything is fresh. A week later most of it is gone."
+    ],
+    "doThis": ["Pick a daily goal you can hit on your worst day", "Never do two days' worth to 'catch up'. Just do today", "Do your flashcards when the app says they are due, not earlier"],
+    "inApp": "The Review tab uses the FSRS scheduler. It shows each word again just before you would forget it.",
+    "sources": [
+      { "label": "Dunlosky et al. (2013), Improving Students' Learning With Effective Learning Techniques, Psychological Science in the Public Interest", "url": "https://doi.org/10.1177/1529100612453266" },
+      { "label": "Cepeda et al. (2006), Distributed practice in verbal recall tasks, Psychological Bulletin", "url": "https://doi.org/10.1037/0033-2909.132.3.354" }
+    ]
+  },
+  {
+    "id": "t_retrieval",
+    "icon": "flash",
+    "title": "Testaa itseäsi",
+    "titleEn": "Test yourself instead of re-reading",
+    "summary": "Trying to remember teaches more than looking at the answer again.",
+    "body": [
+      "Practice testing is the other technique rated highly effective in the same review. In classic experiments, students who tested themselves remembered more a week later than students who re-read the material, even though the re-readers felt more confident.",
+      "Language teachers add one caution: retrieval works best after you have met the word in real input first. Meet it, then test it."
+    ],
+    "doThis": ["Cover the translation and say the answer out loud before you flip the card", "Prefer typing and building sentences over just recognising them", "Getting it wrong and seeing the answer still counts as learning"],
+    "inApp": "Every lesson starts with intro cards (input), then moves to choosing, building and typing (retrieval). Mistakes come back at the end of the lesson.",
+    "sources": [
+      { "label": "Roediger & Karpicke (2006), Test-Enhanced Learning, Psychological Science", "url": "https://doi.org/10.1111/j.1467-9280.2006.01693.x" },
+      { "label": "Gianfranco Conti (2026), Have we overdone retrieval practice?", "url": "https://gianfrancoconti.com/2026/04/14/" }
+    ]
+  },
+  {
+    "id": "t_both_registers",
+    "icon": "swap-horizontal",
+    "title": "Kirjakieli ja puhekieli yhtä aikaa",
+    "titleEn": "Learn written and spoken Finnish together",
+    "summary": "Textbook Finnish is for news and forms. Spoken Finnish is for shops, buses and friends. You need both from the start.",
+    "body": [
+      "A senior lecturer at the University of Helsinki, Maria Ahlholm, gives learners simple advice: learn both forms, and preferably at the same time. Standard Finnish dominates news, official letters and books. Spoken Finnish is what you hear at the till and on the bus.",
+      "If you only learn the standard form, everyday conversation stays hard for years, which makes settling in harder."
+    ],
+    "doThis": ["Whenever you learn a sentence, glance at its spoken version too", "Start with the big five: mä, sä, se, oon, oot", "Write in kirjakieli, speak in whatever comes out"],
+    "inApp": "Every sentence shows its puhekieli version under the textbook one. The verb gym drills both registers, and Aino speaks only puhekieli.",
+    "sources": [
+      { "label": "Satakieli, Haaga-Helia (2025): kirjakieli and puhekieli", "url": "https://satakieli.haaga-helia.fi/article/for-a-foreigner-learning-finnish-can-feel-like-choosing-between-two-different-languages-kirjakieli-and-puhekieli/" }
+    ]
+  },
+  {
+    "id": "t_puhekieli_small",
+    "icon": "chatbubbles",
+    "title": "Aloita pienestä",
+    "titleEn": "Start spoken Finnish small, and start now",
+    "summary": "Swap 'minä olen' for 'mä oon', listen to Finnish music and TV, and use it with real people.",
+    "body": [
+      "Learners and teachers interviewed by ThisisFINLAND agree on the method: begin with a few contractions and everyday colloquial words, soak up spoken Finnish from music and television early, and then be brave enough to use it with Finns in relaxed settings.",
+      "Look up unfamiliar spoken forms as you meet them. They are regular once you see the pattern: -ko becomes -ks, final vowels drop, long forms shrink."
+    ],
+    "doThis": ["Put one Finnish radio station or playlist on in the background every day", "Join a Finnish group chat or forum and read along", "Use one new spoken form in a real conversation this week"],
+    "inApp": "The puhekieli line on each sentence, the spoken-form exercise in lessons, and the puhekieli mode in the verb gym.",
+    "sources": [
+      { "label": "ThisisFINLAND: Speaking Finnish like the Finns", "url": "https://finland.fi/life-society/extending-your-finnish-speech-reach-speaking-finnish-like-the-finns/" }
+    ]
+  },
+  {
+    "id": "t_words_in_sentences",
+    "icon": "link",
+    "title": "Sanat lauseissa",
+    "titleEn": "Learn words inside sentences",
+    "summary": "A Finnish word almost never appears in its dictionary form. Learn it the way you will meet it.",
+    "body": [
+      "If you memorise only 'talo' (house), you will not recognise talossa, talosta or talolle when someone says them. In Finnish the ending carries meaning that English puts in separate words.",
+      "So learn a word together with one or two sentences that use it. The sentence gives you the ending, the case the verb demands, and something to say."
+    ],
+    "doThis": ["For each new noun, learn one 'where' sentence: Olen talossa", "For each new verb, learn what case its object takes", "Tap a sentence apart whenever a form surprises you"],
+    "inApp": "Lessons teach words first and then the same words inside sentences. The breakdown view splits every sentence into stems and endings.",
+    "sources": [
+      { "label": "Clozemaster: Best ways to learn Finnish vocabulary", "url": "https://www.clozemaster.com/blog/?p=7520" }
+    ]
+  },
+  {
+    "id": "t_cases_groups",
+    "icon": "grid",
+    "title": "Sijamuodot ryhmissä",
+    "titleEn": "Learn the cases in groups, not all fifteen at once",
+    "summary": "Start with a handful of cases and learn them as families that answer the same question.",
+    "body": [
+      "Fifteen cases sounds impossible. In practice a few do most of the work, and they come in neat sets. The six location cases are two families of three: in / out of / into, and on / off / onto.",
+      "Learn each family as answers to one question: Missä? Mistä? Mihin? Once the pattern is in your ear, a new noun costs almost nothing."
+    ],
+    "doThis": ["Drill one noun through missä / mistä / mihin before adding a new noun", "Add the partitive and genitive next. Leave the rare cases for later", "Do not study tables for long. Do short drills and then read real sentences"],
+    "inApp": "The case gym drills one noun across cases. The ending detective exercise asks what an ending means in a real sentence.",
+    "sources": [
+      { "label": "Uusi kielemme (Finnish for busy people)", "url": "https://uusikielemme.fi" }
+    ]
+  },
+  {
+    "id": "t_listening",
+    "icon": "headset",
+    "title": "Kuuntele paljon",
+    "titleEn": "Feed your ears first",
+    "summary": "Lots of Finnish you can mostly understand, every day. Understanding comes before speaking.",
+    "body": [
+      "Research-informed teaching puts rich, understandable input first and practice second. You cannot retrieve what you never properly heard.",
+      "Finnish has a gift for learners: Yle publishes daily news in easy Finnish (selkosuomi), read slowly and clearly."
+    ],
+    "doThis": ["Listen to Yle Selkouutiset for five minutes a day from A2 onwards", "Listen to each lesson sentence before you read it", "Re-listen to old material. Easy listening still builds speed"],
+    "inApp": "Every word and sentence has audio with a slow button. Listening exercises make you type what you hear, and sound-alike drills train long and short sounds.",
+    "sources": [
+      { "label": "Yle Selkouutiset: news in easy Finnish", "url": "https://yle.fi/selkouutiset" },
+      { "label": "Gianfranco Conti (2026), Have we overdone retrieval practice?", "url": "https://gianfrancoconti.com/2026/04/14/" }
+    ]
+  },
+  {
+    "id": "t_length",
+    "icon": "pulse",
+    "title": "Pitkä ja lyhyt",
+    "titleEn": "Train your ear for long and short sounds",
+    "summary": "Tuli is fire, tuuli is wind, tulli is customs. Length changes the word.",
+    "body": [
+      "In Finnish every vowel and most consonants can be short or long, and the difference is the meaning. English speakers do not hear it at first, because English does not use length this way.",
+      "The fix is listening practice on pairs of words that differ only in length, with immediate feedback. Exaggerate the long sounds when you speak. To a Finnish ear you will sound exactly right."
+    ],
+    "doThis": ["Hold double letters for twice as long. Count it out if you have to", "Practise pairs: tuli / tuuli / tulli, muta / mutta / muuta", "Stress always goes on the first syllable. Always"],
+    "inApp": "The sound-alike exercise plays one word from a pair and asks which one you heard.",
+    "sources": [
+      { "label": "Uusi kielemme (Finnish for busy people)", "url": "https://uusikielemme.fi" }
+    ]
+  },
+  {
+    "id": "t_shadowing",
+    "icon": "mic",
+    "title": "Varjostus",
+    "titleEn": "Shadow native audio",
+    "summary": "Play a sentence and speak along with it, a split second behind. It trains rhythm and listening together.",
+    "body": [
+      "Shadowing means repeating speech out loud while you hear it. Studies summarised by language-teaching researchers suggest it helps learners decode connected speech and improves rhythm and listening.",
+      "It works best on material you already understand, so shadow sentences from lessons you have finished, not brand-new ones. The evidence is thinner than for spacing and self-testing, so treat it as a useful extra."
+    ],
+    "doThis": ["Play a sentence, then play it again and speak along", "Copy the melody and rhythm first, the exact sounds second", "Two minutes a day is enough"],
+    "inApp": "Tap the speaker on any sentence, then the slow button, and speak along with the character.",
+    "sources": [
+      { "label": "Gianfranco Conti (2025), Shadowing: the what, why and how according to SLA research", "url": "https://gianfrancoconti.com/2025/07/26/" }
+    ]
+  },
+  {
+    "id": "t_speak",
+    "icon": "megaphone",
+    "title": "Puhu rohkeasti",
+    "titleEn": "Speak before you feel ready",
+    "summary": "You do not need perfect grammar. At B1 the test is whether people understand you.",
+    "body": [
+      "Even the YKI exam at level 3, the level used for citizenship, does not grade grammar on its own. Mistakes are fine as long as the message gets through. Clear pronunciation of everyday words, some fluency and enough vocabulary matter more.",
+      "Finns are famously happy to switch to English. Say 'Puhutaan suomea, kiitos' and keep going."
+    ],
+    "doThis": ["Order in Finnish every time, even when it would be faster in English", "When you lack a word, describe it instead of switching language", "Ask people to slow down: 'Voitko puhua hitaammin?'"],
+    "inApp": "Lessons are built around things you actually say in Finland: at the café, the till, the bus stop.",
+    "sources": [
+      { "label": "Uusi kielemme: when are you ready for YKI (B1.1)", "url": "https://uusikielemme.fi/language-levels/yki-testi-when-are-you-ready-b1-1" }
+    ]
+  },
+  {
+    "id": "t_goal",
+    "icon": "flag",
+    "title": "Tiedä tavoitteesi",
+    "titleEn": "Know which level you are aiming for",
+    "summary": "A1 is survival, B1 is independence and citizenship, B2 is work and study. Pick your target and pace yourself.",
+    "body": [
+      "The six CEFR levels map one-to-one onto the six levels of YKI, Finland's national language exam. A1 means simple exchanges about yourself. B1 means coping with most familiar work and social situations. C2 means understanding nearly anything.",
+      "Finnish takes English speakers longer than French or Spanish. The US Foreign Service Institute budgets about 1100 class hours for professional working proficiency. That is not a reason to worry. It is a reason to start a daily habit."
+    ],
+    "doThis": ["Open the journey map and find your next milestone", "Aim for the next half-level, not for 'fluent'", "Re-check your level with real tasks: a form, a phone call, a news clip"],
+    "inApp": "The journey map shows every stage from A1.1 to C2 with what you will be able to do at each one.",
+    "sources": [
+      { "label": "University of Helsinki: language skill level descriptions", "url": "https://www.helsinki.fi/en/language-skill-level-descriptions" },
+      { "label": "US Foreign Service Institute: foreign language training", "url": "https://www.state.gov/foreign-service-institute/foreign-language-training" }
+    ]
+  }
+]

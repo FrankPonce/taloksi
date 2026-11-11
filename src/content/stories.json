@@ -1,0 +1,48 @@
+[
+  {
+    "id": "st_naapuri",
+    "title": "Uusi naapuri",
+    "titleEn": "The new neighbour",
+    "unlockAfter": "u2l3",
+    "lines": [
+      { "id": "st_naapuri_1", "speaker": "Pekka", "speakerId": "pekka", "fi": "Hei! Oletko sinä uusi naapuri?", "en": "Hi! Are you the new neighbour?" },
+      { "id": "st_naapuri_2", "speaker": "Anna", "speakerId": "anna", "fi": "Hei! Olen. Minun nimeni on Anna.", "en": "Hi! I am. My name is Anna." },
+      { "id": "st_naapuri_3", "speaker": "Pekka", "speakerId": "pekka", "fi": "Hauska tutustua, Anna. Minä olen Pekka.", "en": "Nice to meet you, Anna. I'm Pekka." },
+      { "id": "st_naapuri_4", "speaker": "Pekka", "speakerId": "pekka", "fi": "Mistä sinä olet kotoisin?", "en": "Where are you from?" },
+      { "id": "st_naapuri_5", "speaker": "Anna", "speakerId": "anna", "fi": "Olen kotoisin Espanjasta, mutta asun nyt Turussa.", "en": "I'm from Spain, but now I live in Turku." },
+      { "id": "st_naapuri_6", "speaker": "Pekka", "speakerId": "pekka", "fi": "Puhut hyvin suomea!", "en": "You speak Finnish well!" },
+      { "id": "st_naapuri_7", "speaker": "Anna", "speakerId": "anna", "fi": "Kiitos! Puhun vähän. Opiskelen yliopistossa.", "en": "Thanks! I speak a little. I study at the university." },
+      { "id": "st_naapuri_8", "speaker": "Pekka", "speakerId": "pekka", "fi": "Tervetuloa Turkuun!", "en": "Welcome to Turku!" }
+    ],
+    "questions": [
+      { "q": "Where is Anna from?", "choices": ["Finland", "Spain", "Sweden"], "answer": 1 },
+      { "q": "Where does Anna live now?", "choices": ["Helsinki", "Turku", "Madrid"], "answer": 1 },
+      { "q": "What does Pekka say about Anna's Finnish?", "choices": ["She speaks it well", "She doesn't speak it", "She speaks Swedish instead"], "answer": 0 },
+      { "q": "What does Anna do?", "choices": ["Works at a café", "Studies at the university", "Drives a bus"], "answer": 1 }
+    ]
+  },
+  {
+    "id": "st_kahvila",
+    "title": "Kahvilassa",
+    "titleEn": "At the café",
+    "unlockAfter": "u3l4",
+    "lines": [
+      { "id": "st_kahvila_1", "speaker": "Myyjä", "speakerId": "aino", "fi": "Hei! Mitä saisi olla?", "en": "Hi! What can I get you?" },
+      { "id": "st_kahvila_2", "speaker": "Anna", "speakerId": "anna", "fi": "Hei! Haluaisin kupin kahvia, kiitos.", "en": "Hi! I'd like a cup of coffee, please." },
+      { "id": "st_kahvila_3", "speaker": "Myyjä", "speakerId": "aino", "fi": "Tuleeko muuta?", "en": "Anything else?" },
+      { "id": "st_kahvila_4", "speaker": "Anna", "speakerId": "anna", "fi": "Ja yksi korvapuusti.", "en": "And one cinnamon roll." },
+      { "id": "st_kahvila_5", "speaker": "Myyjä", "speakerId": "aino", "fi": "Täällä vai mukaan?", "en": "For here or to go?" },
+      { "id": "st_kahvila_6", "speaker": "Anna", "speakerId": "anna", "fi": "Täällä. Paljonko se maksaa?", "en": "For here. How much is it?" },
+      { "id": "st_kahvila_7", "speaker": "Myyjä", "speakerId": "aino", "fi": "Seitsemän euroa.", "en": "Seven euros." },
+      { "id": "st_kahvila_8", "speaker": "Anna", "speakerId": "anna", "fi": "Voinko maksaa kortilla?", "en": "Can I pay by card?" },
+      { "id": "st_kahvila_9", "speaker": "Myyjä", "speakerId": "aino", "fi": "Totta kai. Kiitos!", "en": "Of course. Thank you!" },
+      { "id": "st_kahvila_10", "speaker": "Anna", "speakerId": "anna", "fi": "Kiitos, hei hei!", "en": "Thanks, bye!" }
+    ],
+    "questions": [
+      { "q": "What does Anna order?", "choices": ["Tea and a cinnamon roll", "Coffee and a cinnamon roll", "Coffee and rye bread"], "answer": 1 },
+      { "q": "Where does she drink it?", "choices": ["At the café", "At home", "On the bus"], "answer": 0 },
+      { "q": "How much does it cost?", "choices": ["Five euros", "Seven euros", "Ten euros"], "answer": 1 },
+      { "q": "How does she pay?", "choices": ["In cash", "By card", "She doesn't pay"], "answer": 1 }
+    ]
+  }
+]

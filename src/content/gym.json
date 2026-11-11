@@ -1,0 +1,480 @@
+{
+  "nouns": [
+    {
+      "fi": "talo",
+      "en": "house",
+      "forms": {
+        "genetiivi": "talon",
+        "partitiivi": "taloa",
+        "inessiivi": "talossa",
+        "elatiivi": "talosta",
+        "illatiivi": "taloon",
+        "adessiivi": "talolla",
+        "ablatiivi": "talolta",
+        "allatiivi": "talolle",
+        "essiivi": "talona",
+        "translatiivi": "taloksi"
+      }
+    },
+    {
+      "fi": "kirja",
+      "en": "book",
+      "forms": {
+        "genetiivi": "kirjan",
+        "partitiivi": "kirjaa",
+        "inessiivi": "kirjassa",
+        "elatiivi": "kirjasta",
+        "illatiivi": "kirjaan",
+        "adessiivi": "kirjalla",
+        "ablatiivi": "kirjalta",
+        "allatiivi": "kirjalle",
+        "essiivi": "kirjana",
+        "translatiivi": "kirjaksi"
+      }
+    },
+    {
+      "fi": "koulu",
+      "en": "school",
+      "forms": {
+        "genetiivi": "koulun",
+        "partitiivi": "koulua",
+        "inessiivi": "koulussa",
+        "elatiivi": "koulusta",
+        "illatiivi": "kouluun",
+        "adessiivi": "koululla",
+        "ablatiivi": "koululta",
+        "allatiivi": "koululle",
+        "essiivi": "kouluna",
+        "translatiivi": "kouluksi"
+      }
+    },
+    {
+      "fi": "ravintola",
+      "en": "restaurant",
+      "forms": {
+        "genetiivi": "ravintolan",
+        "partitiivi": "ravintolaa",
+        "inessiivi": "ravintolassa",
+        "elatiivi": "ravintolasta",
+        "illatiivi": "ravintolaan",
+        "adessiivi": "ravintolalla",
+        "ablatiivi": "ravintolalta",
+        "allatiivi": "ravintolalle",
+        "essiivi": "ravintolana",
+        "translatiivi": "ravintolaksi"
+      }
+    },
+    {
+      "fi": "Suomi",
+      "en": "Finland",
+      "forms": {
+        "genetiivi": "Suomen",
+        "partitiivi": "Suomea",
+        "inessiivi": "Suomessa",
+        "elatiivi": "Suomesta",
+        "illatiivi": "Suomeen",
+        "adessiivi": "Suomella",
+        "ablatiivi": "Suomelta",
+        "allatiivi": "Suomelle",
+        "essiivi": "Suomena",
+        "translatiivi": "Suomeksi"
+      },
+      "note": "-i words often change i → e: Suomi → Suomessa."
+    },
+    {
+      "fi": "katu",
+      "en": "street",
+      "forms": {
+        "genetiivi": "kadun",
+        "partitiivi": "katua",
+        "inessiivi": "kadussa",
+        "elatiivi": "kadusta",
+        "illatiivi": "katuun",
+        "adessiivi": "kadulla",
+        "ablatiivi": "kadulta",
+        "allatiivi": "kadulle",
+        "essiivi": "katuna",
+        "translatiivi": "kaduksi"
+      },
+      "note": "Gradation t → d."
+    },
+    {
+      "fi": "pankki",
+      "en": "bank",
+      "forms": {
+        "genetiivi": "pankin",
+        "partitiivi": "pankkia",
+        "inessiivi": "pankissa",
+        "elatiivi": "pankista",
+        "illatiivi": "pankkiin",
+        "adessiivi": "pankilla",
+        "ablatiivi": "pankilta",
+        "allatiivi": "pankille",
+        "essiivi": "pankkina",
+        "translatiivi": "pankiksi"
+      },
+      "note": "Gradation kk → k."
+    },
+    {
+      "fi": "kauppa",
+      "en": "shop",
+      "forms": {
+        "genetiivi": "kaupan",
+        "partitiivi": "kauppaa",
+        "inessiivi": "kaupassa",
+        "elatiivi": "kaupasta",
+        "illatiivi": "kauppaan",
+        "adessiivi": "kaupalla",
+        "ablatiivi": "kaupalta",
+        "allatiivi": "kaupalle",
+        "essiivi": "kauppana",
+        "translatiivi": "kaupaksi"
+      },
+      "note": "Gradation pp → p."
+    },
+    {
+      "fi": "pöytä",
+      "en": "table",
+      "forms": {
+        "genetiivi": "pöydän",
+        "partitiivi": "pöytää",
+        "inessiivi": "pöydässä",
+        "elatiivi": "pöydästä",
+        "illatiivi": "pöytään",
+        "adessiivi": "pöydällä",
+        "ablatiivi": "pöydältä",
+        "allatiivi": "pöydälle",
+        "essiivi": "pöytänä",
+        "translatiivi": "pöydäksi"
+      },
+      "note": "Gradation t → d, front vowels → -ssä, -llä."
+    },
+    {
+      "fi": "kaupunki",
+      "en": "city",
+      "forms": {
+        "genetiivi": "kaupungin",
+        "partitiivi": "kaupunkia",
+        "inessiivi": "kaupungissa",
+        "elatiivi": "kaupungista",
+        "illatiivi": "kaupunkiin",
+        "adessiivi": "kaupungilla",
+        "ablatiivi": "kaupungilta",
+        "allatiivi": "kaupungille",
+        "essiivi": "kaupunkina",
+        "translatiivi": "kaupungiksi"
+      },
+      "note": "Gradation nk → ng."
+    },
+    {
+      "fi": "Turku",
+      "en": "Turku",
+      "forms": {
+        "genetiivi": "Turun",
+        "partitiivi": "Turkua",
+        "inessiivi": "Turussa",
+        "elatiivi": "Turusta",
+        "illatiivi": "Turkuun",
+        "adessiivi": "Turulla",
+        "ablatiivi": "Turulta",
+        "allatiivi": "Turulle",
+        "essiivi": "Turkuna",
+        "translatiivi": "Turuksi"
+      },
+      "note": "Gradation rk → r."
+    },
+    {
+      "fi": "huone",
+      "en": "room",
+      "forms": {
+        "genetiivi": "huoneen",
+        "partitiivi": "huonetta",
+        "inessiivi": "huoneessa",
+        "elatiivi": "huoneesta",
+        "illatiivi": "huoneeseen",
+        "adessiivi": "huoneella",
+        "ablatiivi": "huoneelta",
+        "allatiivi": "huoneelle",
+        "essiivi": "huoneena",
+        "translatiivi": "huoneeksi"
+      },
+      "note": "-e words: stem huonee-, illative -seen."
+    },
+    {
+      "fi": "nainen",
+      "en": "woman",
+      "forms": {
+        "genetiivi": "naisen",
+        "partitiivi": "naista",
+        "inessiivi": "naisessa",
+        "elatiivi": "naisesta",
+        "illatiivi": "naiseen",
+        "adessiivi": "naisella",
+        "ablatiivi": "naiselta",
+        "allatiivi": "naiselle",
+        "essiivi": "naisena",
+        "translatiivi": "naiseksi"
+      },
+      "note": "-nen words: stem naise-, partitive naista."
+    },
+    {
+      "fi": "vesi",
+      "en": "water",
+      "forms": {
+        "genetiivi": "veden",
+        "partitiivi": "vettä",
+        "inessiivi": "vedessä",
+        "elatiivi": "vedestä",
+        "illatiivi": "veteen",
+        "adessiivi": "vedellä",
+        "ablatiivi": "vedeltä",
+        "allatiivi": "vedelle",
+        "essiivi": "vetenä",
+        "translatiivi": "vedeksi"
+      },
+      "note": "Irregular-looking: vesi → vede-/vete-, partitive vettä."
+    }
+  ],
+  "verbs": [
+    {
+      "inf": "olla",
+      "en": "to be",
+      "forms": [
+        "olen",
+        "olet",
+        "on",
+        "olemme",
+        "olette",
+        "ovat"
+      ],
+      "puhe": [
+        "oon",
+        "oot",
+        "on",
+        "ollaan",
+        "ootte",
+        "on"
+      ]
+    },
+    {
+      "inf": "puhua",
+      "en": "to speak",
+      "forms": [
+        "puhun",
+        "puhut",
+        "puhuu",
+        "puhumme",
+        "puhutte",
+        "puhuvat"
+      ],
+      "puhe": [
+        "puhun",
+        "puhut",
+        "puhuu",
+        "puhutaan",
+        "puhutte",
+        "puhuu"
+      ]
+    },
+    {
+      "inf": "asua",
+      "en": "to live",
+      "forms": [
+        "asun",
+        "asut",
+        "asuu",
+        "asumme",
+        "asutte",
+        "asuvat"
+      ],
+      "puhe": [
+        "asun",
+        "asut",
+        "asuu",
+        "asutaan",
+        "asutte",
+        "asuu"
+      ]
+    },
+    {
+      "inf": "tulla",
+      "en": "to come",
+      "forms": [
+        "tulen",
+        "tulet",
+        "tulee",
+        "tulemme",
+        "tulette",
+        "tulevat"
+      ],
+      "puhe": [
+        "tuun",
+        "tuut",
+        "tulee",
+        "tullaan",
+        "tuutte",
+        "tulee"
+      ]
+    },
+    {
+      "inf": "mennä",
+      "en": "to go",
+      "forms": [
+        "menen",
+        "menet",
+        "menee",
+        "menemme",
+        "menette",
+        "menevät"
+      ],
+      "puhe": [
+        "meen",
+        "meet",
+        "menee",
+        "mennään",
+        "meette",
+        "menee"
+      ]
+    },
+    {
+      "inf": "syödä",
+      "en": "to eat",
+      "forms": [
+        "syön",
+        "syöt",
+        "syö",
+        "syömme",
+        "syötte",
+        "syövät"
+      ],
+      "puhe": [
+        "syön",
+        "syöt",
+        "syö",
+        "syödään",
+        "syötte",
+        "syö"
+      ]
+    },
+    {
+      "inf": "juoda",
+      "en": "to drink",
+      "forms": [
+        "juon",
+        "juot",
+        "juo",
+        "juomme",
+        "juotte",
+        "juovat"
+      ],
+      "puhe": [
+        "juon",
+        "juot",
+        "juo",
+        "juodaan",
+        "juotte",
+        "juo"
+      ]
+    },
+    {
+      "inf": "tehdä",
+      "en": "to do / make",
+      "forms": [
+        "teen",
+        "teet",
+        "tekee",
+        "teemme",
+        "teette",
+        "tekevät"
+      ],
+      "puhe": [
+        "teen",
+        "teet",
+        "tekee",
+        "tehdään",
+        "teette",
+        "tekee"
+      ]
+    },
+    {
+      "inf": "nähdä",
+      "en": "to see",
+      "forms": [
+        "näen",
+        "näet",
+        "näkee",
+        "näemme",
+        "näette",
+        "näkevät"
+      ],
+      "puhe": [
+        "nään",
+        "näät",
+        "näkee",
+        "nähdään",
+        "näätte",
+        "näkee"
+      ]
+    },
+    {
+      "inf": "haluta",
+      "en": "to want",
+      "forms": [
+        "haluan",
+        "haluat",
+        "haluaa",
+        "haluamme",
+        "haluatte",
+        "haluavat"
+      ],
+      "puhe": [
+        "haluun",
+        "haluut",
+        "haluu",
+        "halutaan",
+        "haluutte",
+        "haluu"
+      ]
+    },
+    {
+      "inf": "ostaa",
+      "en": "to buy",
+      "forms": [
+        "ostan",
+        "ostat",
+        "ostaa",
+        "ostamme",
+        "ostatte",
+        "ostavat"
+      ],
+      "puhe": [
+        "ostan",
+        "ostat",
+        "ostaa",
+        "ostetaan",
+        "ostatte",
+        "ostaa"
+      ]
+    },
+    {
+      "inf": "ymmärtää",
+      "en": "to understand",
+      "forms": [
+        "ymmärrän",
+        "ymmärrät",
+        "ymmärtää",
+        "ymmärrämme",
+        "ymmärrätte",
+        "ymmärtävät"
+      ],
+      "puhe": [
+        "ymmärrän",
+        "ymmärrät",
+        "ymmärtää",
+        "ymmärretään",
+        "ymmärrätte",
+        "ymmärtää"
+      ]
+    }
+  ]
+}

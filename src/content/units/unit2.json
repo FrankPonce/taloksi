@@ -1,0 +1,144 @@
+{
+  "id": "u2",
+  "title": "Mistä olet?",
+  "titleEn": "Where are you from?",
+  "color": "#2E9E5B",
+  "reviewed": false,
+  "lessons": [
+    {
+      "id": "u2l1",
+      "title": "Mistä olet kotoisin?",
+      "titleEn": "Where are you from?",
+      "grammar": "g_locative",
+      "words": [
+        { "id": "w_suomi", "fi": "Suomi", "en": "Finland" },
+        { "id": "w_suomalainen", "fi": "suomalainen", "en": "Finnish", "altEn": ["a Finn", "Finn", "Finnish person"] },
+        { "id": "w_espanja", "fi": "Espanja", "en": "Spain" },
+        { "id": "w_yhdysvallat", "fi": "Yhdysvallat", "en": "the United States", "altEn": ["United States", "USA", "the USA", "America"] },
+        { "id": "w_kotoisin", "fi": "kotoisin", "en": "from (originally)", "altEn": ["from", "originally from"] },
+        { "id": "w_mista", "fi": "mistä", "en": "from where", "altEn": ["where from"] }
+      ],
+      "sentences": [
+        { "id": "s_u2l1_1", "fi": "Mistä sinä olet kotoisin?", "en": "Where are you from?", "altFi": ["Mistä olet kotoisin?"], "altEn": ["Where are you originally from?"], "puhe": "Mistä sä oot kotoisin?", "speaker": "mikko" },
+        { "id": "s_u2l1_2", "fi": "Olen kotoisin Espanjasta.", "en": "I am from Spain.", "altEn": ["I am originally from Spain."], "puhe": "Mä oon Espanjasta.", "speaker": "anna" },
+        { "id": "s_u2l1_3", "fi": "Hän on suomalainen.", "en": "He is Finnish.", "altEn": ["She is Finnish.", "He is a Finn.", "She is a Finn."], "puhe": "Se on suomalainen.", "speaker": "mikko" },
+        { "id": "s_u2l1_4", "fi": "Asun nyt Suomessa.", "en": "I live in Finland now.", "altEn": ["Now I live in Finland.", "I now live in Finland."], "puhe": "Mä asun nyt Suomessa.", "speaker": "samir" },
+        { "id": "s_u2l1_5", "fi": "Oletko sinä suomalainen?", "en": "Are you Finnish?", "altFi": ["Oletko suomalainen?"], "altEn": ["Are you a Finn?"], "puhe": "Ootsä suomalainen?", "speaker": "samir" }
+      ],
+      "fill": [
+        { "id": "f_u2l1_1", "before": "Olen kotoisin", "after": ".", "answer": "Espanjasta", "options": ["Espanja", "Espanjasta", "Espanjassa"], "en": "I am from Spain.", "hint": "'From (inside) somewhere' = -sta / -stä." }
+      ]
+    },
+    {
+      "id": "u2l2",
+      "title": "Kielet",
+      "titleEn": "Languages",
+      "grammar": "g_partitive_intro",
+      "words": [
+        { "id": "w_suomi_kieli", "fi": "suomi", "en": "Finnish (language)", "altEn": ["Finnish"], "note": "Languages are written lowercase; the country 'Suomi' is capitalised." },
+        { "id": "w_englanti", "fi": "englanti", "en": "English" },
+        { "id": "w_ruotsi", "fi": "ruotsi", "en": "Swedish", "note": "Finland's second official language. In Turku you'll hear it a lot." },
+        { "id": "w_espanja_kieli", "fi": "espanja", "en": "Spanish" },
+        { "id": "w_puhua", "fi": "puhua", "en": "to speak", "altEn": ["speak"] },
+        { "id": "w_vahan", "fi": "vähän", "en": "a little", "altEn": ["a bit", "little"] },
+        { "id": "w_hyvin", "fi": "hyvin", "en": "well" }
+      ],
+      "sentences": [
+        { "id": "s_u2l2_1", "fi": "Puhun englantia ja espanjaa.", "en": "I speak English and Spanish.", "puhe": "Mä puhun englantii ja espanjaa.", "speaker": "anna" },
+        { "id": "s_u2l2_2", "fi": "Puhun vähän suomea.", "en": "I speak a little Finnish.", "altEn": ["I speak a bit of Finnish.", "I speak some Finnish."], "puhe": "Mä puhun vähän suomee.", "speaker": "anna" },
+        { "id": "s_u2l2_3", "fi": "Hän puhuu ruotsia hyvin.", "en": "He speaks Swedish well.", "altEn": ["She speaks Swedish well."], "puhe": "Se puhuu ruotsii hyvin.", "speaker": "anna" },
+        { "id": "s_u2l2_4", "fi": "Puhutko sinä suomea?", "en": "Do you speak Finnish?", "altFi": ["Puhutko suomea?"], "puhe": "Puhuks sä suomee?", "speaker": "helvi" },
+        { "id": "s_u2l2_5", "fi": "Suomi on vaikea kieli.", "en": "Finnish is a difficult language.", "altEn": ["Finnish is a hard language."], "puhe": "Suomi on vaikee kieli.", "speaker": "helvi" }
+      ],
+      "fill": [
+        { "id": "f_u2l2_1", "before": "Puhun vähän", "after": ".", "answer": "suomea", "options": ["suomi", "suomea", "suomessa"], "en": "I speak a little Finnish.", "hint": "After 'puhua', the language is in the partitive (-a / -ä)." }
+      ]
+    },
+    {
+      "id": "u2l3",
+      "title": "Missä asut?",
+      "titleEn": "Where do you live?",
+      "grammar": "g_verbs_present",
+      "words": [
+        { "id": "w_asua", "fi": "asua", "en": "to live", "altEn": ["live"] },
+        { "id": "w_missa", "fi": "missä", "en": "where" },
+        { "id": "w_turku", "fi": "Turku", "en": "Turku" },
+        { "id": "w_helsinki", "fi": "Helsinki", "en": "Helsinki" },
+        { "id": "w_kaupunki", "fi": "kaupunki", "en": "city", "altEn": ["town"] },
+        { "id": "w_opiskella", "fi": "opiskella", "en": "to study", "altEn": ["study"] },
+        { "id": "w_yliopisto", "fi": "yliopisto", "en": "university" }
+      ],
+      "sentences": [
+        { "id": "s_u2l3_1", "fi": "Missä sinä asut?", "en": "Where do you live?", "altFi": ["Missä asut?"], "puhe": "Missä sä asut?", "speaker": "pekka" },
+        { "id": "s_u2l3_2", "fi": "Asun Turussa.", "en": "I live in Turku.", "puhe": "Mä asun Turussa.", "speaker": "pekka" },
+        { "id": "s_u2l3_3", "fi": "Turku on kaunis kaupunki.", "en": "Turku is a beautiful city.", "altEn": ["Turku is a beautiful town.", "Turku is a pretty city."], "speaker": "pekka" },
+        { "id": "s_u2l3_4", "fi": "Opiskelen yliopistossa.", "en": "I study at the university.", "altEn": ["I study at a university.", "I study at university."], "puhe": "Mä opiskelen yliopistossa.", "speaker": "anna" },
+        { "id": "s_u2l3_5", "fi": "Hän asuu Helsingissä.", "en": "He lives in Helsinki.", "altEn": ["She lives in Helsinki."], "puhe": "Se asuu Helsingissä.", "speaker": "anna" }
+      ],
+      "fill": [
+        { "id": "f_u2l3_1", "before": "Asun", "after": ".", "answer": "Turussa", "options": ["Turku", "Turussa", "Turkuun"], "en": "I live in Turku.", "hint": "Turku → Turussa: rk weakens to r (consonant gradation)." }
+      ]
+    },
+    {
+      "id": "u2l4",
+      "title": "Numerot 0–10",
+      "titleEn": "Numbers 0–10",
+      "words": [
+        { "id": "w_nolla", "fi": "nolla", "en": "zero", "altEn": ["0"] },
+        { "id": "w_yksi", "fi": "yksi", "en": "one", "altEn": ["1"], "puhe": "yks" },
+        { "id": "w_kaksi", "fi": "kaksi", "en": "two", "altEn": ["2"], "puhe": "kaks" },
+        { "id": "w_kolme", "fi": "kolme", "en": "three", "altEn": ["3"] },
+        { "id": "w_nelja", "fi": "neljä", "en": "four", "altEn": ["4"] },
+        { "id": "w_viisi", "fi": "viisi", "en": "five", "altEn": ["5"], "puhe": "viis" },
+        { "id": "w_kuusi", "fi": "kuusi", "en": "six", "altEn": ["6"], "puhe": "kuus" },
+        { "id": "w_seitseman", "fi": "seitsemän", "en": "seven", "altEn": ["7"], "puhe": "seittemän" },
+        { "id": "w_kahdeksan", "fi": "kahdeksan", "en": "eight", "altEn": ["8"], "puhe": "kaheksan" },
+        { "id": "w_yhdeksan", "fi": "yhdeksän", "en": "nine", "altEn": ["9"], "puhe": "yheksän" },
+        { "id": "w_kymmenen", "fi": "kymmenen", "en": "ten", "altEn": ["10"] }
+      ],
+      "sentences": [
+        { "id": "s_u2l4_1", "fi": "Minulla on kaksi siskoa.", "en": "I have two sisters.", "puhe": "Mulla on kaks siskoo.", "speaker": "helvi" },
+        { "id": "s_u2l4_2", "fi": "Yksi kahvi, kiitos.", "en": "One coffee, please.", "altEn": ["A coffee, please.", "One coffee, thanks."], "puhe": "Yks kahvi, kiitos.", "speaker": "aino" },
+        { "id": "s_u2l4_3", "fi": "Kolme plus neljä on seitsemän.", "en": "Three plus four is seven.", "altEn": ["Three plus four equals seven."], "puhe": "Kolme plus neljä on seittemän.", "speaker": "samir" },
+        { "id": "s_u2l4_4", "fi": "Hän on kymmenen vuotta vanha.", "en": "He is ten years old.", "altEn": ["She is ten years old."], "puhe": "Se on kymmenen vuotta vanha.", "speaker": "helvi" },
+        { "id": "s_u2l4_5", "fi": "Bussi numero kuusi tulee.", "en": "Bus number six is coming.", "altEn": ["Bus number six comes."], "puhe": "Kuutonen tulee.", "speaker": "mikko" }
+      ],
+      "fill": [
+        { "id": "f_u2l4_1", "before": "Minulla on kaksi", "after": ".", "answer": "siskoa", "options": ["sisko", "siskoa", "siskot"], "en": "I have two sisters.", "hint": "After numbers 2 and up, the noun is singular partitive." }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_locative",
+      "title": "Missä? Mistä? Mihin?",
+      "titleEn": "In, from, into: the inner cases",
+      "blocks": [
+        { "type": "p", "text": "Finnish has no prepositions like 'in' or 'from'. Instead, endings go on the noun." },
+        { "type": "table", "head": ["Question", "Ending", "talo (house)", "Suomi"], "rows": [["Missä? (where)", "-ssa / -ssä", "talossa", "Suomessa"], ["Mistä? (from where)", "-sta / -stä", "talosta", "Suomesta"], ["Mihin? (to where)", "-Vn / -hVn / -seen", "taloon", "Suomeen"]] },
+        { "type": "tip", "text": "Vowel harmony: if the word has a, o or u, use -ssa/-sta. If it only has ä, ö, y, e or i, use -ssä/-stä: Helsinki → Helsingissä." },
+        { "type": "example", "fi": "Olen kotoisin Espanjasta, mutta asun Suomessa.", "en": "I'm from Spain, but I live in Finland." }
+      ]
+    },
+    {
+      "id": "g_partitive_intro",
+      "title": "Partitiivi (1)",
+      "titleEn": "The partitive, part 1",
+      "blocks": [
+        { "type": "p", "text": "The partitive is Finland's most-used case. Two easy places to start: languages after 'puhua', and nouns after numbers (2 and up)." },
+        { "type": "table", "head": ["Basic form", "Partitive", "Example"], "rows": [["suomi", "suomea", "Puhun suomea."], ["englanti", "englantia", "Puhutko englantia?"], ["sisko", "siskoa", "kaksi siskoa"], ["euro", "euroa", "viisi euroa"]] },
+        { "type": "tip", "text": "The ending is -a/-ä (or -ta/-tä after a long vowel or consonant). Words ending in -i often change to -e first: suomi → suomea." }
+      ]
+    },
+    {
+      "id": "g_verbs_present",
+      "title": "Verbit: preesens",
+      "titleEn": "Verbs in the present tense",
+      "blocks": [
+        { "type": "p", "text": "Take the infinitive (asua), drop the -a/-ä to get the stem (asu-), then add the personal ending." },
+        { "type": "table", "head": ["Person", "Ending", "asua", "Puhekieli"], "rows": [["minä", "-n", "asun", "mä asun"], ["sinä", "-t", "asut", "sä asut"], ["hän", "vowel doubles", "asuu", "se asuu"], ["me", "-mme", "asumme", "me asutaan"], ["te", "-tte", "asutte", "te asutte"], ["he", "-vat / -vät", "asuvat", "ne asuu"]] },
+        { "type": "tip", "text": "Spoken Finnish uses the passive form for 'we' (me asutaan), and the 'he/she' form for 'they' (ne asuu). Nobody will think it's wrong — it's how almost everyone talks." }
+      ]
+    }
+  ]
+}

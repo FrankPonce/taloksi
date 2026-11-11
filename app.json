@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Suomeksi",
+    "slug": "suomeksi",
+    "scheme": "suomeksi",
+    "version": "0.2.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#1B2748",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.frankponce.suomeksi"
+    },
+    "android": {
+      "package": "dev.frankponce.suomeksi"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-audio",
+      "expo-asset",
+      "expo-font"
+    ]
+  }
+}

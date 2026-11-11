@@ -1,0 +1,218 @@
+[
+  {
+    "id": "c_greetings",
+    "unit": "u1",
+    "icon": "hand-left",
+    "title": "Moi ja sinuttelu",
+    "titleEn": "First names for everyone",
+    "body": [
+      "Finns greet briefly. A 'moi' and a nod is a complete, friendly greeting. Handshakes are for first meetings and formal moments. Hugs are for people you know well.",
+      "Almost everyone is 'sinä'. Students call professors by their first name, and so do employees with the CEO. The polite plural 'te' for one person (teitittely) is rare: you may hear it from staff talking to elderly customers.",
+      "Titles like Mr and Mrs are basically never used in speech."
+    ],
+    "words": [
+      { "fi": "moi", "en": "hi" },
+      { "fi": "sinutella", "en": "to say 'sinä' to someone" },
+      { "fi": "teititellä", "en": "to say the polite 'te' to someone" },
+      { "fi": "kätellä", "en": "to shake hands" }
+    ]
+  },
+  {
+    "id": "c_silence",
+    "unit": "u1",
+    "icon": "volume-mute",
+    "title": "Hiljaisuus",
+    "titleEn": "Silence is not awkward",
+    "body": [
+      "In Finland a pause in conversation is comfortable. Nobody rushes to fill it. People wait for their turn to speak and rarely interrupt.",
+      "Small talk exists, but it is light. If you ask 'Mitä kuuluu?', expect a real answer rather than an automatic 'fine'.",
+      "Personal space is generous. At a bus stop people stand well apart. It is not coldness. It is a way of showing respect."
+    ],
+    "words": [
+      { "fi": "hiljaisuus", "en": "silence" },
+      { "fi": "rauha", "en": "peace, calm" },
+      { "fi": "oma tila", "en": "personal space" }
+    ]
+  },
+  {
+    "id": "c_turku",
+    "unit": "u2",
+    "icon": "business",
+    "title": "Turku / Åbo",
+    "titleEn": "Finland's oldest city",
+    "body": [
+      "Turku is the oldest city in Finland and was its capital until 1812. The river Aura runs through the middle, with the cathedral at one end and the medieval castle at the other.",
+      "The city is officially bilingual. Its Swedish name is Åbo, and street signs carry both languages.",
+      "Every Christmas Eve at noon the Christmas Peace is declared from the Old Great Square, a tradition that goes back to the Middle Ages and is broadcast across the country.",
+      "The local dialect clips word endings. 'Turussa' becomes 'Turus', and locals will tell you they live 'Turuus'."
+    ],
+    "words": [
+      { "fi": "Aurajoki", "en": "the river Aura" },
+      { "fi": "tuomiokirkko", "en": "cathedral" },
+      { "fi": "linna", "en": "castle" },
+      { "fi": "joulurauha", "en": "Christmas Peace" }
+    ]
+  },
+  {
+    "id": "c_coffee",
+    "unit": "u3",
+    "icon": "cafe",
+    "title": "Kahvi ja pulla",
+    "titleEn": "A nation run on coffee",
+    "body": [
+      "Finland is regularly ranked among the world's heaviest coffee-drinking countries per person. Coffee is usually light roast, filter brewed, and offered at every visit, meeting and funeral.",
+      "Coffee breaks at work (kahvitauko) are written into many collective agreements. Refusing coffee is fine, but expect to be asked twice.",
+      "Coffee comes with pulla, a sweet cardamom bun. The cinnamon roll version is korvapuusti, literally 'a slap on the ear', and it has its own day on 4 October."
+    ],
+    "words": [
+      { "fi": "kahvitauko", "en": "coffee break" },
+      { "fi": "pulla", "en": "sweet cardamom bun" },
+      { "fi": "santsikuppi", "en": "free refill" },
+      { "fi": "suodatinkahvi", "en": "filter coffee" }
+    ]
+  },
+  {
+    "id": "c_shop",
+    "unit": "u3",
+    "icon": "cart",
+    "title": "Kaupan kassalla",
+    "titleEn": "At the till",
+    "body": [
+      "Checkout conversations are fast and always the same. Learn three questions and you will survive every shop in Finland.",
+      "'Tarviiks kassin?' Do you need a bag? Bags cost money, so most people bring their own. 'Onks bonuskorttia?' Do you have the loyalty card? 'Kuitti?' Do you want the receipt?",
+      "Bottles and cans carry a deposit (pantti). Return them to the machine at the shop entrance and it prints a voucher you use at the till."
+    ],
+    "words": [
+      { "fi": "kassi", "en": "shopping bag" },
+      { "fi": "kuitti", "en": "receipt" },
+      { "fi": "pantti", "en": "bottle deposit" },
+      { "fi": "tarjous", "en": "special offer" }
+    ]
+  },
+  {
+    "id": "c_sauna",
+    "unit": "u4",
+    "icon": "flame",
+    "title": "Sauna",
+    "titleEn": "The one Finnish word everyone knows",
+    "body": [
+      "There are around three million saunas in a country of five and a half million people. Apartments, offices, parliament and even some buses have one. Finnish sauna culture is on UNESCO's list of intangible cultural heritage.",
+      "People go naked. It is not sexual and nobody looks. Public saunas are usually separated by gender. Families and friends decide for themselves.",
+      "Throwing water on the stones makes löyly, the wave of steam. The bundle of birch twigs you gently hit yourself with is a vihta in western Finland and a vasta in the east. The word you use tells people where you learned Finnish.",
+      "Sauna is where Finns talk. If you are invited, say yes."
+    ],
+    "words": [
+      { "fi": "löyly", "en": "sauna steam" },
+      { "fi": "kiuas", "en": "sauna stove" },
+      { "fi": "vihta / vasta", "en": "birch whisk (west / east)" },
+      { "fi": "avanto", "en": "hole in the ice for swimming" }
+    ],
+    "source": { "label": "UNESCO: Sauna culture in Finland", "url": "https://ich.unesco.org/en/RL/sauna-culture-in-finland-01596" }
+  },
+  {
+    "id": "c_everyman",
+    "unit": "u4",
+    "icon": "leaf",
+    "title": "Jokamiehenoikeudet",
+    "titleEn": "Everyone's right to roam",
+    "body": [
+      "In Finland you may walk, ski, cycle and swim almost anywhere in nature, no matter who owns the land. You may pick wild berries, mushrooms and flowers, and camp for a night or two.",
+      "The limits are common sense: stay away from people's yards and fields, do not light fires without permission, and leave no trace.",
+      "This is why half the country disappears into the forest every August with a bucket."
+    ],
+    "words": [
+      { "fi": "metsä", "en": "forest" },
+      { "fi": "mustikka", "en": "bilberry" },
+      { "fi": "sieni", "en": "mushroom" },
+      { "fi": "marjastaa", "en": "to go berry picking" }
+    ],
+    "source": { "label": "Nationalparks.fi: Everyman's rights", "url": "https://www.nationalparks.fi/everymansright" }
+  },
+  {
+    "id": "c_sisu",
+    "icon": "fitness",
+    "title": "Sisu",
+    "titleEn": "The word that does not translate",
+    "body": [
+      "Sisu is stubborn inner strength: continuing after you have run out of reasons to continue. It is not loud bravery. It is quiet, grim persistence.",
+      "Finns use it for winter swimming, for finishing a marathon, and for learning a language with fifteen cases. You already have some. You are still here."
+    ],
+    "words": [
+      { "fi": "sisu", "en": "grit, guts" },
+      { "fi": "sisukas", "en": "full of sisu" },
+      { "fi": "periksi ei anneta", "en": "we do not give up" }
+    ]
+  },
+  {
+    "id": "c_home",
+    "icon": "home",
+    "title": "Kylässä",
+    "titleEn": "Visiting a Finnish home",
+    "body": [
+      "Shoes come off at the door. Always, with no exceptions. Many people bring wool socks.",
+      "Be on time. Six o'clock means six o'clock, and five minutes late deserves a text message.",
+      "Bring something small: coffee, chocolate or flowers. And when your host offers coffee, the correct answer is yes."
+    ],
+    "words": [
+      { "fi": "kyläillä", "en": "to visit someone's home" },
+      { "fi": "villasukat", "en": "wool socks" },
+      { "fi": "tuliaiset", "en": "a gift you bring when visiting" },
+      { "fi": "ajoissa", "en": "on time" }
+    ]
+  },
+  {
+    "id": "c_year",
+    "icon": "calendar",
+    "title": "Suomalainen vuosi",
+    "titleEn": "The Finnish year",
+    "body": [
+      "Vappu, 1 May: the spring carnival. Students wear their white graduation caps, everyone drinks sima (a light mead) and eats munkki doughnuts.",
+      "Juhannus, midsummer in late June: the cities empty as everyone goes to a summer cottage (mökki) to light a bonfire by a lake under a sun that does not set.",
+      "Itsenäisyyspäivä, 6 December: Independence Day. Two candles in the window and the President's reception on television.",
+      "Joulu: Christmas is celebrated on the evening of the 24th. Santa Claus (joulupukki) lives in Finnish Lapland, at Korvatunturi. Before it comes pikkujoulu, the office Christmas party season."
+    ],
+    "words": [
+      { "fi": "vappu", "en": "May Day" },
+      { "fi": "juhannus", "en": "midsummer" },
+      { "fi": "mökki", "en": "summer cottage" },
+      { "fi": "joulupukki", "en": "Santa Claus" }
+    ]
+  },
+  {
+    "id": "c_alko",
+    "adult": true,
+    "icon": "wine",
+    "title": "Alko ja kalsarikännit",
+    "titleEn": "How drinking works here",
+    "body": [
+      "Strong alcohol is sold only by Alko, the state-owned shop chain. Grocery stores sell beer, cider and other mild drinks. Alko closes early and is shut on Sundays, so people plan ahead.",
+      "The age limit is 18 for mild drinks and 20 for spirits. Staff ask for ID often, and it is nothing personal.",
+      "Finnish has a word for drinking at home alone in your underwear with no plan to go out: kalsarikännit. The foreign ministry made an official emoji for it.",
+      "At the table, wait for 'kippis' and look people in the eye when you toast."
+    ],
+    "words": [
+      { "fi": "Alko", "en": "the state alcohol shop" },
+      { "fi": "kalsarikännit", "en": "getting drunk at home in your underwear" },
+      { "fi": "henkkarit", "en": "ID (slang)" },
+      { "fi": "selvä", "en": "sober; also 'OK, got it'" }
+    ]
+  },
+  {
+    "id": "c_swearing",
+    "adult": true,
+    "icon": "thunderstorm",
+    "title": "Perkele!",
+    "titleEn": "Why Finns swear like that",
+    "body": [
+      "Finnish swear words come from religion and the body. Perkele is an old word for the devil, probably borrowed long ago from a Baltic thunder god. Saatana and helvetti need no translation.",
+      "Vittu is the strongest and by far the most flexible. It works as an exclamation, a filler and, in the genitive (vitun), as an intensifier for anything good or bad.",
+      "Swearing among friends is common and not aggressive. In customer service, with strangers or with older people it lands much harder than in English. Know them, understand them, and use them carefully."
+    ],
+    "words": [
+      { "fi": "kirosana", "en": "swear word" },
+      { "fi": "kiroilla", "en": "to swear" },
+      { "fi": "voi ei", "en": "oh no (the clean version)" },
+      { "fi": "hitsi", "en": "darn (child-safe)" }
+    ]
+  }
+]

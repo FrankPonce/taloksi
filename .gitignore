@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+*.log
+.DS_Store
+# Piper voice models and raw dataset dumps are large; download them locally
+voices/
+data/raw/
+__pycache__/
