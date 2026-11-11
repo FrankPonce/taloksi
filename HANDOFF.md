@@ -22,7 +22,7 @@ The plan is to copy the proven mechanics from Duolingo and LingoDeer, then add F
 
 **Constraints:** zero budget. Free tiers only (Expo, Vercel/Cloudflare, Supabase later), free TTS, open data (Wiktionary via kaikki.org, Tatoeba). The only unavoidable costs are app-store fees: Google Play $25 once, Apple $99/yr, and Apple can be deferred.
 
-**Author:** Frank Ponce (frankponce.dev), CS grad, data science master's student (EDISS, Åbo Akademi). The README and roadmap are meant to look good as a portfolio piece. The format mirrors the CadetX project: 12 numbered sprints, rotating Scrum roles, and a review file per sprint.
+**Author:** Frank Ponce (frankponce.dev), CS grad, data science master's student (EDISS, Åbo Akademi). The README and roadmap are meant to look good as a portfolio piece. The format mirrors the CadetX project: numbered sprints (11 after the native-review sprint was dropped), rotating Scrum roles, and a review file per sprint.
 
 ## 2. Current state (end of Sprint 2)
 
@@ -37,14 +37,14 @@ npm run web
 
 **Content:** 4 A1 units plus 2 units on the 18+ track, 21 lessons, 152 words (130 with a picture), 116 sentences, 17 grammar notes, 2 stories, 5 conversations, 3 writing tasks, 232 lexicon word forms, 12 culture notes, 7 life-in-Finland notes, 11 study tips, 11 journey stages, 17 characters, 451 audio clips.
 
-**All content is AI-drafted and unreviewed** (`"reviewed": false` on every unit). That includes the lexicon explanations, culture notes and the 18+ pack. Treat the Finnish as good but unverified. A native-speaker review is Sprint 3.
+**All content is AI-drafted and unreviewed** (`"reviewed": false` on every unit). That includes the lexicon explanations, culture notes and the 18+ pack. Treat the Finnish as good but unverified. No native speaker is available, so there is no native review sprint; instead each content sprint ends with a review pass by Claude against `docs/CONTENT.md`, and `reviewed: true` means that pass was done.
 
 **First tasks for whoever picks this up:**
 
 1. Read `docs/ROADMAP.md`: it describes the finished app and lists the open decisions. The repository is at github.com/FrankPonce/suomeksi.
 2. Run it in Expo Go on Android and iOS. The style uses `boxShadow` and `skewX`, which need the new architecture on Android.
 3. Decide the voice licence question (see "Known gaps").
-4. Start Sprint 3: native review.
+4. Start Sprint 3: starter and structure (unit 0, concept cards, the strict first-contact rule, review pass on units 1–4).
 
 ### Added after the Sprint 2 review (Sprint 3 work in progress)
 
@@ -111,7 +111,7 @@ metro.config.js           makes Metro pick CommonJS builds (zustand's ESM build 
 
 ### Key design decisions
 
-- **Content is JSON, not TS.** Python scripts can read it, and native reviewers can edit it in GitHub PRs without touching code.
+- **Content is JSON, not TS.** Python scripts can read it, and reviewers can edit it in GitHub PRs without touching code.
 - **Lessons are generated, not hand-authored.** `buildLessonExercises()` turns each lesson's words and sentences into a queue:
   1. warm-up: two words from earlier lessons (spaced retrieval)
   2. intro cards and pick-the-word, two words at a time
@@ -158,16 +158,17 @@ Full table in `docs/ROADMAP.md`. Sprint reviews go in `docs/sprints/sprint-NN-na
 
 1. ✅ Foundations
 2. ✅ Voice and identity
-3. ⏳ **Native review** (next)
-4. Starter and structure (unit 0, concept cards, first-contact rule, open data)
-5. Units 5–10 (A1 complete)
-6. Supabase accounts and sync
-7. Leagues and friends
-8. Learning science (mistake bank, FSRS tuning)
-9. Skill rooms
-10. Life in Finland / YKI
-11. Mobile release (EAS, Play Store, PWA)
-12. Launch and retention analytics
+3. ⏳ **Starter and structure** (unit 0, concept cards, first-contact rule, review pass, open data)
+4. Units 5–10 (A1 complete)
+5. Supabase accounts and sync
+6. Leagues and friends
+7. Learning science (mistake bank, FSRS tuning)
+8. Skill rooms
+9. Life in Finland / YKI
+10. Mobile release (EAS, Play Store, PWA)
+11. Launch and retention analytics
+
+The native-review sprint was dropped on 2026-11-11 because no native speaker is available.
 
 Roles rotate every sprint: **Scrum Lead · Content Quality · Documentation · Tech Lead**. Update the README's sprint table and write a sprint review when a sprint closes.
 
@@ -177,4 +178,4 @@ Roles rotate every sprint: **Scrum Lead · Content Quality · Documentation · T
 - Run `npm run validate` before committing content. It checks ids, speakers, lexicon coverage, categories, stage and culture links, and audio coverage.
 - Every study tip needs at least one linked source. Paraphrase, don't copy.
 - Open data goes through `scripts/` into `data/` for review. It never ships to `src/content/` unchecked. Credit sources in `ATTRIBUTION.md` (Wiktionary is CC BY-SA, Tatoeba is CC BY 2.0 FR).
-- Writing rules and the native-review checklist are in `docs/CONTENT.md`.
+- Writing rules and the review checklist are in `docs/CONTENT.md`.

@@ -40,9 +40,9 @@ What is taken from each: Speakly's frequency ordering and situation dialogues, W
 
 | Stage | CEFR | Units | Status |
 |---|---|---|---|
-| Starter | pre-A1 | 0: letters and sounds, how a Finnish sentence works | 🗓️ 4, see section 5 |
-| Survival basics | A1.1 | 1–4: greetings, origins, shop and café, the city | ✅ 16 lessons, unreviewed; to be re-ordered to follow the first-contact rule |
-| Everyday life | A1.2–A1.3 | 5–10: time, family, home, weather, health, work | 🗓️ 5 |
+| Starter | pre-A1 | 0: letters and sounds, how a Finnish sentence works | 🗓️ 3 (current), see section 5 |
+| Survival basics | A1.1 | 1–4: greetings, origins, shop and café, the city | ✅ 16 lessons, no review pass yet; to be re-ordered to follow the first-contact rule |
+| Everyday life | A1.2–A1.3 | 5–10: time, family, home, weather, health, work | 🗓️ 4 |
 | Getting by | A2 | 11–20 | 🗓️ after launch |
 | Independent | B1 (YKI 3) | 21–32 | 🗓️ after launch |
 
@@ -55,7 +55,7 @@ A1 and A2 are the launch target. B1 is the level the citizenship language requir
 | **Listening** | Stories with the text hidden, long-or-short sound drill | A clip, then questions about what was said. Normal and slow speed. Puhekieli clips from A2. |
 | **Reading** | Stories with tap-to-translate | Graded texts per stage: signs, messages, short news, forms. Questions after each. |
 | **Writing** | 3 prompts, scored by a keyword checker that does not understand Finnish | Prompts per stage ("introduce yourself: age, where you are from, your job, a hobby, your favourite colour") graded by an AI with a mark out of 5 and corrections line by line. See open decision 1. |
-| **Speaking** | Shadowing, self-graded | Say-the-sentence with speech recognition, then role-play with a character. 🗓️ 9 |
+| **Speaking** | Shadowing, self-graded | Say-the-sentence with speech recognition, then role-play with a character. 🗓️ 8 |
 
 All four also appear inside ordinary lessons, so the rooms are extra practice, not the only place a skill is trained.
 
@@ -66,13 +66,13 @@ All four also appear inside ordinary lessons, so the rooms are extra practice, n
 - ✅ Multi-turn conversations: the character speaks, you build the reply, four turns.
 - ✅ Finland facts in sentences ("Turku on Suomen vanhin kaupunki").
 - 🗓️ Shorter lessons. They average about 32 steps, which is too long. Target 15 to 20.
-- 🗓️ 8 A personal mistake bank, so wrong answers come back days later and not only at the end of the lesson.
+- 🗓️ 7 A personal mistake bank, so wrong answers come back days later and not only at the end of the lesson.
 
 ### Memory
 
 - ✅ FSRS scheduling for review. It is the current open standard for spaced repetition and replaces the older SM-2 that Anki used for years.
-- 🗓️ 8 Fit FSRS to each learner's own review history once there are enough reviews.
-- 🗓️ 8 Move review cards from "show and self-grade" to "type the answer" as a card matures.
+- 🗓️ 7 Fit FSRS to each learner's own review history once there are enough reviews.
+- 🗓️ 7 Move review cards from "show and self-grade" to "type the answer" as a card matures.
 
 ### The cast
 
@@ -105,8 +105,8 @@ Behind a setting, off by default. It is a parallel track with its own units, not
 ### Life in Finland
 
 - ✅ 7 practical notes and 12 culture notes.
-- 🗓️ 10 A track of scenario lessons hosted by Samir: registering at DVV, Kela, opening a bank account, the doctor, renting, job interviews.
-- 🗓️ 10 YKI practice in the exam's own task formats.
+- 🗓️ 9 A track of scenario lessons hosted by Samir: registering at DVV, Kela, opening a bank account, the doctor, renting, job interviews.
+- 🗓️ 9 YKI practice in the exam's own task formats.
 
 ### The look
 
@@ -114,7 +114,7 @@ Behind a setting, off by default. It is a parallel track with its own units, not
 - ✅ Characters drawn in code with realistic proportions, sharp eyes, hard cel shadows, two body builds, varied head angles, six expressions and a signature prop each.
 - ✅ A backdrop per unit that matches its topic.
 - 🗓️ Full-body character art for unit headers and lesson endings. The portraits are code-drawn SVG, which has a ceiling; see open decision 3.
-- 🗓️ 11 App icon and splash screen.
+- 🗓️ 10 App icon and splash screen.
 
 ### Around the course
 
@@ -124,10 +124,10 @@ Behind a setting, off by default. It is a parallel track with its own units, not
 | Journey map A1.1 to C2 | ✅ |
 | Study guide with sources | ✅ |
 | Works offline | ✅ |
-| Accounts and sync | 🗓️ 6 |
-| Leagues, friends, streak freeze | 🗓️ 7 |
-| Reminders | 🗓️ 11 |
-| Android release and installable web app | 🗓️ 11 |
+| Accounts and sync | 🗓️ 5 |
+| Leagues, friends, streak freeze | 🗓️ 6 |
+| Reminders | 🗓️ 10 |
+| Android release and installable web app | 🗓️ 10 |
 | Importing your own media | ❌ |
 
 ## 5. How the language is introduced
@@ -149,7 +149,7 @@ A learner who already knows this can skip it with a five-question check.
 
 ### The first-contact rule
 
-Decided: the rule is strict. A form may not appear in the lesson that introduces its word, and the unit 1 and 2 sentences that break it get rewritten. The only exception is fixed phrases, as described in point 3.
+Decided: the rule is strict. A form may not appear in the lesson that introduces its word, and the unit 1 and 2 sentences that break it get rewritten in sprint 3. The only exception is fixed phrases, as described in point 3.
 
 1. **Plain form first.** A noun appears in its dictionary form (*Turku*, *kahvi*, *bussi*) for at least one lesson before any other form of it is used.
 2. **A concept card on first contact.** The first lesson that uses a new ending opens with a short card: what it means, two or three words shown side by side in both forms (*Turku → Turussa*, *Helsinki → Helsingissä*, *Suomi → Suomessa*), and when to use it. Then two easy exercises on only that, before it shows up in sentences.
@@ -191,38 +191,41 @@ Suggestions beyond what has been asked for so far, roughly in order of value.
 
 | Idea | Why | When |
 |---|---|---|
-| **Unit checkpoint** | A short mixed test at the end of each unit, no hints, typing only. Passing it is the real "unit done". | 🗓️ 5 |
-| **Placement check** | Ten questions on first launch so people who know some Finnish do not start at "hei". | 🗓️ 5 |
-| **Why are you learning?** | One question on first launch (moving here, partner, study, work, curiosity) that decides which optional track is suggested first. | 🗓️ 5 |
-| **Survival phrasebook** | Thirty phrases with audio, available from day one and offline, for people who land next week. | 🗓️ 5 |
-| **A story per unit** | Each unit ends with a short story that uses only what has been taught, with that unit's hosts. | 🗓️ 5 |
-| **Puhekieli by stages** | Show the spoken form from the start, but only test it from A1.3, so beginners are not graded on two registers at once. | 🗓️ 5 |
-| **Gradation and partitive in the gym** | The case gym drills endings; the two things learners get wrong longest are which stem to use and when the partitive is needed. | 🗓️ 8 |
-| **Compound-word splitter** | Long Finnish words are short words stuck together (*ruoka·kauppa*, *linja-auto·asema*). Tap to split, the same idea as the sentence breakdown. | 🗓️ 8 |
-| **Word families** | Show what one root gives you: *kirja, kirjasto, kirjoittaa, kirjailija*. Cheap vocabulary. | 🗓️ 8 |
+| **Unit checkpoint** | A short mixed test at the end of each unit, no hints, typing only. Passing it is the real "unit done". | 🗓️ 4 |
+| **Placement check** | Ten questions on first launch so people who know some Finnish do not start at "hei". | 🗓️ 4 |
+| **Why are you learning?** | One question on first launch (moving here, partner, study, work, curiosity) that decides which optional track is suggested first. | 🗓️ 4 |
+| **Survival phrasebook** | Thirty phrases with audio, available from day one and offline, for people who land next week. | 🗓️ 4 |
+| **A story per unit** | Each unit ends with a short story that uses only what has been taught, with that unit's hosts. | 🗓️ 4 |
+| **Puhekieli by stages** | Show the spoken form from the start, but only test it from A1.3, so beginners are not graded on two registers at once. | 🗓️ 4 |
+| **Gradation and partitive in the gym** | The case gym drills endings; the two things learners get wrong longest are which stem to use and when the partitive is needed. | 🗓️ 7 |
+| **Compound-word splitter** | Long Finnish words are short words stuck together (*ruoka·kauppa*, *linja-auto·asema*). Tap to split, the same idea as the sentence breakdown. | 🗓️ 7 |
+| **Word families** | Show what one root gives you: *kirja, kirjasto, kirjoittaa, kirjailija*. Cheap vocabulary. | 🗓️ 7 |
 
 ## 6. Sprint plan
 
 About two weeks each, part-time. Roles rotate: Scrum Lead, Content Quality, Documentation, Tech Lead.
 
+There is no native-speaker review sprint: nobody is available to do one. Instead:
+
+Every content sprint ends with a review pass by Claude against the checklist in `docs/CONTENT.md`. It catches grammar slips, unnatural phrasing, wrong translations and rule breaks, but it is not the same as a native speaker reading the course, and the app says so. If a native speaker turns up later, their corrections go in as ordinary pull requests.
+
 | # | Sprint | Delivers | Done when |
 |---|---|---|---|
 | 1 | Foundations ✅ | App, exercise engine, FSRS, 4 units, gyms, stories | Runs on web, validator passes |
 | 2 | Voice and identity ✅ | Audio for every item, cast, visual style, breakdowns, journey map, 18+ pack | Every item has a clip |
-| 3 | Native review ⏳ | Native speakers check units 1–4 and the 18+ units; error log | Under 2 errors per 100 sentences |
-| 4 | Starter and structure | Unit 0; concept cards and the first-contact rule in the validator; units 1–4 re-ordered to obey it; frequency list for word order; kaikki.org noun and verb tables | Validator passes with the rule on; 200+ gym nouns, 100+ verbs |
-| 5 | A1 complete | Units 5–10 with the hosts who have no lessons yet (Joonas, Joulupukki, Aada, Linh, Tuuli), shorter lessons, unit checkpoints, placement check, phrasebook, a story per unit | About 600 words, reviewed |
-| 6 | Accounts and sync | Supabase sign-in, progress sync | Progress survives a reinstall |
-| 7 | Social | Leagues, friends, streak freeze | 10 testers in one league |
-| 8 | Learning science | Mistake bank, typed review, fitted FSRS, gradation and partitive drills, compound splitter, word families | Retention measured against defaults |
-| 9 | Skill rooms | Listening and reading tasks with questions, AI-graded writing, speech recognition | Each room has 10 graded tasks |
-| 10 | Life in Finland | Scenario track, YKI practice, more 18+ units with Ronja and Veera | 10 scenario lessons |
-| 11 | Mobile release | Android build, installable web app, icon, reminders | Installable on a phone |
-| 12 | Launch | Retention numbers, lesson-length test, public beta | First-month write-up |
+| 3 | Starter and structure ⏳ | Unit 0; concept cards and the first-contact rule in the validator; units 1–4 re-ordered to obey it and given a review pass; frequency list for word order; kaikki.org noun and verb tables | Validator passes with the rule on; 200+ gym nouns, 100+ verbs |
+| 4 | A1 complete | Units 5–10 with the hosts who have no lessons yet (Joonas, Joulupukki, Aada, Linh, Tuuli), shorter lessons, unit checkpoints, placement check, phrasebook, a story per unit | About 600 words, each unit through a review pass |
+| 5 | Accounts and sync | Supabase sign-in, progress sync | Progress survives a reinstall |
+| 6 | Social | Leagues, friends, streak freeze | 10 testers in one league |
+| 7 | Learning science | Mistake bank, typed review, fitted FSRS, gradation and partitive drills, compound splitter, word families | Retention measured against defaults |
+| 8 | Skill rooms | Listening and reading tasks with questions, AI-graded writing, speech recognition | Each room has 10 graded tasks |
+| 9 | Life in Finland | Scenario track, YKI practice, more 18+ units with Ronja and Veera | 10 scenario lessons |
+| 10 | Mobile release | Android build, installable web app, icon, reminders | Installable on a phone |
+| 11 | Launch | Retention numbers, lesson-length test, public beta | First-month write-up |
 
 ## 7. Open decisions
 
-1. **AI writing grader.** It needs a model and somewhere to keep the key. Options: a small server function on a free tier that calls a hosted model, with a daily cap per user; or wait for accounts (sprint 6) and attach it to them. Until then the keyword checker stays and is labelled as such.
+1. **AI writing grader.** It needs a model and somewhere to keep the key. Options: a small server function on a free tier that calls a hosted model, with a daily cap per user; or wait for accounts (sprint 5) and attach it to them. Until then the keyword checker stays and is labelled as such.
 2. **Voices.** The clips come from an unofficial free service whose terms for redistribution are unclear. Before a public release: confirm the terms, switch to the open single-voice engine, or record people.
 3. **Character art.** Stay with code-drawn portraits, or commission or draw full illustrations and keep the code version as a fallback.
 4. **Licence.** The repository is public but has no licence file yet, so nobody can legally reuse it. Code and course content may want different licences.

@@ -146,7 +146,7 @@ export default function ProfileScreen() {
           } else setConfirmReset(true);
         }}
       />
-      <Muted>Suomeksi v0.2 · Content is AI-drafted and waiting for native-speaker review.</Muted>
+      <Muted>Suomeksi v0.2 · Course content is written and checked by AI. No native speaker has read it yet.</Muted>
     </Screen>
   );
 }

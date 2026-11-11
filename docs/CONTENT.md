@@ -18,15 +18,19 @@ IDs must be unique across the course: `w_<word>` for words, `s_<lesson>_<n>` for
 3. `puhe` is the most common spoken form around Helsinki/Turku. Leave it out if identical to the textbook form.
 4. 6–8 new words per lesson; reuse earlier words in sentences.
 
-## Native review checklist
+## Review checklist
+
+No native speaker is available, so this checklist is run by Claude at the end of each content sprint. Read every sentence, note, story line and lexicon explanation in the unit.
 
 - [ ] Finnish is grammatical and natural
 - [ ] English translation is accurate; `altEn` covers obvious alternatives
 - [ ] `puhe` sounds natural (not exaggerated)
 - [ ] Grammar notes are correct and not misleading
+- [ ] No sentence uses an ending before the lesson that introduces it (the first-contact rule); fixed phrases are marked as phrases
+- [ ] Lexicon entries give the right lemma, meaning and stem | ending split
 - [ ] Audio (once generated) is pronounced correctly — flag clips to regenerate
 
-When done, set `"reviewed": true` on the unit and log the issues found in the sprint review.
+When done, set `"reviewed": true` on the unit and log the issues found in the sprint review, by category. `reviewed` means this pass was done; it does not mean a native speaker has read the unit. A native speaker's corrections, if one turns up, come in as ordinary pull requests.
 
 ## Importing open data
 

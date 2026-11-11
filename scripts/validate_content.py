@@ -59,7 +59,7 @@ POS = {"noun", "verb", "adj", "adv", "pron", "num", "question", "particle", "phr
 n_pictures = 0
 for u in units:
     if not u.get("reviewed"):
-        warnings.append(f"{u['id']} '{u['titleEn']}' has not been reviewed by a native speaker yet")
+        warnings.append(f"{u['id']} '{u['titleEn']}' has not had a review pass yet (see docs/CONTENT.md)")
     if u.get("track", "main") not in {"main", "adult"}:
         errors.append(f"{u['id']}: unknown track '{u['track']}'")
     for g in u["grammar"]:
