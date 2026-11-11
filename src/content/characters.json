@@ -12,13 +12,13 @@
     "voice": { "base": "noora", "pitch": "+45Hz", "rate": "+5%", "gender": "f", "webPitch": 1.6, "webRate": 1.05 }
   },
   {
-    "id": "anna",
-    "name": "Anna",
+    "id": "sofia",
+    "name": "Sofia",
     "role": "Vaihto-opiskelija",
     "roleEn": "Exchange student from Valencia",
     "bio": "Six months in Turku, three notebooks full of Finnish, one very confused relationship with the partitive. She is learning exactly what you are learning, so her Finnish is careful, clear and by the book.",
     "likes": "Introductions, university life, getting lost",
-    "hello": "Hei! Minä olen Anna. Puhun vähän suomea.",
+    "hello": "Hei! Minä olen Sofia. Puhun vähän suomea.",
     "color": "#FF3B5C",
     "tag": { "style": "note", "bg": "#FFE066", "fg": "#0B0F1A", "accent": "#FF3B5C", "icon": "pencil" },
     "avatar": { "skin": "#E9B58F", "hair": "#3A2418", "hairStyle": "bob", "shirt": "#FFC629", "outfit": "hoodie", "extras": ["earring"] },
@@ -99,7 +99,7 @@
     "hello": "Moro! Mä oon Jere. Mä soitan kitaraa.",
     "color": "#0B0F1A",
     "tag": { "style": "punk", "bg": "#E0102F", "fg": "#FFFFFF", "accent": "#0B0F1A", "icon": "star" },
-    "avatar": { "skin": "#F3D3BC", "hair": "#17141C", "hairStyle": "long", "shirt": "#17141C", "outfit": "vest", "extras": ["goatee"] },
+    "avatar": { "skin": "#F3D3BC", "hair": "#E9CB6B", "hairStyle": "wolfcut", "shirt": "#17141C", "outfit": "vest", "extras": ["stubble", "earring"] },
     "voice": { "base": "harri", "pitch": "-10Hz", "rate": "+4%", "gender": "m", "webPitch": 0.75, "webRate": 1.04 }
   },
   {
@@ -122,12 +122,12 @@
     "name": "Leo",
     "role": "Baarimikko",
     "roleEn": "Bartender",
-    "bio": "Runs the bar at Aurakatu like a ship's captain. Trans, twenty-seven, more piercings than regrets. Remembers every regular's drink, flirts in three languages, and will cut you off with a smile.",
+    "bio": "Runs the bar at Aurakatu like a ship's captain. Trans, twenty-seven, two lip rings and a raised eyebrow that has ended arguments. Remembers every regular's drink, flirts in three languages, and will cut you off with a smile.",
     "likes": "Bars, flirting, dating, good stories",
     "hello": "Moi! Mä oon Leo. Mitä saisi olla?",
     "color": "#FF4FA3",
     "tag": { "style": "neon", "bg": "#141D38", "fg": "#FF8FC7", "accent": "#FF4FA3", "icon": "flash" },
-    "avatar": { "skin": "#E2B594", "hair": "#F2E9DC", "hairStyle": "undercut", "shirt": "#141D38", "outfit": "tee", "extras": ["piercings", "stubble", "chain"] },
+    "avatar": { "skin": "#F6DCC8", "hair": "#B8924A", "hairStyle": "swept", "shirt": "#141D38", "outfit": "tee", "extras": ["liprings", "browring", "chain"] },
     "voice": { "base": "harri", "pitch": "+8Hz", "rate": "+6%", "gender": "m", "webPitch": 0.95, "webRate": 1.06 }
   }
 ]

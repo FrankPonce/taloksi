@@ -21,14 +21,14 @@
         { "id": "w_nakemiin", "fi": "näkemiin", "en": "goodbye", "altEn": ["bye"], "pos": "phrase", "icon": "door-open" }
       ],
       "sentences": [
-        { "id": "s_u1l1_1", "fi": "Hei, minä olen Anna.", "en": "Hi, I am Anna.", "altEn": ["Hello, I am Anna."], "altFi": ["Hei, olen Anna."], "puhe": "Moi, mä oon Anna.", "speaker": "anna" },
-        { "id": "s_u1l1_2", "fi": "Huomenta, Pekka!", "en": "Good morning, Pekka!", "speaker": "anna" },
-        { "id": "s_u1l1_3", "fi": "Hei hei, Anna!", "en": "Bye, Anna!", "altEn": ["Bye bye, Anna!", "Goodbye, Anna!"], "puhe": "Moi moi, Anna!", "speaker": "pekka" },
+        { "id": "s_u1l1_1", "fi": "Hei, minä olen Sofia.", "en": "Hi, I am Sofia.", "altEn": ["Hello, I am Sofia."], "altFi": ["Hei, olen Sofia."], "puhe": "Moi, mä oon Sofia.", "speaker": "sofia" },
+        { "id": "s_u1l1_2", "fi": "Huomenta, Pekka!", "en": "Good morning, Pekka!", "speaker": "sofia" },
+        { "id": "s_u1l1_3", "fi": "Hei hei, Sofia!", "en": "Bye, Sofia!", "altEn": ["Bye bye, Sofia!", "Goodbye, Sofia!"], "puhe": "Moi moi, Sofia!", "speaker": "pekka" },
         { "id": "s_u1l1_4", "fi": "Minä olen Pekka.", "en": "I am Pekka.", "altFi": ["Olen Pekka."], "puhe": "Mä oon Pekka.", "speaker": "pekka" },
-        { "id": "s_u1l1_5", "fi": "Hei, sinä olet Anna.", "en": "Hi, you are Anna.", "altEn": ["Hello, you are Anna."], "puhe": "Moi, sä oot Anna.", "speaker": "pekka" }
+        { "id": "s_u1l1_5", "fi": "Hei, sinä olet Sofia.", "en": "Hi, you are Sofia.", "altEn": ["Hello, you are Sofia."], "puhe": "Moi, sä oot Sofia.", "speaker": "pekka" }
       ],
       "fill": [
-        { "id": "f_u1l1_1", "before": "Minä", "after": "Anna.", "answer": "olen", "options": ["olen", "olet", "on"], "en": "I am Anna." }
+        { "id": "f_u1l1_1", "before": "Minä", "after": "Sofia.", "answer": "olen", "options": ["olen", "olet", "on"], "en": "I am Sofia." }
       ]
     },
     {
@@ -44,9 +44,9 @@
         { "id": "w_huonoa", "fi": "huonoa", "en": "bad", "altEn": ["not good"], "pos": "adj", "icon": "thumb-down" }
       ],
       "sentences": [
-        { "id": "s_u1l2_1", "fi": "Hei, mitä kuuluu?", "en": "Hi, how are you?", "altEn": ["Hello, how are you?"], "puhe": "Moi, mitä kuuluu?", "speaker": "anna" },
+        { "id": "s_u1l2_1", "fi": "Hei, mitä kuuluu?", "en": "Hi, how are you?", "altEn": ["Hello, how are you?"], "puhe": "Moi, mitä kuuluu?", "speaker": "sofia" },
         { "id": "s_u1l2_2", "fi": "Kiitos, hyvää.", "en": "Fine, thanks.", "altEn": ["Good, thanks.", "Thanks, good.", "Fine, thank you.", "Good, thank you.", "Thank you, fine.", "Thank you, good."], "speaker": "samir" },
-        { "id": "s_u1l2_3", "fi": "Entä sinulle?", "en": "And you?", "altEn": ["What about you?", "How about you?"], "puhe": "Entä sulle?", "speaker": "anna" },
+        { "id": "s_u1l2_3", "fi": "Entä sinulle?", "en": "And you?", "altEn": ["What about you?", "How about you?"], "puhe": "Entä sulle?", "speaker": "sofia" },
         { "id": "s_u1l2_4", "fi": "Ihan hyvää, kiitos.", "en": "Pretty good, thanks.", "altEn": ["Pretty good, thank you.", "Quite good, thanks.", "Fine, thanks."], "speaker": "helvi" },
         { "id": "s_u1l2_5", "fi": "Minulle kuuluu hyvää.", "en": "I am doing well.", "altEn": ["I am doing fine.", "I am fine.", "I am well."], "puhe": "Mulle kuuluu hyvää.", "speaker": "mikko" }
       ],
@@ -71,14 +71,14 @@
       ],
       "sentences": [
         { "id": "s_u1l3_1", "fi": "Kuka sinä olet?", "en": "Who are you?", "altFi": ["Kuka olet?"], "puhe": "Kuka sä oot?", "speaker": "helvi" },
-        { "id": "s_u1l3_2", "fi": "Minun nimeni on Anna.", "en": "My name is Anna.", "altFi": ["Nimeni on Anna."], "puhe": "Mun nimi on Anna.", "speaker": "anna" },
+        { "id": "s_u1l3_2", "fi": "Minun nimeni on Sofia.", "en": "My name is Sofia.", "altFi": ["Nimeni on Sofia."], "puhe": "Mun nimi on Sofia.", "speaker": "sofia" },
         { "id": "s_u1l3_3", "fi": "Mikä sinun nimesi on?", "en": "What is your name?", "altFi": ["Mikä nimesi on?"], "puhe": "Mikä sun nimi on?", "speaker": "mikko" },
         { "id": "s_u1l3_4", "fi": "Hän on Pekka.", "en": "He is Pekka.", "puhe": "Se on Pekka.", "speaker": "samir" },
-        { "id": "s_u1l3_5", "fi": "Me olemme ystäviä.", "en": "We are friends.", "altFi": ["Olemme ystäviä."], "puhe": "Me ollaan kavereita.", "speaker": "anna" },
-        { "id": "s_u1l3_6", "fi": "He ovat opiskelijoita.", "en": "They are students.", "puhe": "Ne on opiskelijoita.", "speaker": "anna" }
+        { "id": "s_u1l3_5", "fi": "Me olemme ystäviä.", "en": "We are friends.", "altFi": ["Olemme ystäviä."], "puhe": "Me ollaan kavereita.", "speaker": "sofia" },
+        { "id": "s_u1l3_6", "fi": "He ovat opiskelijoita.", "en": "They are students.", "puhe": "Ne on opiskelijoita.", "speaker": "sofia" }
       ],
       "fill": [
-        { "id": "f_u1l3_1", "before": "Sinä", "after": "Anna.", "answer": "olet", "options": ["olen", "olet", "ovat"], "en": "You are Anna." },
+        { "id": "f_u1l3_1", "before": "Sinä", "after": "Sofia.", "answer": "olet", "options": ["olen", "olet", "ovat"], "en": "You are Sofia." },
         { "id": "f_u1l3_2", "before": "He", "after": "opiskelijoita.", "answer": "ovat", "options": ["on", "ovat", "olemme"], "en": "They are students." }
       ]
     },
@@ -96,9 +96,9 @@
         { "id": "w_joo", "fi": "joo", "en": "yeah", "altEn": ["yes"], "pos": "particle", "icon": "check" }
       ],
       "sentences": [
-        { "id": "s_u1l4_1", "fi": "Anteeksi, en ymmärrä.", "en": "Sorry, I don't understand.", "altEn": ["Excuse me, I don't understand."], "puhe": "Sori, mä en ymmärrä.", "speaker": "anna" },
-        { "id": "s_u1l4_2", "fi": "Kiitos paljon, Anna!", "en": "Thank you very much, Anna!", "altEn": ["Thanks a lot, Anna!", "Thank you so much, Anna!"], "speaker": "pekka" },
-        { "id": "s_u1l4_3", "fi": "Puhutko englantia?", "en": "Do you speak English?", "puhe": "Puhuks sä englantia?", "speaker": "anna" },
+        { "id": "s_u1l4_1", "fi": "Anteeksi, en ymmärrä.", "en": "Sorry, I don't understand.", "altEn": ["Excuse me, I don't understand."], "puhe": "Sori, mä en ymmärrä.", "speaker": "sofia" },
+        { "id": "s_u1l4_2", "fi": "Kiitos paljon, Sofia!", "en": "Thank you very much, Sofia!", "altEn": ["Thanks a lot, Sofia!", "Thank you so much, Sofia!"], "speaker": "pekka" },
+        { "id": "s_u1l4_3", "fi": "Puhutko englantia?", "en": "Do you speak English?", "puhe": "Puhuks sä englantia?", "speaker": "sofia" },
         { "id": "s_u1l4_4", "fi": "Kyllä, puhun.", "en": "Yes, I do.", "altEn": ["Yes, I speak.", "Yes, I speak it."], "puhe": "Joo, puhun.", "speaker": "pekka" },
         { "id": "s_u1l4_5", "fi": "Ei, en puhu.", "en": "No, I don't.", "altEn": ["No, I don't speak.", "No, I don't speak it."], "speaker": "pekka" },
         { "id": "s_u1l4_6", "fi": "Voitko puhua hitaammin?", "en": "Can you speak more slowly?", "altEn": ["Could you speak more slowly?", "Can you speak slower?"], "puhe": "Voitsä puhuu hitaammin?", "speaker": "helvi" }
@@ -130,7 +130,7 @@
       "blocks": [
         { "type": "p", "text": "Olla (to be) is irregular in the 3rd person, but the endings -n, -t, -mme, -tte are the same for almost every verb." },
         { "type": "table", "head": ["Kirjakieli", "Puhekieli", "English"], "rows": [["minä olen", "mä oon", "I am"], ["sinä olet", "sä oot", "you are"], ["hän on", "se on", "he/she is"], ["me olemme", "me ollaan", "we are"], ["te olette", "te ootte", "you (pl.) are"], ["he ovat", "ne on", "they are"]] },
-        { "type": "tip", "text": "In standard Finnish you can drop minä/sinä/me/te because the ending already shows the person: 'Olen Anna.' In spoken Finnish people usually keep the pronoun: 'Mä oon Anna.'" },
+        { "type": "tip", "text": "In standard Finnish you can drop minä/sinä/me/te because the ending already shows the person: 'Olen Sofia.' In spoken Finnish people usually keep the pronoun: 'Mä oon Sofia.'" },
         { "type": "example", "fi": "Olen opiskelija.", "en": "I am a student.", "puhe": "Mä oon opiskelija." }
       ]
     },

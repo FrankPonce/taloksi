@@ -3,6 +3,7 @@ import unit2 from './units/unit2.json';
 import unit3 from './units/unit3.json';
 import unit4 from './units/unit4.json';
 import unitx1 from './units/unitx1.json';
+import unitx2 from './units/unitx2.json';
 import storiesJson from './stories.json';
 import gymJson from './gym.json';
 import charactersJson from './characters.json';
@@ -11,11 +12,14 @@ import guideJson from './guide.json';
 import cultureJson from './culture.json';
 import lexiconJson from './lexicon.json';
 import setsJson from './sets.json';
-import type { Character, CultureNote, GrammarNote, GuideTip, Item, Lesson, Link, Noun, Stage, Story, Token, Unit, Verb } from './types';
+import dialoguesJson from './dialogues.json';
+import lifeJson from './life.json';
+import writingJson from './writing.json';
+import type { Character, CultureNote, Dialogue, GrammarNote, GuideTip, Item, Lesson, Link, Noun, Stage, Story, Token, Unit, Verb, WritingPrompt } from './types';
 
 export * from './types';
 
-export const UNITS = [unit1, unit2, unit3, unit4, unitx1] as unknown as Unit[];
+export const UNITS = [unit1, unit2, unit3, unit4, unitx1, unitx2] as unknown as Unit[];
 export const MAIN_UNITS = UNITS.filter((u) => (u.track ?? 'main') === 'main');
 export const visibleUnits = (adult: boolean) => UNITS.filter((u) => adult || u.track !== 'adult');
 
@@ -28,6 +32,11 @@ export const CURRICULUM_NOTE = curriculumJson.note;
 export const CURRICULUM_SOURCES = curriculumJson.sources as Link[];
 export const GUIDE = guideJson as unknown as GuideTip[];
 export const CULTURE = cultureJson as unknown as CultureNote[];
+export const LIFE = lifeJson as unknown as CultureNote[];
+export const DIALOGUES = dialoguesJson as unknown as Dialogue[];
+export const WRITING = writingJson as unknown as WritingPrompt[];
+export const dialogueFor = (lessonId: string) => DIALOGUES.find((d) => d.lesson === lessonId);
+export const getWriting = (id: string) => WRITING.find((w) => w.id === id);
 export const CATEGORIES = setsJson.categories as { id: string; label: string; words: string[] }[];
 export const MINIMAL_PAIRS = setsJson.minimalPairs as { id: string; words: { fi: string; en: string }[]; note: string }[];
 
@@ -60,7 +69,7 @@ export const getStory = (id: string) => STORIES.find((s) => s.id === id);
 export const getUnit = (id: string) => UNITS.find((u) => u.id === id);
 export const getCharacter = (id?: string) => (id ? CHARACTERS.find((c) => c.id === id) : undefined);
 export const getTip = (id: string) => GUIDE.find((t) => t.id === id);
-export const getCulture = (id: string) => CULTURE.find((c) => c.id === id);
+export const getCulture = (id: string) => [...CULTURE, ...LIFE].find((c) => c.id === id);
 export const cultureFor = (unitId: string) => CULTURE.filter((c) => c.unit === unitId);
 
 /** Lessons unlock one after another within their own track; each track's first lesson is open. */

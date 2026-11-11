@@ -32,6 +32,8 @@ type Data = {
   lessons: Record<string, LessonRecord>;
   srs: Record<string, Card>;
   storiesDone: string[];
+  /** best score (0–5) per writing task */
+  writing: Record<string, number>;
   achievements: string[];
   /** achievements unlocked but not yet shown to the user */
   newAchievements: string[];
@@ -48,6 +50,7 @@ type Actions = {
   completeLesson: (lessonId: string, itemIds: string[], accuracy: number, xp: number) => void;
   review: (itemId: string, grade: Grade) => void;
   completeStory: (id: string, xp: number) => void;
+  completeWriting: (id: string, score: number) => void;
   gymAnswer: (correct: boolean) => void;
   setSetting: <K extends keyof Settings>(k: K, v: Settings[K]) => void;
   clearNewAchievements: () => void;
@@ -64,6 +67,7 @@ const initial = (): Data => ({
   lessons: {},
   srs: {},
   storiesDone: [],
+  writing: {},
   achievements: [],
   newAchievements: [],
   stats: { correct: 0, answered: 0, reviews: 0, gymCorrect: 0 },
@@ -169,6 +173,14 @@ export const useApp = create<AppState>()(
           get().earnXp(xp);
         },
 
+        completeWriting: (id, score) => {
+          const s = get();
+          const best = s.writing[id];
+          set({ writing: { ...s.writing, [id]: Math.max(best ?? 0, score) } });
+          // XP for the first attempt and for each time the best score improves
+          if (best === undefined || score > best) get().earnXp(5 + score);
+        },
+
         gymAnswer: (correct) => {
           const st = get().stats;
           set({ stats: { ...st, gymCorrect: st.gymCorrect + (correct ? 1 : 0) } });
@@ -191,7 +203,7 @@ export const useApp = create<AppState>()(
       },
       storage: createJSONStorage(() => AsyncStorage),
       partialize: (s) => {
-        const { earnXp, loseHeart, gainHeart, syncHearts, recordAnswer, completeLesson, review, completeStory, gymAnswer, setSetting, clearNewAchievements, resetProgress, ...data } = s;
+        const { earnXp, loseHeart, gainHeart, syncHearts, recordAnswer, completeLesson, review, completeStory, completeWriting, gymAnswer, setSetting, clearNewAchievements, resetProgress, ...data } = s;
         return data;
       },
     }

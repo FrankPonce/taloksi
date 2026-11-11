@@ -1,0 +1,90 @@
+{
+  "id": "x2",
+  "title": "Bileet ja tunteet",
+  "titleEn": "Parties and feelings",
+  "color": "#FF4FA3",
+  "host": "niko",
+  "scene": "bar",
+  "track": "adult",
+  "reviewed": false,
+  "lessons": [
+    {
+      "id": "x2l1",
+      "title": "Bileissä",
+      "titleEn": "At the party",
+      "grammar": "g_plural_places",
+      "words": [
+        { "id": "w_bileet", "fi": "bileet", "en": "party", "note": "Always plural, like 'treffit'. The formal word is 'juhlat'.", "pos": "noun", "icon": "balloon" },
+        { "id": "w_musiikki", "fi": "musiikki", "en": "music", "pos": "noun", "icon": "music" },
+        { "id": "w_tanssia", "fi": "tanssia", "en": "to dance", "pos": "verb", "icon": "human-female-dance" },
+        { "id": "w_jatkot", "fi": "jatkot", "en": "afterparty", "note": "From 'jatkaa', to continue. Always plural. Where the night goes when the bar closes.", "pos": "noun", "icon": "home-group" },
+        { "id": "w_kannissa", "fi": "kännissä", "en": "wasted (slang)", "altEn": ["wasted", "drunk"], "note": "The everyday word. 'Humalassa' is the polite one.", "pos": "adj", "icon": "glass-mug-variant" },
+        { "id": "w_vasynyt", "fi": "väsynyt", "en": "tired", "puhe": "väsyny", "pos": "adj", "icon": "sleep" }
+      ],
+      "sentences": [
+        { "id": "s_x2l1_1", "fi": "Tuletko bileisiin?", "en": "Are you coming to the party?", "altEn": ["Will you come to the party?"], "puhe": "Tuuks sä bileisiin?", "speaker": "niko" },
+        { "id": "s_x2l1_2", "fi": "Musiikki on liian kovalla.", "en": "The music is too loud.", "speaker": "helvi" },
+        { "id": "s_x2l1_3", "fi": "Haluatko tanssia?", "en": "Do you want to dance?", "puhe": "Haluuks sä tanssii?", "speaker": "leo" },
+        { "id": "s_x2l1_4", "fi": "Olen ihan kännissä.", "en": "I am totally wasted.", "altEn": ["I am totally drunk.", "I am completely wasted."], "puhe": "Mä oon ihan kännissä.", "speaker": "niko" },
+        { "id": "s_x2l1_5", "fi": "Mennäänkö jatkoille?", "en": "Shall we go to the afterparty?", "altEn": ["Shall we go to an afterparty?"], "puhe": "Mennääks jatkoille?", "speaker": "jere" },
+        { "id": "s_x2l1_6", "fi": "Olen väsynyt, menen kotiin.", "en": "I am tired, I am going home.", "altEn": ["I am tired, I go home.", "I am tired, I will go home."], "puhe": "Mä oon väsyny, mä meen kotiin.", "speaker": "sofia" }
+      ],
+      "fill": [
+        { "id": "f_x2l1_1", "before": "Tuletko", "after": "?", "answer": "bileisiin", "options": ["bileet", "bileissä", "bileisiin"], "en": "Are you coming to the party?", "hint": "Mihin? Into the party. Plural illative: bile + i + siin." },
+        { "id": "f_x2l1_2", "before": "Mennäänkö", "after": "?", "answer": "jatkoille", "options": ["jatkot", "jatkoilla", "jatkoille"], "en": "Shall we go to the afterparty?", "hint": "You go 'onto' an afterparty: -lle. Jatko + i + lle." }
+      ]
+    },
+    {
+      "id": "x2l2",
+      "title": "Tunteet ja riidat",
+      "titleEn": "Feelings and fights",
+      "grammar": "g_feelings",
+      "words": [
+        { "id": "w_tunne", "fi": "tunne", "en": "feeling", "pos": "noun", "icon": "heart-pulse" },
+        { "id": "w_vihainen", "fi": "vihainen", "en": "angry", "puhe": "vihanen", "pos": "adj", "icon": "emoticon-angry" },
+        { "id": "w_mustasukkainen", "fi": "mustasukkainen", "en": "jealous", "note": "Literally 'black-socked'. Nobody is sure why.", "pos": "adj", "icon": "eye" },
+        { "id": "w_ikava", "fi": "ikävä", "en": "longing", "altEn": ["missing someone"], "note": "'Minulla on ikävä sinua' = I miss you. As an adjective, 'ikävä' also means unpleasant.", "pos": "noun", "icon": "heart-broken" },
+        { "id": "w_exa", "fi": "exä", "en": "ex", "pos": "noun", "icon": "account-cancel" },
+        { "id": "w_ero", "fi": "ero", "en": "breakup", "altEn": ["divorce", "difference"], "pos": "noun", "icon": "heart-off" },
+        { "id": "w_sori", "fi": "sori", "en": "sorry (casual)", "altEn": ["sorry"], "pos": "phrase", "icon": "hand-peace" }
+      ],
+      "sentences": [
+        { "id": "s_x2l2_1", "fi": "Olen vihainen sinulle.", "en": "I am angry at you.", "altEn": ["I am angry with you.", "I am mad at you."], "puhe": "Mä oon vihanen sulle.", "speaker": "leo" },
+        { "id": "s_x2l2_2", "fi": "Minulla on ikävä sinua.", "en": "I miss you.", "puhe": "Mulla on ikävä sua.", "speaker": "niko" },
+        { "id": "s_x2l2_3", "fi": "Oletko mustasukkainen?", "en": "Are you jealous?", "puhe": "Ootsä mustasukkanen?", "speaker": "leo" },
+        { "id": "s_x2l2_4", "fi": "Hän on minun exäni.", "en": "He is my ex.", "altEn": ["She is my ex."], "puhe": "Se on mun exä.", "speaker": "aino" },
+        { "id": "s_x2l2_5", "fi": "Sinä olet idiootti.", "en": "You are an idiot.", "puhe": "Sä oot idiootti.", "speaker": "aino" },
+        { "id": "s_x2l2_6", "fi": "Sori, olen idiootti.", "en": "Sorry, I am an idiot.", "puhe": "Sori, mä oon idiootti.", "speaker": "niko" }
+      ],
+      "fill": [
+        { "id": "f_x2l2_1", "before": "Minulla on ikävä", "after": ".", "answer": "sinua", "options": ["sinä", "sinua", "sinulle"], "en": "I miss you.", "hint": "ikävä takes the partitive: ikävä sinua, ikävä Suomea." },
+        { "id": "f_x2l2_2", "before": "Olen vihainen", "after": ".", "answer": "sinulle", "options": ["sinua", "sinulle", "sinusta"], "en": "I am angry at you.", "hint": "Angry at someone: -lle. Vihainen sinulle." }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_plural_places",
+      "title": "Bileisiin, bileissä, bileistä",
+      "titleEn": "Events that are always plural",
+      "blocks": [
+        { "type": "p", "text": "Many Finnish words for events exist only in the plural: bileet (party), juhlat (celebration), treffit (date), jatkot (afterparty), häät (wedding), hautajaiset (funeral). To say you are going to one, you need the plural location endings." },
+        { "type": "table", "head": ["Question", "Ending", "Example"], "rows": [["Mihin? (to)", "-isiin / -ille", "Menen bileisiin."], ["Missä? (at)", "-issä / -illa", "Olen bileissä."], ["Mistä? (from)", "-istä / -ilta", "Tulen bileistä."]] },
+        { "type": "tip", "text": "The plural marker is -i-, squeezed between the stem and the ending: bile + i + ssä. Treffit and jatkot use the 'on' set instead: treffeillä, jatkoilla." },
+        { "type": "example", "fi": "Tuletko bileisiin?", "en": "Are you coming to the party?", "puhe": "Tuuks sä bileisiin?" },
+        { "type": "example", "fi": "Mennäänkö jatkoille?", "en": "Shall we go to the afterparty?", "puhe": "Mennääks jatkoille?" }
+      ]
+    },
+    {
+      "id": "g_feelings",
+      "title": "Minulla on ikävä",
+      "titleEn": "Feelings you 'have'",
+      "blocks": [
+        { "type": "p", "text": "English says 'I am hungry' and 'I miss you'. Finnish often says you have the feeling, using the same 'minulla on' you know from owning things." },
+        { "type": "table", "head": ["Finnish", "Literally", "Meaning"], "rows": [["Minulla on nälkä.", "I have hunger", "I am hungry."], ["Minulla on jano.", "I have thirst", "I am thirsty."], ["Minulla on kylmä.", "I have cold", "I am cold."], ["Minulla on ikävä sinua.", "I have a longing for you", "I miss you."], ["Minulla on krapula.", "I have a hangover", "I am hungover."]] },
+        { "type": "example", "fi": "Minulla on ikävä sinua.", "en": "I miss you.", "puhe": "Mulla on ikävä sua." },
+        { "type": "tip", "text": "Being angry, tired or jealous works like English, with olla plus an adjective: Olen vihainen, olen väsynyt, olen mustasukkainen." }
+      ]
+    }
+  ]
+}

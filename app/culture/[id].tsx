@@ -23,7 +23,7 @@ export default function CultureScreen() {
     <Screen>
       <BackButton icon="arrow-back" />
       <View style={{ flexDirection: 'row', gap: 8 }}>
-        <Tag label="Kulttuuri // Culture" color={colors.red} />
+        <Tag label={note.kind === 'life' ? 'Elämä Suomessa // Life in Finland' : 'Kulttuuri // Culture'} color={note.kind === 'life' ? colors.orange : colors.red} />
         {note.adult && <Tag label="18+" color={colors.berry} tilt={3} />}
       </View>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>

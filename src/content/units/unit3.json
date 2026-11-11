@@ -27,7 +27,7 @@
         { "id": "s_u3l1_2", "fi": "Ruisleipä on hyvää.", "en": "Rye bread is good.", "altEn": ["The rye bread is good.", "Rye bread is tasty."], "speaker": "helvi" },
         { "id": "s_u3l1_3", "fi": "Haluan omenan.", "en": "I want an apple.", "altEn": ["I would like an apple."], "puhe": "Mä haluun omenan.", "speaker": "helvi" },
         { "id": "s_u3l1_4", "fi": "Syötkö kalaa?", "en": "Do you eat fish?", "puhe": "Syöks sä kalaa?", "speaker": "samir" },
-        { "id": "s_u3l1_5", "fi": "En syö lihaa.", "en": "I don't eat meat.", "puhe": "Mä en syö lihaa.", "speaker": "anna" }
+        { "id": "s_u3l1_5", "fi": "En syö lihaa.", "en": "I don't eat meat.", "puhe": "Mä en syö lihaa.", "speaker": "sofia" }
       ],
       "fill": [
         { "id": "f_u3l1_1", "before": "Syön", "after": ".", "answer": "leipää", "options": ["leipä", "leipää", "leivän"], "en": "I eat (some) bread.", "hint": "Uncountable food → partitive." },
@@ -52,7 +52,7 @@
         { "id": "s_u3l2_1", "fi": "Juon kahvia joka aamu.", "en": "I drink coffee every morning.", "puhe": "Mä juon kahvii joka aamu.", "speaker": "aino" },
         { "id": "s_u3l2_2", "fi": "Haluatko teetä vai kahvia?", "en": "Do you want tea or coffee?", "altEn": ["Would you like tea or coffee?"], "puhe": "Haluuks sä teetä vai kahvii?", "speaker": "aino" },
         { "id": "s_u3l2_3", "fi": "Lasi vettä, kiitos.", "en": "A glass of water, please.", "altEn": ["A glass of water, thanks.", "Glass of water, please."], "speaker": "samir" },
-        { "id": "s_u3l2_4", "fi": "Suomalaiset juovat paljon kahvia.", "en": "Finns drink a lot of coffee.", "altEn": ["Finnish people drink a lot of coffee.", "Finns drink lots of coffee."], "puhe": "Suomalaiset juo tosi paljon kahvii.", "speaker": "helvi" },
+        { "id": "s_u3l2_4", "fi": "Suomalaiset juovat paljon kahvia.", "en": "Finns drink a lot of coffee.", "altEn": ["Finnish people drink a lot of coffee.", "Finns drink lots of coffee."], "puhe": "Suomalaiset juo tosi paljon kahvii.", "fact": "Finland is regularly at or near the top of the world for coffee drunk per person.", "speaker": "helvi" },
         { "id": "s_u3l2_5", "fi": "Maito on kylmää.", "en": "The milk is cold.", "altEn": ["Milk is cold."], "speaker": "helvi" }
       ],
       "fill": [

@@ -27,7 +27,7 @@
         { "id": "s_u4l1_2", "fi": "Missä on apteekki?", "en": "Where is the pharmacy?", "altEn": ["Where is a pharmacy?"], "speaker": "mikko" },
         { "id": "s_u4l1_3", "fi": "Tori on keskustassa.", "en": "The market square is in the city center.", "altEn": ["The market square is downtown.", "The market square is in the city centre.", "The market is in the city center.", "The market is downtown."], "speaker": "pekka" },
         { "id": "s_u4l1_4", "fi": "Asema on tuolla.", "en": "The station is over there.", "altEn": ["The station is there."], "puhe": "Asema on tuol.", "speaker": "mikko" },
-        { "id": "s_u4l1_5", "fi": "Ravintola on kiinni.", "en": "The restaurant is closed.", "speaker": "anna" }
+        { "id": "s_u4l1_5", "fi": "Ravintola on kiinni.", "en": "The restaurant is closed.", "speaker": "sofia" }
       ],
       "fill": [
         { "id": "f_u4l1_1", "before": "Tori on", "after": ".", "answer": "keskustassa", "options": ["keskusta", "keskustassa", "keskustaan"], "en": "The market square is in the city center." }
@@ -76,7 +76,7 @@
         { "id": "s_u4l3_2", "fi": "Mennään kotiin!", "en": "Let's go home!", "altEn": ["Let us go home!"], "speaker": "pekka" },
         { "id": "s_u4l3_3", "fi": "Tuletko huomenna kirjastoon?", "en": "Are you coming to the library tomorrow?", "altEn": ["Will you come to the library tomorrow?"], "puhe": "Tuuks sä huomenna kirjastoon?", "speaker": "helvi" },
         { "id": "s_u4l3_4", "fi": "Hän menee töihin.", "en": "He goes to work.", "altEn": ["She goes to work.", "He is going to work.", "She is going to work."], "puhe": "Se menee töihin.", "speaker": "samir" },
-        { "id": "s_u4l3_5", "fi": "Me menemme Helsinkiin tänään.", "en": "We are going to Helsinki today.", "altFi": ["Menemme Helsinkiin tänään."], "altEn": ["We go to Helsinki today.", "Today we are going to Helsinki."], "puhe": "Me mennään Helsinkiin tänään.", "speaker": "anna" }
+        { "id": "s_u4l3_5", "fi": "Me menemme Helsinkiin tänään.", "en": "We are going to Helsinki today.", "altFi": ["Menemme Helsinkiin tänään."], "altEn": ["We go to Helsinki today.", "Today we are going to Helsinki."], "puhe": "Me mennään Helsinkiin tänään.", "speaker": "sofia" }
       ],
       "fill": [
         { "id": "f_u4l3_1", "before": "Menen", "after": ".", "answer": "kauppaan", "options": ["kauppa", "kaupassa", "kauppaan"], "en": "I am going to the store." }

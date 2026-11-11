@@ -1,0 +1,59 @@
+[
+  {
+    "id": "wr_intro",
+    "level": "A1.1",
+    "after": "u1l3",
+    "title": "Esittele itsesi",
+    "titleEn": "Introduce yourself",
+    "task": "Write a short introduction. Say your name, your age, where you are from, what you do, a hobby and your favourite colour.",
+    "minWords": 15,
+    "points": [
+      { "id": "name", "label": "Your name", "hint": "Minä olen… / Minun nimeni on…", "any": ["olen", "nimeni", "nimi on"] },
+      { "id": "age", "label": "Your age", "hint": "Olen 24 vuotta vanha. / Olen 24-vuotias.", "any": ["vuotta", "vuotias"] },
+      { "id": "origin", "label": "Where you are from", "hint": "Olen kotoisin Espanjasta.", "any": ["kotoisin", "olen .*sta\\b", "olen .*stä\\b", "olen .*lta\\b"] },
+      { "id": "job", "label": "What you do", "hint": "Olen opiskelija. / Olen töissä kahvilassa.", "any": ["opiskel", "töissä", "työskentel", "olen .*ja\\b", "ammat"] },
+      { "id": "hobby", "label": "A hobby", "hint": "Harrastan uintia. / Tykkään lukea.", "any": ["harrast", "tykkään", "pidän", "vapaa-aja"] },
+      { "id": "colour", "label": "Your favourite colour", "hint": "Lempivärini on sininen.", "any": ["lempivär", "sininen", "punainen", "vihreä", "keltainen", "musta", "valkoinen", "violetti", "oranssi", "pinkki", "harmaa", "ruskea"] }
+    ],
+    "model": "Hei! Minä olen Sofia. Olen 24 vuotta vanha. Olen kotoisin Espanjasta, mutta asun nyt Turussa. Olen opiskelija. Harrastan valokuvausta ja tykkään lukea. Lempivärini on sininen.",
+    "modelEn": "Hi! I am Sofia. I am 24 years old. I am from Spain, but I live in Turku now. I am a student. My hobby is photography and I like to read. My favourite colour is blue."
+  },
+  {
+    "id": "wr_cafe",
+    "level": "A1.1",
+    "after": "u3l4",
+    "title": "Kahvilassa",
+    "titleEn": "At the café",
+    "task": "You are at a café. Write what you say to the barista: greet them, order a drink and something to eat, say whether it is for here or to go, ask the price, and say thank you.",
+    "minWords": 12,
+    "points": [
+      { "id": "greet", "label": "A greeting", "hint": "Hei! / Moi!", "any": ["hei", "moi", "huomenta", "päivää", "terve"] },
+      { "id": "drink", "label": "A drink", "hint": "Haluaisin kupin kahvia.", "any": ["kahvi", "tee", "teetä", "mehu", "vettä", "kaakao", "maito"] },
+      { "id": "food", "label": "Something to eat", "hint": "Otan korvapuustin.", "any": ["korvapuust", "pulla", "leip", "kakku", "munkki", "sämpyl"] },
+      { "id": "polite", "label": "A polite order", "hint": "Haluaisin… / Otan… / Saisinko…", "any": ["haluaisin", "otan", "ottaisin", "saisinko", "saanko"] },
+      { "id": "where", "label": "For here or to go", "hint": "Täällä, kiitos. / Mukaan, kiitos.", "any": ["täällä", "mukaan"] },
+      { "id": "price", "label": "Asking the price", "hint": "Paljonko se maksaa?", "any": ["paljonko", "maksaa", "hinta"] },
+      { "id": "thanks", "label": "Thank you", "hint": "Kiitos!", "any": ["kiitos", "kiitti"] }
+    ],
+    "model": "Hei! Haluaisin kupin kahvia ja yhden korvapuustin. Täällä, kiitos. Paljonko se maksaa? Voinko maksaa kortilla? Kiitos, hei hei!",
+    "modelEn": "Hi! I would like a cup of coffee and one cinnamon roll. For here, please. How much is it? Can I pay by card? Thanks, bye!"
+  },
+  {
+    "id": "wr_city",
+    "level": "A1.1",
+    "after": "u4l4",
+    "title": "Minun kaupunkini",
+    "titleEn": "My city",
+    "task": "Describe where you live. Name the city, say what it is like, mention two places in it and where they are, and say how you get around.",
+    "minWords": 15,
+    "points": [
+      { "id": "city", "label": "The city you live in", "hint": "Asun Turussa.", "any": ["asun", "asumme"] },
+      { "id": "adj", "label": "What it is like", "hint": "Turku on kaunis kaupunki.", "any": ["kaunis", "iso", "pieni", "vanha", "uusi", "kiva", "hieno", "rauhallinen", "kallis", "halpa"] },
+      { "id": "place", "label": "Places in the city", "hint": "Kirjasto on keskustassa.", "any": ["kirjasto", "tori", "asema", "kauppa", "ravintola", "kahvila", "yliopisto", "apteekki", "pankki", "puisto", "joki"] },
+      { "id": "where", "label": "Where something is", "hint": "…on lähellä / keskustassa / vasemmalla.", "any": ["lähellä", "kaukana", "keskustassa", "vieressä", "vasemmalla", "oikealla"] },
+      { "id": "move", "label": "How you get around", "hint": "Menen bussilla yliopistolle.", "any": ["bussilla", "junalla", "pyörällä", "kävelen", "autolla", "menen"] }
+    ],
+    "model": "Asun Turussa. Turku on vanha ja kaunis kaupunki. Kirjasto on keskustassa ja tori on kirjaston vieressä. Yliopisto on lähellä. Menen bussilla yliopistolle.",
+    "modelEn": "I live in Turku. Turku is an old and beautiful city. The library is in the centre and the market square is next to the library. The university is near. I go to the university by bus."
+  }
+]

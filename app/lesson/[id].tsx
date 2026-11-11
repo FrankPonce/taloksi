@@ -172,6 +172,12 @@ export default function LessonScreen() {
             </Text>
           ) : null}
           {result.note ? <Text style={styles.fbText}>{result.note}</Text> : null}
+          {item?.fact ? (
+            <View style={styles.fact}>
+              <Tag label="Tiesitkö? · Did you know" color={colors.ink} size={13} />
+              <Text style={{ fontSize: 15, lineHeight: 21, color: colors.ink }}>{item.fact}</Text>
+            </View>
+          ) : null}
           {item && (
             <Text style={styles.fbText}>
               {item.fi} = {item.en}
@@ -234,5 +240,6 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     transform: [{ rotate: '-1deg' }],
   },
+  fact: { backgroundColor: colors.paper, borderWidth: OUTLINE, borderColor: colors.ink, borderRadius: 6, padding: 10, gap: 6, transform: [{ rotate: '-0.6deg' }] },
   breakBox: { backgroundColor: colors.paper, borderWidth: OUTLINE, borderColor: colors.ink, borderRadius: 6, padding: 10 },
 });

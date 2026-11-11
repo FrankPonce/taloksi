@@ -24,6 +24,8 @@ export type Sentence = {
   note?: string;
   /** id of the character who says this line (see characters.json) */
   speaker?: string;
+  /** set when the sentence states something true about Finland; shown as a "did you know" */
+  fact?: string;
 };
 
 export type FillBlank = {
@@ -131,6 +133,7 @@ export type Item = {
   note?: string;
   pos?: Pos;
   icon?: string;
+  fact?: string;
 };
 
 export type Character = {
@@ -151,7 +154,7 @@ export type Character = {
   avatar?: {
     skin: string;
     hair: string;
-    hairStyle: 'bob' | 'short' | 'pony' | 'bun' | 'cap' | 'curly' | 'long' | 'emo' | 'undercut' | 'beanie';
+    hairStyle: 'bob' | 'short' | 'pony' | 'bun' | 'cap' | 'curly' | 'long' | 'emo' | 'undercut' | 'beanie' | 'wolfcut' | 'swept';
     shirt: string;
     outfit?: 'hoodie' | 'flannel' | 'apron' | 'cardigan' | 'uniform' | 'shirt' | 'vest' | 'jacket' | 'tee';
     extras?: string[];
@@ -192,6 +195,8 @@ export type GuideTip = {
 
 export type CultureNote = {
   id: string;
+  /** 'life' notes are practical guides to living in Finland */
+  kind?: 'life';
   unit?: string;
   adult?: boolean;
   icon: string;
@@ -200,6 +205,34 @@ export type CultureNote = {
   body: string[];
   words: { fi: string; en: string }[];
   source?: Link;
+};
+
+export type DialogueLine = { fi: string; en: string };
+/** A short conversation: the character speaks, the learner builds the reply */
+export type Dialogue = {
+  id: string;
+  /** lesson this conversation is practised in */
+  lesson: string;
+  title: string;
+  titleEn: string;
+  /** character the learner talks to */
+  with: string;
+  turns: { them: DialogueLine; you: DialogueLine }[];
+};
+
+export type WritingPrompt = {
+  id: string;
+  level: string;
+  /** lesson that unlocks it */
+  after: string;
+  title: string;
+  titleEn: string;
+  task: string;
+  minWords: number;
+  /** things the text should contain; `any` holds lower-case patterns that count as covering the point */
+  points: { id: string; label: string; hint: string; any: string[] }[];
+  model: string;
+  modelEn: string;
 };
 
 /** One word of a sentence, taken apart */

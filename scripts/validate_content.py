@@ -11,6 +11,7 @@ from common import (
     load_characters,
     load_culture,
     load_curriculum,
+    load_dialogues,
     load_guide,
     load_gym,
     load_lexicon,
@@ -115,6 +116,15 @@ for key, entry in lexicon.items():
         errors.append(f"lexicon '{key}': needs [lemma, meaning, segments, explanation]")
     elif entry[2].replace("|", "").lower() != key:
         errors.append(f"lexicon '{key}': segments '{entry[2]}' do not spell the word")
+
+for d in load_dialogues():
+    claim(d["id"], "dialogues")
+    if d["lesson"] not in lesson_ids:
+        errors.append(f"{d['id']}: lesson '{d['lesson']}' does not exist")
+    check_speaker(d["id"], d["with"])
+    for turn in d["turns"]:
+        check_breakdown(d["id"], turn["them"]["fi"])
+        check_breakdown(d["id"], turn["you"]["fi"])
 
 gym = load_gym()
 for n in gym["nouns"]:

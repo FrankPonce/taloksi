@@ -1,0 +1,137 @@
+[
+  {
+    "id": "l_first_week",
+    "kind": "life",
+    "icon": "checkbox",
+    "title": "Ensimmäinen viikko",
+    "titleEn": "Your first week: the paperwork order",
+    "body": [
+      "Almost everything in Finland hangs on one number: your personal identity code (henkilötunnus). Get it first. You register at the Digital and Population Data Services Agency (DVV), or it comes with your residence permit.",
+      "Next is a bank account, and with it online banking codes (pankkitunnukset). Those codes are your digital ID. You use them to log in to Kela, the tax office, health services, the pharmacy and even to sign a rental contract.",
+      "Then: a tax card (verokortti) from the Tax Administration if you work, and a Kela card once Kela has decided you are covered by Finnish social security.",
+      "It feels like a lot. Do it in this order and each step unlocks the next."
+    ],
+    "words": [
+      { "fi": "henkilötunnus", "en": "personal identity code" },
+      { "fi": "pankkitunnukset", "en": "online banking codes" },
+      { "fi": "verokortti", "en": "tax card" },
+      { "fi": "oleskelulupa", "en": "residence permit" }
+    ],
+    "source": { "label": "InfoFinland: moving to Finland", "url": "https://www.infofinland.fi/en/moving-to-finland" }
+  },
+  {
+    "id": "l_health",
+    "kind": "life",
+    "icon": "medkit",
+    "title": "Kun olet kipeä",
+    "titleEn": "When you are ill",
+    "body": [
+      "In an emergency call 112. It is the only emergency number, for ambulance, police and fire.",
+      "For anything that is not life-threatening, call the Medical Helpline 116 117 first. A nurse tells you whether to wait, see a doctor tomorrow or go to the emergency room now.",
+      "Everyday care is at your local health station (terveysasema). Students in higher education use the student health service FSHS (YTHS) instead.",
+      "Pharmacies (apteekki) are the only place that sells medicine, including painkillers. Prescriptions are electronic, so you just show ID."
+    ],
+    "words": [
+      { "fi": "hätänumero", "en": "emergency number" },
+      { "fi": "terveysasema", "en": "health station" },
+      { "fi": "päivystys", "en": "emergency room, out-of-hours care" },
+      { "fi": "resepti", "en": "prescription" }
+    ],
+    "source": { "label": "InfoFinland: health services in Finland", "url": "https://www.infofinland.fi/en/health" }
+  },
+  {
+    "id": "l_winter",
+    "kind": "life",
+    "icon": "snow",
+    "title": "Talvi",
+    "titleEn": "Surviving your first winter",
+    "body": [
+      "There is no bad weather, only bad clothing. Dress in layers: a thin wool layer, a warm middle layer, a windproof shell. Wool socks, real winter boots, a hat that covers your ears.",
+      "Wear a reflector (heijastin). In the dark months drivers cannot see you without one, and using one in the dark is required by law. They cost a euro or two and hang from your coat.",
+      "The dark hits harder than the cold. Get outside at midday even when it is grey, take vitamin D like most Finns do, and plan things with people. Kaamos is easier in company.",
+      "Pavements get icy in the freeze-thaw weeks. Walk like a penguin: short steps, flat feet."
+    ],
+    "words": [
+      { "fi": "heijastin", "en": "reflector" },
+      { "fi": "villasukat", "en": "wool socks" },
+      { "fi": "pakkanen", "en": "frost, below-zero weather" },
+      { "fi": "liukas", "en": "slippery" }
+    ]
+  },
+  {
+    "id": "l_housing",
+    "kind": "life",
+    "icon": "key",
+    "title": "Kerrostalossa",
+    "titleEn": "Living in an apartment block",
+    "body": [
+      "Many buildings have a shared sauna. You book a weekly sauna slot (saunavuoro), often on a list by the door, and that hour is yours.",
+      "The laundry room (pesutupa) works the same way: book a time, be on time, clean the lint filter.",
+      "Quiet hours usually run from about ten in the evening to seven in the morning. The house rules (järjestyssäännöt) are posted in the stairwell and people do follow them.",
+      "Sort your waste. Bio, paper, cardboard, glass, metal, plastic and mixed waste each have their own bin in the yard shelter."
+    ],
+    "words": [
+      { "fi": "saunavuoro", "en": "your booked sauna slot" },
+      { "fi": "pesutupa", "en": "shared laundry room" },
+      { "fi": "taloyhtiö", "en": "the housing company that runs the building" },
+      { "fi": "biojäte", "en": "food waste" }
+    ]
+  },
+  {
+    "id": "l_free_things",
+    "kind": "life",
+    "icon": "library",
+    "title": "Ilmaista ja halpaa",
+    "titleEn": "Free and cheap things locals use",
+    "body": [
+      "The library card is free and Finnish libraries are extraordinary. Besides books you can borrow board games, tools, sports gear and sometimes season tickets, and use studios, sewing machines and 3D printers.",
+      "Students get a subsidised lunch at student restaurants: a full hot meal for a few euros.",
+      "Second-hand is normal and good. Look for kirpputori (flea markets) and the Tori.fi marketplace for furniture, bikes and winter clothes.",
+      "Tap water is excellent everywhere. Nobody buys bottled water."
+    ],
+    "words": [
+      { "fi": "kirjastokortti", "en": "library card" },
+      { "fi": "opiskelijalounas", "en": "student lunch" },
+      { "fi": "kirpputori", "en": "flea market" },
+      { "fi": "hanavesi", "en": "tap water" }
+    ]
+  },
+  {
+    "id": "l_transport",
+    "kind": "life",
+    "icon": "bus",
+    "title": "Liikkuminen",
+    "titleEn": "Getting around",
+    "body": [
+      "Every city region has its own transport system and its own app or card: Föli in Turku, HSL in Helsinki, Nysse in Tampere. Buy tickets in the app or tap a bank card on the reader. Paying the driver in cash is rarely possible.",
+      "Wave at the bus. At a stop, raise your hand when your bus approaches or it may drive past.",
+      "Long distance, trains are run by VR and buses by several companies. Book early for the cheap fares.",
+      "Cycling works most of the year. In winter, lights and studded tyres make it normal rather than brave."
+    ],
+    "words": [
+      { "fi": "pysäkki", "en": "stop" },
+      { "fi": "kertalippu", "en": "single ticket" },
+      { "fi": "kausilippu", "en": "season ticket" },
+      { "fi": "vaihto", "en": "transfer, change" }
+    ]
+  },
+  {
+    "id": "l_history",
+    "kind": "life",
+    "icon": "time",
+    "title": "Suomi pähkinänkuoressa",
+    "titleEn": "Finland in a nutshell",
+    "body": [
+      "For about six hundred years Finland was part of Sweden, which is why Swedish is still an official language and why Turku has a second name, Åbo.",
+      "In 1809 it became an autonomous Grand Duchy under the Russian emperor, and Helsinki replaced Turku as the capital in 1812.",
+      "Finland declared independence on 6 December 1917. In 1906 it had already become the first country in Europe to give women the right to vote, and the first in the world to let them stand for parliament.",
+      "The Kalevala, the national epic compiled from folk poetry in the 1800s, helped turn Finnish from a language of farms into a language of literature. It is one reason the language you are learning survived."
+    ],
+    "words": [
+      { "fi": "itsenäisyys", "en": "independence" },
+      { "fi": "pääkaupunki", "en": "capital city" },
+      { "fi": "äänioikeus", "en": "the right to vote" },
+      { "fi": "kansalliseepos", "en": "national epic" }
+    ]
+  }
+]

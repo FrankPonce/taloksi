@@ -1,6 +1,7 @@
 import type { Exercise } from '../../engine/exercises';
 import { Build } from './Build';
 import { Choice } from './Choice';
+import { Convo } from './Convo';
 import { Fill } from './Fill';
 import { Intro } from './Intro';
 import { Listen } from './Listen';
@@ -31,6 +32,8 @@ export function ExerciseView({ ex, locked, onSubmit }: { ex: Exercise; locked: b
       return <TypeAnswer key={ex.key} ex={ex} {...p} />;
     case 'choice':
       return <Choice key={ex.key} ex={ex} {...p} />;
+    case 'convo':
+      return <Convo key={ex.key} ex={ex} {...p} />;
     case 'picture':
       return <Picture key={ex.key} ex={ex} {...p} />;
     case 'strike':

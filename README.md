@@ -27,7 +27,7 @@ Suomeksi teaches the course *and* drills those pain points directly.
 |---|---|---|
 | 🛤️ | Learning path with units, locked progression, crowns | Duolingo |
 | ✨ | New-word intro cards with audio before quizzing | LingoDeer |
-| 🧩 | 12 exercise types: intro, multiple choice, match pairs, word-bank translation (both ways), listen-and-build, typing, fill-in-the-blank, odd one out, ending detective, street Finnish, true or false, long-or-short listening | Duolingo + *originals* |
+| 🧩 | 18 exercise types: intro, multiple choice, picture cards (both ways), match pairs, word-bank translation (both ways), listen-and-build, typing, spelling tiles, fill-in-the-blank, cross out the extra word, multi-turn conversation, odd one out, ending detective, pick the right form, street Finnish, true or false, long-or-short listening | Duolingo, LingoDeer + *originals* |
 | 🔁 | Missed exercises come back at the end of the lesson | Duolingo |
 | ❤️ | Hearts that refill over time (or by reviewing) · XP · daily goal · streaks | Duolingo |
 | 🧠 | Flashcard review scheduled with **FSRS** (the modern Anki algorithm) | LingoDeer / Anki |
@@ -39,7 +39,9 @@ Suomeksi teaches the course *and* drills those pain points directly.
 | ⌨️ | Forgiving answer checker: contractions, typos, missing ä/ö (with a nudge) | — |
 | 🏆 | Achievements, stats, settings, unlimited-hearts and unlock-all modes | Duolingo |
 | 🔊 | Neural voice clips for every item, with device-voice fallback | — |
-| 🎭 | **A cast of seven characters** with cel-shaded portraits and their own voices, from slow textbook Finnish to fast puhekieli | *Suomeksi original* |
+| 🎭 | **A cast of ten characters** (a seal pup, a lumberjack, a metalhead, a grandma…) with expressions, personal name tags and their own voices | *Suomeksi original* |
+| 🎧 | **Four-skills hub**: listening with the text hidden, reading, writing tasks with a score, and shadowing for speaking | *Suomeksi original* |
+| 👆 | Tap or hover any word in a sentence for its meaning | LingQ-style |
 | ✂️ | **Sentence breakdowns**: tap any sentence apart into stems and endings, with an explanation for every word | *Suomeksi original* |
 | 🗺️ | **Journey map** from A1.1 to C2, mapped to YKI levels, with can-do goals and grammar per stage | *Suomeksi original* |
 | 🎓 | **Study guide**: eleven research-backed tips, each with sources | *Suomeksi original* |
@@ -47,7 +49,7 @@ Suomeksi teaches the course *and* drills those pain points directly.
 | 🔞 | **18+ pack** behind a toggle: bar talk, swearing, dating | *Suomeksi original* |
 | 🎨 | **Kaamos Ink** visual style: comic-ink panels, hard shadows, halftone, slanted type | *Suomeksi original* |
 
-**Course content:** 4 A1 units + 1 bonus unit · 19 lessons · 139 words · 102 sentences · 15 grammar notes · 2 stories · 213 lexicon word forms · 12 culture notes · 11 study tips · 14 gym nouns · 12 gym verbs.
+**Course content:** 4 A1 units + 2 units on the 18+ track · 21 lessons · 152 words · 116 sentences · 17 grammar notes · 2 stories · 5 conversations · 3 writing tasks · 232 lexicon word forms · 12 culture notes · 7 life-in-Finland notes · 11 study tips · 14 gym nouns · 12 gym verbs.
 All content is AI-drafted and marked `"reviewed": false` until a native speaker signs it off (see [docs/CONTENT.md](docs/CONTENT.md)).
 
 ## Quick start

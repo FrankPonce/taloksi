@@ -35,7 +35,7 @@ npm install
 npm run web
 ```
 
-**Content:** 4 A1 units plus 1 bonus (18+) unit, 19 lessons, 139 words, 102 sentences, 15 grammar notes, 2 stories, 213 lexicon word forms, 12 culture notes, 11 study tips, 11 journey stages, 7 characters, 381 audio clips.
+**Content:** 4 A1 units plus 2 units on the 18+ track, 21 lessons, 152 words (130 with a picture), 116 sentences, 17 grammar notes, 2 stories, 5 conversations, 3 writing tasks, 232 lexicon word forms, 12 culture notes, 7 life-in-Finland notes, 11 study tips, 11 journey stages, 10 characters, 444 audio clips.
 
 **All content is AI-drafted and unreviewed** (`"reviewed": false` on every unit). That includes the lexicon explanations, culture notes and the 18+ pack. Treat the Finnish as good but unverified. A native-speaker review is Sprint 3.
 
@@ -45,6 +45,19 @@ npm run web
 2. Run it in Expo Go on Android and iOS. The style uses `boxShadow` and `skewX`, which need the new architecture on Android.
 3. Decide the voice licence question (see "Known gaps").
 4. Start Sprint 3: native review.
+
+### Added after the Sprint 2 review (Sprint 3 work in progress)
+
+- **Cast rebuilt.** Ten characters with personalities, outfits, four expressions (happy, excited, puzzled, sad) and a personal name-tag style each: Norppa (white seal pup, the mascot), Sofia (exchange student; was "Sofia"), Pekka (lumberjack), Aino (barista), Helvi (grandma), Mikko (bus driver), Samir (engineer), Jere (metalhead), and on the 18+ track Niko and Leo. Units have a `host` character and a `scene` backdrop.
+- **Words** carry a type (`pos`) and most a picture (`icon`, a MaterialCommunityIcons name).
+- **18 exercise types.** New: picture cards (both ways), cross out the extra word, spell from letter tiles, pick the right form, and multi-turn conversations (`dialogues.json`). Four of the six "special" sentence exercises are drawn per session, so replays differ. Lessons average about 32 steps, which is long; trimming is an open question.
+- **Tap or hover any word** of a Finnish prompt for a quick translation (`Glossed` in `ui.tsx`).
+- **Finland facts.** A sentence can carry a `fact`, shown as "Tiesitkö?" in the feedback.
+- **Four-skills hub** on the practice tab: listening (stories with the text hidden), reading, writing, speaking (shadowing), plus grammar.
+- **Writing tasks** (`writing.json`, `/write/[id]`) are scored 0–5 by an offline checker in `engine/writing.ts`. It only looks for the requested points by keyword and a few mechanical slips. **It does not understand Finnish and is not AI.** A real AI grader is not built: it needs a decision on provider and on where the API key lives.
+- **Speaking** is self-graded shadowing. The app does not listen.
+- **Motion and sound.** `components/motion.tsx` (pop, rise, shake, bob, flip; respects reduced motion) and synthesised effects in `assets/sfx/` behind a setting.
+- **Not re-verified in the browser:** the last batch (conversations, writing, four-skills hub, backdrops, second 18+ unit) typechecks and the lesson engine was exercised in Node over every lesson, but the screens were not clicked through because the preview window was not painting.
 
 ## 3. Architecture
 

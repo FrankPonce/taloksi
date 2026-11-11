@@ -2,15 +2,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
-import { Avatar, Norppa } from '../../src/components/art';
+import { Avatar, Norppa, Scene, Sprite } from '../../src/components/art';
 import { Halftone, Muted, Panel, ProgressBar, Screen, StatPill, Tag, Text } from '../../src/components/ui';
 import { cultureFor, currentStage, isLessonUnlocked, visibleUnits } from '../../src/content';
 import { todayKey } from '../../src/engine/dates';
 import { liveStreak, useApp } from '../../src/state/store';
 import { colors, font, hardShadow, levelColors, onColor, OUTLINE } from '../../src/theme';
 
-/** Which character fronts each lesson node, in rotation */
-const HOSTS = ['anna', 'pekka', 'aino', 'helvi', 'mikko', 'samir'];
 
 export default function LearnScreen() {
   const s = useApp();
@@ -22,7 +20,7 @@ export default function LearnScreen() {
   const dailyXp = s.daily.day === todayKey() ? s.daily.xp : 0;
   const { stage, progress } = currentStage(s.lessons);
   const units = visibleUnits(s.settings.adult);
-  let host = 0;
+  const mainCount = units.filter((u) => u.track !== 'adult').length;
 
   return (
     <Screen>
@@ -70,14 +68,24 @@ export default function LearnScreen() {
         const notes = cultureFor(u.id);
         return (
           <View key={u.id} style={{ gap: 16, marginTop: 14 }}>
+            {adult && ui === mainCount && (
+              <View style={{ alignItems: 'center', gap: 4, marginVertical: 8 }}>
+                <Tag label="Yöpuoli · After dark" color={colors.berry} size={22} tilt={-3} style={{ alignSelf: 'center' }} />
+                <Muted>The 18+ track. It runs alongside the main course, so start it whenever you like.</Muted>
+              </View>
+            )}
             <View style={[styles.unitHeader, { backgroundColor: u.color }]}>
-              <Halftone color={colors.ink} opacity={0.16} />
+              <Halftone color={colors.ink} opacity={0.14} />
+              <Scene kind={u.scene} />
               <View style={{ flex: 1, gap: 2 }}>
-                <Tag label={adult ? '18+ · Lisäosa // Bonus pack' : `Osa ${ui + 1} // Unit ${ui + 1}`} tilt={-2} />
+                <Tag label={adult ? `18+ // Yöpuoli ${ui + 1 - mainCount}` : `Osa ${ui + 1} // Unit ${ui + 1}`} tilt={-2} />
                 <Text style={[styles.unitTitle, { color: onColor(u.color) }]}>{u.title}</Text>
                 <Text style={{ fontSize: 15, fontWeight: '700', color: onColor(u.color) }}>
                   {u.titleEn} · {done}/{u.lessons.length}
                 </Text>
+              </View>
+              <View style={{ marginVertical: -16, marginRight: 4, alignSelf: 'flex-end' }}>
+                <Sprite id={u.host} size={92} />
               </View>
               <Pressable onPress={() => router.push(`/grammar/${u.grammar[0].id}`)} style={styles.tipsBtn} accessibilityLabel="Grammar tips">
                 <Ionicons name="book" size={22} color={colors.ink} />
@@ -89,7 +97,7 @@ export default function LearnScreen() {
               const unlocked = isLessonUnlocked(l.id, s.lessons, s.settings.unlockAll);
               const rec = s.lessons[l.id];
               const offset = [0, 46, 80, 46][li % 4];
-              const who = HOSTS[host++ % HOSTS.length];
+              const who = u.host ?? 'norppa';
               const fill = !unlocked ? colors.nightSoft : rec ? colors.gold : colors.paper;
               return (
                 <Pressable key={l.id} disabled={!unlocked} onPress={() => router.push(`/lesson/${l.id}`)} style={[styles.node, { marginLeft: offset }]}>

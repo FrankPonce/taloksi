@@ -211,6 +211,11 @@ function Person({ c, mood }: { c: Character; mood: Mood }) {
       {hs === 'long' && <Path d="M26 40 C22 10 78 10 74 40 L81 106 L64 101 L64 46 L36 46 L36 101 L19 106 Z" fill={a.hair} stroke={INK} strokeWidth={3} strokeLinejoin="round" />}
       {hs === 'emo' && <Path d="M28 42 C24 14 76 14 72 42 L73 60 L64 62 L64 44 L36 44 L36 62 L27 60 Z" fill={a.hair} stroke={INK} strokeWidth={3} strokeLinejoin="round" />}
 
+      {hs === 'wolfcut' && (
+        <Path d="M27 40 C23 12 77 12 73 40 L79 62 L72 58 L75 73 L66 66 L64 77 L64 46 L36 46 L36 77 L34 66 L25 73 L28 58 L21 62 Z" fill={a.hair} stroke={INK} strokeWidth={3} strokeLinejoin="round" />
+      )}
+      {hs === 'swept' && <Path d="M62 28 C80 28 86 48 79 60 L72 52 C75 45 72 38 62 36 Z" fill={a.hair} stroke={INK} strokeWidth={3} strokeLinejoin="round" />}
+
       <Outfit a={a} id={c.id} />
 
       {/* neck */}
@@ -245,6 +250,13 @@ function Person({ c, mood }: { c: Character; mood: Mood }) {
         </>
       )}
       {has('earring') && <Circle cx={32} cy={54} r={2.6} fill={colors.gold} stroke={INK} strokeWidth={1.5} />}
+      {has('liprings') && (
+        <>
+          <Circle cx={45.5} cy={60.8} r={1.9} fill="none" stroke="#E4E4EC" strokeWidth={1.6} />
+          <Circle cx={55} cy={60.2} r={1.9} fill="none" stroke="#E4E4EC" strokeWidth={1.6} />
+        </>
+      )}
+      {has('browring') && <Circle cx={62.5} cy={36.6} r={2} fill="none" stroke="#E4E4EC" strokeWidth={1.6} />}
       {has('lipring') && <Circle cx={46} cy={60.5} r={1.9} fill="none" stroke="#D8D8E0" strokeWidth={1.5} />}
       {has('piercings') && (
         <>
@@ -265,6 +277,19 @@ function Person({ c, mood }: { c: Character; mood: Mood }) {
         <>
           <Path d="M29 44 C23 12 79 12 71 40 L68 33 C60 29 54 34 48 49 L37 51 C36 45 33 42 29 44 Z" fill={a.hair} stroke={INK} strokeWidth={3} strokeLinejoin="round" />
           <Path d="M53 22 L61 21 L50 45 L45 48 Z" fill={colors.berry} />
+        </>
+      )}
+      {hs === 'wolfcut' && (
+        <>
+          <Path d="M30 45 C24 11 76 11 70 45 L67 34 L62 41 L58 30 L53 40 L50 29 L46 40 L42 30 L38 41 L33 34 Z" fill={a.hair} stroke={INK} strokeWidth={3} strokeLinejoin="round" />
+          <Path d="M55 16 L63 19 L58 29 Z" fill="#000" opacity={0.14} />
+        </>
+      )}
+      {hs === 'swept' && (
+        <>
+          <Path d="M66 35 L70.5 42 L69.5 59 L65 61 Z" fill={a.hair} stroke={INK} strokeWidth={2.6} strokeLinejoin="round" />
+          <Path d="M30 46 C23 13 77 11 70 42 L66 34 C58 27 50 30 44 41 L40 51 L36.5 62 L31.5 59 C33 53 31 49 30 46 Z" fill={a.hair} stroke={INK} strokeWidth={3} strokeLinejoin="round" />
+          <Path d="M52 20 L62 22 L50 34 Z" fill="#fff" opacity={0.28} />
         </>
       )}
       {hs === 'undercut' && <Path d="M33 33 C29 10 73 8 68 33 L62 24 L55 31 L48 21 L41 31 Z" fill={a.hair} stroke={INK} strokeWidth={3} strokeLinejoin="round" />}
@@ -600,5 +625,79 @@ export function Speech({
         </View>
       </Surface.Provider>
     </View>
+  );
+}
+
+// ── Unit backdrops ──────────────────────────────────────────────────────────
+
+const tree = (x: number, h: number) => `M${x} ${120 - h} L${x + h * 0.26} ${120 - h * 0.55} L${x + h * 0.14} ${120 - h * 0.55} L${x + h * 0.34} 120 L${x - h * 0.34} 120 L${x - h * 0.14} ${120 - h * 0.55} L${x - h * 0.26} ${120 - h * 0.55} Z`;
+
+/**
+ * A silhouette scene that fills its parent, drawn in ink and paper at low
+ * opacity so it sits on any unit colour. Each unit names one in its JSON.
+ */
+export function Scene({ kind }: { kind?: string }) {
+  if (!kind) return null;
+  const dark = { fill: INK, opacity: 0.24 };
+  const light = { fill: '#FFFFFF', opacity: 0.22 };
+  return (
+    <Svg style={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0 }} width="100%" height="100%" viewBox="0 0 400 120" preserveAspectRatio="xMaxYMax slice" pointerEvents="none">
+      {(kind === 'lake' || kind === 'forest') && (
+        <>
+          <Circle cx={330} cy={34} r={20} {...light} />
+          {[214, 244, 262, 296, 372, 392].map((x, i) => (
+            <Path key={x} d={tree(x, [58, 82, 50, 70, 88, 60][i])} {...dark} />
+          ))}
+          <Path d="M200 108 H400 V120 H200 Z" {...light} />
+          <Path d="M300 112 h44 M250 116 h30 M356 116 h26" stroke="#FFFFFF" strokeOpacity={0.4} strokeWidth={2.5} />
+        </>
+      )}
+      {kind === 'river' && (
+        <>
+          {/* cathedral tower and a bridge over the river */}
+          <Path d="M330 120 V54 L326 54 L342 22 L358 54 L354 54 V120 Z" {...dark} />
+          <Path d="M338 22 h8 v-12 h-8 Z" {...dark} />
+          <Path d="M354 120 V82 H398 V120 Z" {...dark} />
+          <Path d="M210 120 V96 H322 V120 H300 C300 104 274 104 274 120 H258 C258 104 232 104 232 120 Z" {...dark} />
+          <Path d="M200 114 H400 V120 H200 Z" {...light} />
+          <Circle cx={250} cy={36} r={14} {...light} />
+        </>
+      )}
+      {kind === 'cafe' && (
+        <>
+          {[236, 300, 364].map((x) => (
+            <Path key={x} d={`M${x} 0 V26 M${x - 14} 44 C${x - 14} 24 ${x + 14} 24 ${x + 14} 44 Z`} stroke={INK} strokeOpacity={0.24} strokeWidth={3} {...dark} />
+          ))}
+          <Path d="M290 120 V84 H346 V120 Z M346 92 C366 92 366 112 346 112" {...dark} />
+          <Path d="M304 74 q6 -10 0 -20 M318 74 q6 -10 0 -20 M332 74 q6 -10 0 -20" stroke="#FFFFFF" strokeOpacity={0.4} strokeWidth={3} fill="none" strokeLinecap="round" />
+          <Path d="M214 120 C214 96 262 96 262 120 Z" {...dark} />
+          <Path d="M222 108 q16 -14 32 0" stroke="#FFFFFF" strokeOpacity={0.35} strokeWidth={3} fill="none" />
+        </>
+      )}
+      {kind === 'city' && (
+        <>
+          <Path d="M204 120 V70 H232 V120 Z M238 120 V46 H270 V120 Z M276 120 V80 H300 V120 Z M360 120 V56 H396 V120 Z" {...dark} />
+          {[52, 62, 72, 82, 92].map((y) => (
+            <Path key={y} d={`M244 ${y} h6 M256 ${y} h6 M366 ${y + 8} h6 M378 ${y + 8} h6`} stroke="#FFFFFF" strokeOpacity={0.4} strokeWidth={3} />
+          ))}
+          {/* a bus */}
+          <Path d="M296 120 V96 Q296 90 302 90 H352 Q358 90 358 96 V120 Z" fill={INK} opacity={0.34} />
+          <Path d="M302 96 h14 v10 h-14 Z M320 96 h14 v10 h-14 Z M338 96 h14 v10 h-14 Z" {...light} />
+          <Circle cx={310} cy={120} r={6} fill={INK} opacity={0.5} />
+          <Circle cx={344} cy={120} r={6} fill={INK} opacity={0.5} />
+        </>
+      )}
+      {kind === 'bar' && (
+        <>
+          <Path d="M206 60 H398 V66 H206 Z" {...dark} />
+          {[222, 246, 270, 366, 388].map((x, i) => (
+            <Path key={x} d={`M${x - 6} 60 V${38 - (i % 2) * 6} Q${x - 6} ${32 - (i % 2) * 6} ${x - 2} ${30 - (i % 2) * 6} V${20 - (i % 2) * 6} H${x + 2} V${30 - (i % 2) * 6} Q${x + 6} ${32 - (i % 2) * 6} ${x + 6} ${38 - (i % 2) * 6} V60 Z`} {...dark} />
+          ))}
+          {/* cocktail glass and a neon bolt */}
+          <Path d="M300 78 H340 L320 100 Z M318 100 h4 v16 h-4 Z M308 116 h24 v4 h-24 Z" {...dark} />
+          <Polygon points="322,10 306,36 320,36 312,56 338,28 324,28 332,10" fill="#FFFFFF" opacity={0.3} />
+        </>
+      )}
+    </Svg>
   );
 }

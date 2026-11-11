@@ -3,7 +3,7 @@ import { router } from 'expo-router';
 import { Pressable, View } from 'react-native';
 import { Avatar, Speech } from '../../src/components/art';
 import { H1, H2, Muted, Panel, ProgressBar, Screen, Tag, Text } from '../../src/components/ui';
-import { CHARACTERS, CULTURE, currentStage, GUIDE } from '../../src/content';
+import { CHARACTERS, CULTURE, currentStage, GUIDE, LIFE } from '../../src/content';
 import { useApp } from '../../src/state/store';
 import { colors, font, levelColors, onColor } from '../../src/theme';
 
@@ -55,6 +55,12 @@ export default function GuideScreen() {
       <Muted>Short, practical, and every one links to its source.</Muted>
       {GUIDE.map((t) => (
         <Row key={t.id} icon={t.icon} title={t.titleEn} sub={t.summary} onPress={() => router.push(`/tip/${t.id}`)} />
+      ))}
+
+      <H2 color={colors.orange}>Elämä Suomessa · Life in Finland</H2>
+      <Muted>Practical things nobody tells you: paperwork order, winter, housing, getting around.</Muted>
+      {LIFE.map((c) => (
+        <Row key={c.id} icon={c.icon} title={c.titleEn} sub={c.title} onPress={() => router.push(`/culture/${c.id}`)} />
       ))}
 
       <H2 color={colors.red}>Kulttuuri · Culture</H2>

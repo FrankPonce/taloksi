@@ -24,7 +24,7 @@
       ],
       "sentences": [
         { "id": "s_x1l1_1", "fi": "Yksi olut, kiitos.", "en": "One beer, please.", "puhe": "Yks kalja, kiitos.", "speaker": "niko" },
-        { "id": "s_x1l1_2", "fi": "Kippis, Pekka!", "en": "Cheers, Pekka!", "speaker": "anna" },
+        { "id": "s_x1l1_2", "fi": "Kippis, Pekka!", "en": "Cheers, Pekka!", "speaker": "sofia" },
         { "id": "s_x1l1_3", "fi": "Otan lonkeron.", "en": "I'll take a long drink.", "altEn": ["I will take a long drink.", "I take a long drink."], "puhe": "Mä otan lonkeron.", "speaker": "leo" },
         { "id": "s_x1l1_4", "fi": "Olen vähän humalassa.", "en": "I am a little drunk.", "altEn": ["I am a bit drunk."], "puhe": "Mä oon vähän kännissä.", "speaker": "niko" },
         { "id": "s_x1l1_5", "fi": "Minulla on krapula.", "en": "I have a hangover.", "puhe": "Mulla on darra.", "speaker": "pekka" },
@@ -81,9 +81,9 @@
       "sentences": [
         { "id": "s_x1l3_1", "fi": "Lähdetkö treffeille?", "en": "Will you go on a date?", "altEn": ["Do you want to go on a date?", "Will you go on a date with me?"], "puhe": "Lähetsä treffeille?", "speaker": "leo" },
         { "id": "s_x1l3_2", "fi": "Olen sinkku.", "en": "I am single.", "puhe": "Mä oon sinkku.", "speaker": "niko" },
-        { "id": "s_x1l3_3", "fi": "Tykkään sinusta.", "en": "I like you.", "puhe": "Mä tykkään susta.", "speaker": "anna" },
+        { "id": "s_x1l3_3", "fi": "Tykkään sinusta.", "en": "I like you.", "puhe": "Mä tykkään susta.", "speaker": "sofia" },
         { "id": "s_x1l3_4", "fi": "Sinä olet ihana.", "en": "You are lovely.", "altEn": ["You are wonderful."], "puhe": "Sä oot ihana.", "speaker": "leo" },
-        { "id": "s_x1l3_5", "fi": "Minä rakastan sinua.", "en": "I love you.", "altFi": ["Rakastan sinua."], "puhe": "Mä rakastan sua.", "speaker": "anna" },
+        { "id": "s_x1l3_5", "fi": "Minä rakastan sinua.", "en": "I love you.", "altFi": ["Rakastan sinua."], "puhe": "Mä rakastan sua.", "speaker": "sofia" },
         { "id": "s_x1l3_6", "fi": "Saanko suudella sinua?", "en": "May I kiss you?", "altEn": ["Can I kiss you?"], "puhe": "Saanks mä pussata sua?", "speaker": "niko" },
         { "id": "s_x1l3_7", "fi": "Mennäänkö meille vai teille?", "en": "Shall we go to my place or yours?", "altEn": ["My place or yours?", "Your place or mine?"], "puhe": "Mennääks meille vai teille?", "speaker": "leo" }
       ],

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "d_hello",
+    "lesson": "u1l4",
+    "title": "Uusi tuttu",
+    "titleEn": "Meeting someone new",
+    "with": "pekka",
+    "turns": [
+      { "them": { "fi": "Hei! Kuka sinä olet?", "en": "Hi! Who are you?" }, "you": { "fi": "Hei, minä olen Sofia.", "en": "Hi, I am Sofia." } },
+      { "them": { "fi": "Mitä kuuluu?", "en": "How are you?" }, "you": { "fi": "Kiitos, hyvää. Entä sinulle?", "en": "Fine, thanks. And you?" } },
+      { "them": { "fi": "Ihan hyvää, kiitos.", "en": "Pretty good, thanks." }, "you": { "fi": "Puhutko englantia?", "en": "Do you speak English?" } },
+      { "them": { "fi": "Kyllä, puhun.", "en": "Yes, I do." }, "you": { "fi": "Hei hei, Pekka!", "en": "Bye, Pekka!" } }
+    ]
+  },
+  {
+    "id": "d_origins",
+    "lesson": "u2l3",
+    "title": "Mummon kysymykset",
+    "titleEn": "Grandma's questions",
+    "with": "helvi",
+    "turns": [
+      { "them": { "fi": "Mistä sinä olet kotoisin?", "en": "Where are you from?" }, "you": { "fi": "Olen kotoisin Espanjasta.", "en": "I am from Spain." } },
+      { "them": { "fi": "Missä sinä asut?", "en": "Where do you live?" }, "you": { "fi": "Asun nyt Turussa.", "en": "I live in Turku now." } },
+      { "them": { "fi": "Puhutko sinä suomea?", "en": "Do you speak Finnish?" }, "you": { "fi": "Puhun vähän suomea.", "en": "I speak a little Finnish." } },
+      { "them": { "fi": "Puhut hyvin suomea!", "en": "You speak Finnish well!" }, "you": { "fi": "Kiitos paljon!", "en": "Thank you very much!" } }
+    ]
+  },
+  {
+    "id": "d_cafe",
+    "lesson": "u3l4",
+    "title": "Tilaus",
+    "titleEn": "Placing an order",
+    "with": "aino",
+    "turns": [
+      { "them": { "fi": "Hei! Mitä saisi olla?", "en": "Hi! What would you like?" }, "you": { "fi": "Haluaisin kupin kahvia.", "en": "I would like a cup of coffee." } },
+      { "them": { "fi": "Tuleeko muuta?", "en": "Anything else?" }, "you": { "fi": "Otan korvapuustin.", "en": "I'll take a cinnamon roll." } },
+      { "them": { "fi": "Täällä vai mukaan?", "en": "For here or to go?" }, "you": { "fi": "Täällä, kiitos.", "en": "For here, please." } },
+      { "them": { "fi": "Se maksaa seitsemän euroa.", "en": "That costs seven euros." }, "you": { "fi": "Voinko maksaa kortilla?", "en": "Can I pay by card?" } }
+    ]
+  },
+  {
+    "id": "d_bus",
+    "lesson": "u4l4",
+    "title": "Linja kuusi",
+    "titleEn": "Line six",
+    "with": "mikko",
+    "turns": [
+      { "them": { "fi": "Huomenta.", "en": "Good morning." }, "you": { "fi": "Milloin seuraava bussi tulee?", "en": "When does the next bus come?" } },
+      { "them": { "fi": "Bussi on myöhässä.", "en": "The bus is late." }, "you": { "fi": "Onko asema kaukana?", "en": "Is the station far?" } },
+      { "them": { "fi": "Ei, se on lähellä.", "en": "No, it is near." }, "you": { "fi": "Menen bussilla yliopistolle.", "en": "I go to the university by bus." } },
+      { "them": { "fi": "Onko sinulla lippu?", "en": "Do you have a ticket?" }, "you": { "fi": "Minulla on lippu.", "en": "I have a ticket." } }
+    ]
+  },
+  {
+    "id": "d_bar",
+    "lesson": "x1l1",
+    "title": "Tiskillä",
+    "titleEn": "At the bar counter",
+    "with": "leo",
+    "turns": [
+      { "them": { "fi": "Moi! Mitä saisi olla?", "en": "Hi! What would you like?" }, "you": { "fi": "Yksi olut, kiitos.", "en": "One beer, please." } },
+      { "them": { "fi": "Tuleeko muuta?", "en": "Anything else?" }, "you": { "fi": "Otan lonkeron.", "en": "I'll take a long drink." } },
+      { "them": { "fi": "Kippis!", "en": "Cheers!" }, "you": { "fi": "Kippis, kiitos!", "en": "Cheers, thanks!" } },
+      { "them": { "fi": "Mitä kuuluu?", "en": "How are you?" }, "you": { "fi": "Olen vähän humalassa.", "en": "I am a little drunk." } }
+    ]
+  }
+]

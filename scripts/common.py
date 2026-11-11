@@ -36,6 +36,10 @@ def load_sets():
     return _load("sets.json")
 
 
+def load_dialogues():
+    return _load("dialogues.json")
+
+
 def load_culture():
     return _load("culture.json")
 
@@ -77,3 +81,6 @@ def speakable_items():
             yield f'mp_{w["fi"]}', w["fi"], None
     for c in load_characters():
         yield f'cast_{c["id"]}', c["hello"], c["id"]
+    for d in load_dialogues():
+        for i, turn in enumerate(d["turns"]):
+            yield f'{d["id"]}_{i}', turn["them"]["fi"], d["with"]

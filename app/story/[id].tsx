@@ -10,7 +10,9 @@ import { useApp } from '../../src/state/store';
 import { colors, font } from '../../src/theme';
 
 export default function StoryScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id, mode } = useLocalSearchParams<{ id: string; mode?: string }>();
+  // Listening mode: hear each line first; the text stays hidden until you tap it
+  const listening = mode === 'listen';
   const story = getStory(String(id));
   const s = useApp();
   const [shown, setShown] = useState(1);
@@ -54,19 +56,24 @@ export default function StoryScreen() {
     <Screen>
       <BackButton />
       <H1 accent={colors.red}>{story.title}</H1>
-      <Muted>{story.titleEn} · tap a line to translate it and take it apart</Muted>
+      {listening && <Tag label="Kuuntelu // Listening" color={colors.red} />}
+      <Muted>
+        {story.titleEn} · {listening ? 'listen first. Tap a line only if you need to read it' : 'tap a line to translate it and take it apart'}
+      </Muted>
 
       {story.lines.slice(0, shown).map((l) => {
         const c = getCharacter(l.speakerId);
         const isOpen = open.includes(l.id);
         return (
           <Pressable key={l.id} onPress={() => setOpen((o) => (o.includes(l.id) ? o.filter((x) => x !== l.id) : [...o, l.id]))}>
-            <Speech speaker={l.speakerId} size={60} color={l.speakerId === 'anna' ? '#FFE9B0' : colors.paper}>
+            <Speech speaker={l.speakerId} size={60} color={l.speakerId === 'sofia' ? '#FFE9B0' : colors.paper}>
               <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
                 <SpeakerButton text={l.fi} id={l.id} speaker={l.speakerId} size="sm" />
                 <View style={{ flexShrink: 1 }}>
                   {!c && l.speaker ? <Text style={{ fontFamily: font.label, fontSize: 12, letterSpacing: 1 }}>{l.speaker.toUpperCase()}</Text> : null}
-                  <Text style={{ fontSize: 19, lineHeight: 25, fontWeight: '700' }}>{l.fi}</Text>
+                  <Text style={{ fontSize: 19, lineHeight: 25, fontWeight: '700', color: listening && !isOpen ? colors.mutedOnPaper : colors.ink }}>
+                    {listening && !isOpen ? '• • •   tap to read' : l.fi}
+                  </Text>
                 </View>
               </View>
               {isOpen && (

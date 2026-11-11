@@ -2,6 +2,7 @@ import {
   ALL_ITEMS,
   breakdown,
   CATEGORIES,
+  dialogueFor,
   formsOf,
   getItem,
   MINIMAL_PAIRS,
@@ -70,6 +71,21 @@ export type Exercise =
       fi: string;
       en: string;
       speaker?: string;
+    }
+  | {
+      /** One turn of a short conversation: the character speaks, you build the reply */
+      kind: 'convo';
+      key: string;
+      title: string;
+      with: string;
+      step: number;
+      total: number;
+      /** what was said before this turn, so the chat stays on screen */
+      history: { who: 'them' | 'you'; fi: string }[];
+      them: { fi: string; en: string };
+      you: { fi: string; en: string };
+      audioId: string;
+      tiles: string[];
     }
   | {
       /** Spell a word from letter tiles (trains double letters and ä/ö) */
@@ -457,6 +473,30 @@ export function buildLessonExercises(
     if (i >= 1) push(extras.shift() ?? null);
   });
   extras.forEach(push);
+
+  // 3b. A short conversation, if this lesson has one: each reply is its own step
+  const d = dialogueFor(lesson.id);
+  if (d) {
+    d.turns.forEach((turn, i) => {
+      const history = d.turns.slice(0, i).flatMap((t) => [
+        { who: 'them' as const, fi: t.them.fi },
+        { who: 'you' as const, fi: t.you.fi },
+      ]);
+      out.push({
+        kind: 'convo',
+        key: `convo-${d.id}-${i}`,
+        title: d.titleEn,
+        with: d.with,
+        step: i + 1,
+        total: d.turns.length,
+        history,
+        them: turn.them,
+        you: turn.you,
+        audioId: `${d.id}_${i}`,
+        tiles: tilesFor(turn.you.fi, 'fi', adult),
+      });
+    });
+  }
 
   // 4. One typing challenge on the shortest sentence (full production)
   const shortest = [...sentences].sort((a, b) => a.fi.length - b.fi.length)[0];
